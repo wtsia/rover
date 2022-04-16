@@ -2,27 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Categories on Rover</title>
-		<link>http://example.org/categories/</link>
-		<description>Recent content in Categories on example.org</description>
+		<link>https://wtsia.github.io/rover/categories/</link>
+		<description>Recent content in Categories on wtsia.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
 		<lastBuildDate>Sat, 16 Apr 2022 03:39:55 -0700</lastBuildDate>
-		<atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>introduction</title>
+			<link>https://wtsia.github.io/rover/categories/introduction/</link>
+			<pubDate>Sat, 16 Apr 2022 03:39:55 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/introduction/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>syntax</title>
-			<link>http://example.org/categories/syntax/</link>
-			<pubDate>Sat, 16 Apr 2022 03:39:55 -0700</pubDate>
-			<guid>http://example.org/categories/syntax/</guid>
+			<link>https://wtsia.github.io/rover/categories/syntax/</link>
+			<pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/syntax/</guid>
 			<description>
 			
 			</description>
 		</item>
 		<item>
 			<title>themes</title>
-			<link>http://example.org/categories/themes/</link>
-			<pubDate>Sat, 16 Apr 2022 03:39:55 -0700</pubDate>
-			<guid>http://example.org/categories/themes/</guid>
+			<link>https://wtsia.github.io/rover/categories/themes/</link>
+			<pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/themes/</guid>
 			<description>
 			
 			</description>
