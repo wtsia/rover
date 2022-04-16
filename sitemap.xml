@@ -3,36 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://example.org/categories/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
   </url><url>
     <loc>http://example.org/tags/css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/helloworld/</loc>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
   </url><url>
     <loc>http://example.org/tags/html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
   </url><url>
     <loc>http://example.org/tags/markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://example.org/posts/example-content/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
   </url><url>
     <loc>http://example.org/posts/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://example.org/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://example.org/tags/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://example.org/categories/themes/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
   </url><url>
     <loc>http://example.org/</loc>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/syntax/</loc>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+  </url><url>
+    <loc>http://example.org/tags/themes/</loc>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/themes/</loc>
+    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+  </url><url>
+    <loc>http://example.org/posts/example-content/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://example.org/series/</loc>
