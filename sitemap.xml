@@ -3,25 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/helloworld/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/introduction/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/introduction/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
-    <lastmod>2022-04-16T03:39:55-07:00</lastmod>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/css/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
@@ -35,7 +17,16 @@
     <loc>https://wtsia.github.io/rover/posts/example-content/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://wtsia.github.io/rover/categories/syntax/</loc>
+    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/themes/</loc>
@@ -43,6 +34,14 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/themes/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/about/</loc>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/about/</loc>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/homepage/</loc>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/self/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/series/</loc>
   </url>

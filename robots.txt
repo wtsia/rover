@@ -1,3 +1,5 @@
 User-agent: *
 
 Disallow: /rover/posts/example-content/
+Disallow: /rover/about/
+Disallow: /rover/homepage/

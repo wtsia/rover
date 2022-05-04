@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>introduction on Rover</title>
-		<link>https://wtsia.github.io/rover/categories/introduction/</link>
-		<description>Recent content in introduction on wtsia.github.io</description>
+		<link>http://example.org/categories/introduction/</link>
+		<description>Recent content in introduction on example.org</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
 		<lastBuildDate>Sat, 16 Apr 2022 03:39:55 -0700</lastBuildDate>
-		<atom:link href="https://wtsia.github.io/rover/categories/introduction/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="http://example.org/categories/introduction/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Helloworld</title>
-			<link>https://wtsia.github.io/rover/posts/helloworld/</link>
+			<link>http://example.org/posts/helloworld/</link>
 			<pubDate>Sat, 16 Apr 2022 03:39:55 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/helloworld/</guid>
+			<guid>http://example.org/posts/helloworld/</guid>
 			<description>
 			
 			</description>

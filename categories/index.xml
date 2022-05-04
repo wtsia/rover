@@ -7,17 +7,8 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Sat, 16 Apr 2022 03:39:55 -0700</lastBuildDate>
+		<lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>introduction</title>
-			<link>https://wtsia.github.io/rover/categories/introduction/</link>
-			<pubDate>Sat, 16 Apr 2022 03:39:55 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/introduction/</guid>
-			<description>
-			
-			</description>
-		</item>
 		<item>
 			<title>syntax</title>
 			<link>https://wtsia.github.io/rover/categories/syntax/</link>
@@ -32,6 +23,15 @@
 			<link>https://wtsia.github.io/rover/categories/themes/</link>
 			<pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/themes/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Self</title>
+			<link>https://wtsia.github.io/rover/categories/self/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/self/</guid>
 			<description>
 			
 			</description>
