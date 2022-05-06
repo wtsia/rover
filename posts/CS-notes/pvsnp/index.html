@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>P vs NP | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="Concept">
+<meta name="description" content="P, NP, and NP-completeness">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+
+
+
+
+<meta property="og:title" content="P vs NP" />
+<meta property="og:description" content="P, NP, and NP-completeness" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/cs-notes/pvsnp/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="P vs NP"/>
+<meta name="twitter:description" content="P, NP, and NP-completeness"/>
+
+<meta itemprop="name" content="P vs NP">
+<meta itemprop="description" content="P, NP, and NP-completeness">
+
+<meta itemprop="wordCount" content="312">
+<meta itemprop="keywords" content="Concept," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">P vs NP</h1>
+</div>
+</div>
+<div class="markdown">
+<h1 id="understanding-p-vs-np-and-np-completeness">Understanding P vs NP, and NP-completeness</h1>
+<h3 id="introduction">Introduction</h3>
+<p>P vs NP concerns the question of how an algorithm used on a problem (P, polynomial time) that can find a solution, relates in some way to problems that, while hard for an algorithm to find an answer in P-time, can be quickly checked (NP, nondeterministic polynomial time)</p>
+<h4 id="visuals">VISUALS:</h4>
+<p>&mdash;Difficulty&mdash;&gt; <!-- raw HTML omitted -->
+|(&ndash;P&ndash;)&ndash;NP&ndash;||&ndash;NP-hard&ndash;|</p>
+<h4 id="p-polynomial-time">P: Polynomial time</h4>
+<p>-size n problems, in polynomial times of n O(1).</p>
+<h4 id="np-nondeterministic-polynomial-time">NP: Nondeterministic polynomial time</h4>
+<p>-nondeterministic: can guess one out of polynomially many options in constant (O(1)) time. <!-- raw HTML omitted -->
+-{decision problems with poly-size certificates and poly-time verifiers for YES inputs}<!-- raw HTML omitted -->
+-decision problems, resulting in YES or NO. <!-- raw HTML omitted -->
+-if guess leads to YES, then we get such a guess.</p>
+<h4 id="np-complete">NP-Complete</h4>
+<p>-X is NP-complete: if every x in NP and x in NP-hard (exactly as hard as everything in NP)<!-- raw HTML omitted -->
+-X is NP-hard: if every problem y in NP reduces to X (at least as hard as everything in NP)<!-- raw HTML omitted -->
+Reduction: from problem A &ndash;&gt; problem B = poly-time algorithm converting A inputs &ndash;&gt; equivalent (same YES/NO answer) B inputs. <!-- raw HTML omitted -->
+-if B in P, then A in P<!-- raw HTML omitted -->
+-if B in NP, then A in NP</p>
+<p>Common thought: P =/= NP</p>
+<h6 id="example">EXAMPLE</h6>
+<p>3SAT: Given Boolean formula of form: (x_1 v x_2 v ~x_6) ^ (~x_2 v x_3 v ~x_7) ^ &hellip;</p>
+<p>can you set the variables (satisfying assignment) x_1, x_2, &hellip; &ndash;&gt; {T, F} such that formula = T</p>
+<p>in NP: guess x_1 = T or F, x_2 = T or F, &hellip; check formula -&gt; T : return YES, F: return NO</p>
+<p>-guesses up front and checking later, this can be a verification algorithm. <!-- raw HTML omitted -->
+-explanation: gives you guesses x_i, you can quickly check each assignment. <!-- raw HTML omitted -->
+-1970&rsquo;s Cooke, proved 3SAT is NP complete, could reduce any NP prob to 3SAT</p>
+<h6 id="how-to-prove-x-is-np-complete">How to prove X is NP-complete</h6>
+<ol>
+<li>X in NP<!-- raw HTML omitted -->
+-nondeterminisitc algorithm<!-- raw HTML omitted -->
+-certificate + verifier<!-- raw HTML omitted --></li>
+<li>reduce from known NP-complete problem Y to X<!-- raw HTML omitted --></li>
+</ol>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-science/">computer-science</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/concept/">concept</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

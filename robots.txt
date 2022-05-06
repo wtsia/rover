@@ -2,4 +2,15 @@ User-agent: *
 
 Disallow: /rover/posts/example-content/
 Disallow: /rover/about/
+Disallow: /rover/posts/cs-notes/databases/
+Disallow: /rover/posts/cs-notes/designandanalysisofalgorithms/
+Disallow: /rover/posts/cs-notes/divideandconquer/
+Disallow: /rover/posts/cs-notes/generaloverview/
 Disallow: /rover/homepage/
+Disallow: /rover/posts/cs-notes/languagesoverview/
+Disallow: /rover/posts/cs-notes/othertopics/economics/nash-equilibrium/
+Disallow: /rover/posts/cs-notes/networks/
+Disallow: /rover/posts/cs-notes/pvsnp/
+Disallow: /rover/posts/cs-notes/scalability/
+Disallow: /rover/posts/cs-notes/tradeoffs/
+Disallow: /rover/posts/cs-notes/security/

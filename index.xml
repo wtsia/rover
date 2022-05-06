@@ -28,12 +28,111 @@
 			</description>
 		</item>
 		<item>
+			<title>Databases</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/databases/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/databases/</guid>
+			<description>
+			Unfinished
+			</description>
+		</item>
+		<item>
+			<title>Design and Analysis of Algorithms</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/designandanalysisofalgorithms/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/designandanalysisofalgorithms/</guid>
+			<description>
+			MIT 6.046J 2015
+			</description>
+		</item>
+		<item>
+			<title>Divide and Conquer</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/divideandconquer/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/divideandconquer/</guid>
+			<description>
+			Unfinished
+			</description>
+		</item>
+		<item>
+			<title>General Overview</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/generaloverview/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/generaloverview/</guid>
+			<description>
+			A page of general Software Engineering concepts
+			</description>
+		</item>
+		<item>
 			<title>Home</title>
 			<link>https://wtsia.github.io/rover/homepage/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 			<guid>https://wtsia.github.io/rover/homepage/</guid>
 			<description>
 			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+			</description>
+		</item>
+		<item>
+			<title>Languages Overview</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/languagesoverview/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/languagesoverview/</guid>
+			<description>
+			Covers major languages used in the Software industry
+			</description>
+		</item>
+		<item>
+			<title>Nash Equilibrium</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/othertopics/economics/nash-equilibrium/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/othertopics/economics/nash-equilibrium/</guid>
+			<description>
+			Unfinished
+			</description>
+		</item>
+		<item>
+			<title>Networks</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/networks/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/networks/</guid>
+			<description>
+			Scaling Networks
+			</description>
+		</item>
+		<item>
+			<title>P vs NP</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/pvsnp/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/pvsnp/</guid>
+			<description>
+			P, NP, and NP-completeness
+			</description>
+		</item>
+		<item>
+			<title>Scalability</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/scalability/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/scalability/</guid>
+			<description>
+			Topics covering scalability of systems
+			</description>
+		</item>
+		<item>
+			<title>Scalability: Tradeoffs</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/tradeoffs/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/tradeoffs/</guid>
+			<description>
+			Scalability topics covering tradoffs
+			</description>
+		</item>
+		<item>
+			<title>Security</title>
+			<link>https://wtsia.github.io/rover/posts/cs-notes/security/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs-notes/security/</guid>
+			<description>
+			Unfinished
 			</description>
 		</item>
 	</channel>
