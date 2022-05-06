@@ -20,99 +20,99 @@
 		</item>
 		<item>
 			<title>Databases</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/databases/</link>
+			<link>https://wtsia.github.io/rover/posts/databases/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/databases/</guid>
+			<guid>https://wtsia.github.io/rover/posts/databases/</guid>
 			<description>
 			Unfinished
 			</description>
 		</item>
 		<item>
 			<title>Design and Analysis of Algorithms</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/designandanalysisofalgorithms/</link>
+			<link>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/designandanalysisofalgorithms/</guid>
+			<guid>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</guid>
 			<description>
 			MIT 6.046J 2015
 			</description>
 		</item>
 		<item>
 			<title>Divide and Conquer</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/divideandconquer/</link>
+			<link>https://wtsia.github.io/rover/posts/divideandconquer/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/divideandconquer/</guid>
+			<guid>https://wtsia.github.io/rover/posts/divideandconquer/</guid>
 			<description>
 			Unfinished
 			</description>
 		</item>
 		<item>
 			<title>General Overview</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/generaloverview/</link>
+			<link>https://wtsia.github.io/rover/posts/generaloverview/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/generaloverview/</guid>
+			<guid>https://wtsia.github.io/rover/posts/generaloverview/</guid>
 			<description>
 			A page of general Software Engineering concepts
 			</description>
 		</item>
 		<item>
 			<title>Languages Overview</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/languagesoverview/</link>
+			<link>https://wtsia.github.io/rover/posts/languagesoverview/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/languagesoverview/</guid>
+			<guid>https://wtsia.github.io/rover/posts/languagesoverview/</guid>
 			<description>
 			Covers major languages used in the Software industry
 			</description>
 		</item>
 		<item>
 			<title>Nash Equilibrium</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/othertopics/economics/nash-equilibrium/</link>
+			<link>https://wtsia.github.io/rover/posts/nash-equilibrium/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/othertopics/economics/nash-equilibrium/</guid>
+			<guid>https://wtsia.github.io/rover/posts/nash-equilibrium/</guid>
 			<description>
 			Unfinished
 			</description>
 		</item>
 		<item>
 			<title>Networks</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/networks/</link>
+			<link>https://wtsia.github.io/rover/posts/networks/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/networks/</guid>
+			<guid>https://wtsia.github.io/rover/posts/networks/</guid>
 			<description>
 			Scaling Networks
 			</description>
 		</item>
 		<item>
 			<title>P vs NP</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/pvsnp/</link>
+			<link>https://wtsia.github.io/rover/posts/pvsnp/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/pvsnp/</guid>
+			<guid>https://wtsia.github.io/rover/posts/pvsnp/</guid>
 			<description>
 			P, NP, and NP-completeness
 			</description>
 		</item>
 		<item>
 			<title>Scalability</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/scalability/</link>
+			<link>https://wtsia.github.io/rover/posts/scalability/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/scalability/</guid>
+			<guid>https://wtsia.github.io/rover/posts/scalability/</guid>
 			<description>
 			Topics covering scalability of systems
 			</description>
 		</item>
 		<item>
 			<title>Scalability: Tradeoffs</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/tradeoffs/</link>
+			<link>https://wtsia.github.io/rover/posts/tradeoffs/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/tradeoffs/</guid>
+			<guid>https://wtsia.github.io/rover/posts/tradeoffs/</guid>
 			<description>
 			Scalability topics covering tradoffs
 			</description>
 		</item>
 		<item>
 			<title>Security</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/security/</link>
+			<link>https://wtsia.github.io/rover/posts/security/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/security/</guid>
+			<guid>https://wtsia.github.io/rover/posts/security/</guid>
 			<description>
 			Unfinished
 			</description>

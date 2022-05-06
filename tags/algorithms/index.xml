@@ -10,18 +10,18 @@
 		<atom:link href="https://wtsia.github.io/rover/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Design and Analysis of Algorithms</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/designandanalysisofalgorithms/</link>
+			<link>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/designandanalysisofalgorithms/</guid>
+			<guid>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</guid>
 			<description>
 			MIT 6.046J 2015
 			</description>
 		</item>
 		<item>
 			<title>Divide and Conquer</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/divideandconquer/</link>
+			<link>https://wtsia.github.io/rover/posts/divideandconquer/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/divideandconquer/</guid>
+			<guid>https://wtsia.github.io/rover/posts/divideandconquer/</guid>
 			<description>
 			Unfinished
 			</description>

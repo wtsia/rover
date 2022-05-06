@@ -10,27 +10,27 @@
 		<atom:link href="https://wtsia.github.io/rover/tags/scalability/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Databases</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/databases/</link>
+			<link>https://wtsia.github.io/rover/posts/databases/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/databases/</guid>
+			<guid>https://wtsia.github.io/rover/posts/databases/</guid>
 			<description>
 			Unfinished
 			</description>
 		</item>
 		<item>
 			<title>Networks</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/networks/</link>
+			<link>https://wtsia.github.io/rover/posts/networks/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/networks/</guid>
+			<guid>https://wtsia.github.io/rover/posts/networks/</guid>
 			<description>
 			Scaling Networks
 			</description>
 		</item>
 		<item>
 			<title>Scalability</title>
-			<link>https://wtsia.github.io/rover/posts/cs-notes/scalability/</link>
+			<link>https://wtsia.github.io/rover/posts/scalability/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs-notes/scalability/</guid>
+			<guid>https://wtsia.github.io/rover/posts/scalability/</guid>
 			<description>
 			Topics covering scalability of systems
 			</description>
