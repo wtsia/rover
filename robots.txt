@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/medicalresearch/
 Disallow: /rover/posts/example-content/
 Disallow: /rover/about/
 Disallow: /rover/posts/databases/
