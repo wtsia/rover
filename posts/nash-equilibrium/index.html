@@ -8,21 +8,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="hugo, vitae, theme, static">
-<meta name="description" content="Unfinished">
+<meta name="description" content="Needs Editing">
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="sha384-HELAAZU8xvHgfT/8z4Mhmu+E2z3oBrMEuywaMh/CEd5uTZIDSct7TEaX+S43+dOi" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="sha384-0QrOZ8WIARJUoT5pH7Iuzi7iq0mXUXLF9yj5ZvYxTkMRv1zcaPQiOQ9ksHYbKw7M" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
 </script>
 
 
 
 
 <meta property="og:title" content="Nash Equilibrium" />
-<meta property="og:description" content="Unfinished" />
+<meta property="og:description" content="Needs Editing" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://wtsia.github.io/rover/posts/nash-equilibrium/" /><meta property="article:section" content="posts" />
 
@@ -30,18 +39,18 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nash Equilibrium"/>
-<meta name="twitter:description" content="Unfinished"/>
+<meta name="twitter:description" content="Needs Editing"/>
 
 <meta itemprop="name" content="Nash Equilibrium">
-<meta itemprop="description" content="Unfinished">
+<meta itemprop="description" content="Needs Editing">
 
-<meta itemprop="wordCount" content="625">
+<meta itemprop="wordCount" content="598">
 <meta itemprop="keywords" content="" />
 </head>
 <body>
 <header>
 <div id="avatar">
-<a href="https://wtsia.github.io/rover/"><img src="/rover/about.jpg" alt="Rover"></a>
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
 </div>
 <div id="titletext">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
@@ -77,12 +86,9 @@ document.addEventListener("DOMContentLoaded", function() { renderMathInElement(d
 </div>
 </div>
 <div class="markdown">
-<h1 id="nash-equilibrium">Nash Equilibrium</h1>
-<p>$$ \sqrt{3x-1}+(1+x)^2 $$</p>
-<p>$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$</p>
-<p>Formally, let \displaystyle S_{i}}S_{i} be the set of all possible strategies for player {\displaystyle i}i, where {\displaystyle i=1,\ldots ,N}{\displaystyle i=1,\ldots ,N}. Let {\displaystyle s^{<em>}=(s_{i}^{</em>},s_{-i}^{<em>})}{\displaystyle s^{</em>}=(s_{i}^{<em>},s_{-i}^{</em>})} be a strategy profile, a set consisting of one strategy for each player, where {\displaystyle s_{-i}^{<em>}}{\displaystyle s_{-i}^{</em>}} denotes the {\displaystyle N-1}N-1 strategies of all the players except {\displaystyle i}i. Let {\displaystyle u_{i}(s_{i},s_{-i}^{<em>})}{\displaystyle u_{i}(s_{i},s_{-i}^{</em>})} be player i&rsquo;s payoff as a function of the strategies. The strategy profile {\displaystyle s^{<em>}}s^{</em>} is a Nash equilibrium if</p>
-<p>{\displaystyle u_{i}(s_{i}^{<em>},s_{-i}^{</em>})\geq u_{i}(s_{i},s_{-i}^{<em>});;{\rm {for;all}};;s_{i}\in S_{i}}{\displaystyle u_{i}(s_{i}^{</em>},s_{-i}^{<em>})\geq u_{i}(s_{i},s_{-i}^{</em>});;{\rm {for;all}};;s_{i}\in S_{i}}
-A game can have more than one Nash equilibrium. Even if the equilibrium is unique, it might be weak: a player might be indifferent among several strategies given the other players&rsquo; choices. It is unique and called a strict Nash equilibrium if the inequality is strict so one strategy is the unique best response:</p>
+<p>Formally, let $S_{i}$ be the set of all possible strategies for player $i$, where $i = 1, &hellip; , N.$ Let $s^<em>=(s_{i}^{</em>},s_{-i}^{<em>})$ be a strategy profile, a set consisting of one strategy for each player, where $s_{-i}^{</em>}$ denotes the $N-1$ strategies of all the players except $i$. Let $u_{i}(s_{i},s_{-i}^{<em>})$ be player $i$&rsquo;s payoff as a function of the strategies. The strategy profile $s^{</em>}$is a Nash equilibrium if,</p>
+<p>$u_{i}(s_{i}^{<em>},s_{-i}^{</em>}) \geq u_{i}(s_{i},s_{-i}^{*});;{\rm {for;all}};;s_{i}\in S_{i}$</p>
+<p>A game can have more than one Nash equilibrium. Even if the equilibrium is unique, it might be weak: a player might be indifferent among several strategies given the other players&rsquo; choices. It is unique and called a strict Nash equilibrium if the inequality is strict so one strategy is the unique best response:</p>
 <p>{\displaystyle u_{i}(s_{i}^{<em>},s_{-i}^{</em>})&gt;u_{i}(s_{i},s_{-i}^{<em>});;{\rm {for;all}};;s_{i}\in S_{i},s_{i}\neq s_{i}^{</em>}}{\displaystyle u_{i}(s_{i}^{<em>},s_{-i}^{</em>})&gt;u_{i}(s_{i},s_{-i}^{<em>});;{\rm {for;all}};;s_{i}\in S_{i},s_{i}\neq s_{i}^{</em>}}
 Note that the strategy set {\displaystyle S_{i}}S_{i} can be different for different players, and its elements can be a variety of mathematical objects. Most simply, a player might choose between two strategies, e.g. {\displaystyle S_{i}={{\text{Yes}},{\text{No}}}.}{\displaystyle S_{i}={{\text{Yes}},{\text{No}}}.} Or, the strategy set might be a finite set of conditional strategies responding to other players, e.g. {\displaystyle S_{i}={{\text{Yes}}|p={\text{Low}},{\text{No}}|p={\text{High}}}.}{\displaystyle S_{i}={{\text{Yes}}|p={\text{Low}},{\text{No}}|p={\text{High}}}.} Or, it might be an infinite set, a continuum or unbounded, e.g. {\displaystyle S_{i}={{\text{Price}}}}{\displaystyle S_{i}={{\text{Price}}}} such that {\displaystyle {\text{Price}}}{\displaystyle {\text{Price}}} is a non-negative real number. Nash&rsquo;s existence proofs assume a finite strategy set, but the concept of Nash equilibrium does not require it.</p>
 <p>The Nash equilibrium may sometimes appear non-rational in a third-person perspective. This is because a Nash equilibrium is not necessarily Pareto optimal.</p>

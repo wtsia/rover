@@ -7,10 +7,28 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Sat, 07 May 2022 12:59:32 -0700</lastBuildDate>
+		<lastBuildDate>Tue, 10 May 2022 01:26:45 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
 		<item>
-			<title>Medical Research</title>
+			<title>LearningMath</title>
+			<link>https://wtsia.github.io/rover/posts/learningmath/</link>
+			<pubDate>Tue, 10 May 2022 01:26:45 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/learningmath/</guid>
+			<description>
+			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+			</description>
+		</item>
+		<item>
+			<title>Trigonometry</title>
+			<link>https://wtsia.github.io/rover/posts/trigonometry/</link>
+			<pubDate>Tue, 10 May 2022 01:18:00 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/trigonometry/</guid>
+			<description>
+			Reviewing Trigonometry Concepts
+			</description>
+		</item>
+		<item>
+			<title>Medical Research: Methods</title>
 			<link>https://wtsia.github.io/rover/posts/medicalresearch/</link>
 			<pubDate>Sat, 07 May 2022 12:59:32 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/posts/medicalresearch/</guid>
@@ -78,7 +96,7 @@
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
 			<guid>https://wtsia.github.io/rover/posts/nash-equilibrium/</guid>
 			<description>
-			Unfinished
+			Needs Editing
 			</description>
 		</item>
 		<item>
