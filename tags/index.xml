@@ -7,8 +7,35 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 10 May 2022 01:26:45 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 15 May 2022 19:45:01 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Project Management</title>
+			<link>https://wtsia.github.io/rover/tags/project-management/</link>
+			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/project-management/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Software Development</title>
+			<link>https://wtsia.github.io/rover/tags/software-development/</link>
+			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/software-development/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Python</title>
+			<link>https://wtsia.github.io/rover/tags/python/</link>
+			<pubDate>Sat, 14 May 2022 04:35:39 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/python/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>Studying</title>
 			<link>https://wtsia.github.io/rover/tags/studying/</link>

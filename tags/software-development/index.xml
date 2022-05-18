@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Software Development on Rover</title>
+		<link>https://wtsia.github.io/rover/tags/software-development/</link>
+		<description>Recent content in Software Development on wtsia.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
+		<lastBuildDate>Sun, 15 May 2022 19:45:01 -0700</lastBuildDate>
+		<atom:link href="https://wtsia.github.io/rover/tags/software-development/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Mythical Man-Month</title>
+			<link>https://wtsia.github.io/rover/posts/mythicalmanmonth/</link>
+			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/mythicalmanmonth/</guid>
+			<description>
+			notes on a book by Fredrick P. Brooks
+			</description>
+		</item>
+	</channel>
+</rss>

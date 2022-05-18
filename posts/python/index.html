@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="Python">
+<meta name="description" content="General Notes on Python Usage">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Python" />
+<meta property="og:description" content="General Notes on Python Usage" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/python/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-14T04:35:39-07:00" />
+<meta property="article:modified_time" content="2022-05-14T04:35:39-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python"/>
+<meta name="twitter:description" content="General Notes on Python Usage"/>
+
+<meta itemprop="name" content="Python">
+<meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
+<meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
+<meta itemprop="wordCount" content="846">
+<meta itemprop="keywords" content="Python," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="meta">
+</div>
+<div class="matter">
+<h1 class="title">Python</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h1 id="python">Python</h1>
+<h2 id="basics">Basics</h2>
+<p><code>#</code> is used for comments to the right</p>
+<p>Numbers: categorized as integers or floats</p>
+<p>Strings: a sequence of characters, can specify using single quotes</p>
+<ul>
+<li><code>'this is a quote'</code></li>
+<li>Multi-line: <code>&quot;&quot;&quot;</code> or <code>'''</code></li>
+<li>are immutable</li>
+<li>C++ users: there is not separate <code>char</code> data type in Python.</li>
+</ul>
+<h3 id="format-method-format">Format Method: <code>format()</code></h3>
+<ul>
+<li>construct strings from information</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>age = 20
+</span></span><span style="display:flex;"><span>name = &#39;Swaroop&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;{0} was {1} years old when he wrote this book&#39;.format(name, age))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># output:
+</span></span><span style="display:flex;"><span>Swaroop was 20 years old when he wrote this book
+</span></span></code></pre></div><p>interpretation: string concatenation can be used to achieve the same goal. However, when the format method is called, the specifications are substituted into the string.</p>
+<ul>
+<li><code>print</code> always ends with an invisible &ldquo;new line&rdquo; character <code>\n</code> so that repeated <code>print</code> calls will separate on each line.</li>
+</ul>
+<h3 id="escape-sequences">Escape Sequences</h3>
+<p>What if you want to use a character that python interprets, like single quotes? This can be done by specifying single quote as <code>\'</code>, i.e. <code>'What\'s your name?'</code></p>
+<ul>
+<li><code>\\</code>: escape sequence for a backslash</li>
+<li><code>\t</code>: tab</li>
+<li><code>\n:</code> start of a new line</li>
+<li>in a string, backslash <code>\</code> at the end of the line indicates the string is continued in the next line, but output does not have a newline added.</li>
+</ul>
+<h4 id="raw-string">Raw String</h4>
+<ul>
+<li>
+<p>for specifying strings where no special processing like escape sequences are handled, using <code>r</code> or <code>R</code> to specify a raw string</p>
+<ul>
+<li><code>r&quot;Newlines are indicated by \n&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="variable">Variable</h3>
+<ul>
+<li>Variables are part of the computer&rsquo;s memory where you store some information. You will need some method of accessing these variables, and hence names.</li>
+</ul>
+<h3 id="naming">Naming</h3>
+<ul>
+<li>first character must be a letter (uppercase, lowercase, or unicode) or an underscore <code>_</code></li>
+<li>rest must consist of letters underscores or digits</li>
+<li>case-sensitive</li>
+</ul>
+<h3 id="logical-and-physical-line">Logical and Physical Line</h3>
+<ul>
+<li>Physical Line: What you see</li>
+<li>Logical Line: What Python sees</li>
+<li>Recommendation: stick to writing a maximum of a single logical line on each single physical line.
+<ul>
+<li>there should never be a need to use a semicolon!</li>
+</ul>
+</li>
+<li>explicit line joining: if you have a long line of code, break it into multiple physical lines using the backslash.</li>
+<li>implicit line joining: starting a logical line with a parentheses, square brackets, or curly braces, but not ending in one.</li>
+</ul>
+<h3 id="indentation">Indentation</h3>
+<ul>
+<li>Indentation: Whitespace at the beginning of the line</li>
+</ul>
+<h2 id="operators-and-expressions">Operators and Expressions</h2>
+<ul>
+<li>Only non-intuitive uses will be listed
+<ul>
+<li><code>**</code>: exponent</li>
+<li><code>//</code>: divide and floor</li>
+<li><code>%</code>: modulo</li>
+<li><code>&lt;&lt;, &gt;&gt;</code>: left, right shift, shifts the bits of the numbers to the left/right of specified object.
+<ul>
+<li><code>2 &lt;&lt; 2</code> gives <code>8</code>. 2 is represented by 10 in bits. left shifting by 2 bits gives 1000 which represents the decimal <code>8</code>.</li>
+<li><code>11 &gt;&gt; 1</code> gives <code>5</code>. 11 is represented by 1011 and one right shift gives 101, which is the decimal 5.</li>
+</ul>
+</li>
+<li><code>&amp;</code>: bit-wise AND
+<ul>
+<li>if both bits are 1, the result is 1, otherwise 0</li>
+<li><code>4 &amp; 3 == 0101 &amp; 0011 == 0001 == 1</code></li>
+</ul>
+</li>
+<li><code>|</code>: bit-wise OR
+<ul>
+<li>if both bits are 0, the result is 0, otherwise 1.
+<ul>
+<li><code>5 | 3 == 0101 | 0011 == 0111 == 7</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>^</code>: bit-wise XOR
+<ul>
+<li>if bits are the same, result is 0. Otherwise 1.
+<ul>
+<li><code>5 ^ 3 == 0101 ^ 0011 == 0110 == 6</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>~</code>: bit-wise invert
+<ul>
+<li>bit-wise inversion of x is -(x+1)</li>
+</ul>
+</li>
+<li>inequalities (&lt;, &gt;, &lt;=, !=, etc)
+<ul>
+<li>returns True or False</li>
+</ul>
+</li>
+<li><code>not</code>: boolean NOT</li>
+</ul>
+</li>
+</ul>
+<h3 id="shortcut-for-math-operation-and-assignment">Shortcut for math operation and assignment</h3>
+<p><code>a = a*3 == a *= 3</code></p>
+<h3 id="evaluation-order">Evaluation Order</h3>
+<ul>
+<li>PEMDAS, Left-Right</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<ul>
+<li>names given to functions are parameters, while values supplied to a function are called arguments</li>
+</ul>
+<h3 id="local-variables">Local Variables</h3>
+<ul>
+<li>When declaring variables inside a function definition, they only relate to its respective scope. All variables have the scope of the block starting from the point of definition of the name.</li>
+<li><code>global</code>: tells Python that the variable is not local, but global.</li>
+<li><code>def say(variable=#)</code>: you can assign a default value for a variable. (should be constant)</li>
+</ul>
+<h3 id="keyword-arguments">Keyword Arguments</h3>
+<p>Applying keyword arguments, where the use of the name instead of the position specifies the argument to the function.</p>
+<ul>
+<li><code>*varArgs</code> parameters: *=tuples, **=dictionary used if you want to define a function that can take any number of arguments.</li>
+<li><code>return</code>: used to break out</li>
+</ul>
+<h3 id="docstrings">DocStrings</h3>
+<p>documentation strings helps document the program better and more understandable.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#39;&#39;&#39;Description of program.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Conditional information for user.&#39;&#39;&#39;
+</span></span></code></pre></div><ul>
+<li>Note: DocStrings apply to modules and classes.</li>
+<li><em>Convention</em>: multi-line string where first line starts with a capital letter and ends with a dot. Then a second line is blank followed by any detailed explanation starting from the third line. (important for non-trivial functions!)</li>
+</ul>
+<h3 id="modules">Modules</h3>
+<h2 id="data-structures">Data Structures</h2>
+<h3 id="data-types">Data Types</h3>
+<ul>
+<li>Python is heavily Object-oriented, in that everything is an object including numbers, strings, and functions</li>
+<li>List: holds an ordered collection of items
+<ul>
+<li>can store sequential items in a list
+<code>['put stuff in this']</code></li>
+<li>mutability: able to be manipulated</li>
+</ul>
+</li>
+</ul>
+<h3 id="quick-and-dirty-objects-and-classes">Quick and Dirty: Objects and Classes</h3>
+<ul>
+<li>list is an example of using objects and classes</li>
+<li><code>i = 5</code>
+<ul>
+<li>an object is created, <code>i</code> of class <code>int</code>. Use <code>help(int)</code> for a detailed explanation.</li>
+</ul>
+</li>
+<li>class: can have methods</li>
+<li>functionality is usable when applied to an object of &lsquo;subject&rsquo; class
+<ul>
+<li>i.e. <code>append</code> method for <code>list</code> class
+<ul>
+<li><code>mylist.append('an item')</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>fields: variables defined for use with respect to that class</li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-science/">computer-science</a>
+<a href="/rover/categories/languages/">languages</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/python/">python</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

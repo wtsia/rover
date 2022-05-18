@@ -7,8 +7,35 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 10 May 2022 01:26:45 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 15 May 2022 19:45:01 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Computer Science</title>
+			<link>https://wtsia.github.io/rover/categories/computer-science/</link>
+			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/computer-science/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Software Engineering</title>
+			<link>https://wtsia.github.io/rover/categories/software-engineering/</link>
+			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/software-engineering/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Languages</title>
+			<link>https://wtsia.github.io/rover/categories/languages/</link>
+			<pubDate>Sat, 14 May 2022 04:35:39 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/languages/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>Math</title>
 			<link>https://wtsia.github.io/rover/categories/math/</link>
@@ -41,15 +68,6 @@
 			<link>https://wtsia.github.io/rover/categories/themes/</link>
 			<pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/themes/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Computer Science</title>
-			<link>https://wtsia.github.io/rover/categories/computer-science/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/computer-science/</guid>
 			<description>
 			
 			</description>
