@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Python">
 <meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
 <meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
-<meta itemprop="wordCount" content="846">
+<meta itemprop="wordCount" content="943">
 <meta itemprop="keywords" content="Python," />
 </head>
 <body>
@@ -248,18 +248,49 @@ src="/rover/">
 <li><em>Convention</em>: multi-line string where first line starts with a capital letter and ends with a dot. Then a second line is blank followed by any detailed explanation starting from the third line. (important for non-trivial functions!)</li>
 </ul>
 <h3 id="modules">Modules</h3>
-<h2 id="data-structures">Data Structures</h2>
-<h3 id="data-types">Data Types</h3>
 <ul>
-<li>Python is heavily Object-oriented, in that everything is an object including numbers, strings, and functions</li>
-<li>List: holds an ordered collection of items
+<li>Methods of using modules</li>
+</ul>
+<ol>
+<li>create a file with a <code>.py</code> extension containing functions and variables</li>
+<li>white modules in a native language the Python interpreter is written, like the C programming language, and when compiled, can be used from your Python code.</li>
+</ol>
 <ul>
-<li>can store sequential items in a list
-<code>['put stuff in this']</code></li>
-<li>mutability: able to be manipulated</li>
+<li><code>import sys</code> imports module <code>sys</code>.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;The command line arguments are:&#39;)
+</span></span><span style="display:flex;"><span>for i in sys.argv:
+</span></span><span style="display:flex;"><span>    print(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;\n\nThe PYTHONPATH is&#39;, sys.path, &#39;\n&#39;)
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ python module_using_sys.py we are arguments    # each arg is separated by white space
+</span></span><span style="display:flex;"><span>The command line arguments are:
+</span></span><span style="display:flex;"><span>module_using_sys.py
+</span></span><span style="display:flex;"><span>we
+</span></span><span style="display:flex;"><span>are
+</span></span><span style="display:flex;"><span>arguments
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The PYTHONPATH is [&#39;/tmp/py&#39;,
+</span></span><span style="display:flex;"><span># many entries here, not shown here
+</span></span><span style="display:flex;"><span>&#39;/Library/Python/2.7/site-packages&#39;,
+</span></span><span style="display:flex;"><span>&#39;/usr/local/lib/python2.7/site-packages&#39;]
+</span></span></code></pre></div><ul>
+<li>Methods of using modules</li>
+</ul>
+<ol>
+<li>create a file with a <code>.py</code> extension containing functions and variables</li>
+<li>white modules in a native lang - can store sequential items in a list
+<code>['put stuff in this']</code>
+<ul>
+<li>mutability: able to be manipulated
+-test</li>
 </ul>
 </li>
-</ul>
+</ol>
 <h3 id="quick-and-dirty-objects-and-classes">Quick and Dirty: Objects and Classes</h3>
 <ul>
 <li>list is an example of using objects and classes</li>
