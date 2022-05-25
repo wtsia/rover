@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Python">
 <meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
 <meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
-<meta itemprop="wordCount" content="943">
+<meta itemprop="wordCount" content="1369">
 <meta itemprop="keywords" content="Python," />
 </head>
 <body>
@@ -96,7 +96,6 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
-<h1 id="python">Python</h1>
 <h2 id="basics">Basics</h2>
 <p><code>#</code> is used for comments to the right</p>
 <p>Numbers: categorized as integers or floats</p>
@@ -225,6 +224,7 @@ src="/rover/">
 <h2 id="functions">Functions</h2>
 <ul>
 <li>names given to functions are parameters, while values supplied to a function are called arguments</li>
+<li><code>len()</code>: gives length of list</li>
 </ul>
 <h3 id="local-variables">Local Variables</h3>
 <ul>
@@ -279,27 +279,51 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>&#39;/Library/Python/2.7/site-packages&#39;,
 </span></span><span style="display:flex;"><span>&#39;/usr/local/lib/python2.7/site-packages&#39;]
 </span></span></code></pre></div><ul>
+<li>searches for the imported module within Python then in <code>sys.path</code> directories</li>
+<li>program iterates through statements then makes them available for use</li>
+<li>name of running script is always the first elemnt in <code>sys.argv</code> list</li>
+<li><code>sys.path</code> has the first string empty, meaning the current directory is part of the <code>sys.path == PYTHONPATH</code> environment variable.</li>
+<li>when using an IDE, look for a way to specify command line arguments to the program in the menus</li>
+</ul>
+<h4 id="module-anatomy">Module anatomy</h4>
+<ul>
+<li>modules have names, and statements can find out the name of their module
+<ul>
+<li>good for figuring out whether the module is standalone or imported</li>
+</ul>
+</li>
+<li>importing a module, code gets executed</li>
 <li>Methods of using modules</li>
 </ul>
 <ol>
-<li>create a file with a <code>.py</code> extension containing functions and variables</li>
+<li>create a file with a <code>.py</code> extension containing functions and variables
+<ul>
+<li>importing modules can use byte-compiled files <code>.pyc</code></li>
+</ul>
+</li>
 <li>white modules in a native lang - can store sequential items in a list
 <code>['put stuff in this']</code>
 <ul>
-<li>mutability: able to be manipulated
--test</li>
+<li>mutability: able to be manipulated</li>
 </ul>
 </li>
 </ol>
+<h5 id="warning-remember-that-you-should-avoid-using-import-star-ie-from-mymodule-import-">WARNING: Remember that you should avoid using import-star, i.e. from mymodule import *.</h5>
+<h5 id="functions-1">Functions:</h5>
+<ul>
+<li><code>dir()</code>: returns the list of names defined by an object, and for modules, lists functions, classes, and variables</li>
+</ul>
+<h5 id="summary">Summary:</h5>
+<p>Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.</p>
 <h3 id="quick-and-dirty-objects-and-classes">Quick and Dirty: Objects and Classes</h3>
 <ul>
-<li>list is an example of using objects and classes</li>
+<li><code>list</code> is an example of using objects and classes</li>
 <li><code>i = 5</code>
 <ul>
 <li>an object is created, <code>i</code> of class <code>int</code>. Use <code>help(int)</code> for a detailed explanation.</li>
 </ul>
 </li>
-<li>class: can have methods</li>
+<li><strong>Class</strong>: can have methods</li>
 <li>functionality is usable when applied to an object of &lsquo;subject&rsquo; class
 <ul>
 <li>i.e. <code>append</code> method for <code>list</code> class
@@ -309,7 +333,47 @@ src="/rover/">
 </li>
 </ul>
 </li>
-<li>fields: variables defined for use with respect to that class</li>
+<li><strong>Fields</strong>: variables defined for use with respect to that class</li>
+<li><code>sort()</code>: sorts said list. Immutable vs mutable: returns unmodified list vs returning modified</li>
+<li><code>del list[0]</code>: deletes some object, in this case <code>list[0]</code></li>
+<li><strong>Tuple</strong>: holds together multiple objects. Lists without extensive functionality. Like strings they are immutable.
+<ul>
+<li>use-case: when the objects the Tuple is dealing with will not change</li>
+<li>defined by specifying items by commas within an optional pair of parenthesis i.e.:
+<ul>
+<li><code>zoo = ('python', 'elephant', 'penguin')</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dictionary</strong>: An address book that has associated keys (names) and values (details).
+<ul>
+<li>keys must be unique and immutable (like strings)</li>
+<li>values may be immutable or mutable</li>
+<li>key-value pairs are stored with colons separating keys to values, and commas to each pair, all in curly brackets:
+<ul>
+<li><code>d = {key1 : value1, key2 : value2 }</code></li>
+<li>key-value pairs in dictionaries are not ordered, therefore sorting is required when necessary before using</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Sequence</strong>: List, Strings, and Tuples are sequences&ndash;what is this? They are characterized by two things:
+<ol>
+<li>membership tests and</li>
+<li>indexing operations</li>
+</ol>
+<ul>
+<li>Also have <em>slicing</em> operations, or in my own words a range/partition of values in the sequence. (<code>[a:b]</code> or for a full slice, <code>[:]</code>)</li>
+</ul>
+</li>
+<li><strong>Set</strong>: unordered collection of objects. Useful for verifying existence of an object in a collection over occurrences.
+<ul>
+<li>Can test for membership</li>
+</ul>
+</li>
+<li><strong>References</strong>: when an object is created and assigned to a variable, or <em>binding</em> the name to the object, the var only points to the object, or references it.</li>
+<li><strong>Strings</strong> (More): Strings are also objects with methods to strip space as well as checking parts</li>
 </ul>
 
 </div>
