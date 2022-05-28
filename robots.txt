@@ -3,6 +3,7 @@ User-agent: *
 Disallow: /rover/posts/mythicalmanmonth/
 Disallow: /rover/posts/python/
 Disallow: /rover/posts/learningmath/
+Disallow: /rover/posts/studying_methodology/
 Disallow: /rover/posts/trigonometry/
 Disallow: /rover/posts/medicalresearch/
 Disallow: /rover/posts/example-content/

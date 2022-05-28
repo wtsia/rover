@@ -88,8 +88,7 @@ src="/rover/">
 <div class="markdown">
 <h3 id="domain-name-system-dns">Domain Name System (DNS)</h3>
 <ul>
-<li>
-<p>work station sends request to ISP, ISP asks other servers for name system IP, then returns the IP address for the web address name so that the work station can connect to the site.</p>
+<li>work station sends request to ISP, ISP asks other servers for name system IP, then returns the IP address for the web address name so that the work station can connect to the site.
 <ul>
 <li>NS record (name server) - Specifies the DNS server for domain/subdomain</li>
 <li>MX record (mail exchange) - specifies the mail servers for accepting messages</li>
@@ -97,11 +96,8 @@ src="/rover/">
 <li>CNAME (canonical) - Points a name to another name or CNAME or to an A record.</li>
 </ul>
 </li>
-<li>
-<p>CloudFlare and Route53 provide managed DNS services.</p>
-</li>
-<li>
-<p>Methods of routing traffic:</p>
+<li>CloudFlare and Route53 provide managed DNS services.</li>
+<li>Methods of routing traffic:
 <ul>
 <li>
 <p>Weighted Round Robin</p>
@@ -115,18 +111,14 @@ src="/rover/">
 <li>
 <p>Latency-based</p>
 <ul>
-<li>
-<p>serving based on region that provides the lowest latency</p>
-</li>
-<li>
-<p>steps to use:</p>
+<li>serving based on region that provides the lowest latency</li>
+<li>steps to use:
 <ul>
 <li>create latency records for resources in multiple regions</li>
 <li>when Route 53 receives a DNS query for your domain/subdomain, then selects a latency record for that region. A response is given in the form of a value from the selected record i.e. IP address or a web server</li>
 </ul>
 </li>
-<li>
-<p>example:</p>
+<li>example:
 <ul>
 <li>Suppose ELB load balancers in US West (Oregon) Region and in the Asia Pacific Region (Singapore). Example of when London enters name of your domain in the browser:
 <ul>
@@ -137,58 +129,43 @@ src="/rover/">
 </li>
 </ul>
 </li>
-<li>
-<p>Latency between hosts can change bc of connectivity and routing, and routing is based on latency measuerements performed over a period of time.</p>
-</li>
-<li>
-<p>AWS Latency Routing: <figure>
+<li>Latency between hosts can change bc of connectivity and routing, and routing is based on latency measuerements performed over a period of time.</li>
+<li>AWS Latency Routing: <figure>
   <img src="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency" alt="link"  />
-</figure></p>
-</li>
-<li>
-<p>Summary: Record of connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.</p>
+</figure></li>
+</ul>
 </li>
 </ul>
 </li>
-<li>
-<p>Geolocation-based:</p>
+</ul>
+<blockquote>
+<p>Summary: Record of connection from X (user) to multiple Y databases are stored, and queries from X will have the load balancer will iterate through this record and respond with lowest latency Y database is relative to X.</p>
+</blockquote>
 <ul>
-<li>
-<p>responds with location that DNS queries originate from.</p>
-</li>
-<li>
-<p>allows localizing content and present some/all language of users.</p>
-</li>
-<li>
-<p>also allows for content restriction</p>
-</li>
-<li>
-<p>can route users consistently to same end-point</p>
-</li>
-<li>
-<p>priority goes to the smallest geographic regions</p>
-</li>
-<li>
-<p>usage:</p>
+<li>Geolocation-based:
+<ul>
+<li>responds with location that DNS queries originate from.</li>
+<li>allows localizing content and present some/all language of users.</li>
+<li>also allows for content restriction</li>
+<li>can route users consistently to same end-point</li>
+<li>priority goes to the smallest geographic regions</li>
+<li>usage:
 <ul>
 <li>maps IP to locations</li>
 <li>some not mapped, so Amazon R53 will recieve DNS queries from unidentified, and thus can create default record from IP not mapped to any location and queries from locations no geolocation records exist for. No default means R53 returns &ldquo;no answer&rdquo;.</li>
 </ul>
 </li>
-<li>
-<p><figure>
+<li><figure>
   <img src="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo" alt="link"  />
-</figure></p>
+</figure></li>
+</ul>
 </li>
-<li>
+</ul>
+<blockquote>
 <p>Summary: A record of locations (and default) are made to which DNS queries will be sent to nearest mapped geographies</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Disadvantages of DNS</p>
+</blockquote>
+<ul>
+<li>Disadvantages of DNS
 <ul>
 <li>Accessing introduces slight delay but mitigated by caching</li>
 <li>Can be complex and is generally managed by governments, ISPs, and large companies.</li>
