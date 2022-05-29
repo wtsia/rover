@@ -15,7 +15,16 @@
 			<pubDate>Sun, 29 May 2022 02:18:43 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/posts/macroeconomics/</guid>
 			<description>
-			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+			Macroeconomics Notes
+			</description>
+		</item>
+		<item>
+			<title>Studying Methodology</title>
+			<link>https://wtsia.github.io/rover/posts/studying_methodology/</link>
+			<pubDate>Sat, 28 May 2022 01:26:45 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/studying_methodology/</guid>
+			<description>
+			Strategies on applying encode learning
 			</description>
 		</item>
 		<item>
@@ -43,15 +52,6 @@
 			<guid>https://wtsia.github.io/rover/posts/learningmath/</guid>
 			<description>
 			Post detailing how to learn math!
-			</description>
-		</item>
-		<item>
-			<title>Learning Math</title>
-			<link>https://wtsia.github.io/rover/posts/studying_methodology/</link>
-			<pubDate>Tue, 10 May 2022 01:26:45 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/studying_methodology/</guid>
-			<description>
-			Post detailing how to learn!
 			</description>
 		</item>
 		<item>
