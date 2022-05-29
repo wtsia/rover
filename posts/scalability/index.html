@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Scalability">
 <meta itemprop="description" content="Topics covering scalability of systems">
 
-<meta itemprop="wordCount" content="2371">
+<meta itemprop="wordCount" content="2365">
 <meta itemprop="keywords" content="Scalability," />
 </head>
 <body>
@@ -237,14 +237,23 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<p>Caching:
-- .html, MySQL, Query Cache
-- Craigslist, throws back an .html page
-- advantage: if storing .html, dont have to regenerate it everytime. 
-- disadvantage: changing aesthetics of the page is now non-trivial, requiring changes among 10s of thousands of files, so a massive find and replace/regeneration of those pages
-- redundancies exist, every page has the same tag
-- better performance over disk space</p>
+<h5 id="caching">Caching:</h5>
 <ul>
+<li>
+<p>.html, MySQL, Query Cache</p>
+</li>
+<li>
+<p>Craigslist, throws back an .html page</p>
+<ul>
+<li>advantage: if storing .html, dont have to regenerate it everytime.</li>
+<li>disadvantage: changing aesthetics of the page is now non-trivial, requiring changes among 10s of thousands of files, so a massive find and replace/regeneration of those pages
+<ul>
+<li>redundancies exist, every page has the same tag</li>
+<li>better performance over disk space</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>
 <p>MySQL Query Cache</p>
 </li>
@@ -288,7 +297,7 @@ src="/rover/">
 <li>want property of sticky sessions</li>
 <li>to ensure saving the session, have the LB insert a cookie that allows it to remember the user is in server 1</li>
 <li>stick db on web server itself</li>
-<li>persistent actions arent saved in other servers unless LB sends the user to the same server</li>
+<li>persistent actions aren&rsquo;t saved in other servers unless LB sends the user to the same server</li>
 <li>in this example, LB needs to be done in code</li>
 <li>would be done with switches, so have 2 switches</li>
 <li>power goes out?</li>
@@ -309,14 +318,16 @@ src="/rover/">
 <li>LB &ndash;&gt; web server, TCP 80</li>
 <li>LB &ndash;&gt; DB, TCP 3306
 <ul>
-<li>why separate encryptions? You should have <strong>principle of least privledge</strong>, so people cannot query db directly.</li>
+<li>why separate encryptions? You should have <strong>principle of least privilege</strong>, so people cannot query db directly.</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h4 id="summary">Summary:</h4>
-<p>As soon as you have too many users, new problems arise</p>
+<blockquote>
+<p>Summary: 
+As soon as you have too many users, new problems arise</p>
+</blockquote>
 <h1 id="scalability-for-dummies-notes">Scalability for Dummies: Notes</h1>
 <h2 id="clones">Clones</h2>
 <p><em>Golden Rule of Scalability</em>: every server contains exactly the same codebase and does not store any user-related data, like sessions or  profile pictures, on local disc or memory</p>
@@ -331,8 +342,10 @@ src="/rover/">
 <p>When codebases are uniform, you can create an image (Amazon Machine Image for AWS) as a &lsquo;super clone&rsquo; from which to draw from</p>
 </li>
 </ul>
-<h4 id="summary-1">Summary:</h4>
-<p>updating the codebase uniformly requires access to a central db or persistent cache, using a tool like Capistrano, then forming a &lsquo;super clone&rsquo; to propogate further.</p>
+<blockquote>
+<p>Summary: 
+updating the codebase uniformly requires access to a central db or persistent cache, using a tool like Capistrano, then forming a &lsquo;super clone&rsquo; to propogate further.</p>
+</blockquote>
 <h2 id="database">Database</h2>
 <ul>
 <li>Even with horizontal scaling, MySQL leads to slower performance and eventual breakdown.</li>
@@ -343,8 +356,10 @@ src="/rover/">
 <p>DBA will use terms like &lsquo;sharding&rsquo;, &lsquo;denormalization&rsquo;, and &lsquo;SQL tuning&rsquo;.</p>
 <h4 id="path-2">Path 2:</h4>
 <p>denormalize from the beginning and include no Joins in any db query. Use MySQL as NoSQL if staying, or switch to an easier NoSQL i.e. MongoDB, CouchDB. Joins in app code (sooner the better). Even so, db requests will again be slower and slower and need a cache.</p>
-<h4 id="summary-of-2-paths">Summary of 2 paths:</h4>
-<p>(1) Use MySQL and apply master-slave replication and expanding RAM on the master server, and (2) remove joins in db query and convert the MySQL to a NoSQL in usage or migrate to MongoDB, CouchDB and place joins in app code.</p>
+<blockquote>
+<p>Summary of 2 paths: 
+(1) Use MySQL and apply master-slave replication and expanding RAM on the master server, and (2) remove joins in db query and convert the MySQL to a NoSQL in usage or migrate to MongoDB, CouchDB and place joins in app code.</p>
+</blockquote>
 <h2 id="cache">Cache</h2>
 <ul>
 <li>
@@ -357,8 +372,10 @@ src="/rover/">
 <p>1st app should retrieve from cache, only then from the data source, since CACHE is fast and holds every dataset in RAM.</p>
 </li>
 </ul>
-<h4 id="summary-2">Summary:</h4>
-<p>Cacheing is faster, but never do file-based. It is stored as a key-value between app and storage, and any query should first go down the chain from the cache, then and only then to the source.</p>
+<blockquote>
+<p>Summary: 
+Cacheing is faster, but never do file-based. It is stored as a key-value between app and storage, and any query should first go down the chain from the cache, then and only then to the source.</p>
+</blockquote>
 <p>2 data caching patterns:</p>
 <h4 id="cached-dataase-queries">Cached Dataase Queries</h4>
 <ul>
@@ -367,8 +384,10 @@ src="/rover/">
 <li>Hashed ver. of query is cache key</li>
 <li>issues: expiration, it is hard to delete cache if it is a complex query, and changing one table cell would require deleting all cached queries including that table cell</li>
 </ul>
-<h4 id="summary-3">Summary:</h4>
-<p>hashed version of query is stored as cache key for the dataset in the cache, but maye have issues with complex queries or changing a table cell.</p>
+<blockquote>
+<p>Summary: 
+hashed version of query is stored as cache key for the dataset in the cache, but may have issues with complex queries or changing a table cell.</p>
+</blockquote>
 <h4 id="cached-objects">Cached Objects</h4>
 <ul>
 <li>
@@ -408,8 +427,10 @@ src="/rover/">
 Memacached: if only caching, and scales easily</p>
 </li>
 </ul>
-<h4 id="summary-4">Summary:</h4>
-<p>Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynch. Redis is more feature rich in caching.</p>
+<blockquote>
+<p>Summary: 
+Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynchronism. Redis is more feature rich in caching.</p>
+</blockquote>
 <h2 id="asynchronism">Asynchronism</h2>
 <ul>
 <li>Imagine buying bread and being told to wait for 2 hours before it&rsquo;s ready&ndash;asynch avoids this</li>
@@ -424,8 +445,10 @@ Memacached: if only caching, and scales easily</p>
 <li>Pre-computing makes websites and apps performant and scalable</li>
 <li>Imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network!</li>
 </ul>
-<h5 id="summary-5">Summary:</h5>
-<p>Preloading dynamic pages into static HTML allows serving at low request times, and computing tasks done regularly.</p>
+<blockquote>
+<p>Summary: 
+Preloading dynamic pages into static HTML allows serving at low request times, and computing tasks done regularly.</p>
+</blockquote>
 <h4 id="async-2">Async #2</h4>
 <p>What if there is something that can&rsquo;t be pre-loaded, or a query that is custom?</p>
 <ul>
@@ -434,8 +457,10 @@ Memacached: if only caching, and scales easily</p>
 <li>Have a queue of tasks for worksers</li>
 <li>Time consuming? do it asynchronously</li>
 </ul>
-<h4 id="summary-6">Summary:</h4>
-<p>Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list</p>
+<blockquote>
+<p>Summary: 
+Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list</p>
+</blockquote>
 <h1 id="google-io-2009---transactions-across-datacenters">Google I/O 2009 - Transactions Across Datacenters..</h1>
 <h3 id="context">Context</h3>
 <ul>
@@ -614,7 +639,7 @@ Memacached: if only caching, and scales easily</p>
 </li>
 <li>Datastore: current</li>
 </ul>
-<h6 id="mastermaster-replication">Master/Master Replication</h6>
+<h5 id="mastermaster-replication">Master/Master Replication</h5>
 <ul>
 <li>Umbrella term for merging concurrent writes</li>
 <li>Asynchronous, eventual consistency</li>
@@ -628,11 +653,11 @@ Memacached: if only caching, and scales easily</p>
 <li>No global transactions</li>
 <li>Datastore: no strong consistency</li>
 </ul>
-<h6 id="tree-replication">Tree Replication</h6>
+<h5 id="tree-replication">Tree Replication</h5>
 <ul>
 <li>Creates slaves, and one slave/master. Said slave/master creates replicated slaves</li>
 </ul>
-<h6 id="buddy-replication">Buddy Replication</h6>
+<h5 id="buddy-replication">Buddy Replication</h5>
 <ul>
 <li>Replicates to each corresponding node, where a backup is kept of another Node/Data, Node A Data A Backup E &ndash;&gt; Node B Data B Backup A &ndash;&gt; &hellip; &ndash;&gt; Node E Data E Backup D &ndash;&gt; Backup E</li>
 <li>upon failure of one, the backup responsibility and data is pushed to the node following the failed server, and the backup of the failed server is kept in the server following the followed server.</li>

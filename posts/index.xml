@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Sun, 15 May 2022 19:45:01 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 29 May 2022 02:18:43 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Macroeconomics</title>
+			<link>https://wtsia.github.io/rover/posts/macroeconomics/</link>
+			<pubDate>Sun, 29 May 2022 02:18:43 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/macroeconomics/</guid>
+			<description>
+			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+			</description>
+		</item>
 		<item>
 			<title>Mythical Man-Month</title>
 			<link>https://wtsia.github.io/rover/posts/mythicalmanmonth/</link>

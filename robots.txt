@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/macroeconomics/
 Disallow: /rover/posts/mythicalmanmonth/
 Disallow: /rover/posts/python/
 Disallow: /rover/posts/learningmath/
