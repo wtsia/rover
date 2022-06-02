@@ -2,8 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wtsia.github.io/rover/tags/529-form/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
-    <lastmod>2022-05-29T02:18:43-07:00</lastmod>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/education/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/education/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/educationaltaxnotes/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/saving/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/saving/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/taxes/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/taxes/</loc>
+    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/economic-history/</loc>
     <lastmod>2022-05-29T02:18:43-07:00</lastmod>
@@ -15,15 +48,6 @@
     <lastmod>2022-05-29T02:18:43-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/macroeconomics/</loc>
-    <lastmod>2022-05-29T02:18:43-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2022-05-29T02:18:43-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2022-05-29T02:18:43-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
     <lastmod>2022-05-29T02:18:43-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/learning/</loc>
@@ -116,7 +140,7 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/concept/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/databases/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_databases/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</loc>
   </url><url>
@@ -132,7 +156,7 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/nash-equilibrium/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/networks/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_networks/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/overview/</loc>
   </url><url>
@@ -140,13 +164,13 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/scalability/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/scalability/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_scalability/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/tradeoffs/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_tradeoffs/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/security/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/security/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_security/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/series/</loc>
   </url><url>
