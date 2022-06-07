@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Python">
 <meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
 <meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
-<meta itemprop="wordCount" content="1706">
+<meta itemprop="wordCount" content="2559">
 <meta itemprop="keywords" content="Python," />
 </head>
 <body>
@@ -451,7 +451,221 @@ src="/rover/">
 </span></span></code></pre></div><h3 id="the-__init__-method">The <strong>init</strong> method</h3>
 <ul>
 <li>method is used to do any initialization, or passing initial values to your object</li>
-<li></li>
+<li>the <code>__init__</code> method does not need to be explicitly called</li>
+</ul>
+<h3 id="class-and-object-variables">Class and Object Variables</h3>
+<ul>
+<li>data part, or fields, are ordinary variables bound to the namespaces of the classes and objects</li>
+<li>names are valid within context of these classes and objects only</li>
+<li>class variables and object variables
+<ul>
+<li><strong>class variables</strong>: are shared, and can be accessed by instances of the class. Each class variable is unique and changes follow to all instances</li>
+<li><strong>object variables</strong>: subset that is owned by individual object/instances. Are not shared and not related to the field of the same name in a different instance.</li>
+</ul>
+</li>
+</ul>
+<h3 id="inheritance">Inheritance</h3>
+<ul>
+<li>a type and subtype relationship between classes, where a major benefit of OOP is being able to reuse code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class SchoolMember:
+</span></span><span style="display:flex;"><span>    &#39;&#39;&#39;Represents any school member.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>    def __init__(self, name, age):
+</span></span><span style="display:flex;"><span>        self.name = name
+</span></span><span style="display:flex;"><span>        self.age = age
+</span></span><span style="display:flex;"><span>        print(&#39;(Initialized SchoolMember: {})&#39;.format(self.name))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def tell(self):
+</span></span><span style="display:flex;"><span>        &#39;&#39;&#39;Tell my details.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>        print(&#39;Name:&#34;{}&#34; Age:&#34;{}&#34;&#39;.format(self.name, self.age), end=&#34; &#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Teacher(SchoolMember):
+</span></span><span style="display:flex;"><span>    &#39;&#39;&#39;Represents a teacher.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>    def __init__(self, name, age, salary):
+</span></span><span style="display:flex;"><span>        SchoolMember.__init__(self, name, age)
+</span></span><span style="display:flex;"><span>        self.salary = salary
+</span></span><span style="display:flex;"><span>        print(&#39;(Initialized Teacher: {})&#39;.format(self.name))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def tell(self):
+</span></span><span style="display:flex;"><span>        SchoolMember.tell(self)
+</span></span><span style="display:flex;"><span>        print(&#39;Salary: &#34;{:d}&#34;&#39;.format(self.salary))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Student(SchoolMember):
+</span></span><span style="display:flex;"><span>    &#39;&#39;&#39;Represents a student.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>    def __init__(self, name, age, marks):
+</span></span><span style="display:flex;"><span>        SchoolMember.__init__(self, name, age)
+</span></span><span style="display:flex;"><span>        self.marks = marks
+</span></span><span style="display:flex;"><span>        print(&#39;(Initialized Student: {})&#39;.format(self.name))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def tell(self):
+</span></span><span style="display:flex;"><span>        SchoolMember.tell(self)
+</span></span><span style="display:flex;"><span>        print(&#39;Marks: &#34;{:d}&#34;&#39;.format(self.marks))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t = Teacher(&#39;Mrs. Shrividya&#39;, 40, 30000)
+</span></span><span style="display:flex;"><span>s = Student(&#39;Swaroop&#39;, 25, 75)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># prints a blank line
+</span></span><span style="display:flex;"><span>print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>members = [t, s]
+</span></span><span style="display:flex;"><span>for member in members:
+</span></span><span style="display:flex;"><span>    # Works for both Teachers and Students
+</span></span><span style="display:flex;"><span>    member.tell()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># $ python oop_subclass.py
+</span></span><span style="display:flex;"><span># (Initialized SchoolMember: Mrs. Shrividya)
+</span></span><span style="display:flex;"><span># (Initialized Teacher: Mrs. Shrividya)
+</span></span><span style="display:flex;"><span># (Initialized SchoolMember: Swaroop)
+</span></span><span style="display:flex;"><span># (Initialized Student: Swaroop)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Name:&#34;Mrs. Shrividya&#34; Age:&#34;40&#34; Salary: &#34;30000&#34;
+</span></span><span style="display:flex;"><span># Name:&#34;Swaroop&#34; Age:&#34;25&#34; Marks: &#34;75&#34;
+</span></span></code></pre></div><blockquote>
+<p>Summary: We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.</p>
+</blockquote>
+<h2 id="input-and-output">Input and Output</h2>
+<ul>
+<li>take input from a user: <code>input()</code> and to print results back <code>print</code></li>
+<li>for output, <code>str</code> methods may be utilized. i.e. <code>rjust</code>, while <code>help(str)</code> can give more details.</li>
+</ul>
+<p>Improved Palindrome:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>def reverse(text):
+</span></span><span style="display:flex;"><span>    return text[::-1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def is_palindrome(text):
+</span></span><span style="display:flex;"><span>    return text == reverse(text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>forbidden = (!, ?, ., &#39;,&#39;, )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>something = input(&#34;Enter text: &#34;)
+</span></span><span style="display:flex;"><span>if is_palindrome(something):
+</span></span><span style="display:flex;"><span>    print(&#34;Yes, it is a palindrome&#34;)
+</span></span><span style="display:flex;"><span>else:
+</span></span><span style="display:flex;"><span>    print(&#34;No, it is not a palindrome&#34;)
+</span></span></code></pre></div><h3 id="files">Files</h3>
+<ul>
+<li><code>open()</code> by default considers files to be a &rsquo;t&rsquo;ext file and opens it in &lsquo;r&rsquo;ead mode</li>
+<li><code>open('file.txt', w)</code> means open a file.txt with write permissions</li>
+</ul>
+<h3 id="pickle">Pickle</h3>
+<ul>
+<li>can be used to store any plain Python object in a file and get it back later, or <em>persistently</em>
+<code>import pickle</code>
+<code>pickle.dump(thing, f)</code> dump object thing to file
+<code>f. close</code> close file</li>
+</ul>
+<h3 id="unicode">Unicode</h3>
+<ul>
+<li>Internet data is sent over using bytes. Translating unicode to bytes is encoding, and a popular one is UTF-8</li>
+</ul>
+<h2 id="exceptions">Exceptions</h2>
+<h3 id="errors">Errors</h3>
+<ul>
+<li>Python raises errors at wherever something is located as well as specific issue</li>
+</ul>
+<h3 id="handling-exceptions">Handling Exceptions</h3>
+<ul>
+<li><code>try..except</code> can be used to handle exceptions</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>try:
+</span></span><span style="display:flex;"><span>    text = input(&#39;Enter something --&gt; &#39;)
+</span></span><span style="display:flex;"><span>except EOFError:
+</span></span><span style="display:flex;"><span>    print(&#39;Why did you do an EOF on me?&#39;)
+</span></span><span style="display:flex;"><span>except KeyboardInterrupt:
+</span></span><span style="display:flex;"><span>    print(&#39;You cancelled the operation.&#39;)
+</span></span><span style="display:flex;"><span>else:
+</span></span><span style="display:flex;"><span>    print(&#39;You entered {}&#39;.format(text))
+</span></span></code></pre></div><h3 id="tryfinally">Try&hellip;Finally</h3>
+<ul>
+<li>Whether or not an exception was raised, using <code>finally</code> will ensure the file object is closed properly</li>
+</ul>
+<h3 id="with-statement">With Statement</h3>
+<ul>
+<li>try and finally block is useful for acquiring and releasing a resource respectively. This can be cleaning done using <code>with</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>with open(&#34;poem.txt&#34;) as f:
+</span></span><span style="display:flex;"><span>    for line in f:
+</span></span><span style="display:flex;"><span>        print(line, end=&#39;&#39;)
+</span></span></code></pre></div><ul>
+<li>with statement. It fetches the object returned by the open statement</li>
+<li>for some &rsquo;thefile&rsquo; object, it always calls the <code>thefile.__enter__</code> and <code>thefile.__exit__</code> before and after respectively</li>
+</ul>
+<blockquote>
+<p>Summary: We have discussed the usage of the try..except and try..finally statements. We have seen how to create our own exception types and how to raise exceptions as well.</p>
+</blockquote>
+<h2 id="more">More</h2>
+<h3 id="passing-tuples-around">Passing Tuples Around</h3>
+<ul>
+<li>Using tuples can allow one to return two different values from a function</li>
+</ul>
+<h3 id="special-methods">Special Methods</h3>
+<ul>
+<li><strong>init</strong>, <strong>del</strong> methods have special significance in classes
+<strong>init</strong>(self, &hellip;)
+<ul>
+<li>This method is called just before the newly created object is returned for usage.</li>
+</ul>
+</li>
+<li><strong>del</strong>(self)
+<ul>
+<li>Called just before the object is destroyed (which has unpredictable timing, so avoid using this)</li>
+</ul>
+</li>
+<li><strong>str</strong>(self)
+<ul>
+<li>Called when we use the print function or when str() is used.</li>
+</ul>
+</li>
+<li><strong>lt</strong>(self, other)
+<ul>
+<li>Called when the less than operator (&lt;) is used. Similarly, there are special methods for all the operators (+, &gt;, etc.)</li>
+</ul>
+</li>
+<li><strong>getitem</strong>(self, key)
+<ul>
+<li>Called when x[key] indexing operation is used.</li>
+</ul>
+</li>
+<li><strong>len</strong>(self)
+<ul>
+<li>Called when the built-in len() function is used for the sequence object.</li>
+</ul>
+</li>
+</ul>
+<h3 id="single-statement-blocks">Single Statement Blocks</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt;&gt;&gt; flag = True
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; if flag: print(&#39;Yes&#39;)
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Yes
+</span></span></code></pre></div><ul>
+<li>Reccomendation: avoid this short-cut method except for erro checking</li>
+</ul>
+<h3 id="lambda-forms">Lambda Forms</h3>
+<ul>
+<li>A lambda statement is used to create new function objects. Essentially, the lambda takes a parameter followed by a single expression</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>points = [{&#39;x&#39;: 2, &#39;y&#39;: 3},
+</span></span><span style="display:flex;"><span>          {&#39;x&#39;: 4, &#39;y&#39;: 1}]
+</span></span><span style="display:flex;"><span>points.sort(key=lambda i: i[&#39;y&#39;])
+</span></span><span style="display:flex;"><span>print(points)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span># $ python more_lambda.py
+</span></span><span style="display:flex;"><span># [{&#39;y&#39;: 1, &#39;x&#39;: 4}, {&#39;y&#39;: 3, &#39;x&#39;: 2}]
+</span></span></code></pre></div><h1 id="standard-library">Standard Library</h1>
+<h2 id="sys-module"><code>sys</code> module</h2>
+<ul>
+<li>contains system-specific functionality</li>
+</ul>
+<h2 id="logging-module"><code>logging</code> module</h2>
+<ul>
+<li>useful for storing debugging or important messages</li>
+<li>The cat command is used in the command line to read the &rsquo;test.log&rsquo; file. If the cat command is not available, you can open the test.log file in a text editor instead.</li>
 </ul>
 
 </div>

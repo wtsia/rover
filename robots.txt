@@ -1,5 +1,7 @@
 User-agent: *
 
+Disallow: /rover/posts/interviewtips/
+Disallow: /rover/posts/cryptography1/
 Disallow: /rover/posts/educationaltaxnotes/
 Disallow: /rover/posts/macroeconomics/
 Disallow: /rover/posts/studying_methodology/
