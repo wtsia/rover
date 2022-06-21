@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Python on Rover</title>
-		<link>https://wtsia.github.io/rover/tags/python/</link>
-		<description>Recent content in Python on wtsia.github.io</description>
+		<title>Interview Prep on Rover</title>
+		<link>https://wtsia.github.io/rover/categories/interview-prep/</link>
+		<description>Recent content in Interview Prep on wtsia.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
 		<lastBuildDate>Wed, 08 Jun 2022 17:41:44 -0700</lastBuildDate>
-		<atom:link href="https://wtsia.github.io/rover/tags/python/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://wtsia.github.io/rover/categories/interview-prep/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Algorithm Questions</title>
 			<link>https://wtsia.github.io/rover/posts/algorithmquestions/</link>
@@ -16,15 +16,6 @@
 			<guid>https://wtsia.github.io/rover/posts/algorithmquestions/</guid>
 			<description>
 			Compiled Algorithm Questions
-			</description>
-		</item>
-		<item>
-			<title>Python</title>
-			<link>https://wtsia.github.io/rover/posts/python/</link>
-			<pubDate>Sat, 14 May 2022 04:35:39 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/python/</guid>
-			<description>
-			General Notes on Python Usage
 			</description>
 		</item>
 	</channel>

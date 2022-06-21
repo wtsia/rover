@@ -1,7 +1,9 @@
 User-agent: *
 
+Disallow: /rover/posts/csterms/
+Disallow: /rover/posts/algorithmquestions/
 Disallow: /rover/posts/interviewtips/
-Disallow: /rover/posts/cryptography1/
+Disallow: /rover/posts/cryptographyi/
 Disallow: /rover/posts/educationaltaxnotes/
 Disallow: /rover/posts/macroeconomics/
 Disallow: /rover/posts/studying_methodology/

@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Sun, 15 May 2022 19:45:01 -0700</lastBuildDate>
+		<lastBuildDate>Wed, 08 Jun 2022 22:40:39 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Computer Science Terms</title>
+			<link>https://wtsia.github.io/rover/posts/csterms/</link>
+			<pubDate>Wed, 08 Jun 2022 22:40:39 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/csterms/</guid>
+			<description>
+			List of terms for computer science
+			</description>
+		</item>
 		<item>
 			<title>Mythical Man-Month</title>
 			<link>https://wtsia.github.io/rover/posts/mythicalmanmonth/</link>

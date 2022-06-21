@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 07 Jun 2022 01:22:05 -0700</lastBuildDate>
+		<lastBuildDate>Wed, 08 Jun 2022 22:40:39 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Computer Science Terms</title>
+			<link>https://wtsia.github.io/rover/posts/csterms/</link>
+			<pubDate>Wed, 08 Jun 2022 22:40:39 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/csterms/</guid>
+			<description>
+			List of terms for computer science
+			</description>
+		</item>
+		<item>
+			<title>Algorithm Questions</title>
+			<link>https://wtsia.github.io/rover/posts/algorithmquestions/</link>
+			<pubDate>Wed, 08 Jun 2022 17:41:44 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/algorithmquestions/</guid>
+			<description>
+			Compiled Algorithm Questions
+			</description>
+		</item>
 		<item>
 			<title>Interview Tips</title>
 			<link>https://wtsia.github.io/rover/posts/interviewtips/</link>
@@ -20,9 +38,9 @@
 		</item>
 		<item>
 			<title>Cryptography1</title>
-			<link>https://wtsia.github.io/rover/posts/cryptography1/</link>
+			<link>https://wtsia.github.io/rover/posts/cryptographyi/</link>
 			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cryptography1/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cryptographyi/</guid>
 			<description>
 			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
 			</description>

@@ -2,8 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wtsia.github.io/rover/tags/algorithms/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
-    <lastmod>2022-06-07T01:22:05-07:00</lastmod>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/computer-science/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/computer-science/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/csterms/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/definitions/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/terms/</loc>
+    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/algorithmquestions/</loc>
+    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/algorithms/</loc>
+    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/interview/</loc>
+    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/interview-prep/</loc>
+    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/programming/</loc>
+    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/python/</loc>
+    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/interviewtips/</loc>
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
@@ -14,22 +59,13 @@
     <loc>https://wtsia.github.io/rover/categories/interviewing/</loc>
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2022-06-07T01:22:05-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/categories/programming/</loc>
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/programming-interview/</loc>
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2022-06-07T01:22:05-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/tags/software-interview/</loc>
-    <lastmod>2022-06-07T01:22:05-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/cat1/</loc>
@@ -38,7 +74,7 @@
     <loc>https://wtsia.github.io/rover/categories/cat2/</loc>
     <lastmod>2022-06-02T14:22:54-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/cryptography1/</loc>
+    <loc>https://wtsia.github.io/rover/posts/cryptographyi/</loc>
     <lastmod>2022-06-02T14:22:54-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/tag1/</loc>
@@ -92,9 +128,6 @@
     <loc>https://wtsia.github.io/rover/posts/studying_methodology/</loc>
     <lastmod>2022-05-28T01:26:45-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/categories/computer-science/</loc>
-    <lastmod>2022-05-15T19:45:01-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/posts/mythicalmanmonth/</loc>
     <lastmod>2022-05-15T19:45:01-07:00</lastmod>
   </url><url>
@@ -108,9 +141,6 @@
     <lastmod>2022-05-15T19:45:01-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/languages/</loc>
-    <lastmod>2022-05-14T04:35:39-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/python/</loc>
     <lastmod>2022-05-14T04:35:39-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/python/</loc>
@@ -168,8 +198,6 @@
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/about/</loc>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/algorithms/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/concept/</loc>
   </url><url>
