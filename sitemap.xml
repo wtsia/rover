@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wtsia.github.io/rover/tags/algorithms/</loc>
-    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/education/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/physics/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/physics/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/physics/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/algorithms/</loc>
     <lastmod>2022-06-08T22:40:39-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/computer-science/</loc>
@@ -18,15 +39,6 @@
     <lastmod>2022-06-08T22:40:39-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/definitions/</loc>
-    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2022-06-08T22:40:39-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
     <lastmod>2022-06-08T22:40:39-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/terms/</loc>
@@ -87,9 +99,6 @@
     <lastmod>2022-06-02T04:04:36-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/education/</loc>
-    <lastmod>2022-06-02T04:04:36-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/education/</loc>
     <lastmod>2022-06-02T04:04:36-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/educationaltaxnotes/</loc>

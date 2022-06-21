@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/physics/
 Disallow: /rover/posts/csterms/
 Disallow: /rover/posts/algorithmquestions/
 Disallow: /rover/posts/interviewtips/
