@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Python">
 <meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
 <meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
-<meta itemprop="wordCount" content="2559">
+<meta itemprop="wordCount" content="2840">
 <meta itemprop="keywords" content="Python," />
 </head>
 <body>
@@ -96,6 +96,61 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
+<h1 id="python-dictionary">Python Dictionary</h1>
+<h2 id="programming-fundamentals">Programming Fundamentals</h2>
+<ul>
+<li>For loop:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>for x in mylist:
+</span></span><span style="display:flex;"><span>    print(x)
+</span></span></code></pre></div><p>Explanation: iterates through <code>mylist</code> and prints each element <code>x</code> in it.
+- range vs xrange: range function returns a new list with numbers of that specified range, while xrange returns an iterator (more efficient)</p>
+<ul>
+<li>While loop: repeats as long as certain boolean conditions are met</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Prints out 0,1,2,3,4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>count = 0
+</span></span><span style="display:flex;"><span>while count &lt; 5:
+</span></span><span style="display:flex;"><span>    print(count)
+</span></span><span style="display:flex;"><span>    count += 1  # This is the same as count = count + 1
+</span></span></code></pre></div><ul>
+<li>&ldquo;break&rdquo; and &ldquo;continue&rdquo;: break exits a for or while loop. Continue skips the current block</li>
+<li>&ldquo;else&rdquo; clause can be used for loops</li>
+</ul>
+<h2 id="methods">Methods</h2>
+<p><code>.append()</code>: appends an element to a list</p>
+<p><code>.count()</code>: counts the number of an element in some target</p>
+<p><code>print([n:N:m])</code>: prints a slice of some string from <code>n</code>, where <code>N</code> acts as an upper bound and <code>m</code> is the units of traversal</p>
+<p><code>string[::-1]</code>: returns a reversed string</p>
+<p><code>.upper()</code>: converts all to uppercase</p>
+<p><code>.lower()</code>: converts all to lowercase</p>
+<p><code>.startswith()</code>: returns true or false if starts with the string</p>
+<p><code>.endswith()</code>: returns true or false if ends with the string</p>
+<h2 id="minor-concepts">Minor Concepts</h2>
+<ul>
+<li>Can apply numerical operations on strings as well as lists</li>
+<li><code>%</code> is used to format a set of variables enclosed ina tuple
+<ul>
+<li>i.e. <code>%s</code> for a string</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>name = &#34;John&#34;
+</span></span><span style="display:flex;"><span>print(&#34;Hello, %s!&#34; % name)
+</span></span></code></pre></div><ul>
+<li><code>%f</code> for floating point numbers</li>
+<li><code>%d</code> for a number</li>
+<li><code>%.&lt;number of digits&gt;f</code> - Floating point numbers with a fixed amount of digits to the right of the dot.</li>
+<li><code>%x/%X</code> - Integers in hex representation (lowercase/uppercase)</li>
+</ul>
+</li>
+<li>using &lsquo;in&rsquo; operator:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>name = &#34;John&#34;
+</span></span><span style="display:flex;"><span>if name in [&#34;John&#34;, &#34;Rick&#34;]:
+</span></span><span style="display:flex;"><span>    print(&#34;Your name is either John or Rick.&#34;)
+</span></span></code></pre></div></li>
+<li>using &lsquo;is&rsquo; operator: instead of equating value, it equates the instance</li>
+</ul>
+<h1 id="concepts">Concepts</h1>
 <h2 id="basics">Basics</h2>
 <p><code>#</code> is used for comments to the right</p>
 <p>Numbers: categorized as integers or floats</p>
@@ -105,60 +160,6 @@ src="/rover/">
 <li>Multi-line: <code>&quot;&quot;&quot;</code> or <code>'''</code></li>
 <li>are immutable</li>
 <li>C++ users: there is not separate <code>char</code> data type in Python.</li>
-</ul>
-<h3 id="format-method-format">Format Method: <code>format()</code></h3>
-<ul>
-<li>construct strings from information</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>age = 20
-</span></span><span style="display:flex;"><span>name = &#39;Swaroop&#39;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>print(&#39;{0} was {1} years old when he wrote this book&#39;.format(name, age))
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span># output:
-</span></span><span style="display:flex;"><span>Swaroop was 20 years old when he wrote this book
-</span></span></code></pre></div><p>interpretation: string concatenation can be used to achieve the same goal. However, when the format method is called, the specifications are substituted into the string.</p>
-<ul>
-<li><code>print</code> always ends with an invisible &ldquo;new line&rdquo; character <code>\n</code> so that repeated <code>print</code> calls will separate on each line.</li>
-</ul>
-<h3 id="escape-sequences">Escape Sequences</h3>
-<p>What if you want to use a character that python interprets, like single quotes? This can be done by specifying single quote as <code>\'</code>, i.e. <code>'What\'s your name?'</code></p>
-<ul>
-<li><code>\\</code>: escape sequence for a backslash</li>
-<li><code>\t</code>: tab</li>
-<li><code>\n:</code> start of a new line</li>
-<li>in a string, backslash <code>\</code> at the end of the line indicates the string is continued in the next line, but output does not have a newline added.</li>
-</ul>
-<h4 id="raw-string">Raw String</h4>
-<ul>
-<li>
-<p>for specifying strings where no special processing like escape sequences are handled, using <code>r</code> or <code>R</code> to specify a raw string</p>
-<ul>
-<li><code>r&quot;Newlines are indicated by \n&quot;</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="variable">Variable</h3>
-<ul>
-<li>Variables are part of the computer&rsquo;s memory where you store some information. You will need some method of accessing these variables, and hence names.</li>
-</ul>
-<h3 id="naming">Naming</h3>
-<ul>
-<li>first character must be a letter (uppercase, lowercase, or unicode) or an underscore <code>_</code></li>
-<li>rest must consist of letters underscores or digits</li>
-<li>case-sensitive</li>
-</ul>
-<h3 id="logical-and-physical-line">Logical and Physical Line</h3>
-<ul>
-<li>Physical Line: What you see</li>
-<li>Logical Line: What Python sees</li>
-<li>Recommendation: stick to writing a maximum of a single logical line on each single physical line.
-<ul>
-<li>there should never be a need to use a semicolon!</li>
-</ul>
-</li>
-<li>explicit line joining: if you have a long line of code, break it into multiple physical lines using the backslash.</li>
-<li>implicit line joining: starting a logical line with a parentheses, square brackets, or curly braces, but not ending in one.</li>
 </ul>
 <h3 id="indentation">Indentation</h3>
 <ul>
@@ -214,6 +215,60 @@ src="/rover/">
 <li><code>not</code>: boolean NOT</li>
 </ul>
 </li>
+</ul>
+<h3 id="format-method-format">Format Method: <code>format()</code></h3>
+<ul>
+<li>construct strings from information</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>age = 20
+</span></span><span style="display:flex;"><span>name = &#39;Swaroop&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;{0} was {1} years old when he wrote this book&#39;.format(name, age))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># output:
+</span></span><span style="display:flex;"><span>Swaroop was 20 years old when he wrote this book
+</span></span></code></pre></div><p>interpretation: string concatenation can be used to achieve the same goal. However, when the format method is called, the specifications are substituted into the string.</p>
+<ul>
+<li><code>print</code> always ends with an invisible &ldquo;new line&rdquo; character <code>\n</code> so that repeated <code>print</code> calls will separate on each line.</li>
+</ul>
+<h3 id="escape-sequences">Escape Sequences</h3>
+<p>What if you want to use a character that python interprets, like single quotes? This can be done by specifying single quote as <code>\'</code>, i.e. <code>'What\'s your name?'</code></p>
+<ul>
+<li><code>\\</code>: escape sequence for a backslash</li>
+<li><code>\t</code>: tab</li>
+<li><code>\n:</code> start of a new line</li>
+<li>in a string, backslash <code>\</code> at the end of the line indicates the string is continued in the next line, but output does not have a newline added.</li>
+</ul>
+<h4 id="raw-string">Raw String</h4>
+<ul>
+<li>
+<p>for specifying strings where no special processing like escape sequences are handled, using <code>r</code> or <code>R</code> to specify a raw string</p>
+<ul>
+<li><code>r&quot;Newlines are indicated by \n&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="variable">Variable</h3>
+<ul>
+<li>Variables are part of the computer&rsquo;s memory where you store some information. You will need some method of accessing these variables, and hence names.</li>
+</ul>
+<h3 id="naming">Naming</h3>
+<ul>
+<li>first character must be a letter (uppercase, lowercase, or unicode) or an underscore <code>_</code></li>
+<li>rest must consist of letters underscores or digits</li>
+<li>case-sensitive</li>
+</ul>
+<h3 id="logical-and-physical-line">Logical and Physical Line</h3>
+<ul>
+<li>Physical Line: What you see</li>
+<li>Logical Line: What Python sees</li>
+<li>Recommendation: stick to writing a maximum of a single logical line on each single physical line.
+<ul>
+<li>there should never be a need to use a semicolon!</li>
+</ul>
+</li>
+<li>explicit line joining: if you have a long line of code, break it into multiple physical lines using the backslash.</li>
+<li>implicit line joining: starting a logical line with a parentheses, square brackets, or curly braces, but not ending in one.</li>
 </ul>
 <h3 id="shortcut-for-math-operation-and-assignment">Shortcut for math operation and assignment</h3>
 <p><code>a = a*3 == a *= 3</code></p>
@@ -436,7 +491,7 @@ src="/rover/">
 </span></span><span style="display:flex;"><span># Output:
 </span></span><span style="display:flex;"><span># $ python this_simplestclass.py
 </span></span><span style="display:flex;"><span># &lt;__main__.Person instance at 0x10171f518&gt;
-</span></span></code></pre></div><h3 id="methods">Methods</h3>
+</span></span></code></pre></div><h3 id="methods-1">Methods</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Person:
 </span></span><span style="display:flex;"><span>    def say_hi(self):
 </span></span><span style="display:flex;"><span>        print(&#39;Hello, how are you?&#39;)
