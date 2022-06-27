@@ -19,6 +19,15 @@
 			</description>
 		</item>
 		<item>
+			<title>Cryptography</title>
+			<link>https://wtsia.github.io/rover/posts/cryptographyi/</link>
+			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cryptographyi/</guid>
+			<description>
+			Notes on topics in cryptography
+			</description>
+		</item>
+		<item>
 			<title>Mythical Man-Month</title>
 			<link>https://wtsia.github.io/rover/posts/mythicalmanmonth/</link>
 			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>

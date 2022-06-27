@@ -82,19 +82,28 @@
 			</description>
 		</item>
 		<item>
-			<title>cat1</title>
-			<link>https://wtsia.github.io/rover/categories/cat1/</link>
+			<title>Computational Mathematics</title>
+			<link>https://wtsia.github.io/rover/categories/computational-mathematics/</link>
 			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/cat1/</guid>
+			<guid>https://wtsia.github.io/rover/categories/computational-mathematics/</guid>
 			<description>
 			
 			</description>
 		</item>
 		<item>
-			<title>cat2</title>
-			<link>https://wtsia.github.io/rover/categories/cat2/</link>
+			<title>Cryptography</title>
+			<link>https://wtsia.github.io/rover/categories/cryptography/</link>
 			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/cat2/</guid>
+			<guid>https://wtsia.github.io/rover/categories/cryptography/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Mathematics</title>
+			<link>https://wtsia.github.io/rover/categories/mathematics/</link>
+			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/mathematics/</guid>
 			<description>
 			
 			</description>

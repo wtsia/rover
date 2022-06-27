@@ -46,12 +46,12 @@
 			</description>
 		</item>
 		<item>
-			<title>Cryptography1</title>
+			<title>Cryptography</title>
 			<link>https://wtsia.github.io/rover/posts/cryptographyi/</link>
 			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/posts/cryptographyi/</guid>
 			<description>
-			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+			Notes on topics in cryptography
 			</description>
 		</item>
 		<item>
