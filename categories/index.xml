@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 21 Jun 2022 14:24:16 -0700</lastBuildDate>
+		<lastBuildDate>Tue, 28 Jun 2022 22:41:20 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Gardening</title>
+			<link>https://wtsia.github.io/rover/categories/gardening/</link>
+			<pubDate>Tue, 28 Jun 2022 22:41:20 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/gardening/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Pomology</title>
+			<link>https://wtsia.github.io/rover/categories/pomology/</link>
+			<pubDate>Tue, 28 Jun 2022 22:41:20 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/pomology/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>Education</title>
 			<link>https://wtsia.github.io/rover/categories/education/</link>
