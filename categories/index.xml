@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 28 Jun 2022 22:41:20 -0700</lastBuildDate>
+		<lastBuildDate>Mon, 04 Jul 2022 16:44:10 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Human Anatomy</title>
+			<link>https://wtsia.github.io/rover/categories/human-anatomy/</link>
+			<pubDate>Mon, 04 Jul 2022 16:44:10 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/human-anatomy/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>Gardening</title>
 			<link>https://wtsia.github.io/rover/categories/gardening/</link>

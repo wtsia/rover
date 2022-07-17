@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/humananatomy/
 Disallow: /rover/posts/pomology/
 Disallow: /rover/posts/physics/
 Disallow: /rover/posts/csterms/

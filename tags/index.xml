@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 28 Jun 2022 22:41:20 -0700</lastBuildDate>
+		<lastBuildDate>Mon, 04 Jul 2022 16:44:10 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Anatomy</title>
+			<link>https://wtsia.github.io/rover/tags/anatomy/</link>
+			<pubDate>Mon, 04 Jul 2022 16:44:10 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/anatomy/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Education</title>
+			<link>https://wtsia.github.io/rover/tags/education/</link>
+			<pubDate>Mon, 04 Jul 2022 16:44:10 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/education/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>Germinating</title>
 			<link>https://wtsia.github.io/rover/tags/germinating/</link>
@@ -113,15 +131,6 @@
 			<link>https://wtsia.github.io/rover/tags/software-interview/</link>
 			<pubDate>Tue, 07 Jun 2022 01:22:05 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/software-interview/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Education</title>
-			<link>https://wtsia.github.io/rover/tags/education/</link>
-			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/education/</guid>
 			<description>
 			
 			</description>

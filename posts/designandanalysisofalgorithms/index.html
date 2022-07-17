@@ -97,48 +97,48 @@ src="/rover/">
 <h3 id="theme-of-lecture">Theme of Lecture:</h3>
 <ul>
 <li>similar problems can have different complexity</li>
-<li>P: class of problems solvable in polynomial time O(n^k) for some constant k.
+<li>$P$: class of problems solvable in polynomial time $O(n^k)$ for some constant $k$.
 <ul>
-<li>Shortest-path: O(v^2), for v = vertices in graph</li>
+<li>Shortest-path: $O(v^2)$, for $v = vertices$ in graph</li>
 </ul>
 </li>
-<li>NP: Non-deterministic polynomial time. Class of probs. solution is verifiable in polynomial time.
+<li>$NP$: Non-deterministic polynomial time. Class of probs. solution is verifiable in polynomial time.
 <ul>
-<li>Hamiltonian cycle: given a directed graph, find a simple cycle that contain each vertex in V</li>
+<li>Hamiltonian cycle: given a directed graph, find a simple cycle that contain each vertex in $V$</li>
 </ul>
 </li>
-<li>NP-complete: problem is in NP and is as hard as any problem in NP.</li>
-<li>Given requests 1, 2, &hellip;, i, j, &hellip;, n, with s(i) being start time, f(i) finishing time, s(i) &lt; f(i)</li>
+<li>$NP-complete$: problem is in $NP$ and is as hard as any problem in $NP$.</li>
+<li>Given requests $1, 2, &hellip;, i, j, &hellip;, n,$ with $s(i)$ being start time, $f(i)$ finishing time, $s(i) &lt; f(i)$</li>
 <li>Greedy Algorithm: a myopic algorithm that processes inputs one piece at a time.
 <ul>
-<li>Greedy Interval Scheduling: use a simple rule to request i, reject incompatible to i, and repeat until process is done
+<li>Greedy Interval Scheduling: use a simple rule to request $i$, reject incompatible to $i$, and repeat until process is done
 <ul>
-<li>min(s(i))? longest early segment&hellip; bad</li>
-<li>min(f(i) - s(i))? smallest segment.. bad</li>
+<li>$min(s(i))$? longest early segment&hellip; bad</li>
+<li>$min(f(i) - s(i))$? smallest segment.. bad</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Claim 1: Greedy algo outputs a list of intervals &lt;s(i_1), f(i_1)&gt;, &hellip; s.t. s(i_1) &lt; f(i_1) &lt;= s(i_2) &hellip;
+<li>Claim 1: Greedy algo outputs a list of intervals $&lt;s(i_1), f(i_1)&gt;, &hellip; s.t. s(i_1) &lt; f(i_1) &lt;= s(i_2) &hellip;$
 <ul>
-<li>Proof: by contradiction. if finish of &lsquo;j&rsquo; is greater than start if &lsquo;j+1&rsquo;, it contradicts step 2 of algo.</li>
+<li>Proof: by contradiction. if finish of &lsquo;$j$&rsquo; is greater than start if &lsquo;$j+1$&rsquo;, it contradicts step 2 of algo.</li>
 </ul>
 </li>
-<li>Claim 2: Given list of intervals L, greedy algorithm with earliest finish time produces k* intervals where k* is optimal
+<li>Claim 2: Given list of intervals $L$, greedy algorithm with earliest finish time produces $k^<em>$ intervals where $k^</em>$ is optimal
 <ul>
-<li>Proof: Induction on k*. k*=1, then suppose it holds true for k*, apply inductive step for k* + 1 intervals.
-S*[1, 2, &hellip;, k* + 1] = &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_(k*+1)), f(j_(k*+1))&gt;
-Say for some generic k, 
-S[1, 2, &hellip;, k] = &lt;s(i_1), f(i_1)&gt;, &hellip;, &lt;s(i_k), f(i_k)&gt; 
-By construction we know f(i_1) &lt;= f(j_1) since algo picks earliest finish time. Construct schedule 
-S** = &lt;s(i_1), f(i_1)&gt;, &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_k*+1), f(j_k*+1)&gt;
-Then S** is optimal due to being length k* + 1. Define L&rsquo; s.t. s(i) &gt;= f(i_1). Since S** is optimal for L, S**[2, 3, &hellip;, k* + 1] is optimal for L&rsquo;, implying optimal schedule for L&rsquo; has k* size. Hence, k - 1 = k*, implying S[1, &hellip;, k] is optimal.</li>
+<li>Proof: Induction on $k^<em>$. $k^</em>=1$, then suppose it holds true for $k^<em>$, apply inductive step for $k^</em> + 1$ intervals.
+$$S*[1, 2, &hellip;, k* + 1] = &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_(k*+1)), f(j_(k*+1))&gt;$$
+Say for some generic $k$, 
+$$S[1, 2, &hellip;, k] = &lt;s(i_1), f(i_1)&gt;, &hellip;, &lt;s(i_k), f(i_k)&gt;$$
+By construction we know $f(i_1) &lt;= f(j_1)$ since algo picks earliest finish time. Construct schedule 
+$$S^{<strong>} = &lt;s(i_1), f(i_1)&gt;, &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_k*+1), f(j_k*+1)&gt;$$
+Then $S^{</strong>}$ is optimal due to being length $k^* + 1$. Define $L&rsquo;$ s.t. $s(i) &gt;= f(i_1)$. Since $S^{<strong>}$ is optimal for $L$, $S^{</strong>}[2, 3, &hellip;, k* + 1]$ is optimal for $L&rsquo;$, implying optimal schedule for $L&rsquo;$ has $k*$ size. Hence, $k - 1 = k*$, implying $S[1, &hellip;, k]$ is optimal.</li>
 </ul>
 </li>
 </ul>
 <h3 id="weighted-interval-scheduling">Weighted Interval Scheduling</h3>
 <ul>
-<li>Each request i has weight w(i). Schedule subset of requests that are non-overlapping with maximum weight.
+<li>Each request $i$ has weight $w(i)$. Schedule subset of requests that are non-overlapping with maximum weight.
 <ul>
 <li>A key observation here is that the greedy algorithm no longer works.</li>
 </ul>

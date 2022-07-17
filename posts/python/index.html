@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Python">
 <meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
 <meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
-<meta itemprop="wordCount" content="2840">
+<meta itemprop="wordCount" content="2890">
 <meta itemprop="keywords" content="Python," />
 </head>
 <body>
@@ -149,6 +149,19 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>    print(&#34;Your name is either John or Rick.&#34;)
 </span></span></code></pre></div></li>
 <li>using &lsquo;is&rsquo; operator: instead of equating value, it equates the instance</li>
+<li><code>block_keyword block_name(argument1,argument2, ...)</code> Block keywords you already know are &ldquo;if&rdquo;, &ldquo;for&rdquo;, and &ldquo;while&rdquo;.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>def my_function():
+</span></span><span style="display:flex;"><span>print(&#34;Hello From My Function!&#34;)
+</span></span></code></pre></div></li>
+<li>creating a class and modifying a variable in the new iteration:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class MyClass:
+</span></span><span style="display:flex;"><span>    variable = &#34;blah&#34;
+</span></span><span style="display:flex;"><span>    def function(self):
+</span></span><span style="display:flex;"><span>        print(&#34;This is a message inside the class.&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>objectx = MyClass()
+</span></span><span style="display:flex;"><span>objectx.variable = &#34;blah2.0&#34; 
+</span></span></code></pre></div></li>
 </ul>
 <h1 id="concepts">Concepts</h1>
 <h2 id="basics">Basics</h2>
@@ -372,7 +385,7 @@ src="/rover/">
 </ul>
 <h5 id="summary">Summary:</h5>
 <p>Just like functions are reusable parts of programs, modules are reusable programs. Packages are another hierarchy to organize modules. The standard library that comes with Python is an example of such a set of packages and modules.</p>
-<h3 id="quick-and-dirty-objects-and-classes">Quick and Dirty: Objects and Classes</h3>
+<h2 id="quick-and-dirty-objects-and-classes">Quick and Dirty: Objects and Classes</h2>
 <ul>
 <li><code>list</code> is an example of using objects and classes</li>
 <li><code>i = 5</code>
