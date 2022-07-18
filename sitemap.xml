@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wtsia.github.io/rover/tags/anatomy/</loc>
-    <lastmod>2022-07-04T16:44:10-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/education/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/productivity/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/productivity/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/reading/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/speedreading/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2022-07-18T00:10:31-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/anatomy/</loc>
     <lastmod>2022-07-04T16:44:10-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/education/</loc>
@@ -15,15 +39,6 @@
     <lastmod>2022-07-04T16:44:10-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/humananatomy/</loc>
-    <lastmod>2022-07-04T16:44:10-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2022-07-04T16:44:10-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2022-07-04T16:44:10-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
     <lastmod>2022-07-04T16:44:10-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/gardening/</loc>
@@ -40,9 +55,6 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/pomology/</loc>
     <lastmod>2022-06-28T22:41:20-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/education/</loc>
-    <lastmod>2022-06-21T14:24:16-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/physics/</loc>
     <lastmod>2022-06-21T14:24:16-07:00</lastmod>

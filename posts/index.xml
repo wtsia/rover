@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Mon, 04 Jul 2022 16:44:10 -0700</lastBuildDate>
+		<lastBuildDate>Mon, 18 Jul 2022 00:10:31 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Speed Reading</title>
+			<link>https://wtsia.github.io/rover/posts/speedreading/</link>
+			<pubDate>Mon, 18 Jul 2022 00:10:31 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/speedreading/</guid>
+			<description>
+			Tips on how to Speed Read
+			</description>
+		</item>
 		<item>
 			<title>Human Anatomy</title>
 			<link>https://wtsia.github.io/rover/posts/humananatomy/</link>
