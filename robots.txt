@@ -1,6 +1,7 @@
 User-agent: *
 
-Disallow: /rover/posts/speedreading/
+Disallow: /rover/posts/physicsmechanics/
+Disallow: /rover/posts/bitesizedproductivity/
 Disallow: /rover/posts/humananatomy/
 Disallow: /rover/posts/pomology/
 Disallow: /rover/posts/physics/

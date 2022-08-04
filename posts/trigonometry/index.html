@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="Trigonometry">
 <meta itemprop="description" content="Reviewing Trigonometry Concepts"><meta itemprop="datePublished" content="2022-05-10T01:18:00-07:00" />
 <meta itemprop="dateModified" content="2022-05-10T01:18:00-07:00" />
-<meta itemprop="wordCount" content="282"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
+<meta itemprop="wordCount" content="658"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
 <meta itemprop="keywords" content="Trigonometry,Review," />
 </head>
 <body>
@@ -101,19 +101,50 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
+<h2 id="angles">Angles</h2>
+<ul>
+<li>Right angle is $90\degree$</li>
+<li>Complementary angles are two positive angles that add up to $90\degree$</li>
+<li>Supplementary angles are two positive angles that add up to $180\degree$</li>
+</ul>
 <h3 id="arc">Arc</h3>
 <ul>
 <li>1 degree = 60 minutes of arc : 1$\degree$ = 60'</li>
 <li>1 minute = 60 seconds of arc : 1&rsquo; = 60''</li>
 </ul>
-<h3 id="triangles">Triangles</h3>
+<h3 id="radian">Radian</h3>
+<ul>
+<li>Radian ($\theta$): central angle $\theta$ that subtends (limits by both sides) an arc length $s$ (curved length) of one radius $r$
+<ul>
+<li>one &lsquo;radius&rsquo; worth of angle</li>
+<li>$s = \theta * r$</li>
+<li>$360\degree = 2\pi$ $rad$
+<ul>
+<li>conversion implies: $1=\frac{360\degree}{2\pi rad}=\frac{180\degree}{\pi rad}=\frac{\pi rad}{180\degree}$</li>
+</ul>
+</li>
+<li>Recall: a circle&rsquo;s circumference is $\pi*d$ or $2\pi$ $rad$</li>
+</ul>
+</li>
+</ul>
+<h2 id="triangles">Triangles</h2>
 <ul>
 <li>Obtuse: Largest angle is &gt;90$\degree$</li>
 <li>Acute: Largest angles are acute</li>
+<li>Congruent: Corresponding parts are congruent (CPCTC)
+<ul>
+<li>implies 3 angles and 3 sides are congruent</li>
+</ul>
+</li>
+<li>Similar: Corresponding angles are congruent, and sides are proportional
+<ul>
+<li>implies 3 angles are congruend, but sides are not</li>
+</ul>
+</li>
 </ul>
 <h3 id="thales-theorem">Thales&rsquo; Theorem</h3>
 <ul>
-<li>If points $A$ and $B$ are points on the diameter, then point $C$ on any point of the circle will form a right triangle between $A$ and $B$.</li>
+<li>If points $A$ and $B$ are points on the diameter ofa circle, then point $C$ on any other point of the circle will form a right triangle between $A$,$B$, and $C$ s.t. they form a triangle $\triangle ABC$.</li>
 </ul>
 <p>$Proof$: Construct an arbitrary circle such that there are two points $A$ and $B$ on the diameter iwth radius $r$. Add an arbitrary point $C$ to any other point of the diameter on the circle. Construct a triangle with angles at each point with $\angle$A, $\angle$B, and $\angle$C. Draw a line within this arbitrary triangle such that the line connects the center, to $C$, and subdivides the arbitrary triangle. The two resulting triangles will be one equilateral triangle with length of radius $r$, and an obtuse triangle also with radial sides $r$ and a length from $\overline{AC}$. label the angles in the equilateral triangle $\measuredangle\alpha$. Label the obtuse triangle such that the smaller angles are $\measuredangle\beta$. We can infer that the remaining angle is $\measuredangle\alpha$. Since the sum of the internal angles of every triangle is 180$\degree$, recall our arbitrary triangle will have internal measurements:</p>
 <p>$$
@@ -129,6 +160,47 @@ $$</p>
 $$</p>
 <p>Recall that angle $\alpha + \beta$ is the same as $\angle C$, making the arbitrary triangle a right triangle.</p>
 <p>$\blacksquare Q.E.D.$</p>
+<h3 id="pythagoren-theorem">Pythagoren Theorem</h3>
+<ul>
+<li>For any right triangle with sides $a$, $b$, and hypotenuse $c$ : 
+$$a^2 + b^2 = c^2$$</li>
+</ul>
+<p>$Proof$: c, the hypotenuse, is given if we know the area of the bigger square, or:</p>
+<p>$$c*c = c²$$</p>
+<p>The area of the triangles are formed by finding the area of 4 of our original triangle, or:</p>
+<p>$$4*(1/2)ab$$</p>
+<p>What about that inner square? Well let’s consider what relations we can deduce, then we would be able to equate the area of a c² square with the parts that make it up. Well we know it’s just a square of (a - b) edge lengths, by looking at where the triangles touch each other, so it would have an area of:</p>
+<p>$$(a - b)^2$$</p>
+<p>The area of the entire square of c² is given by the area of the triangles and inner square, or:</p>
+<p>$$
+c^2 = 4*(1/2)ab + (a - b)^2 = 2ab + a^2 - 2ab + b^2
+\\
+\rightarrow c^2 = a^2 + b^2 + 2ab - 2ab
+\\
+\rightarrow c² = a² + b²
+$$
+$\blacksquare Q.E.D.$</p>
+<h3 id="application-distance-between-two-points">Application: Distance Between Two Points</h3>
+<p>For the distance between two points $c$ in 2 and 3-dimensional space:</p>
+<ul>
+<li>2D: $(x_1, x_1), (y_2,y_2)$
+$$c=\sqrt{(\Delta x)^2 + (\Delta y)^2}$$</li>
+<li>3D: $(x_1,y_1,z_1), (x_2,y_2,z_2)$
+$$c=\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}$$</li>
+</ul>
+<h3 id="trigonometric-ratios">Trigonometric Ratios</h3>
+<ul>
+<li>Sine ($sin$), Cosine ($cos$), Tangent ($tan$)
+<ul>
+<li>S O/H - C A/H - T O/A</li>
+</ul>
+</li>
+<li>Cosecant ($csc$), Secant ($sec$), Cotangent ($cot$), are almost an anagram (recipricols, or $1/f(\theta)$):
+<ul>
+<li>A/O T ($coT$) - H/A C ($seC$) - H/O S ($cSc$)</li>
+</ul>
+</li>
+</ul>
 
 </div>
 <div class="tags">
