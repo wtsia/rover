@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="Trigonometry">
 <meta itemprop="description" content="Reviewing Trigonometry Concepts"><meta itemprop="datePublished" content="2022-05-10T01:18:00-07:00" />
 <meta itemprop="dateModified" content="2022-05-10T01:18:00-07:00" />
-<meta itemprop="wordCount" content="658"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
+<meta itemprop="wordCount" content="783"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
 <meta itemprop="keywords" content="Trigonometry,Review," />
 </head>
 <body>
@@ -138,7 +138,7 @@ src="/rover/">
 </li>
 <li>Similar: Corresponding angles are congruent, and sides are proportional
 <ul>
-<li>implies 3 angles are congruend, but sides are not</li>
+<li>implies 3 angles are congruent, but sides are not</li>
 </ul>
 </li>
 </ul>
@@ -146,7 +146,7 @@ src="/rover/">
 <ul>
 <li>If points $A$ and $B$ are points on the diameter ofa circle, then point $C$ on any other point of the circle will form a right triangle between $A$,$B$, and $C$ s.t. they form a triangle $\triangle ABC$.</li>
 </ul>
-<p>$Proof$: Construct an arbitrary circle such that there are two points $A$ and $B$ on the diameter iwth radius $r$. Add an arbitrary point $C$ to any other point of the diameter on the circle. Construct a triangle with angles at each point with $\angle$A, $\angle$B, and $\angle$C. Draw a line within this arbitrary triangle such that the line connects the center, to $C$, and subdivides the arbitrary triangle. The two resulting triangles will be one equilateral triangle with length of radius $r$, and an obtuse triangle also with radial sides $r$ and a length from $\overline{AC}$. label the angles in the equilateral triangle $\measuredangle\alpha$. Label the obtuse triangle such that the smaller angles are $\measuredangle\beta$. We can infer that the remaining angle is $\measuredangle\alpha$. Since the sum of the internal angles of every triangle is 180$\degree$, recall our arbitrary triangle will have internal measurements:</p>
+<p>$Proof$: Construct an arbitrary circle such that there are two points $A$ and $B$ on the diameter with radius $r$. Add an arbitrary point $C$ to any other point of the diameter on the circle. Construct a triangle with angles at each point with $\angle$A, $\angle$B, and $\angle$C. Draw a line within this arbitrary triangle such that the line connects the center, to $C$, and subdivides the arbitrary triangle. The two resulting triangles will be one equilateral triangle with length of radius $r$, and an obtuse triangle also with radial sides $r$ and a length from $\overline{AC}$. label the angles in the equilateral triangle $\measuredangle\alpha$. Label the obtuse triangle such that the smaller angles are $\measuredangle\beta$. We can infer that the remaining angle is $\measuredangle\alpha$. Since the sum of the internal angles of every triangle is 180$\degree$, recall our arbitrary triangle will have internal measurements:</p>
 <p>$$
 \angle A + \angle B + \angle C = 180\degree
 $$</p>
@@ -160,7 +160,7 @@ $$</p>
 $$</p>
 <p>Recall that angle $\alpha + \beta$ is the same as $\angle C$, making the arbitrary triangle a right triangle.</p>
 <p>$\blacksquare Q.E.D.$</p>
-<h3 id="pythagoren-theorem">Pythagoren Theorem</h3>
+<h3 id="pythagorean-theorem">Pythagorean Theorem</h3>
 <ul>
 <li>For any right triangle with sides $a$, $b$, and hypotenuse $c$ : 
 $$a^2 + b^2 = c^2$$</li>
@@ -173,8 +173,9 @@ $$a^2 + b^2 = c^2$$</li>
 <p>$$(a - b)^2$$</p>
 <p>The area of the entire square of c² is given by the area of the triangles and inner square, or:</p>
 <p>$$
-c^2 = 4*(1/2)ab + (a - b)^2 = 2ab + a^2 - 2ab + b^2
-\\
+c^2 = 4*(1/2)ab + (a - b)^2 
+\\ = 2ab + a^2 - 2ab + b^2
+\\ 
 \rightarrow c^2 = a^2 + b^2 + 2ab - 2ab
 \\
 \rightarrow c² = a² + b²
@@ -195,11 +196,40 @@ $$c=\sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}$$</li>
 <li>S O/H - C A/H - T O/A</li>
 </ul>
 </li>
-<li>Cosecant ($csc$), Secant ($sec$), Cotangent ($cot$), are almost an anagram (recipricols, or $1/f(\theta)$):
+<li>Cosecant ($csc$), Secant ($sec$), Cotangent ($cot$), are almost an anagram (reciprocals, or $1/f(\theta)$):
 <ul>
 <li>A/O T ($coT$) - H/A C ($seC$) - H/O S ($cSc$)</li>
 </ul>
 </li>
+</ul>
+<h3 id="trigonometric-functions">Trigonometric &lsquo;Functions&rsquo;</h3>
+<ul>
+<li>On a unit circle, the hypotenuse, or radius, is of 1 unit. This means for SOHCAHTOA:
+$$
+sin(\theta) = \frac{Opposite}{Hypotenuse} = \frac{Opposite}{1} = Opposite
+\\
+cos(\theta) = \frac{Adjacent}{Hypotenuse} = \frac{Opposite}{1} = Adjacent
+$$</li>
+</ul>
+<h4 id="identities">Identities:</h4>
+<p>$tan^{-1}(x) = arctan(x)$</p>
+<p>$cos^{-1}(x) = arc(x)$</p>
+<p>$sin^{-1}(x) = arcsin(x)$</p>
+<p>$sin^2(\theta) + cos^2(\theta) = 1$</p>
+<ul>
+<li>Apply the pythagorean theorem to a triangle in the unit circle. Notice that when we square non-hypotenuse sides, it equals to $c^2 = 1^2$ or $1$.</li>
+</ul>
+<h4 id="values">Values</h4>
+<ul>
+<li>To obtain values of trig functions along the unit circle (or any circle) along the well known thirds, sixths, halves, and quarters of $\pi$, utilize the Large ($\frac{\sqrt{3}}{2}$), Medium ($\frac{\sqrt{2}}{2}$), and Small ($\frac{\sqrt{1}}{2}$) pneumonic.</li>
+</ul>
+<h4 id="period">Period</h4>
+<ul>
+<li>Length of a functions cycle, typically peak to peak.</li>
+</ul>
+<h4 id="length">Length</h4>
+<ul>
+<li>Test commit</li>
 </ul>
 
 </div>

@@ -1,5 +1,7 @@
 User-agent: *
 
+Disallow: /rover/posts/computationalmethods/
+Disallow: /rover/posts/cis254/
 Disallow: /rover/posts/physicsmechanics/
 Disallow: /rover/posts/bitesizedproductivity/
 Disallow: /rover/posts/humananatomy/

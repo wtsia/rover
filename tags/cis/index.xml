@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Computer Science on Rover</title>
-		<link>https://wtsia.github.io/rover/tags/computer-science/</link>
-		<description>Recent content in Computer Science on wtsia.github.io</description>
+		<title>CIS on Rover</title>
+		<link>https://wtsia.github.io/rover/tags/cis/</link>
+		<description>Recent content in CIS on wtsia.github.io</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
 		<lastBuildDate>Wed, 17 Aug 2022 01:19:31 -0700</lastBuildDate>
-		<atom:link href="https://wtsia.github.io/rover/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://wtsia.github.io/rover/tags/cis/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Introduction to Object Oriented Programming</title>
 			<link>https://wtsia.github.io/rover/posts/cis254/</link>
@@ -16,15 +16,6 @@
 			<guid>https://wtsia.github.io/rover/posts/cis254/</guid>
 			<description>
 			Description
-			</description>
-		</item>
-		<item>
-			<title>Computer Science Terms</title>
-			<link>https://wtsia.github.io/rover/posts/csterms/</link>
-			<pubDate>Wed, 08 Jun 2022 22:40:39 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/csterms/</guid>
-			<description>
-			List of terms for computer science
 			</description>
 		</item>
 	</channel>
