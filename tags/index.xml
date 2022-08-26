@@ -7,22 +7,85 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Wed, 17 Aug 2022 15:31:42 -0700</lastBuildDate>
+		<lastBuildDate>Mon, 22 Aug 2022 01:39:09 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/index.xml" rel="self" type="application/rss+xml" />
 		<item>
-			<title>Computational</title>
-			<link>https://wtsia.github.io/rover/tags/computational/</link>
-			<pubDate>Wed, 17 Aug 2022 15:31:42 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/computational/</guid>
+			<title>Education</title>
+			<link>https://wtsia.github.io/rover/tags/education/</link>
+			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/education/</guid>
 			<description>
 			
 			</description>
 		</item>
 		<item>
-			<title>Education</title>
-			<link>https://wtsia.github.io/rover/tags/education/</link>
+			<title>Electricity</title>
+			<link>https://wtsia.github.io/rover/tags/electricity/</link>
+			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/electricity/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Physics</title>
+			<link>https://wtsia.github.io/rover/tags/physics/</link>
+			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/physics/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>tag1</title>
+			<link>https://wtsia.github.io/rover/tags/tag1/</link>
+			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/tag1/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>tag2</title>
+			<link>https://wtsia.github.io/rover/tags/tag2/</link>
+			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/tag2/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>CIS</title>
+			<link>https://wtsia.github.io/rover/tags/cis/</link>
+			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/cis/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Computer Science</title>
+			<link>https://wtsia.github.io/rover/tags/computer-science/</link>
+			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/computer-science/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>UNIX</title>
+			<link>https://wtsia.github.io/rover/tags/unix/</link>
+			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/unix/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Computational</title>
+			<link>https://wtsia.github.io/rover/tags/computational/</link>
 			<pubDate>Wed, 17 Aug 2022 15:31:42 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/education/</guid>
+			<guid>https://wtsia.github.io/rover/tags/computational/</guid>
 			<description>
 			
 			</description>
@@ -46,37 +109,10 @@
 			</description>
 		</item>
 		<item>
-			<title>CIS</title>
-			<link>https://wtsia.github.io/rover/tags/cis/</link>
-			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/cis/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Computer Science</title>
-			<link>https://wtsia.github.io/rover/tags/computer-science/</link>
-			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/computer-science/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
 			<title>Java</title>
 			<link>https://wtsia.github.io/rover/tags/java/</link>
 			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/java/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Physics</title>
-			<link>https://wtsia.github.io/rover/tags/physics/</link>
-			<pubDate>Mon, 01 Aug 2022 16:10:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/physics/</guid>
 			<description>
 			
 			</description>

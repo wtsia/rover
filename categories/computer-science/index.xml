@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Wed, 17 Aug 2022 01:19:31 -0700</lastBuildDate>
+		<lastBuildDate>Thu, 18 Aug 2022 14:01:59 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>UNIX</title>
+			<link>https://wtsia.github.io/rover/posts/unix/</link>
+			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/unix/</guid>
+			<description>
+			Description
+			</description>
+		</item>
 		<item>
 			<title>Introduction to Object Oriented Programming</title>
 			<link>https://wtsia.github.io/rover/posts/cis254/</link>

@@ -1,5 +1,8 @@
 User-agent: *
 
+Disallow: /rover/posts/electricchargeandfield/
+Disallow: /rover/posts/intrapersonalcommunication/
+Disallow: /rover/posts/unix/
 Disallow: /rover/posts/computationalmethods/
 Disallow: /rover/posts/cis254/
 Disallow: /rover/posts/physicsmechanics/

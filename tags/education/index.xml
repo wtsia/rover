@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Wed, 17 Aug 2022 15:31:42 -0700</lastBuildDate>
+		<lastBuildDate>Mon, 22 Aug 2022 01:39:09 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/education/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Electric Charge and Electric Field</title>
+			<link>https://wtsia.github.io/rover/posts/electricchargeandfield/</link>
+			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/electricchargeandfield/</guid>
+			<description>
+			Description
+			</description>
+		</item>
 		<item>
 			<title>Computational Methods: MATLAB</title>
 			<link>https://wtsia.github.io/rover/posts/computationalmethods/</link>
