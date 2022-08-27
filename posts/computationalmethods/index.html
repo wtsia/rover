@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="Computational Methods: MATLAB">
 <meta itemprop="description" content="Notes on using MATLAB for scientific problems."><meta itemprop="datePublished" content="2022-08-17T15:31:42-07:00" />
 <meta itemprop="dateModified" content="2022-08-17T15:31:42-07:00" />
-<meta itemprop="wordCount" content="101"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
+<meta itemprop="wordCount" content="263"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
 <meta itemprop="keywords" content="Engineering,Computational,Education,MATLAB," />
 </head>
 <body>
@@ -111,6 +111,47 @@ src="/rover/">
 <li>Working from a verbal or equation-based description, use appropriate numerical techniques for differentiation, integration, and solution of differential equations.</li>
 <li>Apply numeric techniques and computer simulations to analyze and solve problems in engineering, mathematics, and the sciences.</li>
 </ol>
+<p>Chapter 1: Background</p>
+<ul>
+<li>compiled languages vs interpreted
+<ul>
+<li>compiled require a programs code to be compiled before execution (specific to the processor)</li>
+<li>interpreted means an interpreter (more applicable across systems) will read high-level statements and execute the operation so on and so forth
+<ul>
+<li>MATLAB is an interpreter!</li>
+</ul>
+</li>
+<li><em>whitespace</em> is not interpreted in Matlab</li>
+</ul>
+<h4 id="common-commands">Common Commands:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>clc: clears command window
+</span></span><span style="display:flex;"><span>clear: clears all vars
+</span></span><span style="display:flex;"><span>diary: records command terminal content 
+</span></span><span style="display:flex;"><span>exit: exits session
+</span></span><span style="display:flex;"><span>who: prints all vars in workspace
+</span></span><span style="display:flex;"><span>whos: ^^ but also prints size, bytes, class, etc
+</span></span><span style="display:flex;"><span>ctrl-c: interrupts program
+</span></span></code></pre></div></li>
+<li><code>format long/short</code>: 15 digits and 4 digits respectively</li>
+<li><code>format compact/loose</code>: single and double spacing</li>
+</ul>
+<h3 id="binary">Binary</h3>
+<ul>
+<li>0000, 0001, 0010&hellip;</li>
+<li>signed vs unsigned:
+<ul>
+<li>unsigned represent non-negative values (1111 = 15)</li>
+<li>signed uses leftmost bit to represent positive of negative</li>
+</ul>
+</li>
+<li>Binary has an additive property:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    0 1 1 1
+</span></span><span style="display:flex;"><span>  + 0 1 1 0
+</span></span><span style="display:flex;"><span>  = 1 1 0 1
+</span></span></code></pre></div><ul>
+<li>overflow: when a binary operator is too large to fit in bits. i.e. 10000 &gt; 1111 + 0001</li>
+</ul>
 
 </div>
 <div class="tags">
