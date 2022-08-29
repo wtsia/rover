@@ -33,20 +33,18 @@ src="/rover/">
 <meta property="og:title" content="Coding Challenges" />
 <meta property="og:description" content="A documentation of my attempts at coding problems" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/codingchallenges/" /><meta property="og:image" content="https://wtsia.github.io/img/example.jpg" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/codingchallenges/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-28T14:32:17-07:00" />
 <meta property="article:modified_time" content="2022-08-28T14:32:17-07:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://wtsia.github.io/img/example.jpg"/>
-
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Coding Challenges"/>
 <meta name="twitter:description" content="A documentation of my attempts at coding problems"/>
 
 <meta itemprop="name" content="Coding Challenges">
 <meta itemprop="description" content="A documentation of my attempts at coding problems"><meta itemprop="datePublished" content="2022-08-28T14:32:17-07:00" />
 <meta itemprop="dateModified" content="2022-08-28T14:32:17-07:00" />
-<meta itemprop="wordCount" content="686"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
+<meta itemprop="wordCount" content="694">
 <meta itemprop="keywords" content="Time Complexity,Programming,Math," />
 </head>
 <body>
@@ -82,9 +80,6 @@ src="/rover/">
 <main>
 <div class="post">
 <article>
-<div class="post-image">
-<img src="/rover/img/example.jpg" alt="An example text for an image you could add!">
-</div>
 <div class="post-header">
 <div class="meta">
 </div>
@@ -131,73 +126,24 @@ $$</p>
 <p><strong>Time Complexity (TC)</strong>: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1)$ since we cannot compare every $a_n \in array$ to itself. Therefore we can iterate through as such:</p>
 <p>$$
 n = 1  \to [a_0]
-$$
-array of $1$ cannot be a duplicate of itself, so no duplicates.</p>
+$$</p>
+<p>array of 1 cannot be a duplicate of itself, so no duplicates.</p>
 <p>$$
-n = 2  \to [a_0, a_1] \to
-a_0
-\begin{pmatrix}
-a_1
-\end{pmatrix}</p>
-<ul>
-<li>a_1
-\begin{pmatrix}
-a_0
-\end{pmatrix}\</li>
-</ul>
-<p>n = 3  \to [a_0, a_1, a_2] \to
-a_0
-\begin{pmatrix}
-a_1 \
-a_2
-\end{pmatrix}</p>
-<ul>
-<li>a_1
-\begin{pmatrix}
-a_0 \
-a_2
-\end{pmatrix}</li>
-<li>a_2
-\begin{pmatrix}
-a_0 \
-a_1
-\end{pmatrix}
-$$
-Continuing to an array of length <code>4</code>:
-$$
-n = 4  \to [a_0, a_1, a_2, a_3] \to
-a_0
-\begin{pmatrix}
-a_1 \
-a_2 \
-a_3
-\end{pmatrix}</li>
-<li>a_1
-\begin{pmatrix}
-a_0 \
-a_2 \
-a_3
-\end{pmatrix}</li>
-<li>a_2
-\begin{pmatrix}
-a_0 \
-a_1 \
-a_3
-\end{pmatrix}
-+a_3
-\begin{pmatrix}
-a_0 \
-a_1 \
-a_2
-\end{pmatrix}
-$$
-As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series:
-$$
+n = 2  \to [a_0, a_1] \to a_0 \begin{pmatrix} a_1 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \end{pmatrix} 
+$$</p>
+<p>$$
+n = 3  \to [a_0, a_1, a_2] \to a_0 \begin{pmatrix} a_1 \\ a_2 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\ a_2 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\ a_1 \end{pmatrix}
+$$</p>
+<p>Continuing to an array of length <code>4</code>:</p>
+<p>$$
+n = 4 \to [a_0, a_1, a_2, a_3] \to a_0 \begin{pmatrix} a_1 \\ a_2 \\ a_3 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \\ a_2 \\ a_3 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\ a_1 \\ a_3 \end{pmatrix} + a_3 \begin{pmatrix} a_0 \\ a_1 \\ a_2 \end{pmatrix}
+$$</p>
+<p>As we can see, the relationship between array length and operations applied can be seen as first storing the variable which costs 1 unit of time, then comparing the variable to other members of the array. We can represent this in a finite series:</p>
+<p>$$
 \sum_{i = 1}^{N}n^2 = 1 + 4 + 9 + 16 + &hellip;
-$$
-$$</li>
-</ul>
-<p>|array| * array[n] = n*n \rArr O(n^2)
+$$</p>
+<p>$$
+|array| * array[n] = n*n \rArr O(n^2)
 $$</p>
 <p>Sol 2) Divide: split the array into two and compare each number to each element of the other array. This reduces the size of the array approximately in half..</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Solution(object):
