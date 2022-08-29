@@ -18,14 +18,5 @@
 			A documentation of my attempts at coding problems
 			</description>
 		</item>
-		<item>
-			<title>Algorithm Questions</title>
-			<link>https://wtsia.github.io/rover/posts/algorithmquestions/</link>
-			<pubDate>Wed, 08 Jun 2022 17:41:44 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/algorithmquestions/</guid>
-			<description>
-			Compiled Algorithm Questions
-			</description>
-		</item>
 	</channel>
 </rss>

@@ -13,7 +13,6 @@ Disallow: /rover/posts/humananatomy/
 Disallow: /rover/posts/pomology/
 Disallow: /rover/posts/physics/
 Disallow: /rover/posts/csterms/
-Disallow: /rover/posts/algorithmquestions/
 Disallow: /rover/posts/interviewtips/
 Disallow: /rover/posts/00_cryptography1/
 Disallow: /rover/posts/educationaltaxnotes/
