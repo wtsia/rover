@@ -1,5 +1,7 @@
 User-agent: *
 
+Disallow: /rover/posts/csnotes/
+Disallow: /rover/posts/codingchallenges/
 Disallow: /rover/posts/electricchargeandfield/
 Disallow: /rover/posts/intrapersonalcommunication/
 Disallow: /rover/posts/unix/
@@ -13,7 +15,7 @@ Disallow: /rover/posts/physics/
 Disallow: /rover/posts/csterms/
 Disallow: /rover/posts/algorithmquestions/
 Disallow: /rover/posts/interviewtips/
-Disallow: /rover/posts/cryptographyi/
+Disallow: /rover/posts/00_cryptography1/
 Disallow: /rover/posts/educationaltaxnotes/
 Disallow: /rover/posts/macroeconomics/
 Disallow: /rover/posts/studying_methodology/
@@ -26,13 +28,11 @@ Disallow: /rover/posts/example-content/
 Disallow: /rover/about/
 Disallow: /rover/posts/00_databases/
 Disallow: /rover/posts/designandanalysisofalgorithms/
-Disallow: /rover/posts/divideandconquer/
-Disallow: /rover/posts/generaloverview/
 Disallow: /rover/homepage/
 Disallow: /rover/posts/languagesoverview/
 Disallow: /rover/posts/nash-equilibrium/
-Disallow: /rover/posts/00_networks/
+Disallow: /rover/posts/networks/
 Disallow: /rover/posts/pvsnp/
-Disallow: /rover/posts/00_scalability/
-Disallow: /rover/posts/00_tradeoffs/
+Disallow: /rover/posts/scalability/
+Disallow: /rover/posts/tradeoffs/
 Disallow: /rover/posts/00_security/

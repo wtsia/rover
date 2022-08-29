@@ -2,8 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wtsia.github.io/rover/categories/cat1/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/cat2/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
-    <lastmod>2022-08-22T01:39:09-07:00</lastmod>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/csnotes/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/tag1/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/tag2/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2022-08-28T16:52:54-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/codingchallenges/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/computer-science/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/math/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/programming/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/programming/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/python/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/time-complexity/</loc>
+    <lastmod>2022-08-28T14:32:17-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/education/</loc>
     <lastmod>2022-08-22T01:39:09-07:00</lastmod>
@@ -20,37 +65,13 @@
     <loc>https://wtsia.github.io/rover/categories/physics/</loc>
     <lastmod>2022-08-22T01:39:09-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2022-08-22T01:39:09-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2022-08-22T01:39:09-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
-    <lastmod>2022-08-22T01:39:09-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/cat1/</loc>
-    <lastmod>2022-08-22T00:17:25-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/cat2/</loc>
-    <lastmod>2022-08-22T00:17:25-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/posts/intrapersonalcommunication/</loc>
-    <lastmod>2022-08-22T00:17:25-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/tag1/</loc>
-    <lastmod>2022-08-22T00:17:25-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/tag2/</loc>
     <lastmod>2022-08-22T00:17:25-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/cis/</loc>
     <lastmod>2022-08-18T14:01:59-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/computer-science/</loc>
-    <lastmod>2022-08-18T14:01:59-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/computer-science/</loc>
     <lastmod>2022-08-18T14:01:59-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/unix/</loc>
@@ -152,9 +173,6 @@
     <loc>https://wtsia.github.io/rover/categories/interview-prep/</loc>
     <lastmod>2022-06-08T17:41:44-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/tags/programming/</loc>
-    <lastmod>2022-06-08T17:41:44-07:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/tags/python/</loc>
     <lastmod>2022-06-08T17:41:44-07:00</lastmod>
   </url><url>
@@ -165,9 +183,6 @@
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/interviewing/</loc>
-    <lastmod>2022-06-07T01:22:05-07:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/programming/</loc>
     <lastmod>2022-06-07T01:22:05-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/programming-interview/</loc>
@@ -182,7 +197,7 @@
     <loc>https://wtsia.github.io/rover/categories/cryptography/</loc>
     <lastmod>2022-06-02T14:22:54-07:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/cryptographyi/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_cryptography1/</loc>
     <lastmod>2022-06-02T14:22:54-07:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/mathematics/</loc>
@@ -304,10 +319,6 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/divideandconquer/</loc>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/generaloverview/</loc>
-  </url><url>
     <loc>https://wtsia.github.io/rover/homepage/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/languages/</loc>
@@ -316,17 +327,15 @@
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/nash-equilibrium/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/00_networks/</loc>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/overview/</loc>
+    <loc>https://wtsia.github.io/rover/posts/networks/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/posts/pvsnp/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/scalability/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/00_scalability/</loc>
+    <loc>https://wtsia.github.io/rover/posts/scalability/</loc>
   </url><url>
-    <loc>https://wtsia.github.io/rover/posts/00_tradeoffs/</loc>
+    <loc>https://wtsia.github.io/rover/posts/tradeoffs/</loc>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/security/</loc>
   </url><url>

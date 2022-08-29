@@ -134,12 +134,12 @@ src="/rover/">
 <li>Partition Tolerance: The system continues to operate despite arbitrary partitioning due to network failures</li>
 <li>Networks arent reliable, so support partition tolerance, and tradeoff between consistency and availability
 <ul>
-<li>CP - consistency partition tolerance
+<li>$CP$ - consistency partition tolerance
 <ul>
 <li>good for business requiring atomic reads and writes</li>
 </ul>
 </li>
-<li>AP - availability and partition tolerance
+<li>$AP$ - availability and partition tolerance
 <ul>
 <li>responds with most readily available version of data available on any node (may not be latest)</li>
 <li>good for business needs eventual consistency or continued function despite external errors</li>
@@ -202,11 +202,10 @@ src="/rover/">
 </li>
 <li>Availability in numbers - quantified by uptime/downtime as a % of time service is available
 <ul>
-<li>measured in units of 9s, 99.99% availabilty is 4 9s
+<li>measured in units of $9s$, 99.99% availability is 4 9s
 <ul>
-<li>{ 9, 99, 999, &hellip;}
-= { 9*(10^0), 9(10^1 + 10^0), 9(10^2 + 10^1 + 10^0), &hellip;}</li>
-<li>for n &gt; 0, n 9s is represented by 9(10^n + 10^n-1 + &hellip; + 10^0)</li>
+<li>${ 9, 99, 999, &hellip;} = { 9*(10^0), 9(10^1 + 10^0), 9(10^2 + 10^1 + 10^0), &hellip;}$</li>
+<li>for $n &gt; 0$, $n$ 9s is represented by $9(10^n + 10^n-1 + &hellip; + 10^0)$</li>
 </ul>
 </li>
 </ul>

@@ -7,21 +7,12 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Mon, 22 Aug 2022 01:39:09 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 28 Aug 2022 16:52:54 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
-		<item>
-			<title>Physics</title>
-			<link>https://wtsia.github.io/rover/categories/physics/</link>
-			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/physics/</guid>
-			<description>
-			
-			</description>
-		</item>
 		<item>
 			<title>cat1</title>
 			<link>https://wtsia.github.io/rover/categories/cat1/</link>
-			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/cat1/</guid>
 			<description>
 			
@@ -30,7 +21,7 @@
 		<item>
 			<title>cat2</title>
 			<link>https://wtsia.github.io/rover/categories/cat2/</link>
-			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/cat2/</guid>
 			<description>
 			
@@ -39,8 +30,35 @@
 		<item>
 			<title>Computer Science</title>
 			<link>https://wtsia.github.io/rover/categories/computer-science/</link>
-			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
+			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/computer-science/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Programming</title>
+			<link>https://wtsia.github.io/rover/categories/programming/</link>
+			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/programming/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Python</title>
+			<link>https://wtsia.github.io/rover/categories/python/</link>
+			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/python/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Physics</title>
+			<link>https://wtsia.github.io/rover/categories/physics/</link>
+			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/physics/</guid>
 			<description>
 			
 			</description>
@@ -140,15 +158,6 @@
 			<link>https://wtsia.github.io/rover/categories/interviewing/</link>
 			<pubDate>Tue, 07 Jun 2022 01:22:05 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/interviewing/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Programming</title>
-			<link>https://wtsia.github.io/rover/categories/programming/</link>
-			<pubDate>Tue, 07 Jun 2022 01:22:05 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/programming/</guid>
 			<description>
 			
 			</description>

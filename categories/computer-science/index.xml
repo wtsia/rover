@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Thu, 18 Aug 2022 14:01:59 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 28 Aug 2022 14:32:17 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/computer-science/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Coding Challenges</title>
+			<link>https://wtsia.github.io/rover/posts/codingchallenges/</link>
+			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/codingchallenges/</guid>
+			<description>
+			A documentation of my attempts at coding problems
+			</description>
+		</item>
 		<item>
 			<title>UNIX</title>
 			<link>https://wtsia.github.io/rover/posts/unix/</link>
@@ -38,9 +47,9 @@
 		</item>
 		<item>
 			<title>Cryptography</title>
-			<link>https://wtsia.github.io/rover/posts/cryptographyi/</link>
+			<link>https://wtsia.github.io/rover/posts/00_cryptography1/</link>
 			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cryptographyi/</guid>
+			<guid>https://wtsia.github.io/rover/posts/00_cryptography1/</guid>
 			<description>
 			Notes on topics in cryptography
 			</description>
@@ -82,24 +91,6 @@
 			</description>
 		</item>
 		<item>
-			<title>Divide and Conquer</title>
-			<link>https://wtsia.github.io/rover/posts/divideandconquer/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/divideandconquer/</guid>
-			<description>
-			Unfinished
-			</description>
-		</item>
-		<item>
-			<title>General Overview</title>
-			<link>https://wtsia.github.io/rover/posts/generaloverview/</link>
-			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/generaloverview/</guid>
-			<description>
-			A page of general Software Engineering concepts
-			</description>
-		</item>
-		<item>
 			<title>Languages Overview</title>
 			<link>https://wtsia.github.io/rover/posts/languagesoverview/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -110,9 +101,9 @@
 		</item>
 		<item>
 			<title>Networks</title>
-			<link>https://wtsia.github.io/rover/posts/00_networks/</link>
+			<link>https://wtsia.github.io/rover/posts/networks/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_networks/</guid>
+			<guid>https://wtsia.github.io/rover/posts/networks/</guid>
 			<description>
 			Scaling Networks
 			</description>
@@ -128,18 +119,18 @@
 		</item>
 		<item>
 			<title>Scalability</title>
-			<link>https://wtsia.github.io/rover/posts/00_scalability/</link>
+			<link>https://wtsia.github.io/rover/posts/scalability/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_scalability/</guid>
+			<guid>https://wtsia.github.io/rover/posts/scalability/</guid>
 			<description>
 			Topics covering scalability of systems
 			</description>
 		</item>
 		<item>
 			<title>Scalability: Tradeoffs</title>
-			<link>https://wtsia.github.io/rover/posts/00_tradeoffs/</link>
+			<link>https://wtsia.github.io/rover/posts/tradeoffs/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_tradeoffs/</guid>
+			<guid>https://wtsia.github.io/rover/posts/tradeoffs/</guid>
 			<description>
 			Scalability topics covering tradoffs
 			</description>
