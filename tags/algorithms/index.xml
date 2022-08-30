@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Wed, 08 Jun 2022 22:40:39 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 28 Aug 2022 16:52:54 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Computer Science Notes</title>
+			<link>https://wtsia.github.io/rover/posts/csnotes/</link>
+			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/csnotes/</guid>
+			<description>
+			Notes on Data Structures, Algorithms, and other broad topics in computer science
+			</description>
+		</item>
 		<item>
 			<title>Computer Science Terms</title>
 			<link>https://wtsia.github.io/rover/posts/csterms/</link>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Data Structures on Rover</title>
+		<link>https://wtsia.github.io/rover/tags/data-structures/</link>
+		<description>Recent content in Data Structures on wtsia.github.io</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-us</language>
+		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
+		<lastBuildDate>Sun, 28 Aug 2022 16:52:54 -0700</lastBuildDate>
+		<atom:link href="https://wtsia.github.io/rover/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Computer Science Notes</title>
+			<link>https://wtsia.github.io/rover/posts/csnotes/</link>
+			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/csnotes/</guid>
+			<description>
+			Notes on Data Structures, Algorithms, and other broad topics in computer science
+			</description>
+		</item>
+	</channel>
+</rss>

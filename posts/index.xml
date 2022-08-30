@@ -10,12 +10,12 @@
 		<lastBuildDate>Sun, 28 Aug 2022 16:52:54 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
 		<item>
-			<title>Csnotes</title>
+			<title>Computer Science Notes</title>
 			<link>https://wtsia.github.io/rover/posts/csnotes/</link>
 			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/posts/csnotes/</guid>
 			<description>
-			Description
+			Notes on Data Structures, Algorithms, and other broad topics in computer science
 			</description>
 		</item>
 		<item>

@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Csnotes | Rover</title>
+<title>Computer Science Notes | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
-<meta name="keywords" content="tag1, tag2">
-<meta name="description" content="Description">
+<meta name="keywords" content="Data Structures, Algorithms">
+<meta name="description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science">
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
@@ -30,24 +30,22 @@ src="/rover/">
 
 
 
-<meta property="og:title" content="Csnotes" />
-<meta property="og:description" content="Description" />
+<meta property="og:title" content="Computer Science Notes" />
+<meta property="og:description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/csnotes/" /><meta property="og:image" content="https://wtsia.github.io/img/example.jpg" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/csnotes/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-28T16:52:54-07:00" />
 <meta property="article:modified_time" content="2022-08-28T16:52:54-07:00" />
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://wtsia.github.io/img/example.jpg"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Computer Science Notes"/>
+<meta name="twitter:description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science"/>
 
-<meta name="twitter:title" content="Csnotes"/>
-<meta name="twitter:description" content="Description"/>
-
-<meta itemprop="name" content="Csnotes">
-<meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-08-28T16:52:54-07:00" />
+<meta itemprop="name" content="Computer Science Notes">
+<meta itemprop="description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science"><meta itemprop="datePublished" content="2022-08-28T16:52:54-07:00" />
 <meta itemprop="dateModified" content="2022-08-28T16:52:54-07:00" />
-<meta itemprop="wordCount" content="0"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
-<meta itemprop="keywords" content="tag1,tag2," />
+<meta itemprop="wordCount" content="645">
+<meta itemprop="keywords" content="Data Structures,Algorithms," />
 </head>
 <body>
 <header>
@@ -82,14 +80,11 @@ src="/rover/">
 <main>
 <div class="post">
 <article>
-<div class="post-image">
-<img src="/rover/img/example.jpg" alt="An example text for an image you could add!">
-</div>
 <div class="post-header">
 <div class="meta">
 </div>
 <div class="matter">
-<h1 class="title">Csnotes</h1>
+<h1 class="title">Computer Science Notes</h1>
 <p class="post-meta">
 <span class="post-meta">
 
@@ -102,8 +97,152 @@ src="/rover/">
 </div>
 <div class="markdown">
 <p><figure>
-  <img src="/rover/img/topic/image.png" alt="Replacement Text"  />
+  <img src="/rover/img/ComputerScience/rubik.jpg" alt="Replacement Text"  />
 </figure></p>
+<h1 id="data-structures-and-algorithms">Data Structures and Algorithms</h1>
+<h3 id="dynamic-programming--memoization">Dynamic Programming &amp; Memoization</h3>
+<p>A way of making algorithms more efficient by storing the intermediary results.</p>
+<ul>
+<li>Memoization: In computing, memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>fib(n)</code></li>
+</ul>
+<h3 id="algorithm-efficiency-big-o-notation">Algorithm Efficiency: Big $O$ notation</h3>
+<p>Ranked closeness from Elements to Operations (Also good to bad)</p>
+<p>$O(1)$, $O(log n)$, $O(n)$, $O(n log n)$, $O(n^2)$, $O(2^n)$, $O(n!)$</p>
+<ul>
+<li>Space complexity: relationship between growth of input size and growth of space needed</li>
+</ul>
+<h4 id="binary-search">Binary Search</h4>
+<ul>
+<li>Check middle element and search from middle element, similar to math approximation algorithm when finding root values.</li>
+</ul>
+<h4 id="selection-sort">Selection Sort</h4>
+<ul>
+<li>Linear scan $O(n^2)$</li>
+</ul>
+<h4 id="merge-sort">Merge sort:</h4>
+<ul>
+<li>
+<p>splits collection into subcollections that can be sorted in constant time</p>
+</li>
+<li>
+<p>merge $log(n)$ sublists</p>
+</li>
+<li>
+<p>cost of merging 2 sorted lists $O(n)$</p>
+</li>
+<li>
+<p>merge sort runs $n*log(n) = O(n log(n))$</p>
+</li>
+<li>
+<p><code>array</code>: continuous memory space</p>
+</li>
+<li>
+<p><code>linked list</code>: packed data into nodes that point to another node, null is end of the list</p>
+<ul>
+<li>appending to dynamically sized array costs $O(1)$ average time complexity</li>
+</ul>
+</li>
+</ul>
+<h4 id="binary-tree">Binary tree</h4>
+<ul>
+<li>node with no children is called leaf node</li>
+<li>Binary Search Tree: Value of the key of the left sub-tree is less than the value of its parent node&rsquo;s key, while right is greater or equal to the value of parent&rsquo;s (root) node key
+<ul>
+<li>$O(H)$ where H is height of the tree, for operations of search, insert, and delete</li>
+<li>Red/Black trees: maintain features to accomplish $O(log(n))$</li>
+</ul>
+</li>
+</ul>
+<h4 id="heap-a-tree-based-data-structure-where-parent-nodes-have--priority-as-children-nodes">Heap: A tree based data structure where parent nodes have &gt;= priority as children nodes</h4>
+<ul>
+<li>Priority Queue: abstract data type where elements have priority and higher priority elements are served first (common in heap)</li>
+<li>Min heap, max heap</li>
+<li>Heap Insertion/Deletion costs $O(log(n))$</li>
+<li>Retrieving highest priority costs $O(1)$</li>
+<li>building heap costs $O(n)$</li>
+</ul>
+<h4 id="depth-first-search-iterates-vertically-through-first-branch-to-the-end-then-the-other-leaf-nodes">Depth First Search: iterates vertically through first branch to the end, then the other leaf nodes</h4>
+<ul>
+<li>Stack: a collection that supports push (add to end) and pop (remove from end)
+<ul>
+<li>Last in First Out</li>
+<li>Recursion
+<ul>
+<li>if Recursion exceeds amount of depth, you get stack overflow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="breadth-first-search-iterates-through-horizontal-branches-and-progresses-downward">Breadth First Search: iterates through horizontal branches and progresses downward</h4>
+<ul>
+<li>Queue: First in First Out</li>
+</ul>
+<h4 id="edges-and-vertices">Edges and Vertices</h4>
+<ul>
+<li>Edges are relationships between vertices</li>
+<li>ex. Google Maps
+<ul>
+<li>vertices of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
+<ul>
+<li>BFS gives shortest path by vertices, not by weight (length), so use Dijkstra&rsquo;s Algorithm</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="dijkstras-algorithm">Dijkstra&rsquo;s Algorithm</h4>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=GazC3A4OQTE" target="_blank">Computerphile - Dijikstra’s Algorithm</a></p>
+</li>
+<li>
+<p>A path-finding algorithm, useful for routing</p>
+</li>
+<li>
+<p>Analogy: Roads</p>
+<ul>
+<li>Smaller = better</li>
+<li>How do you find a route from point A to B? (S to E)</li>
+<li>How do you know this route is the shortest path?</li>
+</ul>
+</li>
+<li>
+<p>Analogous to brute-forcing, storing paths in priority queue where shortest path to a specific node is pushed up a queue</p>
+<ol>
+<li>let initial node be 0, and distance of unvisited nodes in some unvisited set be infinity</li>
+<li>tentative distance is length of the shortest path discovered so far between generic node and starting node
+<ul>
+<li>set initial node as current</li>
+</ul>
+</li>
+<li>On current node, visit unvisited neighboring nodes to current and calculate tentative distance through current.
+<ul>
+<li>assign smallest tentative distance to currently assigned value for current</li>
+</ul>
+</li>
+<li>after considering unvisited nodes, mark current nodes, remove from unvisited set</li>
+<li>if destination has been visited, or smallest tentative distance among unvisited nodes is infinity, return finished.</li>
+<li>else select unvisited node that is marked with smallest tentative distance and set it as new current node, return to step 3.</li>
+</ol>
+</li>
+</ul>
+<h4 id="topological-sort">Topological Sort</h4>
+<h4 id="hash-map">Hash Map</h4>
+<ul>
+<li>Data structure built on top of an array optimized to store key-value pairs</li>
+<li>Can retrieve delete and store data in $O(1)$ (but not strictly)</li>
+<li>Hash function: takes key and returns hash code
+<ul>
+<li>given same key, should return same hash code</li>
+<li>ex. dict (python), or object (js)</li>
+</ul>
+</li>
+</ul>
 
 </div>
 <div class="tags">
@@ -112,8 +251,8 @@ src="/rover/">
 </div>
 <div class="termsfloating_right">
 <p>
-<a href="/rover/categories/cat1/">cat1</a>
-<a href="/rover/categories/cat2/">cat2</a>
+<a href="/rover/categories/computer-science/">computer-science</a>
+<a href="/rover/categories/education/">education</a>
 </p>
 </div>
 <div class="clearit"></div>
@@ -123,8 +262,8 @@ src="/rover/">
 </div>
 <div class="termsfloating_right">
 <p>
-<a href="/rover/tags/tag1/">tag1</a>
-<a href="/rover/tags/tag2/">tag2</a>
+<a href="/rover/tags/algorithms/">algorithms</a>
+<a href="/rover/tags/data-structures/">data-structures</a>
 </p>
 </div>
 <div class="clearit"></div>

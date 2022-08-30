@@ -10,28 +10,19 @@
 		<lastBuildDate>Sun, 28 Aug 2022 16:52:54 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
 		<item>
-			<title>cat1</title>
-			<link>https://wtsia.github.io/rover/categories/cat1/</link>
-			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/cat1/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>cat2</title>
-			<link>https://wtsia.github.io/rover/categories/cat2/</link>
-			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/cat2/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
 			<title>Computer Science</title>
 			<link>https://wtsia.github.io/rover/categories/computer-science/</link>
-			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
+			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/computer-science/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Education</title>
+			<link>https://wtsia.github.io/rover/categories/education/</link>
+			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/education/</guid>
 			<description>
 			
 			</description>
@@ -64,6 +55,24 @@
 			</description>
 		</item>
 		<item>
+			<title>cat1</title>
+			<link>https://wtsia.github.io/rover/categories/cat1/</link>
+			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/cat1/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>cat2</title>
+			<link>https://wtsia.github.io/rover/categories/cat2/</link>
+			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/cat2/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
 			<title>Engineering</title>
 			<link>https://wtsia.github.io/rover/categories/engineering/</link>
 			<pubDate>Wed, 17 Aug 2022 15:31:42 -0700</pubDate>
@@ -77,15 +86,6 @@
 			<link>https://wtsia.github.io/rover/categories/matlab/</link>
 			<pubDate>Wed, 17 Aug 2022 15:31:42 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/matlab/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Education</title>
-			<link>https://wtsia.github.io/rover/categories/education/</link>
-			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/education/</guid>
 			<description>
 			
 			</description>

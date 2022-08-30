@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="Computational Methods: MATLAB">
 <meta itemprop="description" content="Notes on using MATLAB for scientific problems."><meta itemprop="datePublished" content="2022-08-17T15:31:42-07:00" />
 <meta itemprop="dateModified" content="2022-08-17T15:31:42-07:00" />
-<meta itemprop="wordCount" content="263"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
+<meta itemprop="wordCount" content="837"><meta itemprop="image" content="https://wtsia.github.io/img/example.jpg">
 <meta itemprop="keywords" content="Engineering,Computational,Education,MATLAB," />
 </head>
 <body>
@@ -151,6 +151,181 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>  = 1 1 0 1
 </span></span></code></pre></div><ul>
 <li>overflow: when a binary operator is too large to fit in bits. i.e. 10000 &gt; 1111 + 0001</li>
+</ul>
+<h3 id="variables-and-assignments">Variables and Assignments</h3>
+<ul>
+<li>variable is a place for a programmer to store data in memory</li>
+<li>variables take on the value of its most recently assigned value. They can change!</li>
+</ul>
+<h3 id="identifiers">Identifiers</h3>
+<table>
+<thead>
+<tr>
+<th>Keywords</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>else</td>
+<td>global</td>
+<td>return</td>
+</tr>
+<tr>
+<td>case</td>
+<td>elseif</td>
+<td>if</td>
+<td>spmd</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>end</td>
+<td>otherwise</td>
+<td>switch</td>
+</tr>
+<tr>
+<td>classdef</td>
+<td>for</td>
+<td>parfor</td>
+<td>try</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>function</td>
+<td>persistent</td>
+<td>while</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The above <strong>CANNOT</strong> be used as identifiers
+<ul>
+<li>as well as predefined mathematical constants, or functions</li>
+<li>Invalid: <code>$</code>,<code>-</code>, starting with numbers,</li>
+</ul>
+</li>
+<li>make meaningful names for variables</li>
+<li>Good Practice: <code>camelCase</code> with no <code>under_Scores</code></li>
+</ul>
+<h3 id="numeric-variables">Numeric Variables</h3>
+<ul>
+<li>
+<p>1 byte = 8 bits</p>
+</li>
+<li>
+<p>Scientific Notation: $3.14 * 10^n$</p>
+<ul>
+<li>binary normalized scientific notation: 
+$$
+1.f * 2^{exponent}
+$$</li>
+</ul>
+</li>
+<li>
+<p>i.e. $1.010 * 2^5$</p>
+</li>
+<li>
+<p><em>mantissa</em>: the part of a floating-point number that represents the significant digits of that number, and that is multiplied by the base raised to the exponent to give the actual value of the number.</p>
+</li>
+<li>
+<p><strong>double precision</strong>, consisting of:</p>
+<ul>
+<li>1 bit (bit 63) for the sign. 0 indicates the number is positive. 1 indicates the number is negative.</li>
+<li>11 bits (bits 62 to 52) for the exponent.</li>
+<li>52 bits (bits 51 to 0) for the fractional part of the mantissa; the whole part of the mantissa is always 1 and thus is not explicitly stored.</li>
+<li>range: $10^{308}$</li>
+</ul>
+</li>
+<li>
+<p>The standard also defines a 32-bit floating-point representation known as <strong>single precision</strong>, with 1 bit for the sign, 8 bits for the exponent, and 23 bits for the fractional part</p>
+<ul>
+<li>range: $10^{38}$</li>
+</ul>
+</li>
+<li>
+<p><code>realmax</code> = $supernum$</p>
+</li>
+<li>
+<p><code>realmin</code> = $minimum$</p>
+</li>
+<li>
+<p>MATLAB Defaults:</p>
+<ul>
+<li>creates real and double-precision numbers</li>
+</ul>
+</li>
+</ul>
+<h3 id="numeric-expressions">Numeric Expressions</h3>
+<ul>
+<li>do not omit th *</li>
+<li>minus used as a negative is known as unary minus</li>
+</ul>
+<h3 id="precedence">Precedence:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>P(arenthesis ())
+</span></span><span style="display:flex;"><span>E(xponents ^)
+</span></span><span style="display:flex;"><span>M(inus signs, or ~ negations)
+</span></span><span style="display:flex;"><span>M(ultiplication * or)
+</span></span><span style="display:flex;"><span>D(ivision /)
+</span></span><span style="display:flex;"><span>A(ddition + or)
+</span></span><span style="display:flex;"><span>S(ubtraction -)
+</span></span><span style="display:flex;"><span>R(elational operators ==,&lt;,&gt;,&lt;=,&gt;=)
+</span></span><span style="display:flex;"><span>&amp;
+</span></span><span style="display:flex;"><span>|
+</span></span><span style="display:flex;"><span>&amp;&amp;
+</span></span><span style="display:flex;"><span>||
+</span></span></code></pre></div><ul>
+<li>and left to right</li>
+<li>continuation (<code>...</code>):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt;&gt; x1 = (1/2)^1+(1/2)^2+(1/2)^3+...
+</span></span><span style="display:flex;"><span>           (1/2)^4+(1/2)^5+(1/2)^6+...
+</span></span><span style="display:flex;"><span>           (1/2)^7+(1/2)^8+(1/2)^9;
+</span></span></code></pre></div><ul>
+<li>Good practice is to refrain from using very long expressions, instead breaking the expression into subexpressions by using intermediate variables, which makes the program more readable and easier to troubleshoot.
+<ul>
+<li>reduce clutter</li>
+</ul>
+</li>
+<li>The value Inf, meaning infinity, arises either when a nonzero value is divided by zero or when a mathematical expression results in an overflow. Overflow occurs when the result of a expression exceeds the maximum value that can be stored within a variable.</li>
+<li>The value NaN, meaning not-a-number, is generated by trying to evaluate expressions that do not have well defined mathematical values. For example, the expressions 0/0 and Inf-Inf evaluate to NaN.</li>
+</ul>
+<h3 id="string-scalars">String Scalars</h3>
+<ul>
+<li>A <strong>string scalar</strong> stores text in a variable that has a class string.</li>
+<li>The ASCII standard is a commonly-used way of encoding characters using bits. For example, the 8-bit ASCII encoding of the character &ldquo;s&rdquo; is 1110011, which is 115 in decimal. The statement myChar = &ldquo;s&rdquo;</li>
+</ul>
+<h3 id="logical-variables">Logical Variables</h3>
+<ul>
+<li>A logical value, also known as a Boolean value, can be only true (indicated by a non-zero number, typically 1) or false (indicated by the number 0)
+<ul>
+<li>Such variables only occupy one byte each, in contrast to the numerical variable num, which occupies 8 bytes</li>
+<li><code>xor(A, B)</code>: checks if truth value is the same</li>
+</ul>
+</li>
+</ul>
+<h3 id="short-circuit-evaluation">Short-Circuit Evaluation</h3>
+<ul>
+<li>short-circuits occur when the rest of the logical operator is not executed, hence &lsquo;short circuit&rsquo;</li>
+<li><code>&amp;&amp;</code>:
+<ul>
+<li>1st expression <code>true</code>, 2nd expression evaluated</li>
+<li>1st value <code>false</code>, 2nd expression isn&rsquo;t</li>
+</ul>
+</li>
+<li><code>||</code>:
+<ul>
+<li>1st expression <code>true</code>, so 2nd expression isn&rsquo;t evaluated</li>
+<li>1st <code>false</code>, 2nd is evaluated</li>
+</ul>
+</li>
+</ul>
+<h3 id="precendence">Precendence</h3>
+<ul>
+<li>Arithmetic operators (+, -, *) have precedence over relational operators</li>
+<li>== has precedence over &amp;</li>
 </ul>
 
 </div>
