@@ -19,12 +19,21 @@
 			</description>
 		</item>
 		<item>
-			<title>Introduction to Object Oriented Programming</title>
+			<title>Intrapersonal Communication</title>
+			<link>https://wtsia.github.io/rover/posts/intrapersonalcommunication/</link>
+			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/intrapersonalcommunication/</guid>
+			<description>
+			Notes on Looking Out Looking In, 15th Edition
+			</description>
+		</item>
+		<item>
+			<title>Object Oriented Programming</title>
 			<link>https://wtsia.github.io/rover/posts/cis254/</link>
 			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/posts/cis254/</guid>
 			<description>
-			Description
+			Notes on Object Oriented Programming
 			</description>
 		</item>
 		<item>
