@@ -1,5 +1,7 @@
 User-agent: *
 
+Disallow: /rover/posts/refactoring-exercises/
+Disallow: /rover/posts/ubuntu-server/
 Disallow: /rover/posts/csnotes/
 Disallow: /rover/posts/codingchallenges/
 Disallow: /rover/posts/electricchargeandfield/
