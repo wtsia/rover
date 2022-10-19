@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Tips for an Ubuntu Server">
 <meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-09-26T21:24:43-07:00" />
 <meta itemprop="dateModified" content="2022-09-26T21:24:43-07:00" />
-<meta itemprop="wordCount" content="1471">
+<meta itemprop="wordCount" content="1506">
 <meta itemprop="keywords" content="Ubuntu," />
 </head>
 <body>
@@ -116,7 +116,8 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>sudo blkid              // get uuid of drive
 </span></span><span style="display:flex;"><span>sudo nano /etc/fstab    // edit fstab using nano
 </span></span><span style="display:flex;"><span># example of a disk mount
-</span></span><span style="display:flex;"><span>/dev/disk/by-uuid/&lt;id&gt;  /&lt;directory for mount&gt;  &lt;storage type like ext4&gt;    defaults    0   0    
+</span></span><span style="display:flex;"><span>/dev/disk/by-uuid/6cb2542a-022b-45f6-8bce-4f593a2f839b  /&lt;directory for mount&gt;  &lt;storage type like ext4&gt;    defaults    0   0    
+</span></span><span style="display:flex;"><span>sudo mount -a
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// show video card drivers
 </span></span><span style="display:flex;"><span>lshw -c video
@@ -132,13 +133,27 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// rsync
 </span></span><span style="display:flex;"><span>rsync -rtvu source_folder/ destination_folder/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//ubuntu drivers
+</span></span><span style="display:flex;"><span>sudo ubuntu-drivers devices
+</span></span></code></pre></div><h3 id="ubuntu-server-troubleshooting">Ubuntu Server Troubleshooting</h3>
+<ul>
+<li>allocated space not totally filled (seen after <code>lsblk</code>)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// ubuntu stack overflow
+</span></span><span style="display:flex;"><span>I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie&#39;s suggestion and the provided link did it for me. To summarize:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@util:~# vgdisplay
+</span></span><span style="display:flex;"><span>&lt;snip&gt;
+</span></span><span style="display:flex;"><span>root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+</span></span><span style="display:flex;"><span>&lt;snip&gt;
+</span></span><span style="display:flex;"><span>root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</span></span><span style="display:flex;"><span>&lt;snip&gt;
 </span></span></code></pre></div><h2 id="useful-text-editor-shortcuts">useful text editor shortcuts</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// NANO
 </span></span><span style="display:flex;"><span>Ctrl + 6 to set a mark.
 </span></span><span style="display:flex;"><span>Alt + T will delete all content in a file.
 </span></span><span style="display:flex;"><span>Ctrl + K will delete the current line at your cursor.
-</span></span></code></pre></div><h2 id="portainer">Portainer</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 </span></span></code></pre></div><h1 id="setting-up-reverse-proxy-with-caddy-or-nginx">Setting up Reverse Proxy with Caddy or Nginx</h1>
 <p>To create a web server that is accessible from a domain, we will be using Caddy or Nginx proxy manager to set up our local reverse proxy and manage Nginx from a friendly UI.</p>
 <h2 id="caddy">Caddy</h2>
@@ -193,6 +208,8 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>//log out and log back in or:
 </span></span><span style="display:flex;"><span>su - ${USER}
+</span></span></code></pre></div><h2 id="docker-portainer">Docker: Portainer</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 </span></span></code></pre></div><h3 id="docker-operations">Docker Operations</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// run docker container from docker-compose.yml in (-d) background
 </span></span><span style="display:flex;"><span>docker-compose up -d 
@@ -205,7 +222,11 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// remove all containers
 </span></span><span style="display:flex;"><span>docker rm $(docker ps -aq) 
-</span></span></code></pre></div><h2 id="nginx-proxy-manager">Nginx Proxy Manager</h2>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// run shell in docker
+</span></span><span style="display:flex;"><span>$ docker exec -it &lt;container id&gt; bash 
+</span></span><span style="display:flex;"><span>root@&lt;container id&gt;:/#
+</span></span></code></pre></div><h2 id="docker-nginx-proxy-manager">Docker: Nginx Proxy Manager</h2>
 <p>Quick-Start (9.28.2022)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># use this as a docker-compose.yml file
 </span></span><span style="display:flex;"><span>version: &#39;3&#39;
@@ -247,13 +268,14 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>ssh-keygen -t ed25519
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>ssh-copy-id -i /&lt;key directory&gt; &lt;user&gt;@&lt;ip&gt;
-</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(default: /home/&lt;user&gt;/.ssh/id_ed25519.pub)
 </span></span><span style="display:flex;"><span>// edit ssh settings on server
 </span></span><span style="display:flex;"><span>sudo nano /etc/ssh/sshd_config
 </span></span><span style="display:flex;"><span>systemctl restart sshd          // restart daemon
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// create easier login @ .bashrc
-</span></span><span style="display:flex;"><span>nano .bashrc
+</span></span><span style="display:flex;"><span>sudo nano ~/.bashrc
+</span></span><span style="display:flex;"><span>// add &#34;alias &lt;name&gt;=&#34;ssh -p &lt;port&gt; &lt;user&gt;@&lt;ip address&gt;&#34;
 </span></span><span style="display:flex;"><span>source ~/.bashrc
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// fail2ban SSH logins
@@ -309,7 +331,7 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// edit maldet configg
 </span></span><span style="display:flex;"><span>nano /usr/local/maldetect/conf.maldet
-</span></span></code></pre></div><p>Make sure to have <code>clamscan</code> installed so that maldet can utilize the clamav binary for the scanner engine.</p>
+</span></span></code></pre></div><p>Make sure to have <code>clamav</code> installed so that maldet can utilize the clamav binary for the scanner engine.</p>
 <p><code>maldet --scan-all &lt;directory&gt;</code>: scan the entirety of a directory and subdirectories</p>
 <p><code>maldet -u</code>: update maldet</p>
 <h1 id="media">Media</h1>
@@ -376,19 +398,6 @@ Uses the format filter to choose the yuv420p10le pixel format to create 10-bit o
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span># remove all subtitles (copy none)
 </span></span><span style="display:flex;"><span>mkvmerge -o output.mkv --no-subtitles input.mkv
-</span></span></code></pre></div><h3 id="ubuntu-server-troubleshooting">Ubuntu Server Troubleshooting</h3>
-<ul>
-<li>allocated space not totally filled (seen after <code>lsblk</code>)</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// ubuntu stack overflow
-</span></span><span style="display:flex;"><span>I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie&#39;s suggestion and the provided link did it for me. To summarize:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>root@util:~# vgdisplay
-</span></span><span style="display:flex;"><span>&lt;snip&gt;
-</span></span><span style="display:flex;"><span>root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
-</span></span><span style="display:flex;"><span>&lt;snip&gt;
-</span></span><span style="display:flex;"><span>root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
-</span></span><span style="display:flex;"><span>&lt;snip&gt;
 </span></span></code></pre></div>
 </div>
 <div class="tags">
