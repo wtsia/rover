@@ -8,7 +8,7 @@ Disallow: /rover/posts/physicselectricitymagnitism/
 Disallow: /rover/posts/intrapersonalcommunication/
 Disallow: /rover/posts/unix/
 Disallow: /rover/posts/computationalmethods/
-Disallow: /rover/posts/cis254/
+Disallow: /rover/posts/objectorientedprogjava/
 Disallow: /rover/posts/physicsmechanics/
 Disallow: /rover/posts/bitesizedproductivity/
 Disallow: /rover/posts/humananatomy/
