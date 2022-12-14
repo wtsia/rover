@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="UNIX">
 <meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-08-18T14:01:59-07:00" />
 <meta itemprop="dateModified" content="2022-08-18T14:01:59-07:00" />
-<meta itemprop="wordCount" content="538"><meta itemprop="image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png">
+<meta itemprop="wordCount" content="2515"><meta itemprop="image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png">
 <meta itemprop="keywords" content="UNIX,CIS,Computer Science," />
 </head>
 <body>
@@ -152,6 +152,271 @@ src="/rover/">
 <li>The Linux community is a far reaching ecosystem of developers, vendors, and users that supports and advances the Linux operating system.</li>
 <li>Some of the common terms used in Linux are: kernel, distribution, boot loader, service, filesystem, X Window system, desktop  environment, and command line.</li>
 <li>A full Linux distribution consists of the kernel plus a number of other software tools for file-related operations, user management, and software package management.</li>
+</ul>
+<h2 id="boot">Boot</h2>
+<ul>
+<li>ON -&gt; BIOS -&gt; Master Boot Record (1st Sector on HD) -&gt; Kernel (Linux OS) -&gt; Initial RAM -&gt; /sbin/init (parent process) -&gt; Command Shell using getty -&gt; X Windows System</li>
+<li>BIOS: Basic Input Output System</li>
+<li>POST: Power On Self Test</li>
+<li>Master Boot Record: 512 bytes&ndash;finds partition table + bootable partition, searches GRUB and loads into RAM
+<ul>
+<li>UEFI</li>
+</ul>
+</li>
+<li>initramfs</li>
+<li>/sbin/init</li>
+<li>text-mode login</li>
+<li>Filesystem Hierarchy Standard (Linux storage)</li>
+<li>A partition is a logical part of the disk.</li>
+<li>A filesystem is a method of storing/finding files on a hard disk.</li>
+<li>By dividing the hard disk into partitions, data can be grouped and separated as needed. When a failure or mistake occurs, only the data in the affected partition will be damaged, while the data on the other partitions will likely survive.</li>
+<li>The boot process has multiple steps, starting with BIOS, which triggers the boot loader to start up the Linux kernel. From there, the initramfs filesystem is invoked, which triggers the init program to complete the startup process.</li>
+<li>Determining the appropriate distribution to deploy requires that you match your specific system needs to the capabilities of the different distributions.</li>
+</ul>
+<h3 id="gui-x-windows-gnome">GUI: X Windows, GNOME</h3>
+<ul>
+<li><code>startx</code>: runs GUI</li>
+<li>GNOME
+<ul>
+<li><code>gdm</code> default disp manager @ GNOME, <code>lightdm</code> (Ubuntu before 18.04LTS), <code>kdm</code> (KDE), <code>XFCE</code>, <code>LXDE</code></li>
+<li><em>gnome-tweaks</em></li>
+</ul>
+</li>
+</ul>
+<h4 id="summary-1">SUMMARY</h4>
+<ul>
+<li>GNOME is a popular desktop environment and graphical user interface that runs on top of the Linux operating system.</li>
+<li>The default display manager for GNOME is called gdm.</li>
+<li>The gdm display manager presents the user with the login screen, which prompts for the login username and password.</li>
+<li>Logging out through the desktop environment kills all processes in your current X session and returns to the display manager login screen.</li>
+<li>Linux enables users to switch between logged-in sessions.</li>
+<li>Suspending puts the computer into sleep mode.</li>
+<li>For each key task, there is generally a default application installed.</li>
+<li>Every user created in the system will have a home directory.</li>
+<li>The Places menu contains entries that allow you to access different parts of the computer and the network.</li>
+<li>Nautilus gives three formats to view files.</li>
+<li>Most text editors are located in the Accessories submenu.</li>
+<li>Each Linux distribution comes with its own set of desktop backgrounds.</li>
+<li>GNOME comes with a set of different themes which can change the way your applications look.</li>
+</ul>
+<h3 id="ntp-software-management">NTP, Software Management</h3>
+<ul>
+<li>It supports many VPN technologies, such as native IPSec, Cisco OpenConnect (via either the Cisco client or a native open source client), Microsoft PPTP, and OpenVPN.</li>
+<li>apt (advanced package tool) -&gt; dpkg-installer -&gt; Debian family Linux</li>
+<li>You can control basic configuration options and desktop settings through the System Settings panel.</li>
+<li>Linux always uses Coordinated Universal Time (UTC) for its own internal time-keeping. You can set the date and time settings from the System Settingswindow.</li>
+<li>The Network Time Protocol is the most popular and reliable protocol for setting the local time via Internet servers.</li>
+<li>The Displays panel allows you to change the resolution of your display and configure multiple screens.</li>
+<li>Network Manager can present available wireless networks, allow the choice of a wireless or mobile broadband network, handle passwords, and set up VPNs.</li>
+<li>dpkg and RPM are the most popular package management systems used on Linux distributions.</li>
+<li>Debian distributions use dpkg and apt-based utilities for package management.</li>
+<li>RPM was developed by Red Hat, and adopted by a number of other distributions, including the openSUSE, Mandriva, CentOS, Oracle Linux, and others.</li>
+</ul>
+<h3 id="common-apps">Common Apps</h3>
+<ul>
+<li>
+<p>Development Apps</p>
+<ul>
+<li><code>vi</code>, <code>emacs</code> (editors)</li>
+<li><code>gcc</code>, <code>clang</code> (compilers)</li>
+<li><code>gdb, Valgrind</code> (debuggers)</li>
+<li><code>VSC, Eclipse</code> (IDEs)</li>
+</ul>
+</li>
+<li>
+<p>Graphic Utilities</p>
+<ul>
+<li><code>eog, Inkscape, convert, Scribus</code></li>
+</ul>
+</li>
+<li>
+<p>Linux offers a wide variety of Internet applications, such as web browsers, email clients, online media applications, and others.</p>
+</li>
+<li>
+<p>Web browsers supported by Linux can be either graphical or text-based, such as Firefox, Google Chrome, Epiphany, w3m, lynx, and others.</p>
+</li>
+<li>
+<p>Linux supports graphical email clients, such as Thunderbird, Evolution, and Claws Mail, and text mode email clients, such as Mutt and mail.</p>
+</li>
+<li>
+<p>Linux systems provide many other applications for performing Internet-related tasks, such as Filezilla, XChat, Pidgin, and others.</p>
+</li>
+<li>
+<p>Most Linux distributions offer LibreOffice to create and edit different kinds of documents.</p>
+</li>
+<li>
+<p>Linux systems offer entire suites of development applications and tools, including compilers and debuggers.</p>
+</li>
+<li>
+<p>Linux systems offer a number of sound players including Amarok, Audacity, and Rhythmbox.</p>
+</li>
+<li>
+<p>Linux systems offer a number of movie players, including VLC, MPlayer, Xine, and Totem.</p>
+</li>
+<li>
+<p>Linux systems offer a number of movie editors, including Kino, Cinepaint, Blender among others.</p>
+</li>
+<li>
+<p>The GIMP (GNU Image Manipulation Program) utility is a feature-rich image retouching and editing tool available on all Linux distributions.</p>
+</li>
+<li>
+<p>Other graphics utilities that help perform various image-related tasks are eog, Inkscape, convert, and Scribus.</p>
+</li>
+</ul>
+<h3 id="cli-operations">CLI operations</h3>
+<ul>
+<li><strong>inode</strong>: The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory</li>
+<li>terminal programs: xterm, konsole (default on KDE), terminator</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat: used to type out a file (or combine files).
+</span></span><span style="display:flex;"><span>head: used to show the first few lines of a file.
+</span></span><span style="display:flex;"><span>tail: used to show the last few lines of a file.
+</span></span><span style="display:flex;"><span>man: used to view documentation.
+</span></span></code></pre></div><ul>
+<li>
+<p>Virtual Terminals (VT): console sesh that uses display and keyboard outside of a graphical env</p>
+</li>
+<li>
+<p><code>which | whereis</code> search commands, local to global</p>
+</li>
+<li>
+<p><code>whichis | whichever</code> search programs</p>
+</li>
+<li>
+<p><code>tree</code>: shows filesystem top down</p>
+</li>
+<li>
+<p><code>ln file1 file2</code>: hard link (shortcuts) inode</p>
+</li>
+<li>
+<p><code>ln -s file1 file3</code>: soft link ()</p>
+</li>
+<li>
+<p><code>pushd | popd</code>: pushes starting dir on list, <code>popd</code> sends you back to said dir</p>
+</li>
+<li>
+<p><code>cat | tac</code>: <code>tac</code> = ~cat</p>
+</li>
+<li>
+<p><code>less</code>: uses console and allows traversal</p>
+</li>
+<li>
+<p><code>stdin | stdout | stderr</code>: in out error, generally keyboard input</p>
+<ul>
+<li><code>do_something &lt; input-file</code> or <code>&gt;</code> send output (its directional!)</li>
+</ul>
+</li>
+<li>
+<p>Pipes: <code>$ command1 | command2 | command3</code> (remember docker commands!)</p>
+</li>
+<li>
+<p>Search: <code>locate | find</code></p>
+</li>
+<li>
+<p><code>grep</code>: prints only linees containing one or more specified string i.e. <code>$ locate zip | grep bin</code></p>
+</li>
+<li>
+<p>wildcards: <code>?</code> single character, <code>*</code> string of characters, <code>[set]</code> matches s, e, t, <code>[!set]</code> matches char not in set</p>
+</li>
+<li>
+<p><code>find</code>: recurses down the filesystem tree from any particular directory (or set of directories) and locates files that match specified conditions</p>
+</li>
+<li>
+<p><code>$ find -name &quot;*.swp&quot; -exec rm {} ’;’</code>: To find and remove all files that end with .swp, <code>-ok</code> lets you check removal before unlike <code>exec</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ find / -ctime 3     # To find files based on time:
+</span></span><span style="display:flex;"><span>$ find / -size 0  # To find files based on sizes
+</span></span><span style="display:flex;"><span>$ find / -size +10M -exec command {} ’;’  # For example, to find files greater than 10 MB in size and running a command on those files
+</span></span></code></pre></div><ul>
+<li>Package Management System: level 1, <code>dpkg | rpm</code>, level 2: <code>apt-get, dnf(Open Source RH), yum (RH), zypper (SUSE)</code>
+<ul>
+<li>lvl 1: details of unpacking, installing correctly</li>
+<li>lvl 2: checks dependencies, works with groups of packages and downloads from vendor</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="summary-2">SUMMARY</h4>
+<ul>
+<li>Virtual terminals (VT) in Linux are consoles, or command line terminals that use the connected monitor and keyboard.</li>
+<li>Different Linux distributions start and stop the graphical desktop in different ways.</li>
+<li>A terminal emulator program on the graphical desktop works by emulating a terminal within a window on the desktop.</li>
+<li>The Linux system allows you to either log in via text terminal or remotely via the console.</li>
+<li>When typing your password, nothing is printed to the terminal, not even a generic symbol to indicate that you typed.</li>
+<li>The preferred method to shut down or reboot the system is to use the shutdown command.</li>
+<li>There are two types of pathnames: absolute and relative.</li>
+<li>An absolute pathname begins with the root directory and follows the tree, branch by branch, until it reaches the desired directory or file.</li>
+<li>A relative pathname starts from the present working directory.</li>
+<li>Using hard and soft (symbolic) links is extremely useful in Linux.</li>
+<li>cd remembers where you were last, and lets you get back there with cd -.</li>
+<li>locate performs a database search to find all file names that match a given pattern.</li>
+<li>find locates files recursively from a given directory or set of directories.</li>
+<li>find is able to run commands on the files that it lists, when used with the -exec option.</li>
+<li>touch is used to set the access, change, and edit times of files, as well as to create empty files.</li>
+<li>The Advanced Packaging Tool (apt) package management system is used to manage installed software on Debian-based systems.</li>
+<li>You can use the dnf command-line package management utility for the RPM-based Red Hat Family Linux distributions.</li>
+<li>The zypper package management system is based on RPM and used for openSUSE.</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>man pages, GNI Info, help (&ndash;help)</li>
+<li><code>man –f</code> generates the same result as typing <code>whatis</code>.</li>
+<li><code>man –k</code> generates the same result as typing <code>apropos</code>.</li>
+<li>GNU Info&quot; <code>info</code></li>
+<li><code>{cmd} --help</code></li>
+<li>The main sources of Linux documentation are the man pages, GNU info, the help options and command, and a rich variety of online documentation sources.</li>
+<li>The man utility searches, formats, and displays man pages.</li>
+<li>The man pages provide in-depth documentation about programs and other topics about the system, including configuration files, system calls, library routines, and the kernel.</li>
+<li>The GNU Info System was created by the GNU project as its standard documentation. It is robust and is accessible via command line, web, and graphical tools using info.</li>
+<li>Short descriptions for commands are usually displayed with the -h or &ndash;help argument.</li>
+<li>You can type help at the command line to display a synopsis of built-in commands.</li>
+<li>There are many other help resources both on your system and on the Internet.</li>
+<li>The filesystem tree starts at what is often called the root directory (or trunk, or /).</li>
+</ul>
+<h3 id="filesystem">Filesystem</h3>
+<ul>
+<li>The  Filesystem Hierarchy Standard (FHS) provides Linux developers and system administrators a standard directory structure for the filesystem.</li>
+<li>Partitions help to segregate files according to usage, ownership, and type.</li>
+<li>Filesystems can be mounted anywhere on the main filesystem tree at a mount point. Automatic filesystem mounting can be set up by editing /etc/fstab.</li>
+<li>NFS (Network File System) is a useful method for sharing files and data through the network systems.</li>
+<li>Filesystems like /proc are called pseudo filesystems because they exist only in memory.</li>
+<li>/root (slash-root) is the home directory for the root user.</li>
+<li>/var may be put in its own filesystem so that growth can be contained and not fatally affect the system.</li>
+<li>/boot contains the basic files needed to boot the system.</li>
+<li>patch is a very useful tool in Linux. Many modifications to source code and configuration files are distributed with patch files, as they contain the deltas or changes to go from an old version of a file to the new version of a file.</li>
+<li>File extensions in Linux do not necessarily mean that a file is of a certain type.</li>
+<li>cp is used to copy files on the local machine, while rsync can also be used to copy files from one machine to another, as well as synchronize contents.</li>
+<li>gzip, bzip2, xz and zip are used to compress files.</li>
+<li>tar allows you to create or extract files from an archive file, often called a tarball. You can optionally compress while creating the archive, and decompress while extracting its contents.</li>
+<li>dd can be used to make large exact copies, even of entire disk partitions, efficiently.</li>
+</ul>
+<h3 id="editing-text-files">Editing Text Files</h3>
+<ul>
+<li><code>sed</code>: stream editor, filter text and perform substitutions in data streams</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sed -e command &lt;filename&gt;   # Specify editing commands at the command line, operate on file and put the output on standard out (e.g. the terminal)
+</span></span><span style="display:flex;"><span>sed -f scriptfile &lt;filename&gt;    # Specify a scriptfile containing sed commands, operate on file and put output on standard out
+</span></span><span style="display:flex;"><span>echo &#34;I hate you&#34; | sed s/hate/love/    # Use sed to filter standard input, putting output on standard out
+</span></span></code></pre></div><ul>
+<li><code>awk</code></li>
+</ul>
+<h3 id="networking">Networking</h3>
+<ul>
+<li>IPv4 IPv6: 32-bit vs 128-bit</li>
+<li>octets: 8-bit sections (or 1 byte)</li>
+<li>Class A vs B vs C vs D
+<ul>
+<li>A: Octate 1 always 0, NetID.HostID.HostID.HostID</li>
+<li>B: Octate 1 first 1 bits always 10, NetID.NetID.HostID.HostID</li>
+</ul>
+</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>cgroups: Control Groups</li>
+<li>containers: uses cgroups isolated Linux systems</li>
+<li>Virtualization: isolated + insulated guests on one physical host</li>
+<li></li>
 </ul>
 
 </div>

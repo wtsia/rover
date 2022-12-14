@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Object Oriented Programming">
 <meta itemprop="description" content="Notes on Object Oriented Programming: Java"><meta itemprop="datePublished" content="2022-08-17T01:19:31-07:00" />
 <meta itemprop="dateModified" content="2022-08-17T01:19:31-07:00" />
-<meta itemprop="wordCount" content="1647">
+<meta itemprop="wordCount" content="2311">
 <meta itemprop="keywords" content="CIS,Computer Science,Java," />
 </head>
 <body>
@@ -112,7 +112,7 @@ src="/rover/">
 <blockquote>
 <p>Keep these concepts in mind for testing.</p>
 </blockquote>
-<h2 id="introduction">Introduction</h2>
+<h1 id="introduction">Introduction</h1>
 <p><figure>
   <img src="/rover/img/ComputerScience/introJava.jpg" alt="Introduction to Java"  />
 </figure></p>
@@ -132,7 +132,7 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h2 id="basics-of-java">Basics of Java</h2>
+<h1 id="basics-of-java">Basics of Java</h1>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner; // import scanner
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>public class Salary {                       
@@ -230,7 +230,16 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h3 id="character-vs-string">Character vs String</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>count = 0;
+</span></span><span style="display:flex;"><span>num = 6;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>do {
+</span></span><span style="display:flex;"><span>   num = num - 1;
+</span></span><span style="display:flex;"><span>   count = count + 1;
+</span></span><span style="display:flex;"><span>} while (num &gt; 4); 
+</span></span><span style="display:flex;"><span>// executes twice, but DO always executes!
+</span></span><span style="display:flex;"><span>// for all num, DO will execute!
+</span></span></code></pre></div><h3 id="character-vs-string">Character vs String</h3>
 <ul>
 <li>ASCII - merican Standard Code for Information Interchange</li>
 <li>&lsquo;char&rsquo; vs &ldquo;String&rdquo;</li>
@@ -252,7 +261,7 @@ src="/rover/">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>!(A &amp;&amp; B)  is the same as   !A || !B
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>!(A || B)  is the same as   !A &amp;&amp; !B
-</span></span></code></pre></div><h3 id="arrays">Arrays</h3>
+</span></span></code></pre></div><h2 id="arrays">Arrays</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// Create Arrays
 </span></span><span style="display:flex;"><span>String[] names;
 </span></span><span style="display:flex;"><span>double[] values;
@@ -284,9 +293,7 @@ src="/rover/">
 </span></span></code></pre></div><ul>
 <li>Search (returning index of occurence), Reducing (i.e. Sum),</li>
 </ul>
-<h3 id="midterm">Midterm</h3>
-<p>The online midterm test covers chapters 1-8 in the zyBook.</p>
-<p>You are expected to know everything that you were asked to do on your assignments, which means you should be able to write Java programs that include:</p>
+<h3 id="summary-so-far">Summary so far</h3>
 <ul>
 <li>Definition of methods besides the main method
 <ul>
@@ -331,35 +338,20 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  public static class {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Code block above is an example of:</p>
+<h2 id="enhanced-loops">Enhanced Loops</h2>
 <ul>
-<li>Call methods in main to perform a calculation or an action.</li>
-<li>Input values from the standard input using the Scanner object.</li>
-<li>Output values on the screen.</li>
-<li>Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()</li>
-<li>One-dimensional arrays</li>
-<li>if-else statements</li>
-<li>switch statements</li>
-<li>loops
+<li>for-each: reduces programming burden but removes incrementing capabilities
 <ul>
-<li>for and for-each</li>
-<li>while and do-while</li>
+<li>cannot change your &lsquo;value&rsquo; within the for each loop.</li>
 </ul>
 </li>
 </ul>
-<p>The Midterm exam is in 2 parts:</p>
-<ul>
-<li>a multiple-choice section (20 points)</li>
-<li>a programming assignment question that requires a file upload (10 points)</li>
-<li>The test opens on Friday at 12 PM and must be submitted by 11:59 PM. You will have two hours from the time you start.</li>
-</ul>
-<p>It is best to upload the programming assignment early, even if your answer is not complete so you don&rsquo;t risk missing the cut-off. After uploading a preliminary version, you can continue to work on the assignment, then re-upload an improved version. You may also earn partial credit if your answer is not complete.</p>
-<h2 id="hashmaps">Hashmaps</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] values = { 1, 2, 3, 4, 5 };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>for (int value:values) {
+</span></span><span style="display:flex;"><span>  System.out.println(value);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="hashmaps">Hashmaps</h2>
 <h3 id="import-javautilhashmap"><code>import java.util.HashMap;</code></h3>
 <ul>
 <li>The HashMap type is an ADT implemented as a generic class (discussed elsewhere) that supports different types of keys and values. Generically, a HashMap can be declared and created as <code>HashMap&lt;K, V&gt; hashMap = new HashMap&lt;K, V&gt;();</code> where K represents the HashMap&rsquo;s key type and V represents the HashMap&rsquo;s value type.</li>
@@ -414,7 +406,205 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
 </span></span><span style="display:flex;"><span>values = exMap.values();
 </span></span><span style="display:flex;"><span>// values contains: 14, 86, 13
-</span></span></code></pre></div>
+</span></span></code></pre></div><h1 id="objects">Objects</h1>
+<ul>
+<li>objects have features, qualities, functions</li>
+<li><strong>abstraction</strong>: interaction at a high level with no lower level understanding (encapsulation) i.e. tech priest</li>
+<li>objects highly support abstraction</li>
+</ul>
+<h3 id="classes">Classes</h3>
+<ul>
+<li>defines new type that can group data and methods to create objects
+<ul>
+<li>public member methods: operations a class user can perform on an object</li>
+</ul>
+</li>
+<li>A <strong>field</strong> is a variable of any type that is declared directly in a class or struct
+<ul>
+<li><strong>private</strong> field: accessible to class method but not class users</li>
+</ul>
+</li>
+<li><strong>constructor</strong>: class member method that initializes fields</li>
+</ul>
+<h3 id="static-fields-and-methods">Static Fields and Methods</h3>
+<ul>
+<li><strong>static</strong> indicates the variable is allocated once in memory. However due to being stored in static memory, it has global scope.</li>
+<li><strong>static field</strong> is the field of a class instead of distributively to each class object</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>add()	add(element) 
+</span></span><span style="display:flex;"><span>Create space for and add the element at the end of the list.	
+</span></span><span style="display:flex;"><span>// List originally empty
+</span></span><span style="display:flex;"><span>valsList.add(31); // List now: 31 
+</span></span><span style="display:flex;"><span>valsList.add(41); // List now: 31 41
+</span></span><span style="display:flex;"><span>get()	get(index) 
+</span></span><span style="display:flex;"><span>Returns the element at the specified list location known as the index. Indices start at 0.	
+</span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
+</span></span><span style="display:flex;"><span>x = valsList.get(0);  // Assigns 31 to x
+</span></span><span style="display:flex;"><span>x = valsList.get(1);  // Assigns 41
+</span></span><span style="display:flex;"><span>x = valsList.get(2);  // Assigns 59
+</span></span><span style="display:flex;"><span>x = valsList.get(3);  // Error: No such element
+</span></span><span style="display:flex;"><span>set()	set(index, element) 
+</span></span><span style="display:flex;"><span>Replaces the element at the specified position in this list with the specified element.	
+</span></span><span style="display:flex;"><span>// List originally: 31 41 59 
+</span></span><span style="display:flex;"><span>valsList.set(1, 119);  // List now 31 119 59
+</span></span><span style="display:flex;"><span>size()	size()
+</span></span><span style="display:flex;"><span>Returns the number of list elements.	
+</span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
+</span></span><span style="display:flex;"><span>x = valsList.size();  // Assigns x with 3
+</span></span></code></pre></div><h3 id="mutable-vs-immutable-objects">Mutable vs Immutable Objects</h3>
+<ul>
+<li><strong>mutable</strong>: may be changed after creation</li>
+<li><strong>immutable</strong>: cannot be changed after creation</li>
+</ul>
+<h4 id="aliasing">Aliasing</h4>
+<ul>
+<li>more than one reference to the same object. Below is an example where a new object is not created, but the object box1 is referenced by box2.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Rectangle box1 = new Rectangle(0, 0, 100, 200);
+</span></span><span style="display:flex;"><span>Rectangle box2 = box1;
+</span></span></code></pre></div><h1 id="closing-ideas">Closing Ideas</h1>
+<ul>
+<li>Definition of methods besides the main method
+<ul>
+<li>A method  is a list of statements executed by invoking the method&rsquo;s name (this is known as a method call). There are user defined methods and built in methods.
+<ul>
+<li>i.e. <code>sqrt(x), pow(x,y), abs(x)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>These methods may receive arguments/parameters and may or may not return values.
+<ul>
+<li>Values passed as arguments to methods may be of any type, such as, but not limited to: -
+<ul>
+<li><code>int, double, String</code>.</li>
+</ul>
+</li>
+<li>Values returned by methods may be of any type, such as, but not limited to:
+<ul>
+<li><code>boolean, int, double, String</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Call methods in main to perform a calculation or an action.</li>
+<li>To call a method:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class VeganClass { 
+</span></span><span style="display:flex;"><span>   public static double calcVegan() {
+</span></span><span style="display:flex;"><span>      // some calculations and logic
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   public static void main(String[] args) {
+</span></span><span style="display:flex;"><span>      // Calls method calcVegan and prints the result
+</span></span><span style="display:flex;"><span>      System.out.println(calcVegan());
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Input values from the standard input using the Scanner object.</li>
+<li>Output values on the screen.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>public class MyClass {
+</span></span><span style="display:flex;"><span>  public static void main (String [] args) {
+</span></span><span style="display:flex;"><span>    Scanner input = new Scanner(System.in);
+</span></span><span style="display:flex;"><span>    // create new Scanner object called &#39;input&#39; which takes &#39;System.in&#39;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
+<ul>
+<li><code>charAt()</code>: determines the character at index x of a string</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>String userWord = &#34;myWord&#34;;
+</span></span></code></pre></div><ul>
+<li>One-dimensional arrays
+<ul>
+<li><code>myArray = [1, 2, 3, 4, 5];</code></li>
+<li>Two-dim: <code>int [][] myArray = new int[3][3] // 3x3, 9 elements</code></li>
+</ul>
+</li>
+<li>if-else statements</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (myThing == myNum) {
+</span></span><span style="display:flex;"><span>  // do stuff
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>switch statements</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>switch (userVal) {
+</span></span><span style="display:flex;"><span>   case 1: // case userVal == 1
+</span></span><span style="display:flex;"><span>      numItems = 5; 
+</span></span><span style="display:flex;"><span>      break;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   case 3: // case userVal == 3
+</span></span><span style="display:flex;"><span>      numItems = 12; 
+</span></span><span style="display:flex;"><span>      break;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   default:
+</span></span><span style="display:flex;"><span>      numItems = 55;
+</span></span><span style="display:flex;"><span>      break;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="loops">Loops</h3>
+<ul>
+<li>for and for-each (Find: <strong>Enhanced Loops</strong>)</li>
+<li>while and do-while (Find: <strong>Do/While Loop</strong>)</li>
+<li>Mutable and Immutable Objects
+<ul>
+<li>Mutable: can be changed
+<ul>
+<li><code>StringBuilder</code>, <code>Point origin</code>, <code>Point blank</code>, <code>double dist</code></li>
+</ul>
+</li>
+<li>Immutable: cannot change the content of object once created
+<ul>
+<li><code>String</code>
+<ul>
+<li>creating <code>for</code> loop that creates new <code>String</code> objects and concatenates them can create a lot of garbage, because a new <code>String</code> is declared and stored for use.</li>
+<li>i.e. <code>This String</code> + <code>This String and more</code> + <code>This String and more more</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Aliasing</em>: more than one reference to the same object</li>
+</ul>
+</li>
+<li>Designing your own classes (recall lab):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class myObject {
+</span></span><span style="display:flex;"><span>  // declare private variable (accessible only to method)
+</span></span><span style="display:flex;"><span>	private double thing;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	public myObject() {
+</span></span><span style="display:flex;"><span>    // initialize value
+</span></span><span style="display:flex;"><span>		this.thing = // some value;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	public double myMethod(double myInput) {
+</span></span><span style="display:flex;"><span>    // example method
+</span></span><span style="display:flex;"><span>		thing = thing + myInput;
+</span></span><span style="display:flex;"><span>		return thing;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>  // get and set methods
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Creating objects of classes and calling methods on those objects
+<code>myObject myInstanceObject = new myObject();</code></li>
+<li>The basics of GUI (Swing/SWT)
+<ul>
+<li>use Eclipse to generate default Swing application (Final Lab):
+<ul>
+<li>File&raquo;New&raquo;Create Java Project&raquo;New&raquo;Project Explorer&raquo;New&raquo;Other&raquo;Swing Designer&raquo;Application Window</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>It is helpful to review Discussion posts, homework assignments, group projects and quizzes.</li>
+</ul>
+
 </div>
 <div class="tags">
 <div class="taxosfloating_left">

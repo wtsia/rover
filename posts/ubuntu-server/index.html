@@ -191,7 +191,7 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>// add a GPG key for the official Docker repo:
 </span></span><span style="display:flex;"><span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// Add docker rpo to APT sources:
+</span></span><span style="display:flex;"><span>// Add docker repo to APT sources:
 </span></span><span style="display:flex;"><span>echo &#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&#34; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>// update existing list of packages
