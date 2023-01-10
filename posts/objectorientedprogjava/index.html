@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Object Oriented Programming | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.97.0" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="CIS, Computer Science, Java">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -33,18 +33,21 @@ src="/rover/">
 <meta property="og:title" content="Object Oriented Programming" />
 <meta property="og:description" content="Notes on Object Oriented Programming: Java" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/objectorientedprogjava/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/objectorientedprogjava/" />
 <meta property="article:published_time" content="2022-08-17T01:19:31-07:00" />
 <meta property="article:modified_time" content="2022-08-17T01:19:31-07:00" />
-
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Object Oriented Programming"/>
 <meta name="twitter:description" content="Notes on Object Oriented Programming: Java"/>
 
 <meta itemprop="name" content="Object Oriented Programming">
-<meta itemprop="description" content="Notes on Object Oriented Programming: Java"><meta itemprop="datePublished" content="2022-08-17T01:19:31-07:00" />
+<meta itemprop="description" content="Notes on Object Oriented Programming: Java">
+<meta itemprop="datePublished" content="2022-08-17T01:19:31-07:00" />
 <meta itemprop="dateModified" content="2022-08-17T01:19:31-07:00" />
-<meta itemprop="wordCount" content="2311">
+<meta itemprop="wordCount" content="2391">
+
+
+
 <meta itemprop="keywords" content="CIS,Computer Science,Java," />
 </head>
 <body>
@@ -56,7 +59,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -131,31 +134,49 @@ src="/rover/">
 </li>
 </ul>
 </li>
+<li><strong>pointer</strong>: variables that store addresses of other variables. Typically occupies 4 bytes of memory. Think of this like a reference to an originally stored variable.
+<ul>
+<li>in Java, this may be like string1 = string2. This does not create a new string, but references string2.</li>
+</ul>
+</li>
+</ul>
+<h1 id="concepts">Concepts</h1>
+<h2 id="binary">Binary</h2>
+<h3 id="8-bit">8-bit</h3>
+<ul>
+<li>represented in 8 binary, or <code>10101010</code> where each number would symbolize:
+$$
+1<em>2^8 + 0</em>2^7 + 1<em>2^6 + 0</em>2^5 + 1<em>2^4 + 0</em>2^3 + 1<em>2^2 + 0</em>2^0
+$$</li>
+</ul>
+<h2 id="integer-overflow">Integer Overflow</h2>
+<ul>
+<li><strong>overflow</strong> occurs when</li>
 </ul>
 <h1 id="basics-of-java">Basics of Java</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner; // import scanner
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>public class Salary {                       
-</span></span><span style="display:flex;"><span>  public static void main (String [] args) {
-</span></span><span style="display:flex;"><span>    // Program starts in main and executes in main&#39;s braces {}
-</span></span><span style="display:flex;"><span>    int wage; // declare variable, does not assign 
-</span></span><span style="display:flex;"><span>    // semicolon ends statement, and declaring a variable is paramount to object manipulation
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    // wage = 20; assigns the variable&#39;s value
-</span></span><span style="display:flex;"><span>    Scanner scnr = new Scanner(System.in);
-</span></span><span style="display:flex;"><span>    // create object scanner, from System.in (keyboard input)
-</span></span><span style="display:flex;"><span>    wage = scnr.nextInt();                      
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    System.out.print(&#34;Salary is \n&#34;);
-</span></span><span style="display:flex;"><span>    // \n creates a new line       
-</span></span><span style="display:flex;"><span>    System.out.println(wage * 40 * 52 + &#34; this is example text&#34;);
-</span></span><span style="display:flex;"><span>    /*
-</span></span><span style="display:flex;"><span>     * This is weirdly valid
-</span></span><span style="display:flex;"><span>     *
-</span></span><span style="display:flex;"><span>    */
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import java.util.Scanner; // import scanner
+
+public class Salary {                       
+  public static void main (String [] args) {
+    // Program starts in main and executes in main&#39;s braces {}
+    int wage; // declare variable, does not assign 
+    // semicolon ends statement, and declaring a variable is paramount to object manipulation
+
+    // wage = 20; assigns the variable&#39;s value
+    Scanner scnr = new Scanner(System.in);
+    // create object scanner, from System.in (keyboard input)
+    wage = scnr.nextInt();                      
+
+    System.out.print(&#34;Salary is \n&#34;);
+    // \n creates a new line       
+    System.out.println(wage * 40 * 52 + &#34; this is example text&#34;);
+    /*
+     * This is weirdly valid
+     *
+    */
+  }
+}
+</code></pre></div><ul>
 <li><code>print</code> vs <code>println</code>: ln encloses the output in its own line, sending the next line to a blank line</li>
 </ul>
 <h3 id="errorstroubleshooting">Errors/Troubleshooting</h3>
@@ -174,9 +195,9 @@ src="/rover/">
 </li>
 </ul>
 <p><code>(&quot;Hello \&quot;Hello\&quot; \nWorld&quot;)</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Hello &#34;Hello&#34; 
-</span></span><span style="display:flex;"><span>World
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Hello &#34;Hello&#34; 
+World
+</code></pre></div><ul>
 <li>Dereferencing: Dereferencing means the action of accessing an object&rsquo;s features through a reference. Performing any dereferencing on a primitive will result in the error “X cannot be dereferenced”, where X is a primitive type</li>
 </ul>
 <h3 id="variables">Variables</h3>
@@ -185,42 +206,42 @@ src="/rover/">
 </ul>
 <h3 id="unit-tests">Unit Tests</h3>
 <h3 id="formatted-strings">Formatted Strings</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>%a	floating point (except BigDecimal)	Hex output of floating point number
-</span></span><span style="display:flex;"><span>%b	Any type	“true” if non-null, “false” if null
-</span></span><span style="display:flex;"><span>%c	character	Unicode character
-</span></span><span style="display:flex;"><span>%d	integer (incl. byte, short, int, long, bigint)	Decimal Integer
-</span></span><span style="display:flex;"><span>%e	floating point	decimal number in scientific notation
-</span></span><span style="display:flex;"><span>.n%f	floating point	decimal number with n trailing
-</span></span><span style="display:flex;"><span>%g	floating point	decimal number, possibly in scientific notation depending on the precision and value.
-</span></span><span style="display:flex;"><span>%h	any type	Hex String of value from hashCode() method.
-</span></span><span style="display:flex;"><span> %n	none	Platform-specific line separator.
-</span></span><span style="display:flex;"><span>%o	integer (incl. byte, short, int, long, bigint)	Octal number
-</span></span><span style="display:flex;"><span>%s	any type	String value
-</span></span><span style="display:flex;"><span>%t	Date/Time (incl. long, Calendar, Date and TemporalAccessor)	%t is the prefix for Date/Time conversions. More formatting flags are needed after this. See Date/Time conversion below.
-</span></span><span style="display:flex;"><span>%x	integer (incl. byte, short, int, long, bigint)	
-</span></span><span style="display:flex;"><span>Hex string.
-</span></span></code></pre></div><h3 id="character-methods-return-values-each-method-must-prepend-character-as-in-characterisletter">Character methods return values. Each method must prepend <code>Character.</code>, as in <code>Character.isLetter</code></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>isLetter(c) true if alphabetic:
-</span></span><span style="display:flex;"><span>a-z or A-Z  
-</span></span><span style="display:flex;"><span>isLetter(&#39;x&#39;) // true
-</span></span><span style="display:flex;"><span>isLetter(&#39;6&#39;) // false
-</span></span><span style="display:flex;"><span>isLetter(&#39;!&#39;) // false
-</span></span><span style="display:flex;"><span>  toUpperCase(c)  Uppercase version 
-</span></span><span style="display:flex;"><span>toUpperCase(&#39;a&#39;)  // A
-</span></span><span style="display:flex;"><span>toUpperCase(&#39;A&#39;)  // A
-</span></span><span style="display:flex;"><span>toUpperCase(&#39;3&#39;)  // 3
-</span></span><span style="display:flex;"><span>isDigit(c)  true if digit: 0-9. 
-</span></span><span style="display:flex;"><span>isDigit(&#39;x&#39;) // false
-</span></span><span style="display:flex;"><span>isDigit(&#39;6&#39;) // true
-</span></span><span style="display:flex;"><span>  toLowerCase(c)  Lowercase version 
-</span></span><span style="display:flex;"><span>toLowerCase(&#39;A&#39;)  // a
-</span></span><span style="display:flex;"><span>toLowerCase(&#39;a&#39;)  // a
-</span></span><span style="display:flex;"><span>toLowerCase(&#39;3&#39;)  // 3
-</span></span><span style="display:flex;"><span>isWhitespace(c) true if whitespace. 
-</span></span><span style="display:flex;"><span>isWhitespace(&#39; &#39;)  // true
-</span></span><span style="display:flex;"><span>isWhitespace(&#39;\n&#39;) // true
-</span></span><span style="display:flex;"><span>isWhitespace(&#39;x&#39;)  // false
-</span></span></code></pre></div><h3 id="dowhile-loop">Do/While Loop</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">%a	floating point (except BigDecimal)	Hex output of floating point number
+%b	Any type	“true” if non-null, “false” if null
+%c	character	Unicode character
+%d	integer (incl. byte, short, int, long, bigint)	Decimal Integer
+%e	floating point	decimal number in scientific notation
+.n%f	floating point	decimal number with n trailing
+%g	floating point	decimal number, possibly in scientific notation depending on the precision and value.
+%h	any type	Hex String of value from hashCode() method.
+ %n	none	Platform-specific line separator.
+%o	integer (incl. byte, short, int, long, bigint)	Octal number
+%s	any type	String value
+%t	Date/Time (incl. long, Calendar, Date and TemporalAccessor)	%t is the prefix for Date/Time conversions. More formatting flags are needed after this. See Date/Time conversion below.
+%x	integer (incl. byte, short, int, long, bigint)	
+Hex string.
+</code></pre></div><h3 id="character-methods-return-values-each-method-must-prepend-character-as-in-characterisletter">Character methods return values. Each method must prepend <code>Character.</code>, as in <code>Character.isLetter</code></h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">isLetter(c) true if alphabetic:
+a-z or A-Z  
+isLetter(&#39;x&#39;) // true
+isLetter(&#39;6&#39;) // false
+isLetter(&#39;!&#39;) // false
+  toUpperCase(c)  Uppercase version 
+toUpperCase(&#39;a&#39;)  // A
+toUpperCase(&#39;A&#39;)  // A
+toUpperCase(&#39;3&#39;)  // 3
+isDigit(c)  true if digit: 0-9. 
+isDigit(&#39;x&#39;) // false
+isDigit(&#39;6&#39;) // true
+  toLowerCase(c)  Lowercase version 
+toLowerCase(&#39;A&#39;)  // a
+toLowerCase(&#39;a&#39;)  // a
+toLowerCase(&#39;3&#39;)  // 3
+isWhitespace(c) true if whitespace. 
+isWhitespace(&#39; &#39;)  // true
+isWhitespace(&#39;\n&#39;) // true
+isWhitespace(&#39;x&#39;)  // false
+</code></pre></div><h3 id="dowhile-loop">Do/While Loop</h3>
 <ul>
 <li>separate the while loop from executing a code block (i.e. a menu)</li>
 <li>for something to happen regardless of condition</li>
@@ -230,48 +251,48 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>count = 0;
-</span></span><span style="display:flex;"><span>num = 6;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>do {
-</span></span><span style="display:flex;"><span>   num = num - 1;
-</span></span><span style="display:flex;"><span>   count = count + 1;
-</span></span><span style="display:flex;"><span>} while (num &gt; 4); 
-</span></span><span style="display:flex;"><span>// executes twice, but DO always executes!
-</span></span><span style="display:flex;"><span>// for all num, DO will execute!
-</span></span></code></pre></div><h3 id="character-vs-string">Character vs String</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">count = 0;
+num = 6;
+
+do {
+   num = num - 1;
+   count = count + 1;
+} while (num &gt; 4); 
+// executes twice, but DO always executes!
+// for all num, DO will execute!
+</code></pre></div><h3 id="character-vs-string">Character vs String</h3>
 <ul>
 <li>ASCII - merican Standard Code for Information Interchange</li>
 <li>&lsquo;char&rsquo; vs &ldquo;String&rdquo;</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;String&gt;.length(): returns length of *String*
-</span></span><span style="display:flex;"><span>&lt;String&gt;.indexOf(&lt;char/string&gt;): returns index of occurrence
-</span></span><span style="display:flex;"><span>&lt;String&gt;.subString(n, m): returns characters in the form of a string at n and before m
-</span></span><span style="display:flex;"><span>word.toLowerCase();
-</span></span><span style="display:flex;"><span>word.toUpperCase();
-</span></span></code></pre></div><h3 id="input-validation">Input Validation</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (!in.**hasNextDouble()**) {
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    String word = in.next();
-</span></span><span style="display:flex;"><span>    System.err.println(word + &#34;is not a number&#34;);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;String&gt;.length(): returns length of *String*
+&lt;String&gt;.indexOf(&lt;char/string&gt;): returns index of occurrence
+&lt;String&gt;.subString(n, m): returns characters in the form of a string at n and before m
+word.toLowerCase();
+word.toUpperCase();
+</code></pre></div><h3 id="input-validation">Input Validation</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">if (!in.**hasNextDouble()**) {
+
+    String word = in.next();
+    System.err.println(word + &#34;is not a number&#34;);
+}
+</code></pre></div><ul>
 <li>De Morgans Law:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>!(A &amp;&amp; B)  is the same as   !A || !B
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>!(A || B)  is the same as   !A &amp;&amp; !B
-</span></span></code></pre></div><h2 id="arrays">Arrays</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// Create Arrays
-</span></span><span style="display:flex;"><span>String[] names;
-</span></span><span style="display:flex;"><span>double[] values;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>values = new double[size]; 
-</span></span><span style="display:flex;"><span>// new operator allocates memory for the array and automatically initializes all of its elements to a default value
-</span></span><span style="display:flex;"><span>// values refer to an array of doubles; 
-</span></span><span style="display:flex;"><span>// how many elements depends on the value of size 
-</span></span><span style="display:flex;"><span>// (at the time the array is created)
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">!(A &amp;&amp; B)  is the same as   !A || !B
+
+!(A || B)  is the same as   !A &amp;&amp; !B
+</code></pre></div><h2 id="arrays">Arrays</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// Create Arrays
+String[] names;
+double[] values;
+
+values = new double[size]; 
+// new operator allocates memory for the array and automatically initializes all of its elements to a default value
+// values refer to an array of doubles; 
+// how many elements depends on the value of size 
+// (at the time the array is created)
+</code></pre></div><ul>
 <li><code>toString</code>, returns a string representation of an array.</li>
 <li><code>copyOf</code> , copies an array
 <ul>
@@ -281,16 +302,16 @@ src="/rover/">
 </ul>
 <h4 id="array-are-references">Array are references</h4>
 <p>When you make an assignment to an array variable, it simply <strong>copies the reference</strong>. But it doesn’t copy the array itself. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>double[] values = new double[3];
-</span></span><span style="display:flex;"><span>double[] data = values;
-</span></span></code></pre></div><h4 id="traversing-arrays">Traversing Arrays</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] array = {1, 2, 3, 4, 5};
-</span></span><span style="display:flex;"><span>for (int i = 0; i &lt; array.length; i++) {
-</span></span><span style="display:flex;"><span>    array[i] *= array[i];
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// Values after the loop: {1, 4, 9, 16, 25}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">double[] values = new double[3];
+double[] data = values;
+</code></pre></div><h4 id="traversing-arrays">Traversing Arrays</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">int[] array = {1, 2, 3, 4, 5};
+for (int i = 0; i &lt; array.length; i++) {
+    array[i] *= array[i];
+}
+
+// Values after the loop: {1, 4, 9, 16, 25}
+</code></pre></div><ul>
 <li>Search (returning index of occurence), Reducing (i.e. Sum),</li>
 </ul>
 <h3 id="summary-so-far">Summary so far</h3>
@@ -316,18 +337,18 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;access_modifier&gt; &lt;return_type&gt; &lt;method_name&gt;( list_of_parameters) {
-</span></span><span style="display:flex;"><span>    //body
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>public int subtractNumbers(int m, int n) {
-</span></span><span style="display:flex;"><span>    int p = 0;
-</span></span><span style="display:flex;"><span>    p = m - n;
-</span></span><span style="display:flex;"><span>    System.out.println(p);
-</span></span><span style="display:flex;"><span>    return p;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&lt;access_modifier&gt; &lt;return_type&gt; &lt;method_name&gt;( list_of_parameters) {
+    //body
+}
+
+
+public int subtractNumbers(int m, int n) {
+    int p = 0;
+    p = m - n;
+    System.out.println(p);
+    return p;
+}
+</code></pre></div><blockquote>
 <p>we can see that <code>public</code> corresponse to the access modifier, <code>int</code> to return type, and <code>subtractNumbers</code> to method name. You can infer what the other parts are.</p>
 </blockquote>
 <ul>
@@ -346,67 +367,67 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] values = { 1, 2, 3, 4, 5 };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>for (int value:values) {
-</span></span><span style="display:flex;"><span>  System.out.println(value);
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="hashmaps">Hashmaps</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">int[] values = { 1, 2, 3, 4, 5 };
+
+for (int value:values) {
+  System.out.println(value);
+}
+</code></pre></div><h2 id="hashmaps">Hashmaps</h2>
 <h3 id="import-javautilhashmap"><code>import java.util.HashMap;</code></h3>
 <ul>
 <li>The HashMap type is an ADT implemented as a generic class (discussed elsewhere) that supports different types of keys and values. Generically, a HashMap can be declared and created as <code>HashMap&lt;K, V&gt; hashMap = new HashMap&lt;K, V&gt;();</code> where K represents the HashMap&rsquo;s key type and V represents the HashMap&rsquo;s value type.</li>
 </ul>
 <h3 id="table-common-hashmap-methods">Table: Common HashMap methods.</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>put() put(key, value) 
-</span></span><span style="display:flex;"><span>Associates key with specified value. If key already exists, replaces previous value with specified value. 
-</span></span><span style="display:flex;"><span>// Map originally empty
-</span></span><span style="display:flex;"><span>exMap.put(&#34;Tom&#34;, 14); 
-</span></span><span style="display:flex;"><span>// Map now: Tom-&gt;14,  
-</span></span><span style="display:flex;"><span>exMap.put(&#34;John&#34;, 86); 
-</span></span><span style="display:flex;"><span>// Map now: Tom-&gt;14, John-&gt;86
-</span></span><span style="display:flex;"><span>putIfAbsent() putIfAbsent(key, value) 
-</span></span><span style="display:flex;"><span>Associates key with specified value if the key does not already exist or is mapped to null. 
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86
-</span></span><span style="display:flex;"><span>exMap.putIfAbsent(&#34;Tom&#34;, 20); 
-</span></span><span style="display:flex;"><span>// Key &#34;Tom&#34; already exists. Map is unchanged.
-</span></span><span style="display:flex;"><span>exMap.putIfAbsent(&#34;Mary&#34;, 13); 
-</span></span><span style="display:flex;"><span>// Map is now: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>get() get(key)
-</span></span><span style="display:flex;"><span>Returns the value associated with key. If key does not exist, return null.  
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>exMap.get(&#34;Tom&#34;)  // returns 14 
-</span></span><span style="display:flex;"><span>exMap.get(&#34;Bob&#34;)  // returns null
-</span></span><span style="display:flex;"><span>containsKey() containsKey(key) 
-</span></span><span style="display:flex;"><span>Returns true if key exists, otherwise returns false.  
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>exMap.containsKey(&#34;Tom&#34;)  // returns true 
-</span></span><span style="display:flex;"><span>exMap.containsKey(&#34;Bob&#34;)  // returns false
-</span></span><span style="display:flex;"><span>containsValue() containsValue(value) 
-</span></span><span style="display:flex;"><span>Returns true if at least one key is associated with the specified value, otherwise returns false. 
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>exMap.containsValue(86)  // returns true (key &#34;John&#34; associated with value 86)
-</span></span><span style="display:flex;"><span>exMap.containsValue(17)  // returns false (no key associated with value 17)
-</span></span><span style="display:flex;"><span>remove()  remove(key) 
-</span></span><span style="display:flex;"><span>Removes the map entry for the specified key if the key exists.  
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>exMap.remove(&#34;John&#34;);  
-</span></span><span style="display:flex;"><span>// Map is now: Tom-&gt;14, Mary-&gt;13
-</span></span><span style="display:flex;"><span>clear() clear() 
-</span></span><span style="display:flex;"><span>Removes all map entries.  
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>exMap.clear();  
-</span></span><span style="display:flex;"><span>// Map is now empty
-</span></span><span style="display:flex;"><span>keySet()  keySet() 
-</span></span><span style="display:flex;"><span>Returns a Set containing all keys within the map. 
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>keys = exMap.keySet();
-</span></span><span style="display:flex;"><span>// keys contains: &#34;Tom&#34;, &#34;John&#34;, &#34;Mary&#34;
-</span></span><span style="display:flex;"><span>values()  values() 
-</span></span><span style="display:flex;"><span>Returns a Collection containing all values within the map.  
-</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
-</span></span><span style="display:flex;"><span>values = exMap.values();
-</span></span><span style="display:flex;"><span>// values contains: 14, 86, 13
-</span></span></code></pre></div><h1 id="objects">Objects</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">put() put(key, value) 
+Associates key with specified value. If key already exists, replaces previous value with specified value. 
+// Map originally empty
+exMap.put(&#34;Tom&#34;, 14); 
+// Map now: Tom-&gt;14,  
+exMap.put(&#34;John&#34;, 86); 
+// Map now: Tom-&gt;14, John-&gt;86
+putIfAbsent() putIfAbsent(key, value) 
+Associates key with specified value if the key does not already exist or is mapped to null. 
+// Assume Map is: Tom-&gt;14, John-&gt;86
+exMap.putIfAbsent(&#34;Tom&#34;, 20); 
+// Key &#34;Tom&#34; already exists. Map is unchanged.
+exMap.putIfAbsent(&#34;Mary&#34;, 13); 
+// Map is now: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+get() get(key)
+Returns the value associated with key. If key does not exist, return null.  
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+exMap.get(&#34;Tom&#34;)  // returns 14 
+exMap.get(&#34;Bob&#34;)  // returns null
+containsKey() containsKey(key) 
+Returns true if key exists, otherwise returns false.  
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+exMap.containsKey(&#34;Tom&#34;)  // returns true 
+exMap.containsKey(&#34;Bob&#34;)  // returns false
+containsValue() containsValue(value) 
+Returns true if at least one key is associated with the specified value, otherwise returns false. 
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+exMap.containsValue(86)  // returns true (key &#34;John&#34; associated with value 86)
+exMap.containsValue(17)  // returns false (no key associated with value 17)
+remove()  remove(key) 
+Removes the map entry for the specified key if the key exists.  
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+exMap.remove(&#34;John&#34;);  
+// Map is now: Tom-&gt;14, Mary-&gt;13
+clear() clear() 
+Removes all map entries.  
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+exMap.clear();  
+// Map is now empty
+keySet()  keySet() 
+Returns a Set containing all keys within the map. 
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+keys = exMap.keySet();
+// keys contains: &#34;Tom&#34;, &#34;John&#34;, &#34;Mary&#34;
+values()  values() 
+Returns a Collection containing all values within the map.  
+// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+values = exMap.values();
+// values contains: 14, 86, 13
+</code></pre></div><h1 id="objects">Objects</h1>
 <ul>
 <li>objects have features, qualities, functions</li>
 <li><strong>abstraction</strong>: interaction at a high level with no lower level understanding (encapsulation) i.e. tech priest</li>
@@ -431,27 +452,27 @@ src="/rover/">
 <li><strong>static</strong> indicates the variable is allocated once in memory. However due to being stored in static memory, it has global scope.</li>
 <li><strong>static field</strong> is the field of a class instead of distributively to each class object</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>add()	add(element) 
-</span></span><span style="display:flex;"><span>Create space for and add the element at the end of the list.	
-</span></span><span style="display:flex;"><span>// List originally empty
-</span></span><span style="display:flex;"><span>valsList.add(31); // List now: 31 
-</span></span><span style="display:flex;"><span>valsList.add(41); // List now: 31 41
-</span></span><span style="display:flex;"><span>get()	get(index) 
-</span></span><span style="display:flex;"><span>Returns the element at the specified list location known as the index. Indices start at 0.	
-</span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
-</span></span><span style="display:flex;"><span>x = valsList.get(0);  // Assigns 31 to x
-</span></span><span style="display:flex;"><span>x = valsList.get(1);  // Assigns 41
-</span></span><span style="display:flex;"><span>x = valsList.get(2);  // Assigns 59
-</span></span><span style="display:flex;"><span>x = valsList.get(3);  // Error: No such element
-</span></span><span style="display:flex;"><span>set()	set(index, element) 
-</span></span><span style="display:flex;"><span>Replaces the element at the specified position in this list with the specified element.	
-</span></span><span style="display:flex;"><span>// List originally: 31 41 59 
-</span></span><span style="display:flex;"><span>valsList.set(1, 119);  // List now 31 119 59
-</span></span><span style="display:flex;"><span>size()	size()
-</span></span><span style="display:flex;"><span>Returns the number of list elements.	
-</span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
-</span></span><span style="display:flex;"><span>x = valsList.size();  // Assigns x with 3
-</span></span></code></pre></div><h3 id="mutable-vs-immutable-objects">Mutable vs Immutable Objects</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">add()	add(element) 
+Create space for and add the element at the end of the list.	
+// List originally empty
+valsList.add(31); // List now: 31 
+valsList.add(41); // List now: 31 41
+get()	get(index) 
+Returns the element at the specified list location known as the index. Indices start at 0.	
+// List originally: 31 41 59. Assume x is an int. 
+x = valsList.get(0);  // Assigns 31 to x
+x = valsList.get(1);  // Assigns 41
+x = valsList.get(2);  // Assigns 59
+x = valsList.get(3);  // Error: No such element
+set()	set(index, element) 
+Replaces the element at the specified position in this list with the specified element.	
+// List originally: 31 41 59 
+valsList.set(1, 119);  // List now 31 119 59
+size()	size()
+Returns the number of list elements.	
+// List originally: 31 41 59. Assume x is an int. 
+x = valsList.size();  // Assigns x with 3
+</code></pre></div><h3 id="mutable-vs-immutable-objects">Mutable vs Immutable Objects</h3>
 <ul>
 <li><strong>mutable</strong>: may be changed after creation</li>
 <li><strong>immutable</strong>: cannot be changed after creation</li>
@@ -460,9 +481,9 @@ src="/rover/">
 <ul>
 <li>more than one reference to the same object. Below is an example where a new object is not created, but the object box1 is referenced by box2.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Rectangle box1 = new Rectangle(0, 0, 100, 200);
-</span></span><span style="display:flex;"><span>Rectangle box2 = box1;
-</span></span></code></pre></div><h1 id="closing-ideas">Closing Ideas</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Rectangle box1 = new Rectangle(0, 0, 100, 200);
+Rectangle box2 = box1;
+</code></pre></div><h1 id="closing-ideas">Closing Ideas</h1>
 <ul>
 <li>Definition of methods besides the main method
 <ul>
@@ -490,37 +511,38 @@ src="/rover/">
 <li>Call methods in main to perform a calculation or an action.</li>
 <li>To call a method:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class VeganClass { 
-</span></span><span style="display:flex;"><span>   public static double calcVegan() {
-</span></span><span style="display:flex;"><span>      // some calculations and logic
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   public static void main(String[] args) {
-</span></span><span style="display:flex;"><span>      // Calls method calcVegan and prints the result
-</span></span><span style="display:flex;"><span>      System.out.println(calcVegan());
-</span></span><span style="display:flex;"><span>   }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public class VeganClass { 
+   public static double calcVegan() {
+      // some calculations and logic
+   }
+
+   public static void main(String[] args) {
+      // Calls method calcVegan and prints the result
+      System.out.println(calcVegan());
+   }
+}
+
+</code></pre></div><ul>
 <li>Input values from the standard input using the Scanner object.</li>
 <li>Output values on the screen.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>public class MyClass {
-</span></span><span style="display:flex;"><span>  public static void main (String [] args) {
-</span></span><span style="display:flex;"><span>    Scanner input = new Scanner(System.in);
-</span></span><span style="display:flex;"><span>    // create new Scanner object called &#39;input&#39; which takes &#39;System.in&#39;
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import java.util.Scanner;
+
+public class MyClass {
+  public static void main (String [] args) {
+    Scanner input = new Scanner(System.in);
+    // create new Scanner object called &#39;input&#39; which takes &#39;System.in&#39;
+  }
+}
+</code></pre></div><ul>
 <li>Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
 <ul>
 <li><code>charAt()</code>: determines the character at index x of a string</li>
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>String userWord = &#34;myWord&#34;;
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">String userWord = &#34;myWord&#34;;
+</code></pre></div><ul>
 <li>One-dimensional arrays
 <ul>
 <li><code>myArray = [1, 2, 3, 4, 5];</code></li>
@@ -529,26 +551,26 @@ src="/rover/">
 </li>
 <li>if-else statements</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (myThing == myNum) {
-</span></span><span style="display:flex;"><span>  // do stuff
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">if (myThing == myNum) {
+  // do stuff
+}
+</code></pre></div><ul>
 <li>switch statements</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>switch (userVal) {
-</span></span><span style="display:flex;"><span>   case 1: // case userVal == 1
-</span></span><span style="display:flex;"><span>      numItems = 5; 
-</span></span><span style="display:flex;"><span>      break;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   case 3: // case userVal == 3
-</span></span><span style="display:flex;"><span>      numItems = 12; 
-</span></span><span style="display:flex;"><span>      break;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>   default:
-</span></span><span style="display:flex;"><span>      numItems = 55;
-</span></span><span style="display:flex;"><span>      break;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="loops">Loops</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">switch (userVal) {
+   case 1: // case userVal == 1
+      numItems = 5; 
+      break;
+
+   case 3: // case userVal == 3
+      numItems = 12; 
+      break;
+
+   default:
+      numItems = 55;
+      break;
+}
+</code></pre></div><h3 id="loops">Loops</h3>
 <ul>
 <li>for and for-each (Find: <strong>Enhanced Loops</strong>)</li>
 <li>while and do-while (Find: <strong>Do/While Loop</strong>)</li>
@@ -574,23 +596,23 @@ src="/rover/">
 </li>
 <li>Designing your own classes (recall lab):</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class myObject {
-</span></span><span style="display:flex;"><span>  // declare private variable (accessible only to method)
-</span></span><span style="display:flex;"><span>	private double thing;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	public myObject() {
-</span></span><span style="display:flex;"><span>    // initialize value
-</span></span><span style="display:flex;"><span>		this.thing = // some value;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	
-</span></span><span style="display:flex;"><span>	public double myMethod(double myInput) {
-</span></span><span style="display:flex;"><span>    // example method
-</span></span><span style="display:flex;"><span>		thing = thing + myInput;
-</span></span><span style="display:flex;"><span>		return thing;
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>  // get and set methods
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public class myObject {
+  // declare private variable (accessible only to method)
+	private double thing;
+
+	public myObject() {
+    // initialize value
+		this.thing = // some value;
+	}
+	
+	public double myMethod(double myInput) {
+    // example method
+		thing = thing + myInput;
+		return thing;
+	}
+  // get and set methods
+}
+</code></pre></div><ul>
 <li>Creating objects of classes and calling methods on those objects
 <code>myObject myInstanceObject = new myObject();</code></li>
 <li>The basics of GUI (Swing/SWT)
@@ -634,7 +656,7 @@ src="/rover/">
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

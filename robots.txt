@@ -1,5 +1,8 @@
 User-agent: *
 
+Disallow: /rover/posts/containerization/
+Disallow: /rover/posts/aws-cloud-practitioner-2023/
+Disallow: /rover/posts/react-framework/
 Disallow: /rover/posts/refactoring-exercises/
 Disallow: /rover/posts/ubuntu-server/
 Disallow: /rover/posts/csnotes/

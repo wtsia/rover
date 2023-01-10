@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>UNIX | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.97.0" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="UNIX, CIS, Computer Science">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -33,10 +33,10 @@ src="/rover/">
 <meta property="og:title" content="UNIX" />
 <meta property="og:description" content="Description" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/unix/" /><meta property="og:image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/unix/" />
+<meta property="og:image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png" />
 <meta property="article:published_time" content="2022-08-18T14:01:59-07:00" />
 <meta property="article:modified_time" content="2022-08-18T14:01:59-07:00" />
-
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png"/>
 
@@ -44,9 +44,14 @@ src="/rover/">
 <meta name="twitter:description" content="Description"/>
 
 <meta itemprop="name" content="UNIX">
-<meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-08-18T14:01:59-07:00" />
+<meta itemprop="description" content="Description">
+<meta itemprop="datePublished" content="2022-08-18T14:01:59-07:00" />
 <meta itemprop="dateModified" content="2022-08-18T14:01:59-07:00" />
-<meta itemprop="wordCount" content="2515"><meta itemprop="image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png">
+<meta itemprop="wordCount" content="2529">
+<meta itemprop="image" content="https://wtsia.github.io/img/UNIX/UnixFamilies.png">
+
+
+
 <meta itemprop="keywords" content="UNIX,CIS,Computer Science," />
 </head>
 <body>
@@ -58,7 +63,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -102,6 +107,13 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
+<h1 id="quick-concepts">Quick concepts</h1>
+<ul>
+<li><code>dmidecode</code>:</li>
+<li><code>hostnamectl</code>: <code>hostnamectl hostname &lt;name&gt;</code></li>
+<li><code>htop</code> vs <code>atop</code> vs <code>iftop</code></li>
+</ul>
+<h1 id="unix-systems">UNIX Systems</h1>
 <h2 id="introduction">Introduction</h2>
 <ul>
 <li>Discuss the role of The Linux Foundation.</li>
@@ -268,11 +280,11 @@ src="/rover/">
 <li><strong>inode</strong>: The inode (index node) is a data structure in a Unix-style file system that describes a file-system object such as a file or a directory</li>
 <li>terminal programs: xterm, konsole (default on KDE), terminator</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat: used to type out a file (or combine files).
-</span></span><span style="display:flex;"><span>head: used to show the first few lines of a file.
-</span></span><span style="display:flex;"><span>tail: used to show the last few lines of a file.
-</span></span><span style="display:flex;"><span>man: used to view documentation.
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cat: used to type out a file (or combine files).
+head: used to show the first few lines of a file.
+tail: used to show the last few lines of a file.
+man: used to view documentation.
+</code></pre></div><ul>
 <li>
 <p>Virtual Terminals (VT): console sesh that uses display and keyboard outside of a graphical env</p>
 </li>
@@ -323,10 +335,10 @@ src="/rover/">
 </li>
 <li>
 <p><code>$ find -name &quot;*.swp&quot; -exec rm {} ’;’</code>: To find and remove all files that end with .swp, <code>-ok</code> lets you check removal before unlike <code>exec</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ find / -ctime 3     # To find files based on time:
-</span></span><span style="display:flex;"><span>$ find / -size 0  # To find files based on sizes
-</span></span><span style="display:flex;"><span>$ find / -size +10M -exec command {} ’;’  # For example, to find files greater than 10 MB in size and running a command on those files
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ find / -ctime 3     # To find files based on time:
+$ find / -size 0  # To find files based on sizes
+$ find / -size +10M -exec command {} ’;’  # For example, to find files greater than 10 MB in size and running a command on those files
+</code></pre></div><ul>
 <li>Package Management System: level 1, <code>dpkg | rpm</code>, level 2: <code>apt-get, dnf(Open Source RH), yum (RH), zypper (SUSE)</code>
 <ul>
 <li>lvl 1: details of unpacking, installing correctly</li>
@@ -362,7 +374,7 @@ src="/rover/">
 <li>man pages, GNI Info, help (&ndash;help)</li>
 <li><code>man –f</code> generates the same result as typing <code>whatis</code>.</li>
 <li><code>man –k</code> generates the same result as typing <code>apropos</code>.</li>
-<li>GNU Info&quot; <code>info</code></li>
+<li>GNU Info&rdquo; <code>info</code></li>
 <li><code>{cmd} --help</code></li>
 <li>The main sources of Linux documentation are the man pages, GNU info, the help options and command, and a rich variety of online documentation sources.</li>
 <li>The man utility searches, formats, and displays man pages.</li>
@@ -394,10 +406,10 @@ src="/rover/">
 <ul>
 <li><code>sed</code>: stream editor, filter text and perform substitutions in data streams</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sed -e command &lt;filename&gt;   # Specify editing commands at the command line, operate on file and put the output on standard out (e.g. the terminal)
-</span></span><span style="display:flex;"><span>sed -f scriptfile &lt;filename&gt;    # Specify a scriptfile containing sed commands, operate on file and put output on standard out
-</span></span><span style="display:flex;"><span>echo &#34;I hate you&#34; | sed s/hate/love/    # Use sed to filter standard input, putting output on standard out
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sed -e command &lt;filename&gt;   # Specify editing commands at the command line, operate on file and put the output on standard out (e.g. the terminal)
+sed -f scriptfile &lt;filename&gt;    # Specify a scriptfile containing sed commands, operate on file and put output on standard out
+echo &#34;I hate you&#34; | sed s/hate/love/    # Use sed to filter standard input, putting output on standard out
+</code></pre></div><ul>
 <li><code>awk</code></li>
 </ul>
 <h3 id="networking">Networking</h3>
@@ -447,7 +459,7 @@ src="/rover/">
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

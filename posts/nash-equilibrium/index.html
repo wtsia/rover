@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Nash Equilibrium | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.97.0" />
+<meta name="generator" content="Hugo 0.68.3" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="hugo, vitae, theme, static">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -33,9 +33,7 @@ src="/rover/">
 <meta property="og:title" content="Nash Equilibrium" />
 <meta property="og:description" content="Needs Editing" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/nash-equilibrium/" /><meta property="article:section" content="posts" />
-
-
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/nash-equilibrium/" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Nash Equilibrium"/>
@@ -45,6 +43,9 @@ src="/rover/">
 <meta itemprop="description" content="Needs Editing">
 
 <meta itemprop="wordCount" content="594">
+
+
+
 <meta itemprop="keywords" content="" />
 </head>
 <body>
@@ -56,7 +57,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -87,13 +88,13 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
-<p>Formally, let $S_{i}$ be the set of all possible strategies for player $i$, where $i = 1, &hellip; , N.$ Let $s^<em>=(s_{i}^{</em>},s_{-i}^{<em>})$ be a strategy profile, a set consisting of one strategy for each player, where $s_{-i}^{</em>}$ denotes the $N-1$ strategies of all the players except $i$. Let $u_{i}(s_{i},s_{-i}^{<em>})$ be player $i$&rsquo;s payoff as a function of the strategies. The strategy profile $s^{</em>}$is a Nash equilibrium if,</p>
+<p>Formally, let $S_{i}$ be the set of all possible strategies for player $i$, where $i = 1, &hellip; , N.$ Let $s^*=(s_{i}^{*},s_{-i}^{*})$ be a strategy profile, a set consisting of one strategy for each player, where $s_{-i}^{*}$ denotes the $N-1$ strategies of all the players except $i$. Let $u_{i}(s_{i},s_{-i}^{*})$ be player $i$'s payoff as a function of the strategies. The strategy profile $s^{*}$is a Nash equilibrium if,</p>
 <p>$$
-u_{i}(s_{i}^{<em>},s_{-i}^{</em>}) \geq u_{i}(s_{i},s_{-i}^{*});;{\rm {for;all}};;s_{i}\in S_{i}
+u_{i}(s_{i}^{*},s_{-i}^{*}) \geq u_{i}(s_{i},s_{-i}^{*});;{\rm {for;all}};;s_{i}\in S_{i}
 $$</p>
 <p>A game can have more than one Nash equilibrium. Even if the equilibrium is unique, it might be weak: a player might be indifferent among several strategies given the other players&rsquo; choices. It is unique and called a strict Nash equilibrium if the inequality is strict so one strategy is the unique best response:</p>
 <p>$$
-{\displaystyle u_{i}(s_{i}^{<em>},s_{-i}^{</em>})&gt;u_{i}(s_{i},s_{-i}^{<em>});;{\rm {for;all}};;s_{i}\in S_{i},s_{i}\neq s_{i}^{</em>}}
+{\displaystyle u_{i}(s_{i}^{*},s_{-i}^{*})&gt;u_{i}(s_{i},s_{-i}^{*});;{\rm {for;all}};;s_{i}\in S_{i},s_{i}\neq s_{i}^{*}}
 $$</p>
 <p>Note that the strategy set</p>
 <p>$${\displaystyle S_{i}}S_{i}$$</p>
@@ -131,7 +132,7 @@ Nash proved that if mixed strategies (where a player chooses probabilities of us
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

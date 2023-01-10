@@ -7,8 +7,35 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 27 Sep 2022 13:34:38 -0700</lastBuildDate>
+		<lastBuildDate>Sat, 31 Dec 2022 22:49:03 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Containerization</title>
+			<link>https://wtsia.github.io/rover/posts/containerization/</link>
+			<pubDate>Sat, 31 Dec 2022 22:49:03 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/containerization/</guid>
+			<description>
+			Description
+			</description>
+		</item>
+		<item>
+			<title>Aws Cloud Practitioner 2023</title>
+			<link>https://wtsia.github.io/rover/posts/aws-cloud-practitioner-2023/</link>
+			<pubDate>Fri, 30 Dec 2022 16:09:58 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/aws-cloud-practitioner-2023/</guid>
+			<description>
+			Description
+			</description>
+		</item>
+		<item>
+			<title>React Framework</title>
+			<link>https://wtsia.github.io/rover/posts/react-framework/</link>
+			<pubDate>Fri, 30 Dec 2022 02:07:08 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/react-framework/</guid>
+			<description>
+			Description
+			</description>
+		</item>
 		<item>
 			<title>Refactoring Exercises</title>
 			<link>https://wtsia.github.io/rover/posts/refactoring-exercises/</link>
