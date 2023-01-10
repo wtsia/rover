@@ -10,9 +10,27 @@
 		<lastBuildDate>Tue, 10 Jan 2023 11:52:33 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/index.xml" rel="self" type="application/rss+xml" />
 		<item>
+			<title>Math</title>
+			<link>https://wtsia.github.io/rover/tags/math/</link>
+			<pubDate>Tue, 10 Jan 2023 11:52:33 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/math/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Mathematics</title>
+			<link>https://wtsia.github.io/rover/tags/mathematics/</link>
+			<pubDate>Tue, 10 Jan 2023 11:52:33 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/mathematics/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
 			<title>tag1</title>
 			<link>https://wtsia.github.io/rover/tags/tag1/</link>
-			<pubDate>Tue, 10 Jan 2023 11:52:33 -0800</pubDate>
+			<pubDate>Sat, 31 Dec 2022 22:49:03 -0800</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/tag1/</guid>
 			<description>
 			
@@ -21,7 +39,7 @@
 		<item>
 			<title>tag2</title>
 			<link>https://wtsia.github.io/rover/tags/tag2/</link>
-			<pubDate>Tue, 10 Jan 2023 11:52:33 -0800</pubDate>
+			<pubDate>Sat, 31 Dec 2022 22:49:03 -0800</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/tag2/</guid>
 			<description>
 			
@@ -50,15 +68,6 @@
 			<link>https://wtsia.github.io/rover/tags/data-structures/</link>
 			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/data-structures/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Math</title>
-			<link>https://wtsia.github.io/rover/tags/math/</link>
-			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/math/</guid>
 			<description>
 			
 			</description>
