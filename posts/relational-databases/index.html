@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="description" content="Description">
 <meta itemprop="datePublished" content="2023-01-17T19:29:32-08:00" />
 <meta itemprop="dateModified" content="2023-01-17T19:29:32-08:00" />
-<meta itemprop="wordCount" content="393">
+<meta itemprop="wordCount" content="498">
 
 
 
@@ -155,7 +155,40 @@ services:
 <p><figure>
   <img src="/rover/img/MySQL/dockerConnectingMySQL.png" alt="Connecting to MySQL"  />
 </figure></p>
-<h2 id="er-model">ER Model</h2>
+<h2 id="entity-relationship-er-model">Entity Relationship (ER) Model</h2>
+<ul>
+<li>Element Types:
+<ul>
+<li>Entity and Entity Sets (Rectangle)
+<ul>
+<li>similar entities == entity set</li>
+</ul>
+</li>
+<li>Attributes (Ovals): qualitative descriptors</li>
+<li>Relationships (Diamonds)
+<ul>
+<li>represented by keys for entity instance</li>
+<li>binary (2), tertiary(3) relationship</li>
+<li>symbols
+<ul>
+<li>&ldquo;$\circ$&rdquo; indicates optional (0 instances of relationships between entities)</li>
+<li>&ldquo;$|$&rdquo; means mandatory</li>
+<li>&ldquo;$||$&rdquo; means cardinality (measure of the number of elements of a set)</li>
+<li>&ldquo;$\triangleleft$&quot;+&quot;$+$&rdquo; crows foot indicates many relationships (imagine $\in$ but with straight lines)
+$$
+Attributes \in Entity
+\\
+$$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>$R:E\rArr F$ = Each $E$ to at most one member of $F$, is <strong>&ldquo;many to one&rdquo;</strong></li>
+<li><strong>&ldquo;one-one&rdquo;</strong> is equivalent to bijection of the above relation</li>
+<li><strong>&ldquo;many-many&rdquo;</strong> is not &ldquo;many to one&rdquo; bijectively</li>
+</ul>
+</li>
+</ul>
 
 </div>
 <div class="tags">

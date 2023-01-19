@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="description" content="A documentation of my attempts at coding problems">
 <meta itemprop="datePublished" content="2022-08-28T14:32:17-07:00" />
 <meta itemprop="dateModified" content="2022-08-28T14:32:17-07:00" />
-<meta itemprop="wordCount" content="763">
+<meta itemprop="wordCount" content="925">
 
 
 
@@ -101,8 +101,9 @@ src="/rover/">
 </div>
 <div class="markdown">
 <p>Relevant References: <a href="https://neetcode.io/" target="_blank">Neetcode</a></p>
-<h2 id="definitions">Definitions</h2>
-<p>Time Complexity (TC): Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
+<h1 id="definitions">Definitions</h1>
+<h2 id="time-complexity-tc">Time Complexity (TC)</h2>
+<p>Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
 $$
 f(l) = t
 $$</p>
@@ -111,7 +112,18 @@ $$
 O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! &hellip;
 $$</p>
 <p>A time-complexity analysis will require evaluating run time on each step of a program.</p>
-<h3 id="contains-duplicate">Contains Duplicate</h3>
+<blockquote>
+<p>Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.</p>
+</blockquote>
+<h2 id="space-complexity-sc">Space Complexity (SC)</h2>
+<p>While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.</p>
+<p>A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.</p>
+<blockquote>
+<p>Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.</p>
+</blockquote>
+<h4 id="references-differences-between-time-complexity-and-space-complexityhttpsstackoverflowcomquestions18686121differences-between-time-complexity-and-space-complexitytexttime20complexity20deals20with20findingchange20in20the20input20size">References: <a href="https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size." target="_blank">Differences between time complexity and space complexity?</a></h4>
+<h1 id="problems">Problems</h1>
+<h2 id="contains-duplicate">Contains Duplicate</h2>
 <p>Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.</p>
 <p>Example 1:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Input: nums = [1,2,3,1]
@@ -126,16 +138,18 @@ Output: true
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1 &lt;= nums.length &lt;= 10^5
 -10^9 &lt;= nums[i] &lt;= 10^9
 </code></pre></div><p>Design:</p>
-<p><strong>Solution 1)</strong> <em>Brute force</em>: store each number in a variable and iterate through the array recursively and return <code>false</code> if the operation completes without returning <code>true</code>.</p>
-<p><strong>Time Complexity (TC)</strong>: each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_n \in array$ to itself. We can note the supremum $sup(N^2 - N) = N2$, but more importantly, storing a value inside a variable takes computation time. Thus, we can say its $N^2 -N +N$ or simply $N^2$.
+<h3 id="solution-1"><strong>Solution 1)</strong></h3>
+<p><em>Brute force</em>: store each member of the array in a variable and iterate through the array recursively and return <code>false</code> if the operation completes without returning <code>true</code>.</p>
+<p><strong>Time Complexity (TC)</strong>: Let $a_n$ represent each element in an array, with $n$ beginning at $0$. For example, <code>[1,2,3]</code> would have $a_0 = 1$, and $a_2 = 3$. Each element in the array is stored and iterated through the other elements, so the complexity grows with the size of the entire array such that each operation on each $a_n \in array$ produces operations of array size $N*(N-1) = N^2 - N$ since we cannot compare every $a_N \in array$ to itself. We can note the supremum $sup(N^2 - N) = N^2$. Thus, we can say it is bounded in time complexity at $N^2 -N +N$ or simply $N^2$.
 We can iterate through as such:</p>
 <p>$$
 n = 1  \to [a_0]
 $$</p>
-<p>array of 1 cannot be a duplicate of itself, so no duplicates.</p>
+<p>array of 1 cannot contain a duplicate of itself, so no duplicates.</p>
 <p>$$
 n = 2  \to [a_0, a_1] \to a_0 \begin{pmatrix} a_1 \end{pmatrix} + a_1 \begin{pmatrix} a_0 \end{pmatrix}
 $$</p>
+<p>In this example, we store $a_0$ and then compare it to $a_1$, and vice versa. This takes 2 operations each, or 4 total.</p>
 <p>$$
 n = 3  \to [a_0, a_1, a_2] \to a_0 \begin{pmatrix} a_1 \\ a_2 \end{pmatrix} \\ + a_1 \begin{pmatrix} a_0 \\ a_2 \end{pmatrix} + a_2 \begin{pmatrix} a_0 \\ a_1 \end{pmatrix}
 $$</p>
@@ -151,7 +165,10 @@ However, more appropriately, we can represent the incremental operations as a se
 $$
 [a_n]_{n = 1}^N ~,~~~ a_n = n^2 \equiv (1, 4, 9, 16, &hellip;, N^2)
 $$</p>
-<p>Sol 2) Divide: split the array into two and compare each number to each element of the other array. This reduces the size of the array approximately in half..</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// java
+
+</code></pre></div><h3 id="solution-2"><strong>Solution 2)</strong></h3>
+<p>Divide: split the array into two and compare each number to each element of the other array. This reduces the size of the array approximately in half..</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">class Solution(object):
     def containsDuplicate(self, nums):
         &#34;&#34;&#34;
