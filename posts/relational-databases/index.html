@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Relational Databases | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.68.3" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="tag1, tag2">
+<meta name="description" content="Description">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Relational Databases" />
+<meta property="og:description" content="Description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/relational-databases/" />
+<meta property="og:image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg" />
+<meta property="article:published_time" content="2023-01-17T19:29:32-08:00" />
+<meta property="article:modified_time" content="2023-01-17T19:29:32-08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg"/>
+
+<meta name="twitter:title" content="Relational Databases"/>
+<meta name="twitter:description" content="Description"/>
+
+<meta itemprop="name" content="Relational Databases">
+<meta itemprop="description" content="Description">
+<meta itemprop="datePublished" content="2023-01-17T19:29:32-08:00" />
+<meta itemprop="dateModified" content="2023-01-17T19:29:32-08:00" />
+<meta itemprop="wordCount" content="393">
+<meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
+
+
+
+<meta itemprop="keywords" content="tag1,tag2," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-image">
+<img src="/rover/img/%3cfolder%3e/example.jpg" alt="An example text for an image you could add!">
+</div>
+<div class="post-header">
+<div class="meta">
+</div>
+<div class="matter">
+<h1 class="title">Relational Databases</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h1 id="relational-databases-mysql">Relational Databases: MySQL</h1>
+<p>An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
+and XML Schema for validation, and an introduction to the query and transformation languages XPath,
+XQuery, and XSLT. The course includes relational design principles based on dependencies and normal
+forms. Additional database topics introduced are indexes, views, transactions, authorization, integrity
+constraints, triggers, on-line analytical processing (OLAP), and emerging NoSQL (Not only SQL)
+databases for cloud and desktop computing.</p>
+<p>Book: murach&rsquo;s MySQL (3rd Edition, 2019)</p>
+<h2 id="outcomes">Outcomes:</h2>
+<ol>
+<li>Create and assure the quality of a suitable data model for a given application.</li>
+<li>Use normalization to transform a relational schema into a set of normalized relations (3NF).</li>
+<li>Use SQL for database creation, manipulation and control.</li>
+<li>Employ data storage and indexing options and perform query optimization.</li>
+<li>Perform basic database administration tasks.</li>
+<li>Employ XML technologies to query, manipulate and transform data.</li>
+<li>Develop NoSQL desktop and cloud database solutions.</li>
+</ol>
+<h1 id="contents">Contents</h1>
+<p><a href="#building-mysql">Building MySQL</a></p>
+<h1 id="building-mysql">Building MySQL</h1>
+<p>Per instructions on <a href="https://hub.docker.com/_/mysql" target="_blank">mysql’s docker page</a>, we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">version: &#39;3.1&#39;
+
+services:
+
+  db:
+    image: mysql
+    # NOTE: use of &#34;mysql_native_password&#34; is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
+    # (this is just an example, not intended to be a production configuration)
+    command: --default-authentication-plugin=sha256_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+</code></pre></div><p>Since <code>mysql_native_password</code> is not recommended as the field value for <code>--default-authentication-plugin</code>, so we will use one of the recommended values, <code>sha256_password</code>. Our root password will be stored in an environment variable called <code>${ROOT_PWD}</code>, located in your <code>.env</code> or environment section of your container manager and will be used to log into mysql.</p>
+<p>We will also need MySQL Client Package&rsquo;s <code>mysql-client</code>, so we can run:</p>
+<p><code>sudo apt-get install mysql-client</code></p>
+<p>Now we can run it using <code>docker compose up -d</code> from the CLI or start it up using your container manager.</p>
+<p>To confirm startup, we can check via <code>docker logs my-container-name</code>, or using <code>docker ps</code>, check that the container is running. You will need to run it using <code>sudo</code> if you haven&rsquo;t added docker to your user group.</p>
+<p><figure>
+  <img src="/rover/img/MySQL/checkMySQLInstall.png" alt="Check Running"  />
+</figure></p>
+<p>Now lets log into the MySQL database. we can interact with a terminal in the container using:</p>
+<p><code>docker exec -it my-sql-db-1 bash</code></p>
+<p>Now we will open a client to interface with the MySQL database. type:</p>
+<p><code>mysql -uroot -p</code></p>
+<p><figure>
+  <img src="/rover/img/MySQL/dockerConnectingMySQL.png" alt="Connecting to MySQL"  />
+</figure></p>
+<h2 id="er-model">ER Model</h2>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/cat1/">cat1</a>
+<a href="/rover/categories/cat2/">cat2</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/tag1/">tag1</a>
+<a href="/rover/tags/tag2/">tag2</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

@@ -42,7 +42,7 @@ src="/rover/">
 <meta itemprop="name" content="Security">
 <meta itemprop="description" content="Unfinished">
 
-<meta itemprop="wordCount" content="55">
+<meta itemprop="wordCount" content="151">
 
 
 
@@ -89,12 +89,52 @@ src="/rover/">
 </div>
 <div class="markdown">
 <h1 id="security-topics">Security Topics</h1>
-<h2 id="ghidra">Ghidra</h2>
+<ul>
+<li><a href="#security-topics">Security Topics</a></li>
+<li><a href="#secure-shell-ssh">Secure Shell (SSH)</a></li>
+<li><a href="#hypertext-transfer-protocol-secure-https">Hypertext Transfer Protocol Secure (HTTPS)</a>
+<ul>
+<li><a href="#transport-layer-security-tls">Transport Layer Security (TLS)</a>
+<ul>
+<li><a href="#rsa-or-diffie-hellman">RSA or Diffie-Hellman</a>
+<ul>
+<li><a href="#diffie-hellman">Diffie-Hellman</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ghidra">Ghidra</a></li>
+<li><a href="#golang">Golang</a></li>
+<li><a href="#reverse-engineering">Reverse Engineering</a></li>
+</ul>
+<h1 id="secure-shell-ssh">Secure Shell (SSH)</h1>
+<p><figure>
+  <img src="https://i.stack.imgur.com/VhMqi.jpg" alt="Secure Shell"  />
+</figure></p>
+<h1 id="hypertext-transfer-protocol-secure-https">Hypertext Transfer Protocol Secure (HTTPS)</h1>
+<h2 id="transport-layer-security-tls">Transport Layer Security (TLS)</h2>
+<ul>
+<li>Formerly known as Secure Socket Layer (SSL)
+<ul>
+<li>&ldquo;Public&rdquo; key is made public, while &ldquo;Private&rdquo; key is owned by a client or origin server.</li>
+<li>Information is scrambled with a key to make cyphertext, and said key can unscramble the cyphertext</li>
+<li>Public key cryptography utilizes two keys, one asymmetric for handshake, and the other for symmetric encryption</li>
+</ul>
+</li>
+</ul>
+<h3 id="rsa-or-diffie-hellman">RSA or Diffie-Hellman</h3>
+<h4 id="diffie-hellman">Diffie-Hellman</h4>
+<ul>
+<li>exponential key exchange</li>
+</ul>
+<h1 id="ghidra">Ghidra</h1>
 <ul>
 <li>an open source reverse engineering tool introduced in RSA Conference, first leaked in Wikileaks and released by the NSA in 2019.</li>
 </ul>
-<h2 id="golang">Golang</h2>
-<h3 id="reverse-engineering">Reverse Engineering</h3>
+<h1 id="golang">Golang</h1>
+<h1 id="reverse-engineering">Reverse Engineering</h1>
 <ul>
 <li>Golang compiler preverses some data that may be reverse engineered, and is untouched by the strip utility (on UNIX, see <code>man strip</code> for manual pages on strip utility).</li>
 </ul>

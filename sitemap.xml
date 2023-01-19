@@ -3,17 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wtsia.github.io/rover/categories/cat1/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/categories/cat2/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/categories/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/posts/relational-databases/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/tags/tag1/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/tags/tag2/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wtsia.github.io/rover/categories/arithmetic/</loc>
     <lastmod>2023-01-10T11:52:33-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/posts/arithmetic-proofs/</loc>
-    <lastmod>2023-01-10T11:52:33-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/categories/</loc>
     <lastmod>2023-01-10T11:52:33-08:00</lastmod>
   </url>
   
@@ -28,47 +68,12 @@
   </url>
   
   <url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2023-01-10T11:52:33-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wtsia.github.io/rover/categories/proofs/</loc>
     <lastmod>2023-01-10T11:52:33-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2023-01-10T11:52:33-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
-    <lastmod>2023-01-10T11:52:33-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/categories/cat1/</loc>
-    <lastmod>2022-12-31T22:49:03-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/categories/cat2/</loc>
-    <lastmod>2022-12-31T22:49:03-08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://wtsia.github.io/rover/posts/containerization/</loc>
-    <lastmod>2022-12-31T22:49:03-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/tags/tag1/</loc>
-    <lastmod>2022-12-31T22:49:03-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/tags/tag2/</loc>
     <lastmod>2022-12-31T22:49:03-08:00</lastmod>
   </url>
   
@@ -378,7 +383,7 @@
   </url>
   
   <url>
-    <loc>https://wtsia.github.io/rover/posts/00_cryptography1/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_cryptography/</loc>
     <lastmod>2022-06-02T14:22:54-07:00</lastmod>
   </url>
   
