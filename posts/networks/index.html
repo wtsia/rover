@@ -42,7 +42,7 @@ src="/rover/">
 <meta itemprop="name" content="Networks">
 <meta itemprop="description" content="Scaling Networks">
 
-<meta itemprop="wordCount" content="722">
+<meta itemprop="wordCount" content="1036">
 
 
 
@@ -88,7 +88,98 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
-<h3 id="domain-name-system-dns">Domain Name System (DNS)</h3>
+<h1 id="introduction">Introduction</h1>
+<p>Introduction to networks and digital communications with a focus on Internet protocols: Application
+layer architectures (client/server, peer-to-peer) and protocols (HTTP-web, SMTP-mail, etc.), Transport
+layer operation: (reliable transport, congestion and flow control, UDP, TCP); Network layer operation -
+(routing, addressing, IPv4 and IPv6), Data Link layer operation (error detection/correction, access
+control, Ethernet, 802.11, PPP), Layer 2/3 protocols (ATM and MPLS); selected current topics such as:
+security, multimedia protocols, Quality of Service, mobility, wireless networking, emerging protocols,
+network management.</p>
+<h1 id="content">Content</h1>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#content">Content</a></li>
+<li><a href="#networks-an-introduction">Networks: An Introduction</a>
+<ul>
+<li><a href="#introduction-1">Introduction</a>
+<ul>
+<li><a href="#osi"><strong>OSI</strong></a></li>
+<li><a href="#number-bases-and-conversion">Number Bases and Conversion</a>
+<ul>
+<li><a href="#binary-to-hex"><strong>Binary to Hex</strong></a></li>
+<li><a href="#binary-to-decimal"><strong>Binary to Decimal</strong></a></li>
+<li><a href="#hex-to-decimal"><strong>Hex to Decimal</strong></a></li>
+<li><a href="#decimal-to-hex"><strong>Decimal to Hex</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#dns-vs-cdn">DNS vs CDN</a>
+<ul>
+<li><a href="#domain-name-system-dns">Domain Name System (DNS)</a></li>
+<li><a href="#content-delivery-network">Content Delivery Network</a>
+<ul>
+<li><a href="#push-cdns">Push CDNs</a></li>
+<li><a href="#pull-cdns">Pull CDNs</a></li>
+<li><a href="#disadvantages-of-cdns">Disadvantages of CDNs:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="networks-an-introduction">Networks: An Introduction</h1>
+<ul>
+<li>Why layers are used in Computer Networks</li>
+<li>7 layers of OSI, describe each layer</li>
+</ul>
+<h2 id="introduction-1">Introduction</h2>
+<ul>
+<li>Layers: (1) physical, (2) data link, medium access control (MAC, sublayer), (3) network, (4) transport, (5) session, (6) presentation, (7) application</li>
+<li>parity is used to verify if information is correctly received&ndash;i.e. a 1 is added to <code>0100 0001</code> to make &lsquo;A&rsquo; an &lsquo;odd parity&rsquo;</li>
+<li><em>communication protocol</em>: agreement/rule</li>
+</ul>
+<h3 id="osi"><strong>OSI</strong></h3>
+<p>Open System Interconnect (by International Standard Organization, or ISO)</p>
+<ul>
+<li>Physical: sending bits via physical property i.e. voltage</li>
+<li>Data Link: CRC (different error detection), Hamming, Flow Control, sliding window, shared ethernet channel
+<ul>
+<li>MAC: bluetooth tech, RFID</li>
+</ul>
+</li>
+</ul>
+<h3 id="number-bases-and-conversion">Number Bases and Conversion</h3>
+<ul>
+<li>Base:
+<ul>
+<li>2 - binary <code>0b</code></li>
+<li>8 - octal <code>0o</code></li>
+<li>10 - decimal <code>0d</code></li>
+<li>16 - hex <code>0x</code></li>
+</ul>
+</li>
+</ul>
+<p><code>0x101</code> equivalent hex to decimal is:</p>
+<p>$$
+1<em>16^2 + 0</em>16^1 + 1*16^0 = 256 + 0 + 1 = 257
+$$</p>
+<h4 id="binary-to-hex"><strong>Binary to Hex</strong></h4>
+<p>Binary: 1, 0 -&gt; Hex: 1, 0, A-F</p>
+<ul>
+<li>0000 -&gt; 0</li>
+<li>1111 -&gt; F</li>
+<li>Order of binary: 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, &hellip;</li>
+</ul>
+<h4 id="binary-to-decimal"><strong>Binary to Decimal</strong></h4>
+<p>Convert to hex first</p>
+<h4 id="hex-to-decimal"><strong>Hex to Decimal</strong></h4>
+<h4 id="decimal-to-hex"><strong>Decimal to Hex</strong></h4>
+<h1 id="dns-vs-cdn">DNS vs CDN</h1>
+<p>Domain Name System vs Content Delivery Network</p>
+<h2 id="domain-name-system-dns">Domain Name System (DNS)</h2>
 <ul>
 <li>work station sends request to ISP, ISP asks other servers for name system IP, then returns the IP address for the web address name so that the work station can connect to the site.
 <ul>
@@ -171,7 +262,7 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h3 id="content-delivery-network">Content Delivery Network</h3>
+<h2 id="content-delivery-network">Content Delivery Network</h2>
 <ul>
 <li>CDN is a globally distributed network of proxy servers, serving content from locations closer to the user i.e. static files like HTML, CSS, JS, photos, or videos</li>
 <li>Pros:
@@ -181,14 +272,14 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h4 id="push-cdns">Push CDNs</h4>
+<h3 id="push-cdns">Push CDNs</h3>
 <ul>
 <li>receive new content when changes occur on server</li>
 <li>Provider managed, uploading and rewriting URLs to point to CDN, expiration, and update frequency.</li>
 <li>Content uploading when new or changed minimizing traffic but maximizing storage</li>
 <li>Push is good for sites whose content isn&rsquo;t often updated</li>
 </ul>
-<h4 id="pull-cdns">Pull CDNs</h4>
+<h3 id="pull-cdns">Pull CDNs</h3>
 <ul>
 <li>grabs new content from server when the first user requests content.
 <ul>
@@ -202,7 +293,7 @@ src="/rover/">
 </li>
 <li>minimizes storage space on CDN but can create redundant traffic if files expire and are pulled before changes.</li>
 </ul>
-<h4 id="disadvantages-of-cdns">Disadvantages of CDNs:</h4>
+<h3 id="disadvantages-of-cdns">Disadvantages of CDNs:</h3>
 <ul>
 <li>CDN costs may be significant dependent on traffic,but should be analyzed by opportunity cost.</li>
 <li>Content may be stale if updated before TTL expires it</li>

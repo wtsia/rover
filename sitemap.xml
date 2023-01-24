@@ -4,46 +4,51 @@
   
   <url>
     <loc>https://wtsia.github.io/rover/categories/cat1/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/categories/cat2/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/categories/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/posts/computer-organization-systems-prog/</loc>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://wtsia.github.io/rover/posts/relational-databases/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/tags/tag1/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/tags/tag2/</loc>
-    <lastmod>2023-01-17T19:29:32-08:00</lastmod>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
   </url>
   
   <url>
     <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2023-01-23T00:30:07-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wtsia.github.io/rover/posts/relational-databases/</loc>
     <lastmod>2023-01-17T19:29:32-08:00</lastmod>
   </url>
   
@@ -138,7 +143,7 @@
   </url>
   
   <url>
-    <loc>https://wtsia.github.io/rover/posts/codingchallenges/</loc>
+    <loc>https://wtsia.github.io/rover/posts/00_codingchallenges/</loc>
     <lastmod>2022-08-28T14:32:17-07:00</lastmod>
   </url>
   

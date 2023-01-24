@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/computer-organization-systems-prog/
 Disallow: /rover/posts/relational-databases/
 Disallow: /rover/posts/arithmetic-proofs/
 Disallow: /rover/posts/containerization/
@@ -8,7 +9,7 @@ Disallow: /rover/posts/react-framework/
 Disallow: /rover/posts/refactoring-exercises/
 Disallow: /rover/posts/ubuntu-server/
 Disallow: /rover/posts/csnotes/
-Disallow: /rover/posts/codingchallenges/
+Disallow: /rover/posts/00_codingchallenges/
 Disallow: /rover/posts/physicselectricitymagnitism/
 Disallow: /rover/posts/intrapersonalcommunication/
 Disallow: /rover/posts/unix/

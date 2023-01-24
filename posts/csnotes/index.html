@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science">
 <meta itemprop="datePublished" content="2022-08-28T16:52:54-07:00" />
 <meta itemprop="dateModified" content="2022-08-28T16:52:54-07:00" />
-<meta itemprop="wordCount" content="645">
+<meta itemprop="wordCount" content="928">
 
 
 
@@ -103,8 +103,66 @@ src="/rover/">
 <p><figure>
   <img src="/rover/img/ComputerScience/rubik.jpg" alt="Replacement Text"  />
 </figure></p>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#complexity">Complexity</a>
+<ul>
+<li><a href="#time-complexity-tc">Time Complexity (TC)</a></li>
+<li><a href="#space-complexity-sc">Space Complexity (SC)</a></li>
+</ul>
+</li>
+<li><a href="#data-structures-and-algorithms">Data Structures and Algorithms</a>
+<ul>
+<li><a href="#dynamic-programming--memoization">Dynamic Programming & Memoization</a></li>
+<li><a href="#algorithm-efficiency-big-oomega-notation">Algorithm Efficiency: Big $O/\Omega$-Notation</a>
+<ul>
+<li><a href="#o-notation">O-notation</a></li>
+<li><a href="#omega-notation">$\Omega$-notation</a></li>
+</ul>
+</li>
+<li><a href="#algorithms">Algorithms</a>
+<ul>
+<li><a href="#binary-search">Binary Search</a></li>
+<li><a href="#selection-sort">Selection Sort</a></li>
+<li><a href="#merge-sort">Merge sort:</a></li>
+<li><a href="#binary-tree">Binary tree</a></li>
+<li><a href="#heap">Heap:</a></li>
+<li><a href="#depth-first-search">Depth First Search:</a></li>
+<li><a href="#breadth-first-search">Breadth First Search:</a></li>
+<li><a href="#edges-and-vertices">Edges and Vertices</a></li>
+<li><a href="#dijkstras-algorithm">Dijkstra’s Algorithm</a></li>
+<li><a href="#topological-sort">Topological Sort</a></li>
+<li><a href="#hash-map">Hash Map</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="complexity">Complexity</h1>
+<h2 id="time-complexity-tc">Time Complexity (TC)</h2>
+<p>Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
+$$
+f(l) = t
+$$</p>
+<p>or more commonly:
+$$
+O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! &hellip;
+$$</p>
+<p>Where $O(x)$ denotes O-notation, or &ldquo;Order&rdquo; notation. See <a href="#algorithm-efficiency-big-o-notation">Algorithm Efficiency</a>.</p>
+<p>A time-complexity analysis will require evaluating run time on each step of a program.</p>
+<blockquote>
+<p>Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.</p>
+</blockquote>
+<h2 id="space-complexity-sc">Space Complexity (SC)</h2>
+<p>While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.</p>
+<p>A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.</p>
+<blockquote>
+<p>Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.</p>
+</blockquote>
+<p>References: <a href="https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size." target="_blank">Differences between time complexity and space complexity?</a></p>
 <h1 id="data-structures-and-algorithms">Data Structures and Algorithms</h1>
-<h3 id="dynamic-programming--memoization">Dynamic Programming &amp; Memoization</h3>
+<h2 id="dynamic-programming--memoization">Dynamic Programming &amp; Memoization</h2>
 <p>A way of making algorithms more efficient by storing the intermediary results.</p>
 <ul>
 <li>Memoization: In computing, memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again</li>
@@ -113,21 +171,31 @@ src="/rover/">
 <ul>
 <li><code>fib(n)</code></li>
 </ul>
-<h3 id="algorithm-efficiency-big-o-notation">Algorithm Efficiency: Big $O$ notation</h3>
-<p>Ranked closeness from Elements to Operations (Also good to bad)</p>
-<p>$O(1)$, $O(log n)$, $O(n)$, $O(n log n)$, $O(n^2)$, $O(2^n)$, $O(n!)$</p>
+<h2 id="algorithm-efficiency-big-oomega-notation">Algorithm Efficiency: Big $O/\Omega$-Notation</h2>
 <ul>
 <li>Space complexity: relationship between growth of input size and growth of space needed</li>
 </ul>
-<h4 id="binary-search">Binary Search</h4>
+<h3 id="o-notation">O-notation</h3>
+<p>Ranked closeness from Elements to Operations (Also good to bad)</p>
+<p>$O(1)$, $O(log n)$, $O(n)$, $O(n log n)$, $O(n^2)$, $O(2^n)$, $O(n!)$</p>
+<ul>
+<li>denotes <strong>maximum</strong> bound for runtime.</li>
+</ul>
+<h3 id="omega-notation">$\Omega$-notation</h3>
+<p>$\Omega (n)$</p>
+<ul>
+<li>denotes <strong>minimum</strong> bound for runtime.</li>
+</ul>
+<h2 id="algorithms">Algorithms</h2>
+<h3 id="binary-search">Binary Search</h3>
 <ul>
 <li>Check middle element and search from middle element, similar to math approximation algorithm when finding root values.</li>
 </ul>
-<h4 id="selection-sort">Selection Sort</h4>
+<h3 id="selection-sort">Selection Sort</h3>
 <ul>
 <li>Linear scan $O(n^2)$</li>
 </ul>
-<h4 id="merge-sort">Merge sort:</h4>
+<h3 id="merge-sort">Merge sort:</h3>
 <ul>
 <li>
 <p>splits collection into subcollections that can be sorted in constant time</p>
@@ -151,7 +219,7 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h4 id="binary-tree">Binary tree</h4>
+<h3 id="binary-tree">Binary tree</h3>
 <ul>
 <li>node with no children is called leaf node</li>
 <li>Binary Search Tree: Value of the key of the left sub-tree is less than the value of its parent node&rsquo;s key, while right is greater or equal to the value of parent&rsquo;s (root) node key
@@ -161,7 +229,8 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h4 id="heap-a-tree-based-data-structure-where-parent-nodes-have--priority-as-children-nodes">Heap: A tree based data structure where parent nodes have &gt;= priority as children nodes</h4>
+<h3 id="heap">Heap:</h3>
+<p>A tree based data structure where parent nodes have &gt;= priority as children nodes</p>
 <ul>
 <li>Priority Queue: abstract data type where elements have priority and higher priority elements are served first (common in heap)</li>
 <li>Min heap, max heap</li>
@@ -169,7 +238,8 @@ src="/rover/">
 <li>Retrieving highest priority costs $O(1)$</li>
 <li>building heap costs $O(n)$</li>
 </ul>
-<h4 id="depth-first-search-iterates-vertically-through-first-branch-to-the-end-then-the-other-leaf-nodes">Depth First Search: iterates vertically through first branch to the end, then the other leaf nodes</h4>
+<h3 id="depth-first-search">Depth First Search:</h3>
+<p>iterates vertically through first branch to the end, then the other leaf nodes</p>
 <ul>
 <li>Stack: a collection that supports push (add to end) and pop (remove from end)
 <ul>
@@ -182,11 +252,12 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h4 id="breadth-first-search-iterates-through-horizontal-branches-and-progresses-downward">Breadth First Search: iterates through horizontal branches and progresses downward</h4>
+<h3 id="breadth-first-search">Breadth First Search:</h3>
+<p>iterates through horizontal branches and progresses downward</p>
 <ul>
 <li>Queue: First in First Out</li>
 </ul>
-<h4 id="edges-and-vertices">Edges and Vertices</h4>
+<h3 id="edges-and-vertices">Edges and Vertices</h3>
 <ul>
 <li>Edges are relationships between vertices</li>
 <li>ex. Google Maps
@@ -199,7 +270,7 @@ src="/rover/">
 </ul>
 </li>
 </ul>
-<h4 id="dijkstras-algorithm">Dijkstra&rsquo;s Algorithm</h4>
+<h3 id="dijkstras-algorithm">Dijkstra&rsquo;s Algorithm</h3>
 <ul>
 <li>
 <p><a href="https://www.youtube.com/watch?v=GazC3A4OQTE" target="_blank">Computerphile - Dijikstra’s Algorithm</a></p>
@@ -235,8 +306,8 @@ src="/rover/">
 </ol>
 </li>
 </ul>
-<h4 id="topological-sort">Topological Sort</h4>
-<h4 id="hash-map">Hash Map</h4>
+<h3 id="topological-sort">Topological Sort</h3>
+<h3 id="hash-map">Hash Map</h3>
 <ul>
 <li>Data structure built on top of an array optimized to store key-value pairs</li>
 <li>Can retrieve delete and store data in $O(1)$ (but not strictly)</li>
