@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Mon, 23 Jan 2023 00:30:07 -0800</lastBuildDate>
+		<lastBuildDate>Mon, 23 Jan 2023 23:09:27 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/categories/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Computer Science</title>
+			<link>https://wtsia.github.io/rover/categories/computer-science/</link>
+			<pubDate>Mon, 23 Jan 2023 23:09:27 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/computer-science/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Programming</title>
+			<link>https://wtsia.github.io/rover/categories/programming/</link>
+			<pubDate>Mon, 23 Jan 2023 23:09:27 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/programming/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>cat1</title>
 			<link>https://wtsia.github.io/rover/categories/cat1/</link>
@@ -23,6 +41,15 @@
 			<link>https://wtsia.github.io/rover/categories/cat2/</link>
 			<pubDate>Mon, 23 Jan 2023 00:30:07 -0800</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/cat2/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Databases</title>
+			<link>https://wtsia.github.io/rover/categories/databases/</link>
+			<pubDate>Tue, 17 Jan 2023 19:29:32 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/categories/databases/</guid>
 			<description>
 			
 			</description>
@@ -64,28 +91,10 @@
 			</description>
 		</item>
 		<item>
-			<title>Computer Science</title>
-			<link>https://wtsia.github.io/rover/categories/computer-science/</link>
-			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/computer-science/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
 			<title>Education</title>
 			<link>https://wtsia.github.io/rover/categories/education/</link>
 			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/education/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Programming</title>
-			<link>https://wtsia.github.io/rover/categories/programming/</link>
-			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/programming/</guid>
 			<description>
 			
 			</description>
@@ -167,15 +176,6 @@
 			<link>https://wtsia.github.io/rover/categories/pomology/</link>
 			<pubDate>Tue, 28 Jun 2022 22:41:20 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/categories/pomology/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Terms</title>
-			<link>https://wtsia.github.io/rover/categories/terms/</link>
-			<pubDate>Wed, 08 Jun 2022 22:40:39 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/categories/terms/</guid>
 			<description>
 			
 			</description>

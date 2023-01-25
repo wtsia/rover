@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Mon, 23 Jan 2023 00:30:07 -0800</lastBuildDate>
+		<lastBuildDate>Mon, 23 Jan 2023 23:09:27 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>C&#43;&#43;</title>
+			<link>https://wtsia.github.io/rover/tags/c&#43;&#43;/</link>
+			<pubDate>Mon, 23 Jan 2023 23:09:27 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/c&#43;&#43;/</guid>
+			<description>
+			
+			</description>
+		</item>
 		<item>
 			<title>tag1</title>
 			<link>https://wtsia.github.io/rover/tags/tag1/</link>
@@ -23,6 +32,24 @@
 			<link>https://wtsia.github.io/rover/tags/tag2/</link>
 			<pubDate>Mon, 23 Jan 2023 00:30:07 -0800</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/tag2/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>MySQL</title>
+			<link>https://wtsia.github.io/rover/tags/mysql/</link>
+			<pubDate>Tue, 17 Jan 2023 19:29:32 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/mysql/</guid>
+			<description>
+			
+			</description>
+		</item>
+		<item>
+			<title>Relational Databases</title>
+			<link>https://wtsia.github.io/rover/tags/relational-databases/</link>
+			<pubDate>Tue, 17 Jan 2023 19:29:32 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/tags/relational-databases/</guid>
 			<description>
 			
 			</description>
@@ -230,15 +257,6 @@
 			<link>https://wtsia.github.io/rover/tags/guide/</link>
 			<pubDate>Tue, 28 Jun 2022 22:41:20 -0700</pubDate>
 			<guid>https://wtsia.github.io/rover/tags/guide/</guid>
-			<description>
-			
-			</description>
-		</item>
-		<item>
-			<title>Definitions</title>
-			<link>https://wtsia.github.io/rover/tags/definitions/</link>
-			<pubDate>Wed, 08 Jun 2022 22:40:39 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/tags/definitions/</guid>
 			<description>
 			
 			</description>

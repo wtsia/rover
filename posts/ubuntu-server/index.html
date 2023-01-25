@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="description" content="Description">
 <meta itemprop="datePublished" content="2022-09-26T21:24:43-07:00" />
 <meta itemprop="dateModified" content="2022-09-26T21:24:43-07:00" />
-<meta itemprop="wordCount" content="1541">
+<meta itemprop="wordCount" content="1597">
 
 
 
@@ -100,7 +100,59 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
-<h2 id="useful-server-commands">Useful server commands</h2>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a>
+<ul>
+<li><a href="#useful-commands">Useful Commands</a>
+<ul>
+<li><a href="#ubuntu-server-troubleshooting">Ubuntu Server Troubleshooting</a></li>
+</ul>
+</li>
+<li><a href="#useful-text-editor-shortcuts">useful text editor shortcuts</a></li>
+</ul>
+</li>
+<li><a href="#setting-up-reverse-proxy-with-caddy-or-nginx">Setting up Reverse Proxy with Caddy or Nginx</a>
+<ul>
+<li><a href="#caddy">Caddy</a></li>
+</ul>
+</li>
+<li><a href="#docker">Docker</a>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#docker-portainer">Docker: Portainer</a>
+<ul>
+<li><a href="#docker-commandsoperations">Docker Commands/Operations</a></li>
+</ul>
+</li>
+<li><a href="#docker-nginx-proxy-manager">Docker: Nginx Proxy Manager</a></li>
+</ul>
+</li>
+<li><a href="#nginx">Nginx</a>
+<ul>
+<li><a href="#port-forwarding">Port Forwarding</a></li>
+</ul>
+</li>
+<li><a href="#server-security">Server Security</a>
+<ul>
+<li><a href="#fail2ban">Fail2ban</a></li>
+<li><a href="#maldet-linux-malware-detection">Maldet: Linux Malware Detection</a>
+<ul>
+<li><a href="#installation-1">Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#media">Media</a>
+<ul>
+<li><a href="#installing-jellyfin-docker">Installing Jellyfin (Docker)</a></li>
+<li><a href="#transcoding">Transcoding</a></li>
+<li><a href="#converting-mkv-to-h264-with-ffmpeg">Converting mkv to h264 with FFmpeg</a></li>
+<li><a href="#hevc-x265-to-mp4-x264">HEVC x265 to MP4 x264</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="useful-commands">Useful Commands</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">//useful for monitoring changes to a `.log` file in real time.
 watch -n 1 tail /var/log/&lt;webserver&gt;/&lt;something&gt;.log
 

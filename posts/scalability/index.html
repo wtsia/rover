@@ -42,7 +42,7 @@ src="/rover/">
 <meta itemprop="name" content="Scalability">
 <meta itemprop="description" content="Topics covering scalability of systems">
 
-<meta itemprop="wordCount" content="2379">
+<meta itemprop="wordCount" content="2460">
 
 
 
@@ -88,6 +88,80 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#scalability-asummary">Scalability: A Summary</a>
+<ul>
+<li><a href="#vertical-scaling">Vertical Scaling:</a></li>
+<li><a href="#horizontal-scaling">Horizontal Scaling:</a></li>
+<li><a href="#load-balancer-introduction">Load Balancer: Introduction</a>
+<ul>
+<li><a href="#load-balancing">Load Balancing:</a>
+<ul>
+<li><a href="#caching">Caching:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#building-a-network">Building a Network</a></li>
+<li><a href="#security">Security</a></li>
+</ul>
+</li>
+<li><a href="#scalability-for-dummies-notes">Scalability for Dummies: Notes</a>
+<ul>
+<li><a href="#clones">Clones</a></li>
+<li><a href="#database">Database</a>
+<ul>
+<li><a href="#path-1">Path 1:</a></li>
+<li><a href="#path-2">Path 2:</a></li>
+</ul>
+</li>
+<li><a href="#cache">Cache</a>
+<ul>
+<li><a href="#cached-dataase-queries">Cached Dataase Queries</a></li>
+<li><a href="#cached-objects">Cached Objects</a></li>
+</ul>
+</li>
+<li><a href="#asynchronism">Asynchronism</a>
+<ul>
+<li><a href="#paradigms-of-asynchronism">Paradigms of Asynchronism:</a>
+<ul>
+<li><a href="#async-1">Async #1</a></li>
+<li><a href="#async-2">Async #2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#google-io-2009---transactions-across-datacenters">Google I/O 2009 - Transactions Across Datacenters..</a>
+<ul>
+<li><a href="#context">Context</a>
+<ul>
+<li><a href="#weak-consistency">Weak Consistency</a></li>
+<li><a href="#eventual-consistency">Eventual Consistency</a></li>
+<li><a href="#strong-consistency">Strong Consistency</a></li>
+<li><a href="#why-transactions">Why Transactions?</a></li>
+<li><a href="#across-datacenters">Across Datacenters</a></li>
+<li><a href="#multihoming">Multihoming</a></li>
+<li><a href="#techniques-and-tradeoffs">Techniques and Tradeoffs</a>
+<ul>
+<li><a href="#backups">Backups</a></li>
+<li><a href="#masterslave-replication">Master/Slave Replication</a></li>
+<li><a href="#mastermaster-replication">Master/Master Replication</a></li>
+<li><a href="#tree-replication">Tree Replication</a></li>
+<li><a href="#buddy-replication">Buddy Replication</a></li>
+<li><a href="#2pc-two-phase-commit">2PC, Two Phase Commit</a></li>
+<li><a href="#paxos">Paxos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#slides-notes">Slides Notes</a></li>
+</ul>
+</li>
+</ul>
 <h1 id="scalability-asummary">Scalability: A Summary</h1>
 <p><a href="https://www.youtube.com/watch?v=-W9F__D3oY4" target="_blank">CS75 (Summer 2012) Lecture 9 Scalability Harvard Web Development David Malan</a></p>
 <p><a href="https://www.slideshare.net/jboner/scalability-availability-stability-patterns/" target="_blank">Scalability Slides</a></p>
