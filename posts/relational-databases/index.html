@@ -108,7 +108,7 @@ src="/rover/">
 <li><a href="#outcomes">Outcomes</a></li>
 </ul>
 </li>
-<li><a href="#building-mysql">Building MySQL</a></li>
+<li><a href="#starting-a-mysql-instance">Starting a MySQL Instance</a></li>
 <li><a href="#entity-relationship-er-model">Entity Relationship (ER) Model</a>
 <ul>
 <li><a href="#er-diagram-example">ER Diagram Example</a></li>
@@ -133,7 +133,7 @@ databases for cloud and desktop computing.</p>
 <li>Employ XML technologies to query, manipulate and transform data.</li>
 <li>Develop NoSQL desktop and cloud database solutions.</li>
 </ol>
-<h1 id="building-mysql">Building MySQL</h1>
+<h1 id="starting-a-mysql-instance">Starting a MySQL Instance</h1>
 <p>Per instructions on <a href="https://hub.docker.com/_/mysql" target="_blank">mysql’s docker page</a>, we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">version: &#39;3.1&#39;
 
@@ -154,14 +154,14 @@ services:
     ports:
       - 8080:8080
 </code></pre></div><p>Since <code>mysql_native_password</code> is not recommended as the field value for <code>--default-authentication-plugin</code>, so we will use one of the recommended values, <code>sha256_password</code>. Our root password will be stored in an environment variable called <code>${ROOT_PWD}</code>, located in your <code>.env</code> or environment section of your container manager and will be used to log into mysql.</p>
-<p>Now we can run it using <code>docker compose up -d</code> from the CLI or start it up using your container manager.</p>
+<p>Now we can build it using <code>docker compose up -d</code> from the CLI or start it up using your container manager.</p>
 <p>To confirm startup, we can check via <code>docker logs my-container-name</code>, or using <code>docker ps</code>, check that the container is running. You will need to run it using <code>sudo</code> if you haven&rsquo;t added docker to your user group.</p>
 <p><figure>
   <img src="/rover/img/MySQL/checkMySQLInstall.png" alt="Check Running"  />
 </figure></p>
-<p>Now lets log into the MySQL database. we can interact with a terminal in the container using:</p>
+<p>Now lets log into the MySQL database. we can access the container shell using:</p>
 <p><code>docker exec -it my-sql-db-1 bash</code></p>
-<p>Now we will open a client to interface with the MySQL database. type:</p>
+<p>Now we will log into the MySQL database as root by typing:</p>
 <p><code>mysql -uroot -p</code></p>
 <p><figure>
   <img src="/rover/img/MySQL/dockerConnectingMySQL.png" alt="Connecting to MySQL"  />
