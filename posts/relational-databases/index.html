@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="description" content="Notes on Relational Databases">
 <meta itemprop="datePublished" content="2023-01-17T19:29:32-08:00" />
 <meta itemprop="dateModified" content="2023-01-17T19:29:32-08:00" />
-<meta itemprop="wordCount" content="534">
+<meta itemprop="wordCount" content="755">
 
 
 
@@ -112,6 +112,16 @@ src="/rover/">
 <li><a href="#entity-relationship-er-model">Entity Relationship (ER) Model</a>
 <ul>
 <li><a href="#er-diagram-example">ER Diagram Example</a></li>
+</ul>
+</li>
+<li><a href="#populating-database">Populating Database</a>
+<ul>
+<li><a href="#creating-tables">Creating Tables</a></li>
+<li><a href="#creating-relationships">Creating Relationships</a>
+<ul>
+<li><a href="#additional-commands">Additional commands:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -218,6 +228,41 @@ $$</li>
 </li>
 </ul>
 </li>
+</ul>
+<h1 id="populating-database">Populating Database</h1>
+<h2 id="creating-tables">Creating Tables</h2>
+<p>The following is an ER Diagram for the database we will be creating:</p>
+<p><figure>
+  <img src="/rover/img/MySQL/ERDiagramStudentDB.png" alt="ER Diagram"  />
+</figure></p>
+<p>These are the following commands we will use to create our table for <code>user</code>, <code>student</code>, <code>instructor</code>, and <code>courses</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table user(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;));
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table student(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;),major varchar(100));
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table instructor(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;), title enum(&#39;Full Professor&#39;,&#39;Reader&#39;,&#39;Instructor&#39;));
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table courses(course_num int, dept varchar(100), title varchar(1000), level 
+enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key(course_num,department));
+</code></pre></div><p>we can confirm with <code>describe table_name;</code>, like <code>describe user;</code>:</p>
+<p><figure>
+  <img src="/rover/img/MySQL/describeUser.png" alt="example &amp;lsquo;describe&amp;rsquo;"  />
+</figure></p>
+<p>we can see, the <code>create table user --</code> command created the corresponding fields and data types.</p>
+<p>Now, let&rsquo;s check what tables we have so far using <code>show tables;</code>:
+<figure>
+  <img src="/rover/img/MySQL/showTablesStudentDB.png" alt="show table"  />
+</figure></p>
+<p>Let&rsquo;s make some more tables. One for <code>class</code>, <code>assignments</code>, and <code>posts</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table class(class_num int primary key, start_date date, end_date date, max_students int, term varchar(100), year int, grade double);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table assignments(assignment_id int primary key, name varchar(100), deadline datetime, grade double);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table posts(post_id int primary key, kind text, posting_time datetime, topics text, context text, popularity_rating double);
+</code></pre></div><p><figure>
+  <img src="/rover/img/MySQL/createTableFullCreate.png" alt="create all tables"  />
+</figure></p>
+<h2 id="creating-relationships">Creating Relationships</h2>
+<h3 id="additional-commands">Additional commands:</h3>
+<p>remove a column like <code>level</code> in <code>courses</code>:</p>
+<p><code>mysql&gt; alter table courses drop column level;</code></p>
+<ul>
+<li><code>alter table</code>: lets you <code>add</code> or <code>drop</code> columns</li>
 </ul>
 
 </div>
