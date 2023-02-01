@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="description" content="Notes on Relational Databases">
 <meta itemprop="datePublished" content="2023-01-17T19:29:32-08:00" />
 <meta itemprop="dateModified" content="2023-01-17T19:29:32-08:00" />
-<meta itemprop="wordCount" content="755">
+<meta itemprop="wordCount" content="1246">
 
 
 
@@ -114,16 +114,18 @@ src="/rover/">
 <li><a href="#er-diagram-example">ER Diagram Example</a></li>
 </ul>
 </li>
-<li><a href="#populating-database">Populating Database</a>
+<li><a href="#populating-a-database">Populating a Database</a>
 <ul>
-<li><a href="#creating-tables">Creating Tables</a></li>
-<li><a href="#creating-relationships">Creating Relationships</a>
+<li><a href="#creating-tables">Creating Tables</a>
 <ul>
+<li><a href="#important"><strong>IMPORTANT</strong></a></li>
 <li><a href="#additional-commands">Additional commands:</a></li>
 </ul>
 </li>
+<li><a href="#creating-relationships">Creating Relationships</a></li>
 </ul>
 </li>
+<li><a href="#scripts">Scripts</a></li>
 </ul>
 <h1 id="relational-databases-mysql">Relational Databases: MySQL</h1>
 <p>An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
@@ -229,7 +231,7 @@ $$</li>
 </ul>
 </li>
 </ul>
-<h1 id="populating-database">Populating Database</h1>
+<h1 id="populating-a-database">Populating a Database</h1>
 <h2 id="creating-tables">Creating Tables</h2>
 <p>The following is an ER Diagram for the database we will be creating:</p>
 <p><figure>
@@ -257,14 +259,78 @@ enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key
 </code></pre></div><p><figure>
   <img src="/rover/img/MySQL/createTableFullCreate.png" alt="create all tables"  />
 </figure></p>
-<h2 id="creating-relationships">Creating Relationships</h2>
-<h3 id="additional-commands">Additional commands:</h3>
+<h3 id="important"><strong>IMPORTANT</strong></h3>
+<p>Now, how do we create relationships while creating tables? Well, we can input commands via:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">CREATE TABLE accounts(
+    account_id INT NOT NULL AUTO_INCREMENT,
+    customer_id INT( 4 ) NOT NULL ,
+    account_type ENUM( &#39;savings&#39;, &#39;credit&#39; ) NOT NULL,
+    balance FLOAT( 9 ) NOT NULL,
+    PRIMARY KEY ( account_id ), 
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) 
+) ENGINE=INNODB;
+</code></pre></div><h3 id="additional-commands">Additional commands:</h3>
 <p>remove a column like <code>level</code> in <code>courses</code>:</p>
 <p><code>mysql&gt; alter table courses drop column level;</code></p>
 <ul>
 <li><code>alter table</code>: lets you <code>add</code> or <code>drop</code> columns</li>
 </ul>
+<h2 id="creating-relationships">Creating Relationships</h2>
+<p>We will now create relationships. We will have to use <code>ALTER TABLE</code> commands to set up relationships for our existing tables, like so:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ALTER TABLE `table1` ADD CONSTRAINT table1_id_refs FOREIGN KEY (`table2_id`) REFERENCES `table2` (`id`);
+</code></pre></div><p>Referenced from the <a href="https://dev.mysql.com/doc/" target="_blank">documentation (MySQL 8.0 Reference Manual)</a>:</p>
+<blockquote>
+<p>The <code>FOREIGN KEY</code> and <code>REFERENCES</code> clauses are supported by the InnoDB and NDB storage engines, which implement <code>ADD [CONSTRAINT [symbol]] FOREIGN KEY [index_name] (...) REFERENCES ... (...)</code>. See Section 13.1.20.5, “FOREIGN KEY Constraints”. For other storage engines, the clauses are parsed but ignored.</p>
+<p>For <code>ALTER TABLE</code>, unlike <code>CREATE TABLE</code>, <code>ADD FOREIGN KEY</code> ignores <code>index_name</code> if given and uses an automatically generated foreign key name. As a workaround, include the <code>CONSTRAINT</code> clause to specify the foreign key name:</p>
+<p><code>ADD CONSTRAINT name FOREIGN KEY (....) ...</code></p>
+</blockquote>
+<p>An example of usage from older docs:</p>
+<blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ALTER TABLE tbl_name
+   ADD [CONSTRAINT [symbol]] FOREIGN KEY
+   [index_name] (index_col_name, ...)
+   REFERENCES tbl_name (index_col_name,...)
+   [ON DELETE reference_option]
+   [ON UPDATE reference_option
+</code></pre></div></blockquote>
+<ul>
+<li><code>FOREIGN KEY</code>: one or more columns in a table that refer to a primary key in another table.</li>
+</ul>
+<blockquote>
+<p><strong>Important</strong></p>
+<p>MySQL silently ignores inline <code>REFERENCES</code> specifications, where the references are defined as part of the column specification. MySQL accepts only <code>REFERENCES</code> clauses defined as part of a separate <code>FOREIGN KEY</code> specification.</p>
+<p><strong>Note</strong></p>
+<p>Partitioned InnoDB tables do not support foreign keys. This restriction does not apply to NDB tables, including those explicitly partitioned by [LINEAR] KEY. For more information, see Section 24.6.2, “Partitioning Limitations Relating to Storage Engines”.</p>
+</blockquote>
+<p>With that out of the way, let&rsquo;s begin:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES student (user_id);
 
+ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES instructor (user_id);
+
+ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (post_id) REFERENCES posts (post_id);
+
+ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
+
+ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE instructor ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE courses ADD CONSTRAINT department FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE courses ADD CONSTRAINT course_num FOREIGN KEY (class_num) REFERENCES class (class_num);
+
+ALTER TABLE class ADD CONSTRAINT class_num FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
+
+</code></pre></div><h1 id="scripts">Scripts</h1>
+<p>We will be loading a script into our docker container. SSH into the server and create a file that will house our script.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">touch myscript.sql
+nano myscript.sql
+docker cp myscript.sql container_id:/&lt;my directory&gt;/myscript.sql
+</code></pre></div><p>Now, it should copy the file straight into the root directory or inside <code>&lt;my directory&gt;</code> in your root directory. We can do this via:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">docker cp myfile.ext &lt;container name&gt;:/&lt;my directory&gt;/myfileout.ext
+</code></pre></div><p>To run the script, we use the path into the MySQL db.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+</code></pre></div>
 </div>
 <div class="tags">
 <div class="taxosfloating_left">
