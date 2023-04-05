@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Cryptography | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="Education">
@@ -33,21 +33,18 @@ src="/rover/">
 <meta property="og:title" content="Cryptography" />
 <meta property="og:description" content="Notes on topics in cryptography" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/00_cryptography/" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/00_cryptography/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-06-02T14:22:54-07:00" />
 <meta property="article:modified_time" content="2022-06-02T14:22:54-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Cryptography"/>
 <meta name="twitter:description" content="Notes on topics in cryptography"/>
 
 <meta itemprop="name" content="Cryptography">
-<meta itemprop="description" content="Notes on topics in cryptography">
-<meta itemprop="datePublished" content="2022-06-02T14:22:54-07:00" />
+<meta itemprop="description" content="Notes on topics in cryptography"><meta itemprop="datePublished" content="2022-06-02T14:22:54-07:00" />
 <meta itemprop="dateModified" content="2022-06-02T14:22:54-07:00" />
-<meta itemprop="wordCount" content="133">
-
-
-
+<meta itemprop="wordCount" content="284">
 <meta itemprop="keywords" content="Education," />
 </head>
 <body>
@@ -108,6 +105,7 @@ src="/rover/">
 <ul>
 <li><a href="#schneiers-law">Schneier’s Law</a></li>
 <li><a href="#kerckhoffs-principle">Kerckhoff’s principle</a></li>
+<li><a href="#stream-cipher">Stream Cipher</a></li>
 </ul>
 </li>
 </ul>
@@ -124,6 +122,20 @@ src="/rover/">
 </blockquote>
 <h2 id="kerckhoffs-principle">Kerckhoff&rsquo;s principle</h2>
 <p>A cryptosystem should be secure, even if everything about the system, except the key, is public knowledge.</p>
+<blockquote>
+<p>&ldquo;The fewer and simpler the secrets that one must keep to ensure system security, the easier it is to maintain system security.&rdquo;</p>
+</blockquote>
+<p>Six design rules for military ciphers:</p>
+<ol>
+<li>The system must be practically, if not mathematically, indecipherable;</li>
+<li><strong>It should not require secrecy, and it should not be a problem if it falls into enemy hands;</strong></li>
+<li>It must be possible to communicate and remember the key without using written notes, and correspondents must be able to change or modify it at will;</li>
+<li>It must be applicable to telegraph communications;</li>
+<li>It must be portable, and not require several persons to handle/operate;</li>
+<li>Given the circumstance of use, it should be easy to use and not be stressful to use, nor require a long list of rules for usage.</li>
+</ol>
+<p>Note: some are not relevant due to computer&rsquo;s ability to perform encryption (likely $3$, $5$, or $6$). $2$. However is very important.</p>
+<h2 id="stream-cipher">Stream Cipher</h2>
 
 </div>
 <div class="tags">

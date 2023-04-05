@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Tips for an Ubuntu Server | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="Ubuntu">
@@ -33,21 +33,18 @@ src="/rover/">
 <meta property="og:title" content="Tips for an Ubuntu Server" />
 <meta property="og:description" content="Description" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/ubuntu-server/" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/ubuntu-server/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-26T21:24:43-07:00" />
 <meta property="article:modified_time" content="2022-09-26T21:24:43-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Tips for an Ubuntu Server"/>
 <meta name="twitter:description" content="Description"/>
 
 <meta itemprop="name" content="Tips for an Ubuntu Server">
-<meta itemprop="description" content="Description">
-<meta itemprop="datePublished" content="2022-09-26T21:24:43-07:00" />
+<meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-09-26T21:24:43-07:00" />
 <meta itemprop="dateModified" content="2022-09-26T21:24:43-07:00" />
 <meta itemprop="wordCount" content="1597">
-
-
-
 <meta itemprop="keywords" content="Ubuntu," />
 </head>
 <body>
@@ -153,7 +150,7 @@ src="/rover/">
 </li>
 </ul>
 <h2 id="useful-commands">Useful Commands</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">//useful for monitoring changes to a `.log` file in real time.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">//useful for monitoring changes to a `.log` file in real time.
 watch -n 1 tail /var/log/&lt;webserver&gt;/&lt;something&gt;.log
 
 // query icanhazip.com for your ip address
@@ -203,7 +200,7 @@ chmod +x filename.sh
 <ul>
 <li>allocated space not totally filled (seen after <code>lsblk</code>)</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// ubuntu stack overflow
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// ubuntu stack overflow
 I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie&#39;s suggestion and the provided link did it for me. To summarize:
 
 root@util:~# vgdisplay
@@ -213,7 +210,7 @@ root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
 &lt;snip&gt;
 </code></pre></div><h2 id="useful-text-editor-shortcuts">useful text editor shortcuts</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// NANO
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// NANO
 Ctrl + 6 to set a mark.
 Alt + T will delete all content in a file.
 Ctrl + K will delete the current line at your cursor.
@@ -221,7 +218,7 @@ Ctrl + K will delete the current line at your cursor.
 <p>To create a web server that is accessible from a domain, we will be using Caddy or Nginx proxy manager to set up our local reverse proxy and manage Nginx from a friendly UI.</p>
 <h2 id="caddy">Caddy</h2>
 <p><a href="https://caddyserver.com/docs/install" target="_blank">Caddy Installation Documentation</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 
 curl -1sLf &#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39; | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 
@@ -243,7 +240,7 @@ sudo systemctl reload caddy
 
 </code></pre></div><h1 id="docker">Docker</h1>
 <h2 id="installation">Installation</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// update list. If your output seems abnormal, take a moment to think on your next step. This is a guide that worked for me on Ubuntu 22.04.1 LTS
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// update list. If your output seems abnormal, take a moment to think on your next step. This is a guide that worked for me on Ubuntu 22.04.1 LTS
 sudo apt update
 
 // install prerequisites:
@@ -273,9 +270,9 @@ sudo usermod -aG docker ${USER}
 //log out and log back in or:
 su - ${USER}
 </code></pre></div><h2 id="docker-portainer">Docker: Portainer</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
 </code></pre></div><h3 id="docker-commandsoperations">Docker Commands/Operations</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// run docker container from docker-compose.yml in (-d) background
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// run docker container from docker-compose.yml in (-d) background
 docker-compose up -d 
 
 // list docker images
@@ -298,7 +295,7 @@ docker logs &lt;container-id&gt;
 // 
 </code></pre></div><h2 id="docker-nginx-proxy-manager">Docker: Nginx Proxy Manager</h2>
 <p>Quick-Start (9.28.2022)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># use this as a docker-compose.yml file
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># use this as a docker-compose.yml file
 version: &#39;3&#39;
 services:
   app:
@@ -311,9 +308,9 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
-</code></pre></div><p>Then initiate your stack: `docker-compose up -d&rsquo;</p>
+</code></pre></div><p>Then initiate your stack: `docker-compose up -d'</p>
 <h1 id="nginx">Nginx</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// enable autostart
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// enable autostart
 sudo update-rc.d nginx defaults
 
 // disable nginx from autostarting
@@ -323,11 +320,11 @@ sudo update-rc.d -f nginx disable
 <li>TCP/UDP: Connecting and holding to an endpoint/Sending a signal and hoping it arrives</li>
 <li>dealing with busy port:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sudo netstat -nlptu | grep 80
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sudo netstat -nlptu | grep 80
 sudo systemctl stop nginx
 sudo systemctl stop apache
 </code></pre></div><h1 id="server-security">Server Security</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sudo ufw enable // make sure to enable the server firewall. 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">sudo ufw enable // make sure to enable the server firewall. 
 
 sudo ufw reload // reload server firewall rules
 
@@ -351,7 +348,7 @@ source ~/.bashrc
 <ul>
 <li></li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// fail2ban SSH logins
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// fail2ban SSH logins
 sudo apt install fail2ban
 
 // create sshd ban entry-- cp fail2ban.conf and enter at the bottom of /etc/fail2ban/fail2ban.local
@@ -393,7 +390,7 @@ tar -xvf rkhunter-1.4.6.tar.gz  // extract
 rkhunter --check                // run tool
 </code></pre></div><h2 id="maldet-linux-malware-detection">Maldet: Linux Malware Detection</h2>
 <h3 id="installation-1">Installation</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// cd into a directory to unpack maldet files
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">// cd into a directory to unpack maldet files
 wget https://www.rfxn.com/downloads/maldetect-current.tar.gz
 tar -xvf maldetect-current.tar.gz
 cd maldet-&lt;version&gt;
@@ -409,10 +406,10 @@ nano /usr/local/maldetect/conf.maldet
 <p><code>maldet -u</code>: update maldet</p>
 <h1 id="media">Media</h1>
 <h3 id="installing-jellyfin-docker">Installing Jellyfin (Docker)</h3>
-<p><a href="https://jellyfin.org/docs/general/administration/installing.html">https://jellyfin.org/docs/general/administration/installing.html</a></p>
+<p><a href="https://jellyfin.org/docs/general/administration/installing.html" target="_blank">https://jellyfin.org/docs/general/administration/installing.html</a></p>
 <h3 id="transcoding">Transcoding</h3>
 <p>To properly change track order of an <code>.mkv</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mkvmerge --output &#34;your_file (1).mkv&#34; &#34;(&#34; &#34;your_file.mkv&#34; &#34;)&#34; --track-order 0:0,0:2,0:1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mkvmerge --output &#34;your_file (1).mkv&#34; &#34;(&#34; &#34;your_file.mkv&#34; &#34;)&#34; --track-order 0:0,0:2,0:1
 
 # first, get audio track info so we know which one to keep
 mkvmerge -i input.mkv
@@ -425,7 +422,7 @@ Track ID 4: audio (A_AAC)
 mkvmerge -o output.mkv --audio-tracks 3 input.mkv
 </code></pre></div><h3 id="converting-mkv-to-h264-with-ffmpeg">Converting mkv to h264 with FFmpeg</h3>
 <p>EDIT: This question has become very popular and is one of the top results for searching &ldquo;convert mkv to h264 ffmpeg&rdquo; and thus I feel it is appropriate to add that for anyone stumbling upon this question to rather use</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
 
 // 10-bit/12-bit HEVC to 10-bit H.264
 
@@ -465,7 +462,7 @@ Adjust the -crf value to provide the desired level of quality. Add the -preset o
 
 Uses the format filter to choose the yuv420p10le pixel format to create 10-bit output. Other 10-bit pixel formats supported by libx265 are yuv422p10le &amp; yuv444p10le, but your player may not like these. See ffmpeg -h encoder=libx265 for additional supported pixel formats.
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># assume input.mkv has 3 subtitle tracks
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># assume input.mkv has 3 subtitle tracks
 # remove subtitle track 2 (copy 1&amp;3) from input.mkv &amp; save to output.mkv
 mkvmerge -o output.mkv --subtitle-tracks 1,3 input.mkv
 

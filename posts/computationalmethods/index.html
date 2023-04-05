@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Computational Methods: MATLAB | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="Engineering, Computational, Education, MATLAB">
@@ -33,21 +33,18 @@ src="/rover/">
 <meta property="og:title" content="Computational Methods: MATLAB" />
 <meta property="og:description" content="Notes on using MATLAB for scientific problems." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/computationalmethods/" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/computationalmethods/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-08-17T15:31:42-07:00" />
 <meta property="article:modified_time" content="2022-08-17T15:31:42-07:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Computational Methods: MATLAB"/>
 <meta name="twitter:description" content="Notes on using MATLAB for scientific problems."/>
 
 <meta itemprop="name" content="Computational Methods: MATLAB">
-<meta itemprop="description" content="Notes on using MATLAB for scientific problems.">
-<meta itemprop="datePublished" content="2022-08-17T15:31:42-07:00" />
+<meta itemprop="description" content="Notes on using MATLAB for scientific problems."><meta itemprop="datePublished" content="2022-08-17T15:31:42-07:00" />
 <meta itemprop="dateModified" content="2022-08-17T15:31:42-07:00" />
 <meta itemprop="wordCount" content="1741">
-
-
-
 <meta itemprop="keywords" content="Engineering,Computational,Education,MATLAB," />
 </head>
 <body>
@@ -128,7 +125,7 @@ src="/rover/">
 <li><em>whitespace</em> is not interpreted in Matlab</li>
 </ul>
 <h4 id="common-commands">Common Commands:</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">clc: clears command window
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">clc: clears command window
 clear: clears all vars
 diary: records command terminal content 
 exit: exits session
@@ -150,7 +147,7 @@ ctrl-c: interrupts program
 </li>
 <li>Binary has an additive property:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    0 1 1 1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    0 1 1 1
   + 0 1 1 0
   = 1 1 0 1
 </code></pre></div><ul>
@@ -268,7 +265,7 @@ $$</li>
 <li>minus used as a negative is known as unary minus</li>
 </ul>
 <h3 id="precedence">Precedence:</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">P(arenthesis ())
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">P(arenthesis ())
 E(xponents ^)
 M(inus signs, or ~ negations)
 M(ultiplication * or)
@@ -284,7 +281,7 @@ R(elational operators ==,&lt;,&gt;,&lt;=,&gt;=)
 <li>and left to right</li>
 <li>continuation (<code>...</code>):</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt;&gt; x1 = (1/2)^1+(1/2)^2+(1/2)^3+...
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt;&gt; x1 = (1/2)^1+(1/2)^2+(1/2)^3+...
            (1/2)^4+(1/2)^5+(1/2)^6+...
            (1/2)^7+(1/2)^8+(1/2)^9;
 </code></pre></div><ul>
@@ -338,18 +335,18 @@ R(elational operators ==,&lt;,&gt;,&lt;=,&gt;=)
 <li><code>ismembertol(&lt;calculation&gt;,&lt;goal&gt;,&lt;range&gt;)</code></li>
 </ul>
 <h3 id="modular-arithmetic">Modular Arithmetic</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">num0 % num1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">num0 % num1
 </code></pre></div><blockquote>
 <p>This is equivalent to the remainder of $num0/num1$</p>
 </blockquote>
 <h3 id="numeric-data-types">Numeric Data-types</h3>
 <ul>
 <li><code>double float</code> is the most common floating-point type</li>
-<li>A <code>double</code>'s <em>mantissa</em> is limited to 16 digits (due to the number of bits that represent the mantissa), but an int&rsquo;s range is about +/- 2 billion which means 10 digits.</li>
+<li>A <code>double</code>&rsquo;s <em>mantissa</em> is limited to 16 digits (due to the number of bits that represent the mantissa), but an int&rsquo;s range is about +/- 2 billion which means 10 digits.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">linspace(&lt;starting value&gt;, &lt;ending value&gt;, &lt;total partitions&gt;)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">linspace(&lt;starting value&gt;, &lt;ending value&gt;, &lt;total partitions&gt;)
 logspace(&lt;starting 10^n&gt;, &lt;ending 10^n&gt;, &lt;total partitions&gt;)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">//-TRIG-//
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">//-TRIG-//
 MATLAB function	Description
 sin	Sine.
 sind	Sine of argument in degrees.
@@ -397,7 +394,7 @@ log	Natural logarithm.
 log10	Common (base 10) logarithm.
 sqrt	Square root.
 nthroot	Real n-th root of real numbers.
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Commonly-used formatting operators.
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Commonly-used formatting operators.
 Operator	Prints	Description
 %f
 fixed-point	f is for fixed-point.
@@ -409,7 +406,7 @@ integer	i is for integer. This operator is identical to %d when formatting outpu
 character	c is for character.
 %s
 string	s is for string.
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Commonly-used special characters.
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Commonly-used special characters.
 Special character	Description
 \n
 Prints a new line.
@@ -421,7 +418,7 @@ Two percent characters print one percent character. Note that a single % charact
 Two backslash characters print one backslash character. Note that a single backslash character would instead indicate the start of a special character sequence like \n.
 \t
 Prints a tab.
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Floating-point number formatting operators.
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Floating-point number formatting operators.
 Operator	Description
 %f
 Fixed-point notation
@@ -433,7 +430,7 @@ Either %f or %e, whatever is shorter
 Scientific notation with capital E, as in 3.141593E+00
 %G
 Either %f or %E, whichever is shorter
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Conversion specification	Description
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">Conversion specification	Description
 -
 Specifies left-justified display. Without this item, the default is right-justified.
 
@@ -442,7 +439,7 @@ Number that specifies the minimum number of digits that will be displayed. If th
 
 precision
 Number that specifies the number of digits to the right of the decimal point.
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1D arithmetic array operators.
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">1D arithmetic array operators.
 Element-wise operator	Equivalent function	Description
 +
 plus(a,b)
@@ -459,7 +456,7 @@ Element-wise array exponentiation
 ./
 rdivide(a,b)
 Element-wise array division
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ceil(n): rounds n upward
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ceil(n): rounds n upward
 </code></pre></div><h3 id="indexing-rows-and-columns-single-colon">Indexing rows and Columns: Single Colon</h3>
 <p>MATLAB supports a single colon index to access all elements of a row or column. All of the third row can thus accessed as sampleMatrix(3, : ). Likewise, all of column 2 can be accessed as sampleMatrix( :, 2)</p>
 <h3 id="concatenation">Concatenation</h3>
@@ -473,7 +470,7 @@ Element-wise array division
 <li>try-catch: handles errors</li>
 </ul>
 <h3 id="while-and-for-loops">While and For Loops</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">
 
 i = 0;
 while (i &lt;= 99)
@@ -486,7 +483,7 @@ for i=0:1:99
 end
 
 
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cellArrayOut = cell(numRows,numCols)
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">cellArrayOut = cell(numRows,numCols)
 </code></pre></div><ul>
 <li>cell creates a numRows × numCols cell array of empty cells. Cell arrays of higher dimensions can be created by calling cell() with additional arguments.</li>
 </ul>
@@ -523,7 +520,7 @@ end
 <h1 id="plotting">Plotting</h1>
 <p>$ln(y) = m*x+ln(b)$
 find the linear regression of the cubic, quadratic, and exponential of this data:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x = 1:4;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x = 1:4;
 y = [45;5.3;0.76;0.09];
 r2 = @(y, yH) 1 - sum(y-yH).^2 / sum(y-mean(y)).^2
 

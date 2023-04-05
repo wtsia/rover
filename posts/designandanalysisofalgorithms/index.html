@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Design and Analysis of Algorithms | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="Algorithms">
@@ -33,7 +33,9 @@ src="/rover/">
 <meta property="og:title" content="Design and Analysis of Algorithms" />
 <meta property="og:description" content="MIT 6.046J 2015" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/" /><meta property="article:section" content="posts" />
+
+
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Design and Analysis of Algorithms"/>
@@ -43,9 +45,6 @@ src="/rover/">
 <meta itemprop="description" content="MIT 6.046J 2015">
 
 <meta itemprop="wordCount" content="467">
-
-
-
 <meta itemprop="keywords" content="Algorithms," />
 </head>
 <body>
@@ -101,7 +100,7 @@ src="/rover/">
 <h1 id="design-and-analysis-of-algorithms-mit-6046j-2015">Design and Analysis of Algorithms, MIT 6.046J 2015</h1>
 <h2 id="notes-summary">Notes Summary</h2>
 <h5 id="1-course-overview-interval-scheduling">1. Course Overview, Interval Scheduling</h5>
-<p><code> P vs NP: class of problems solvable in polynomial time O(n^k) vs non-deterministic polynomial time, which is verifiable in poly. time.</code> Claims:
+<p><code>P vs NP: class of problems solvable in polynomial time O(n^k) vs non-deterministic polynomial time, which is verifiable in poly. time.</code> Claims:
 1. Greedy algorithm produces a list of intervals s.t. starts and finishes are chronological
 2. Given a list of Intervals L, greedy algorithms with earliest finish time produces k* intervals where k* is maximum
 - Conclusion: earliest finish time is mathematically the most optimal algorithm</p>
@@ -143,8 +142,8 @@ $$S*[1, 2, &hellip;, k* + 1] = &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_(k*+1))
 Say for some generic $k$,
 $$S[1, 2, &hellip;, k] = &lt;s(i_1), f(i_1)&gt;, &hellip;, &lt;s(i_k), f(i_k)&gt;$$
 By construction we know $f(i_1) &lt;= f(j_1)$ since algo picks earliest finish time. Construct schedule
-$$S^{**} = &lt;s(i_1), f(i_1)&gt;, &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_k*+1), f(j_k*+1)&gt;$$
-Then $S^{**}$ is optimal due to being length $k^* + 1$. Define $L'$ s.t. $s(i) &gt;= f(i_1)$. Since $S^{**}$ is optimal for $L$, $S^{**}[2, 3, &hellip;, k* + 1]$ is optimal for $L'$, implying optimal schedule for $L'$ has $k*$ size. Hence, $k - 1 = k*$, implying $S[1, &hellip;, k]$ is optimal.</li>
+$$S^{<strong>} = &lt;s(i_1), f(i_1)&gt;, &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_k*+1), f(j_k*+1)&gt;$$
+Then $S^{</strong>}$ is optimal due to being length $k^* + 1$. Define $L'$ s.t. $s(i) &gt;= f(i_1)$. Since $S^{<strong>}$ is optimal for $L$, $S^{</strong>}[2, 3, &hellip;, k* + 1]$ is optimal for $L'$, implying optimal schedule for $L'$ has $k*$ size. Hence, $k - 1 = k*$, implying $S[1, &hellip;, k]$ is optimal.</li>
 </ul>
 </li>
 </ul>
