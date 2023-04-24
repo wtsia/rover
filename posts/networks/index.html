@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Networks">
 <meta itemprop="description" content="Scaling Networks">
 
-<meta itemprop="wordCount" content="2804">
+<meta itemprop="wordCount" content="3390">
 <meta itemprop="keywords" content="Scalability," />
 </head>
 <body>
@@ -128,12 +128,23 @@ network management.</p>
 </li>
 </ul>
 </li>
-<li><a href="#study-guide">Study Guide</a>
+<li><a href="#unit-review-1">Unit Review 1</a>
 <ul>
 <li><a href="#content-review">Content Review:</a></li>
 <li><a href="#study-guide-questions">Study Guide Questions</a></li>
 </ul>
 </li>
+<li><a href="#devices">Devices</a>
+<ul>
+<li><a href="#hub-vs-switch-vs-router">Hub vs Switch vs Router</a></li>
+<li><a href="#default-gateway">Default Gateway</a>
+<ul>
+<li><a href="#subnet-mask">Subnet Mask</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#unit-review-2">Unit Review 2</a></li>
 </ul>
 <h1 id="networks-an-introduction">Networks: An Introduction</h1>
 <ul>
@@ -307,7 +318,7 @@ $$</p>
 <blockquote>
 <p>Summary: Push CDNs are good for sites that doesn&rsquo;t update content frequently, Pull CDNs for cites that need to update frequently. CDNs involve changing URLs for content to point to the CDN.</p>
 </blockquote>
-<h1 id="study-guide">Study Guide</h1>
+<h1 id="unit-review-1">Unit Review 1</h1>
 <h2 id="content-review">Content Review:</h2>
 <p>Seven layers of OSI and the function of each layer</p>
 <blockquote>
@@ -480,6 +491,66 @@ $$</p>
 </blockquote>
 <blockquote>
 <p>To add extra bits, a polynomial is generated using the data bits and a predetermined divisor. The polynomial is then divided by the divisor using a modulo-2 division algorithm, resulting in a remainder. This remainder is appended to the data as a CRC code, which can be transmitted along with the data. The receiver can then perform the same polynomial division using the received data and the same divisor to obtain a remainder. If the remainder obtained by the receiver is zero, it indicates that the data has not been corrupted during transmission. If the remainder is non-zero, it indicates that an error has occurred, and the data needs to be retransmitted</p>
+</blockquote>
+<h1 id="devices">Devices</h1>
+<h2 id="hub-vs-switch-vs-router">Hub vs Switch vs Router</h2>
+<p>Switch may be considered an intelligent hub, and both are used to form networks. Whereas a router over the internet connects networks. Interestingly, both switches and routers operate at the 2nd and 3rd layer of the OSI model, or Data-link and Network layer.</p>
+<h2 id="default-gateway">Default Gateway</h2>
+<p>The</p>
+<h3 id="subnet-mask">Subnet Mask</h3>
+<p><code>255.255.255.0</code>: implies the <code>255</code> occupied sets are <em>network</em> addresses. The latter (<code>0</code>) is <em>host</em></p>
+<ul>
+<li>ex: <code>192.168.0.1</code> $\rArr$ <code>192.168.0</code> (<code>network</code>) <code>.1</code>(<code>host</code>)</li>
+</ul>
+<h1 id="unit-review-2">Unit Review 2</h1>
+<p>IP layer header &ndash; know the reason for each field of IP header</p>
+<blockquote>
+<p>The header contains transfer information (in bits). This includes <strong>Version (4), Header Length (4), Type of Service (8), Total Length (16), Identification (16), Flags (3), Fragment Offset (13), Time to Live (8), Protocol(8), Header Checksum (16), Source IP (32), Destination IP (32), Options (variable).</strong></p>
+</blockquote>
+<p>IP checksum &ndash; what does checksum do?</p>
+<blockquote>
+<p><strong>IP checksum</strong> uses two&rsquo;s complement addition to check errors. Calculations are made at the sender and destination, and if the same, passes the error check.</p>
+</blockquote>
+<p>Fragmentation &ndash; the fields of IP used for fragmentation and why packets are fragmented.</p>
+<blockquote>
+<p>Breaking up packets into smaller packets. Uses: <strong>Total Length, Identification, Flags, and Fragment Offset.</strong> Under fragmentation, the header is copied to fragments and (a) Total length is updated (b) Flag field updated to show which is the last fragment (c) Fragment Offset updated to reflect offset relative to the start of the OG packet.</p>
+</blockquote>
+<p>IP address and class-A, class-B and class-C</p>
+<blockquote>
+<p>Classes are divided into ranges of IP addresses. A, B, and C are used by devices on the internet.</p>
+<p><strong>A</strong>: Large no. of hosts ($(2^8)^3 =$ 16,777,214), 126 networks, from 1to 127. 1.0.0.0 to 127.0.0.0</p>
+<p><strong>B</strong>: Medium no. of hosts ($(2^8)^2=$ 65,534) Allows for 16,384 networks. From 128.0.0.0 to 191.255.0.0.</p>
+<p><strong>C</strong>: Small number of hosts. Allows for 2,097,150 networks. From 192.0.0.0 to 223.255.255.0.</p>
+</blockquote>
+<p>Subnetting &ndash; given a range of IP addresses know how to subnet a given network.</p>
+<blockquote>
+<p>The subnet mask defines the network address under <code>255</code>. If a field is <code>255</code>, it is part of the network address. <code>255.255.255.0</code> means the host IP range is 0 to 255 for i.e. <code>192.168.0.1</code>$\rarr$<code>192.168.0.255</code></p>
+</blockquote>
+<p>Know the difference between hub, switch and router.</p>
+<blockquote>
+<p>Switch is an intelligent hub, that can send packets to its intended recipient. Routers may act as default gateways and connects networks as well as directs packets to its destination.</p>
+</blockquote>
+<p>Flooding, distance vector routing</p>
+<blockquote>
+<p><strong>Flooding</strong>: data packets are sent to all outgoing links except received. (<em>Uncontrolled</em>: to all neighbors, <em>Controlled</em>: Sequence Number Controlled Flooding&ndash;SNCP)</p>
+<p><strong>Distance Vector Routing</strong> (Bellman-Ford algorithm): Calculates best route based on distance or hops. Given by:
+$$ d_x(y) = min_v{c(x,v) + d_v(y)}$$</p>
+<p>Where:</p>
+<p>$d_x(y)$ = The least distance from x to y</p>
+<p>$c(x,v)$ = Node x&rsquo;s cost from each of its neighbor v</p>
+<p>$d_v(y)$ = distance to each node from intial node</p>
+<p>$min_v$ = selecting shortest distance</p>
+</blockquote>
+<p>What is the problem of distance vector routing, what is the count to infinity problem?</p>
+<blockquote>
+<p>If a node goes offline, and other nodes are not immediately aware. Then packets are still sent through the node believing it is reachable. The distance to that node keeps increasing in the routing tables (to infinity) until hitting a max.</p>
+</blockquote>
+<p>What do we mean by hierarchy routing?</p>
+<blockquote>
+<p>network is divided into multiple levels or tiers of routers.
+It goes from:</p>
+<p>&ldquo;core routers&rdquo; $\rarr$ &ldquo;edge routers&rdquo;</p>
+<p>This design allows for specialized routing protocols at each level of the hierarchy and can be optimized for needs.</p>
 </blockquote>
 
 </div>
