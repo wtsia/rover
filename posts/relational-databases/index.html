@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Relational Databases | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="MySQL, Relational Databases">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Relational Databases">
 <meta itemprop="description" content="Notes on Relational Databases"><meta itemprop="datePublished" content="2023-01-17T19:29:32-08:00" />
 <meta itemprop="dateModified" content="2023-01-17T19:29:32-08:00" />
-<meta itemprop="wordCount" content="3138">
+<meta itemprop="wordCount" content="3283">
 <meta itemprop="keywords" content="MySQL,Relational Databases," />
 </head>
 <body>
@@ -56,7 +56,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -126,13 +126,14 @@ src="/rover/">
 <li><a href="#scripts">Scripts</a></li>
 <li><a href="#creating-a-db-from-scratch">Creating a DB from Scratch</a></li>
 <li><a href="#sql-query-clauses">SQL Query Clauses</a></li>
-<li><a href="#working-with-a-db-assignment-6">Working with a DB (Assignment 6)</a>
+<li><a href="#lab-queries-and-sorting">Lab: Queries and Sorting</a>
 <ul>
-<li><a href="#displaying-count-of-rows">Displaying COUNT of rows</a></li>
-<li><a href="#insert-new-student">Insert New ‘Student’</a></li>
-<li><a href="#inserting-score-for-student_id-into-table">Inserting SCORE for STUDENT_ID into table</a></li>
-<li><a href="#finding-count-of-groups-of-an-attribute">Finding COUNT of “groups” of an “attribute”</a></li>
-<li><a href="#displaying-query-by-value">Displaying Query by Value</a></li>
+<li><a href="#displaying-count-of-rows-2">Displaying COUNT of rows (2)</a></li>
+<li><a href="#insert-new-student-3">Insert New ‘Student’ (3)</a></li>
+<li><a href="#inserting-score-for-student_id-into-table-4">Inserting SCORE for STUDENT_ID into table (4)</a></li>
+<li><a href="#finding-count-of-groups-of-an-attribute-5-6">Finding COUNT of “groups” of an “attribute” (5), (6)</a></li>
+<li><a href="#displaying-query-by-value-7">Displaying Query by Value (7)</a></li>
+<li><a href="#group-query-and-filter-8">Group Query and Filter (8)</a></li>
 </ul>
 </li>
 <li><a href="#database-triggers">Database Triggers</a>
@@ -150,10 +151,10 @@ src="/rover/">
 <h1 id="relational-databases-mysql">Relational Databases: MySQL</h1>
 <p>Guide based on Joel Murach&rsquo;s MySQL (3rd Edition, 2019)</p>
 <p>An introduction to the relational model, relational algebra, and SQL. Also covers XML data including DTDs
-and XML Schema for validation, and an introduction to the query and transformation languages XPath,
-XQuery, and XSLT. The course includes relational design principles based on dependencies and normal
-forms. Additional database topics introduced are indexes, views, transactions, authorization, integrity
-constraints, triggers, on-line analytical processing (OLAP), and emerging NoSQL (Not only SQL)
+and XML Schema for validation, and an introduction to the query and transformation languages XPath, 
+XQuery, and XSLT. The course includes relational design principles based on dependencies and normal 
+forms. Additional database topics introduced are indexes, views, transactions, authorization, integrity 
+constraints, triggers, on-line analytical processing (OLAP), and emerging NoSQL (Not only SQL) 
 databases for cloud and desktop computing.</p>
 <h2 id="outcomes">Outcomes</h2>
 <ol>
@@ -167,30 +168,30 @@ databases for cloud and desktop computing.</p>
 </ol>
 <h1 id="basic-commands">Basic Commands</h1>
 <p>to list data in a table:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">SELECT * FROM table_name;
-</code></pre></div><p>updating a table entry:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">UPDATE table_name SET field=&#39;value&#39; WHERE attribute=&#39;value&#39;;
-</code></pre></div><h1 id="starting-a-mysql-instance">Starting a MySQL Instance</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * FROM table_name;
+</span></span></code></pre></div><p>updating a table entry:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>UPDATE table_name SET field=&#39;value&#39; WHERE attribute=&#39;value&#39;;
+</span></span></code></pre></div><h1 id="starting-a-mysql-instance">Starting a MySQL Instance</h1>
 <p>Per instructions on <a href="https://hub.docker.com/_/mysql" target="_blank">mysql’s docker page</a>, we will be making a docker compose file with the following recommended settings. This will be done on a Linux based OS:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">version: &#39;3.1&#39;
-
-services:
-
-  db:
-    image: mysql
-    # NOTE: use of &#34;mysql_native_password&#34; is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
-    # (this is just an example, not intended to be a production configuration)
-    command: --default-authentication-plugin=sha256_password
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
-
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
-</code></pre></div><p>Since <code>mysql_native_password</code> is not recommended as the field value for <code>--default-authentication-plugin</code>, so we will use one of the recommended values, <code>sha256_password</code>. Our root password will be stored in an environment variable called <code>${ROOT_PWD}</code>, located in your <code>.env</code> or environment section of your container manager and will be used to log into mysql.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>version: &#39;3.1&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  db:
+</span></span><span style="display:flex;"><span>    image: mysql
+</span></span><span style="display:flex;"><span>    # NOTE: use of &#34;mysql_native_password&#34; is not recommended: https://dev.mysql.com/doc/refman/8.0/en/upgrading-from-previous-series.html#upgrade-caching-sha2-password
+</span></span><span style="display:flex;"><span>    # (this is just an example, not intended to be a production configuration)
+</span></span><span style="display:flex;"><span>    command: --default-authentication-plugin=sha256_password
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      MYSQL_ROOT_PASSWORD: ${ROOT_PWD}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  adminer:
+</span></span><span style="display:flex;"><span>    image: adminer
+</span></span><span style="display:flex;"><span>    restart: always
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - 8080:8080
+</span></span></code></pre></div><p>Since <code>mysql_native_password</code> is not recommended as the field value for <code>--default-authentication-plugin</code>, so we will use one of the recommended values, <code>sha256_password</code>. Our root password will be stored in an environment variable called <code>${ROOT_PWD}</code>, located in your <code>.env</code> or environment section of your container manager and will be used to log into mysql.</p>
 <p>Now we can build it using <code>docker compose up -d</code> from the CLI or start it up using your container manager.</p>
 <p>To confirm startup, we can check via <code>docker logs my-container-name</code>, or using <code>docker ps</code>, check that the container is running. You will need to run it using <code>sudo</code> if you haven&rsquo;t added docker to your user group.</p>
 <p><figure>
@@ -225,7 +226,7 @@ services:
 <li>&ldquo;$\triangleleft$&quot;+&quot;$+$&rdquo; crows foot indicates many relationships (imagine $\in$ but with straight lines)
 $$
 Attributes \in Entity
-\\
+\\ 
 $$</li>
 </ul>
 </li>
@@ -263,12 +264,12 @@ $$</li>
   <img src="/rover/img/MySQL/ERDiagramStudentDB.png" alt="ER Diagram"  />
 </figure></p>
 <p>These are the following commands we will use to create our table for <code>user</code>, <code>student</code>, <code>instructor</code>, and <code>courses</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table user(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;));
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table student(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;),major varchar(100));
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table instructor(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;), title enum(&#39;Full Professor&#39;,&#39;Reader&#39;,&#39;Instructor&#39;));
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table courses(course_num int, dept varchar(100), title varchar(1000), level 
-enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key(course_num,department));
-</code></pre></div><p>we can confirm with <code>describe table_name;</code>, like <code>describe user;</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table user(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;));
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table student(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;),major varchar(100));
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table instructor(user_id int primary key, first_name varchar(100), last_name varchar(100), email_addr varchar(100), phone_num enum(&#39;home&#39;,&#39;office&#39;,&#39;mobile&#39;), title enum(&#39;Full Professor&#39;,&#39;Reader&#39;,&#39;Instructor&#39;));
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table courses(course_num int, dept varchar(100), title varchar(1000), level 
+</span></span><span style="display:flex;"><span>enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key(course_num,department));
+</span></span></code></pre></div><p>we can confirm with <code>describe table_name;</code>, like <code>describe user;</code>:</p>
 <p><figure>
   <img src="/rover/img/MySQL/describeUser.png" alt="example &amp;lsquo;describe&amp;rsquo;"  />
 </figure></p>
@@ -278,23 +279,23 @@ enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key
   <img src="/rover/img/MySQL/showTablesStudentDB.png" alt="show table"  />
 </figure></p>
 <p>Let&rsquo;s make some more tables. One for <code>class</code>, <code>assignments</code>, and <code>posts</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table class(class_num int primary key, start_date date, end_date date, max_students int, term varchar(100), year int, grade double);
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table assignments(assignment_id int primary key, name varchar(100), deadline datetime, grade double);
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table posts(post_id int primary key, kind text, posting_time datetime, topics text, context text, popularity_rating double);
-</code></pre></div><p><figure>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table class(class_num int primary key, start_date date, end_date date, max_students int, term varchar(100), year int, grade double);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table assignments(assignment_id int primary key, name varchar(100), deadline datetime, grade double);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table posts(post_id int primary key, kind text, posting_time datetime, topics text, context text, popularity_rating double);
+</span></span></code></pre></div><p><figure>
   <img src="/rover/img/MySQL/createTableFullCreate.png" alt="create all tables"  />
 </figure></p>
 <h3 id="important"><strong>IMPORTANT</strong></h3>
 <p>Now, how do we create relationships while creating tables? Well, we can input commands via:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">CREATE TABLE accounts(
-    account_id INT NOT NULL AUTO_INCREMENT,
-    customer_id INT( 4 ) NOT NULL ,
-    account_type ENUM( &#39;savings&#39;, &#39;credit&#39; ) NOT NULL,
-    balance FLOAT( 9 ) NOT NULL,
-    PRIMARY KEY ( account_id ), 
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) 
-) ENGINE=INNODB;
-</code></pre></div><h3 id="additional-commands">Additional commands:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE TABLE accounts(
+</span></span><span style="display:flex;"><span>    account_id INT NOT NULL AUTO_INCREMENT,
+</span></span><span style="display:flex;"><span>    customer_id INT( 4 ) NOT NULL ,
+</span></span><span style="display:flex;"><span>    account_type ENUM( &#39;savings&#39;, &#39;credit&#39; ) NOT NULL,
+</span></span><span style="display:flex;"><span>    balance FLOAT( 9 ) NOT NULL,
+</span></span><span style="display:flex;"><span>    PRIMARY KEY ( account_id ), 
+</span></span><span style="display:flex;"><span>    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) 
+</span></span><span style="display:flex;"><span>) ENGINE=INNODB;
+</span></span></code></pre></div><h3 id="additional-commands">Additional commands:</h3>
 <p>remove a column like <code>level</code> in <code>courses</code>:</p>
 <p><code>mysql&gt; alter table courses drop column level;</code></p>
 <ul>
@@ -302,8 +303,8 @@ enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key
 </ul>
 <h2 id="creating-relationships">Creating Relationships</h2>
 <p>We will now create relationships. We will have to use <code>ALTER TABLE</code> commands to set up relationships for our existing tables, like so:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>table1<span style="color:#f92672">`</span> <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> table1_id_refs <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>table2_id<span style="color:#f92672">`</span>) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#f92672">`</span>table2<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>);
-</code></pre></div><p>Referenced from the <a href="https://dev.mysql.com/doc/" target="_blank">documentation (MySQL 8.0 Reference Manual)</a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>table1<span style="color:#f92672">`</span> <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> table1_id_refs <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>table2_id<span style="color:#f92672">`</span>) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#f92672">`</span>table2<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>);
+</span></span></code></pre></div><p>Referenced from the <a href="https://dev.mysql.com/doc/" target="_blank">documentation (MySQL 8.0 Reference Manual)</a>:</p>
 <blockquote>
 <p>The <code>FOREIGN KEY</code> and <code>REFERENCES</code> clauses are supported by the InnoDB and NDB storage engines, which implement <code>ADD [CONSTRAINT [symbol]] FOREIGN KEY [index_name] (...) REFERENCES ... (...)</code>. See Section 13.1.20.5, “FOREIGN KEY Constraints”. For other storage engines, the clauses are parsed but ignored.</p>
 <p>For <code>ALTER TABLE</code>, unlike <code>CREATE TABLE</code>, <code>ADD FOREIGN KEY</code> ignores <code>index_name</code> if given and uses an automatically generated foreign key name. As a workaround, include the <code>CONSTRAINT</code> clause to specify the foreign key name:</p>
@@ -311,13 +312,13 @@ enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key
 </blockquote>
 <p>An example of usage from older docs:</p>
 <blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ALTER TABLE tbl_name
-   ADD [CONSTRAINT [symbol]] FOREIGN KEY
-   [index_name] (index_col_name, ...)
-   REFERENCES tbl_name (index_col_name,...)
-   [ON DELETE reference_option]
-   [ON UPDATE reference_option
-</code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ALTER TABLE tbl_name
+</span></span><span style="display:flex;"><span>   ADD [CONSTRAINT [symbol]] FOREIGN KEY
+</span></span><span style="display:flex;"><span>   [index_name] (index_col_name, ...)
+</span></span><span style="display:flex;"><span>   REFERENCES tbl_name (index_col_name,...)
+</span></span><span style="display:flex;"><span>   [ON DELETE reference_option]
+</span></span><span style="display:flex;"><span>   [ON UPDATE reference_option
+</span></span></code></pre></div></blockquote>
 <ul>
 <li><code>FOREIGN KEY</code>: one or more columns in a table that refer to a primary key in another table.</li>
 </ul>
@@ -328,176 +329,196 @@ enum(&#39;undergraduate&#39;,&#39;graduate&#39;,&#39;research&#39;), primary key
 <p>Partitioned InnoDB tables do not support foreign keys. This restriction does not apply to NDB tables, including those explicitly partitioned by [LINEAR] KEY. For more information, see Section 24.6.2, “Partitioning Limitations Relating to Storage Engines”.</p>
 </blockquote>
 <p>With that out of the way, let&rsquo;s begin:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES student (user_id);
-
-ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES instructor (user_id);
-
-ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (post_id) REFERENCES posts (post_id);
-
-ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
-
-ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
-
-ALTER TABLE instructor ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
-
-ALTER TABLE courses ADD CONSTRAINT department FOREIGN KEY (class_num) REFERENCES class (class_num);
-
-ALTER TABLE courses ADD CONSTRAINT course_num FOREIGN KEY (class_num) REFERENCES class (class_num);
-
-ALTER TABLE class ADD CONSTRAINT class_num FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
-
-</code></pre></div><h1 id="scripts">Scripts</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES student (user_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (user_id) REFERENCES instructor (user_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE user ADD CONSTRAINT user_id FOREIGN KEY (post_id) REFERENCES posts (post_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE student ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE instructor ADD CONSTRAINT user_id FOREIGN KEY (class_num) REFERENCES class (class_num);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE courses ADD CONSTRAINT department FOREIGN KEY (class_num) REFERENCES class (class_num);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE courses ADD CONSTRAINT course_num FOREIGN KEY (class_num) REFERENCES class (class_num);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE class ADD CONSTRAINT class_num FOREIGN KEY (assignment_id) REFERENCES assignments (assignment_id);
+</span></span></code></pre></div><h1 id="scripts">Scripts</h1>
 <p>We will be loading a script into our docker container. SSH into the server and create a file that will house our script.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">touch myscript.sql
-nano myscript.sql
-docker cp myscript.sql container_id:/{directory}/myscript.sql
-</code></pre></div><p>Now, it should copy the file straight into the root directory or inside <code>{directory}</code> in your root directory. The full workings of this command is:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">docker cp {myfile.ext} {container name}:/{directory}/{myfileout.ext}
-</code></pre></div><p>To run the script, we use <code>source</code> and set the path in mySQL.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">source /{directory/{script.sql}
-</code></pre></div><h1 id="creating-a-db-from-scratch">Creating a DB from Scratch</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>touch myscript.sql
+</span></span><span style="display:flex;"><span>nano myscript.sql
+</span></span><span style="display:flex;"><span>docker cp myscript.sql container_id:/{directory}/myscript.sql
+</span></span></code></pre></div><p>Now, it should copy the file straight into the root directory or inside <code>{directory}</code> in your root directory. The full workings of this command is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker cp {myfile.ext} {container name}:/{directory}/{myfileout.ext}
+</span></span></code></pre></div><p>To run the script, we use <code>source</code> and set the path in mySQL.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>source /{directory/{script.sql}
+</span></span></code></pre></div><h1 id="creating-a-db-from-scratch">Creating a DB from Scratch</h1>
 <p>create a database &ldquo;mysqldev&rdquo;:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create database mysqldev;
-use mysqldev;
-</code></pre></div><p>create table and specify InnoDB engine:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table ADDRESS(ADDRESS_ID INT, ADDRESS_LINE1 VARCHAR(100), ADDRESS_LINE2 VARCHAR(100), CITY VARCHAR(100), STATE_CD VARCHAR(2), PRIMARY KEY (ADDRESS_ID)) ENGINE=INNODB;
-</code></pre></div><p>confirm table is made to specification:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">show tables;
-describe ADDRESS;
-</code></pre></div><p>create an &ldquo;ORDER&rdquo; table. Because order is a keyword, we must use backticks:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">ORDER</span><span style="color:#f92672">`</span>(ORDER_ID <span style="color:#66d9ef">INT</span>, PRODUCT_CODE <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">100</span>), PRODUCT_DESCRIPTION <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">100</span>), TRANSACTION_DATE <span style="color:#66d9ef">DATE</span>, <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (ORDER_ID)) <span style="color:#66d9ef">ENGINE</span><span style="color:#f92672">=</span>INNODB;
-</code></pre></div><p>create a &ldquo;CUSTOMER&rdquo; table:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">create table CUSTOMER(CUSTOMER_ID INT, FIRST_NAME VARCHAR(100), LAST_NAME VARCHAR(100), EMAIL VARCHAR(100), PHONE VARCHAR(100), DATE_PURCHASED DATE, ADDRESS_ID INT, ORDER_ID INT, PRIMARY KEY (CUSTOMER_ID)) ENGINE=INNODB;
-</code></pre></div><p>create foreign key on <code>ADDRESS_ID</code> referring to <code>ADDRESS TABLE</code>, and a foreign key on <code>ORDER_ID</code> referring to <code>ORDER TABLE</code>, as well as a unique constraint on <code>EMAIL</code> column.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create database mysqldev;
+</span></span><span style="display:flex;"><span>use mysqldev;
+</span></span></code></pre></div><p>create table and specify InnoDB engine:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table ADDRESS(ADDRESS_ID INT, ADDRESS_LINE1 VARCHAR(100), ADDRESS_LINE2 VARCHAR(100), CITY VARCHAR(100), STATE_CD VARCHAR(2), PRIMARY KEY (ADDRESS_ID)) ENGINE=INNODB;
+</span></span></code></pre></div><p>confirm table is made to specification:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>show tables;
+</span></span><span style="display:flex;"><span>describe ADDRESS;
+</span></span></code></pre></div><p>create an &ldquo;ORDER&rdquo; table. Because order is a keyword, we must use backticks:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">ORDER</span><span style="color:#f92672">`</span>(ORDER_ID <span style="color:#66d9ef">INT</span>, PRODUCT_CODE <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">100</span>), PRODUCT_DESCRIPTION <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">100</span>), TRANSACTION_DATE <span style="color:#66d9ef">DATE</span>, <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (ORDER_ID)) <span style="color:#66d9ef">ENGINE</span><span style="color:#f92672">=</span>INNODB;
+</span></span></code></pre></div><p>create a &ldquo;CUSTOMER&rdquo; table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>create table CUSTOMER(CUSTOMER_ID INT, FIRST_NAME VARCHAR(100), LAST_NAME VARCHAR(100), EMAIL VARCHAR(100), PHONE VARCHAR(100), DATE_PURCHASED DATE, ADDRESS_ID INT, ORDER_ID INT, PRIMARY KEY (CUSTOMER_ID)) ENGINE=INNODB;
+</span></span></code></pre></div><p>create foreign key on <code>ADDRESS_ID</code> referring to <code>ADDRESS TABLE</code>, and a foreign key on <code>ORDER_ID</code> referring to <code>ORDER TABLE</code>, as well as a unique constraint on <code>EMAIL</code> column.</p>
 <p>We&rsquo;ve already added primary keys, but can do it again as a learning experience in addition to adding foreign keys and unique constraints:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> CUSTOMER <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> FK_ADDRESS_ID <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (ADDRESS_ID) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#a6e22e">ADDRESS</span>(ADDRESS_ID);
-
-<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> CUSTOMER <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> FK_ORDER_ID <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (ORDER_ID) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">ORDER</span><span style="color:#f92672">`</span>(ORDER_ID);
-
-<span style="color:#f92672">//</span> don<span style="color:#e6db74">&#39;t need to do this!
-</span><span style="color:#e6db74">ALTER TABLE ADDRESS ADD CONSTRAINT PK_ADDRESS_ID PRIMARY KEY(ADDRESS_ID);
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">// don&#39;</span>t need <span style="color:#66d9ef">to</span> do this<span style="color:#f92672">!</span>
-<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> CUSTOMER <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> PK_CUSTOMER_ID <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(CUSTOMER_ID);
-
-<span style="color:#f92672">//</span> don<span style="color:#e6db74">&#39;t need to do this!
-</span><span style="color:#e6db74">ALTER TABLE `ORDER` ADD CONSTRAINT PK_ORDER_ID PRIMARY KEY(ORDER_ID);
-</span><span style="color:#e6db74">
-</span><span style="color:#e6db74">ALTER TABLE CUSTOMER ADD CONSTRAINT EMAIL_UNIQUE UNIQUE (EMAIL);
-</span></code></pre></div><h1 id="sql-query-clauses">SQL Query Clauses</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">SELECT
-FROM
-WHERE
-GROUP BY
-HAVING
-ORDER BY
-</code></pre></div><h1 id="working-with-a-db-assignment-6">Working with a DB (Assignment 6)</h1>
-<p>Using a database. For example <code>studentdb</code> which has tables <code>STUDENT</code>, <code>grade_event</code>, and <code>score</code>.</p>
-<h3 id="displaying-count-of-rows">Displaying COUNT of rows</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> CUSTOMER <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> FK_ADDRESS_ID <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (ADDRESS_ID) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#a6e22e">ADDRESS</span>(ADDRESS_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> CUSTOMER <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> FK_ORDER_ID <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (ORDER_ID) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#f92672">`</span><span style="color:#66d9ef">ORDER</span><span style="color:#f92672">`</span>(ORDER_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> don<span style="color:#e6db74">&#39;t need to do this!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ALTER TABLE ADDRESS ADD CONSTRAINT PK_ADDRESS_ID PRIMARY KEY(ADDRESS_ID);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">// don&#39;</span>t need <span style="color:#66d9ef">to</span> do this<span style="color:#f92672">!</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> CUSTOMER <span style="color:#66d9ef">ADD</span> <span style="color:#66d9ef">CONSTRAINT</span> PK_CUSTOMER_ID <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(CUSTOMER_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">//</span> don<span style="color:#e6db74">&#39;t need to do this!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ALTER TABLE `ORDER` ADD CONSTRAINT PK_ORDER_ID PRIMARY KEY(ORDER_ID);
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">ALTER TABLE CUSTOMER ADD CONSTRAINT EMAIL_UNIQUE UNIQUE (EMAIL);
+</span></span></span></code></pre></div><h1 id="sql-query-clauses">SQL Query Clauses</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT
+</span></span><span style="display:flex;"><span>FROM
+</span></span><span style="display:flex;"><span>WHERE
+</span></span><span style="display:flex;"><span>GROUP BY
+</span></span><span style="display:flex;"><span>HAVING
+</span></span><span style="display:flex;"><span>ORDER BY
+</span></span></code></pre></div><h1 id="lab-queries-and-sorting">Lab: Queries and Sorting</h1>
+<p>Using a database. For example <code>studentdb</code> which has tables <code>STUDENT</code>, <code>grade_event</code>, and <code>score</code>. (1)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>USE studentdb;  -- use the db
+</span></span><span style="display:flex;"><span>SHOW tables;    -- show tables present i.e. STUDENT, ...
+</span></span></code></pre></div><h3 id="displaying-count-of-rows-2">Displaying COUNT of rows (2)</h3>
 <p>Perhaps we want to know how many rows exist in each table. We can obtain this via <code>COUNT()</code> which counts the number of rows:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT COUNT(*) FROM STUDENT;
-+----------+
-| COUNT(*) |
-+----------+
-|       31 |
-+----------+
-
-</code></pre></div><p>we can display the <code>COUNT</code> of all rows similarly:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT COUNT(*) FROM grade_event;
-+----------+
-| COUNT(*) |
-+----------+
-|        6 |
-+----------+
-
-mysql&gt; SELECT COUNT(*) FROM score;
-+----------+
-| COUNT(*) |
-+----------+
-|      173 |
-+----------+
-</code></pre></div><h3 id="insert-new-student">Insert New &lsquo;Student&rsquo;</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT COUNT(*) FROM STUDENT;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>|       31 |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span></code></pre></div><p>we can display the <code>COUNT</code> of all rows similarly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT COUNT(*) FROM grade_event;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>|        6 |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mysql&gt; SELECT COUNT(*) FROM score;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>|      173 |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span></code></pre></div><h3 id="insert-new-student-3">Insert New &lsquo;Student&rsquo; (3)</h3>
 <p>To insert a new row into a table, for example, <code>STUDENT</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">INSERT INTO STUDENT VALUES (&#39;JOESCHMO&#39;, &#39;M&#39;, &#39;12345666&#39;);
-</code></pre></div><p>Here we insert a new row with the indicated values above. It&rsquo;s important that the datatype are correspondingly matched.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>INSERT INTO STUDENT VALUES (&#39;JOESCHMO&#39;, &#39;M&#39;, &#39;12345666&#39;);
+</span></span></code></pre></div><p>Here we insert a new row with the indicated values above. It&rsquo;s important that the datatype are correspondingly matched.</p>
 <p>Now we can check if the row updated correctly by recounting the rows present in table <code>STUDENT</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT COUNT(*) FROM STUDENT;
-+----------+
-| COUNT(*) |
-+----------+
-|       32 |
-+----------+
-</code></pre></div><p>Now, what if we wanted to update the <code>score</code> table with an event for our new &ldquo;student&rdquo; using the previous <code>INSERT</code> command?</p>
-<h3 id="inserting-score-for-student_id-into-table">Inserting SCORE for STUDENT_ID into table</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; INSERT INTO score VALUES (12345666, 10, 70);
-</code></pre></div><p>we get:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql">
-ERROR <span style="color:#ae81ff">1452</span> (<span style="color:#ae81ff">23000</span>): Cannot <span style="color:#66d9ef">add</span> <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">update</span> a child row: a <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span> <span style="color:#66d9ef">constraint</span> <span style="color:#a6e22e">fails</span> (<span style="color:#f92672">`</span>studentdb<span style="color:#f92672">`</span>.<span style="color:#f92672">`</span>score<span style="color:#f92672">`</span>, <span style="color:#66d9ef">CONSTRAINT</span> <span style="color:#f92672">`</span>score_ibfk_1<span style="color:#f92672">`</span> <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>EVENT_ID<span style="color:#f92672">`</span>) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#f92672">`</span>grade_event<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>EVENT_ID<span style="color:#f92672">`</span>))
-</code></pre></div><p>Oh no! We can recall from:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; describe score;
-+------------+--------------+------+-----+---------+-------+
-| Field      | Type         | Null | Key | Default | Extra |
-+------------+--------------+------+-----+---------+-------+
-| STUDENT_ID | int unsigned | NO   | PRI | NULL    |       |
-| EVENT_ID   | int unsigned | NO   | PRI | NULL    |       |
-| SCORE      | int          | NO   |     | NULL    |       |
-+------------+--------------+------+-----+---------+-------+
-</code></pre></div><p><code>EVENT_ID</code> has a foreign key constraint such that <code>EVENT_ID</code> from score references the parent table <code>grade_event</code>&rsquo;s <code>EVENT_ID</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT COUNT(*) FROM STUDENT;
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>| COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span><span style="display:flex;"><span>|       32 |
+</span></span><span style="display:flex;"><span>+----------+
+</span></span></code></pre></div><p>Now, what if we wanted to update the <code>score</code> table with an event for our new &ldquo;student&rdquo; using the previous <code>INSERT</code> command?</p>
+<h3 id="inserting-score-for-student_id-into-table-4">Inserting SCORE for STUDENT_ID into table (4)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; INSERT INTO score VALUES (12345666, 10, 70);
+</span></span></code></pre></div><p>we get:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ERROR <span style="color:#ae81ff">1452</span> (<span style="color:#ae81ff">23000</span>): Cannot <span style="color:#66d9ef">add</span> <span style="color:#66d9ef">or</span> <span style="color:#66d9ef">update</span> a child row: a <span style="color:#66d9ef">foreign</span> <span style="color:#66d9ef">key</span> <span style="color:#66d9ef">constraint</span> <span style="color:#a6e22e">fails</span> (<span style="color:#f92672">`</span>studentdb<span style="color:#f92672">`</span>.<span style="color:#f92672">`</span>score<span style="color:#f92672">`</span>, <span style="color:#66d9ef">CONSTRAINT</span> <span style="color:#f92672">`</span>score_ibfk_1<span style="color:#f92672">`</span> <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>EVENT_ID<span style="color:#f92672">`</span>) <span style="color:#66d9ef">REFERENCES</span> <span style="color:#f92672">`</span>grade_event<span style="color:#f92672">`</span> (<span style="color:#f92672">`</span>EVENT_ID<span style="color:#f92672">`</span>))
+</span></span></code></pre></div><p>Oh no! We can recall from:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; describe score;
+</span></span><span style="display:flex;"><span>+------------+--------------+------+-----+---------+-------+
+</span></span><span style="display:flex;"><span>| Field      | Type         | Null | Key | Default | Extra |
+</span></span><span style="display:flex;"><span>+------------+--------------+------+-----+---------+-------+
+</span></span><span style="display:flex;"><span>| STUDENT_ID | int unsigned | NO   | PRI | NULL    |       |
+</span></span><span style="display:flex;"><span>| EVENT_ID   | int unsigned | NO   | PRI | NULL    |       |
+</span></span><span style="display:flex;"><span>| SCORE      | int          | NO   |     | NULL    |       |
+</span></span><span style="display:flex;"><span>+------------+--------------+------+-----+---------+-------+
+</span></span></code></pre></div><p><code>EVENT_ID</code> has a foreign key constraint such that <code>EVENT_ID</code> from score references the parent table <code>grade_event</code>&rsquo;s <code>EVENT_ID</code>.</p>
 <p>Thus, we can populate the parent table with dummy data and push our insert command to <code>score</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; INSERT INTO grade_event VALUES (&#39;2012-10-02&#39;, &#39;Q&#39;, 10);
-Query OK, 1 row affected (0.01 sec)
-</code></pre></div><p>and then successfully insert data:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; INSERT INTO score VALUES (12345666, 10, 70);
-Query OK, 1 row affected (0.01 sec)
-</code></pre></div><h3 id="finding-count-of-groups-of-an-attribute">Finding COUNT of &ldquo;groups&rdquo; of an &ldquo;attribute&rdquo;</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; INSERT INTO grade_event VALUES (&#39;2012-10-02&#39;, &#39;Q&#39;, 10);
+</span></span><span style="display:flex;"><span>Query OK, 1 row affected (0.01 sec)
+</span></span></code></pre></div><p>and then successfully insert data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; INSERT INTO score VALUES (12345666, 10, 70);
+</span></span><span style="display:flex;"><span>Query OK, 1 row affected (0.01 sec)
+</span></span></code></pre></div><h3 id="finding-count-of-groups-of-an-attribute-5-6">Finding COUNT of &ldquo;groups&rdquo; of an &ldquo;attribute&rdquo; (5), (6)</h3>
 <p>The command below finds the count of each group in EVENT_ID. In this case, we are finding the count of each <code>EVENT_ID</code> in the <code>score</code> table:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT EVENT_ID, COUNT(*) FROM score GROUP BY EVENT_ID;
-+----------+----------+
-| EVENT_ID | COUNT(*) |
-+----------+----------+
-|        1 |       29 |
-|        2 |       30 |
-|        3 |       31 |
-|        4 |       27 |
-|        5 |       27 |
-|        6 |       29 |
-|       10 |        1 |
-+----------+----------+
-7 rows in set (0.00 sec)
-</code></pre></div><p>and finding it by <code>STUDENT_ID</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mysql&gt; SELECT STUDENT_ID, COUNT(*) FROM score GROUP BY STUDENT_ID;
-+------------+----------+
-| STUDENT_ID | COUNT(*) |
-+------------+----------+
-|          1 |        5 |
-|          2 |        5 |
-|          3 |        6 |
-... // removed for readability
-|         30 |        5 |
-|         31 |        6 |
-|   12345666 |        1 |
-+------------+----------+
-32 rows in set (0.00 sec)
-</code></pre></div><h3 id="displaying-query-by-value">Displaying Query by Value</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT EVENT_ID, COUNT(*) FROM score GROUP BY EVENT_ID;
+</span></span><span style="display:flex;"><span>+----------+----------+
+</span></span><span style="display:flex;"><span>| EVENT_ID | COUNT(*) |
+</span></span><span style="display:flex;"><span>+----------+----------+
+</span></span><span style="display:flex;"><span>|        1 |       29 |
+</span></span><span style="display:flex;"><span>|        2 |       30 |
+</span></span><span style="display:flex;"><span>|        3 |       31 |
+</span></span><span style="display:flex;"><span>|        4 |       27 |
+</span></span><span style="display:flex;"><span>|        5 |       27 |
+</span></span><span style="display:flex;"><span>|        6 |       29 |
+</span></span><span style="display:flex;"><span>|       10 |        1 |
+</span></span><span style="display:flex;"><span>+----------+----------+
+</span></span><span style="display:flex;"><span>7 rows in set (0.00 sec)
+</span></span></code></pre></div><p>and finding it by <code>STUDENT_ID</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT STUDENT_ID, COUNT(*) FROM score GROUP BY STUDENT_ID;
+</span></span><span style="display:flex;"><span>+------------+----------+
+</span></span><span style="display:flex;"><span>| STUDENT_ID | COUNT(*) |
+</span></span><span style="display:flex;"><span>+------------+----------+
+</span></span><span style="display:flex;"><span>|          1 |        5 |
+</span></span><span style="display:flex;"><span>|          2 |        5 |
+</span></span><span style="display:flex;"><span>|          3 |        6 |
+</span></span><span style="display:flex;"><span>... // removed for readability
+</span></span><span style="display:flex;"><span>|         30 |        5 |
+</span></span><span style="display:flex;"><span>|         31 |        6 |
+</span></span><span style="display:flex;"><span>|   12345666 |        1 |
+</span></span><span style="display:flex;"><span>+------------+----------+
+</span></span><span style="display:flex;"><span>32 rows in set (0.00 sec)
+</span></span></code></pre></div><h3 id="displaying-query-by-value-7">Displaying Query by Value (7)</h3>
 <p>Let&rsquo;s find the student who has the maximum score, minimum score, and their respective student names.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">SELECT 
-  STUDENT.name, score.SCORE 
-  FROM STUDENT INNER JOIN score 
-  ON STUDENT.STUDENT_ID = STUDENT.STUDENT_ID 
-    WHERE score.SCORE = (SELECT MIN(SCORE) FROM score);
-
-</code></pre></div><h1 id="database-triggers">Database Triggers</h1>
+<p>Find MIN SCORE:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT 
+</span></span><span style="display:flex;"><span>  -&gt;  STUDENT.name, score.SCORE 
+</span></span><span style="display:flex;"><span>  -&gt;  FROM STUDENT INNER JOIN score 
+</span></span><span style="display:flex;"><span>  -&gt;  ON STUDENT.STUDENT_ID = score.STUDENT_ID 
+</span></span><span style="display:flex;"><span>  -&gt;    WHERE score.SCORE = (SELECT MIN(SCORE) FROM score);
+</span></span><span style="display:flex;"><span>+--------+-------+
+</span></span><span style="display:flex;"><span>| name   | SCORE |
+</span></span><span style="display:flex;"><span>+--------+-------+
+</span></span><span style="display:flex;"><span>| Joseph |     7 |
+</span></span><span style="display:flex;"><span>+--------+-------+
+</span></span><span style="display:flex;"><span>1 row in set (0.00 sec)
+</span></span></code></pre></div><p>Find MAX SCORE:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mysql&gt; SELECT
+</span></span><span style="display:flex;"><span>    -&gt;   STUDENT.name, score.SCORE
+</span></span><span style="display:flex;"><span>    -&gt;   FROM STUDENT INNER JOIN score
+</span></span><span style="display:flex;"><span>    -&gt;   ON STUDENT.STUDENT_ID = score.STUDENT_ID
+</span></span><span style="display:flex;"><span>    -&gt;     WHERE score.SCORE = (SELECT MAX(SCORE) FROM score);
+</span></span><span style="display:flex;"><span>+-------+-------+
+</span></span><span style="display:flex;"><span>| name  | SCORE |
+</span></span><span style="display:flex;"><span>+-------+-------+
+</span></span><span style="display:flex;"><span>| Megan |   100 |
+</span></span><span style="display:flex;"><span>+-------+-------+
+</span></span><span style="display:flex;"><span>1 row in set (0.00 sec)
+</span></span></code></pre></div><p>How do we know this is correct? We can also check manually and cross reference each field. Noticably, the <code>MAX</code> score query is the same as the one for <code>MIN</code> score, only we filter for the <code>MAX()</code>.</p>
+<h3 id="group-query-and-filter-8">Group Query and Filter (8)</h3>
+<h1 id="database-triggers">Database Triggers</h1>
 <p>A history of edits made to tables in a database.</p>
 <p>A database trigger is a special type of stored program that automatically executes in response to certain events or actions occurring within a database. These events can include things like the insertion, update or deletion of data in a particular table or database.</p>
 <p>Triggers in MySQL are written using SQL statements and are associated with a specific table or database. When the specified event occurs, the trigger&rsquo;s code is executed, allowing you to perform a variety of actions such as logging changes, enforcing data integrity rules, or updating related tables.</p>
 <p>example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">CREATE TRIGGER log_changes AFTER INSERT ON mytable
-FOR EACH ROW
-BEGIN
-  INSERT INTO log_table (user, action, timestamp) 
-  VALUES (USER(), &#39;INSERT&#39;, NOW());
-END;
-</code></pre></div><p>Database triggers are a subset of <strong>stored programs</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE TRIGGER log_changes AFTER INSERT ON mytable
+</span></span><span style="display:flex;"><span>FOR EACH ROW
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>  INSERT INTO log_table (user, action, timestamp) 
+</span></span><span style="display:flex;"><span>  VALUES (USER(), &#39;INSERT&#39;, NOW());
+</span></span><span style="display:flex;"><span>END;
+</span></span></code></pre></div><p>Database triggers are a subset of <strong>stored programs</strong>.</p>
 <h2 id="stored-programs">Stored Programs</h2>
 <table>
 <thead>
@@ -526,117 +547,115 @@ END;
 </tbody>
 </table>
 <h1 id="midterm-db-3">Midterm DB (3)</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">CREATE DATABASE MIDTERM;
-
-USE MIDTERM;
-
-CREATE TABLE COUNTRIES(
-  COUNTRY_ID CHAR(2) NOT NULL, 
-  COUNTRY_NAME varchar (40), 
-  REGION_ID INT);
-
-ALTER TABLE COUNTRIES ADD PRIMARY KEY (COUNTRY_ID);
-
-CREATE TABLE DEPARTMENTS( 
-  DEPARTMENT_ID INT(4) NOT NULL, 
-  DEPARTMENT_NAME varchar(30) NOT NULL, 
-  MANAGER_ID INT(6), 
-  LOCATION_ID INT(4));
-
-CREATE INDEX DEPT_LOCATION_IX ON DEPARTMENTS (LOCATION_ID);
-
-ALTER TABLE DEPARTMENTS ADD PRIMARY KEY (DEPARTMENT_ID);
-
-CREATE TABLE EMPLOYEES(
-  EMPLOYEE_ID INT(6) NOT NULL, 
-  FIRST_NAME varchar(20), 
-  LAST_NAME varchar(25) NOT NULL, 
-  EMAIL varchar(25) NOT NULL, 
-  PHONE_NUMBER varchar (20), 
-  HIRE_DATE DATE NOT NULL, 
-  JOB_ID varchar(10) NOT NULL, 
-  SALARY DOUBLE(8,2), 
-  COMMISSION_PCT DOUBLE(2,2), 
-  MANAGER_ID INT(6), 
-  DEPARTMENT_ID INT(4));
-
-CREATE INDEX EMP_DEPARTMENT_IX ON EMPLOYEES (DEPARTMENT_ID);
-
-CREATE INDEX EMP_NAME_IX ON EMPLOYEES (LAST_NAME ASC, FIRST_NAME ASC);
-
-CREATE INDEX EMP_JOB_IX ON EMPLOYEES (JOB_ID ASC);
-
-CREATE TABLE JOBS(
-  JOB_ID varchar(10) NOT NULL, 
-  JOB_TITLE varchar (35) NOT NULL, 
-  MIN_SALARY INT(6), 
-  MAX_SALARY INT(6));
-
-ALTER TABLE JOBS ADD CONSTRAINT JOB_ID_PK PRIMARY KEY (JOB_ID);
-
-CREATE TABLE JOB_HISTORY( 
-  EMPLOYEE_ID INT(6) NOT NULL, 
-  START_DATE DATE NOT NULL, 
-  END_DATE DATE NOT NULL, 
-  JOB_ID varchar(10) NOT NULL, 
-  DEPARTMENT_ID INT(4));
-
-CREATE TABLE LOCATIONS(
-  LOCATION_ID INT(4) NOT NULL, 
-  STREET_ADDRESS varchar(40), 
-  POSTAL_CODE varchar(12), 
-  CITY varchar(30) NOT NULL, 
-  STATE_PROVINCE varchar(25), 
-  COUNTRY_ID CHAR(2)); 
-
-CREATE INDEX LOC_CITY_IX ON LOCATIONS (CITY);
-
-ALTER TABLE LOCATIONS ADD CONSTRAINT LOC_ID_PK PRIMARY KEY (LOCATION_ID);
-</code></pre></div><ol start="2">
-<li></li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">CREATE TABLE STUDENT_AUDIT (
-  name varchar(20),
-  GENDER enum(&#39;F&#39;,&#39;M&#39;),
-  STUDENT_ID INT unsigned,
-  CREATE_DATE DATE,
-  ACTION_TYPE varchar(10),
-  USER varchar(20));
-
-DELIMITER //
-CREATE TRIGGER insert_trigger
-AFTER INSERT ON STUDENT
-FOR EACH ROW
-BEGIN
-  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
-  VALUES (NEW.name, new.GENDER, new.STUDENT_ID, NOW(), &#39;INSERTED&#39;, USER());
-END //
-
-DELIMITER //
-CREATE TRIGGER delete_trigger
-AFTER DELETE ON STUDENT
-FOR EACH ROW
-BEGIN
-  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
-  VALUES (OLD.name, OLD.GENDER, OLD.STUDENT_ID, NOW(), &#39;DELETED&#39;, USER());
-END //
-
-DELIMITER //
-CREATE TRIGGER update_trigger
-AFTER UPDATE ON STUDENT
-FOR EACH ROW
-BEGIN
-  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
-  VALUES (NEW.name, new.GENDER, new.STUDENT_ID, NOW(), &#39;UPDATED&#39;, USER());
-END //
-
-
-INSERT INTO STUDENT(name, GENDER, STUDENT_ID) VALUES(&#39;test1&#39;, &#39;M&#39;, &#39;111&#39;);
-
-UPDATE STUDENT SET name=&#39;test22&#39; WHERE name=&#39;test1&#39;;
-
-DELETE FROM STUDENT WHERE name=&#39;test22&#39;;
-</code></pre></div><h1 id="database-transactions">Database Transactions</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE DATABASE MIDTERM;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USE MIDTERM;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE COUNTRIES(
+</span></span><span style="display:flex;"><span>  COUNTRY_ID CHAR(2) NOT NULL, 
+</span></span><span style="display:flex;"><span>  COUNTRY_NAME varchar (40), 
+</span></span><span style="display:flex;"><span>  REGION_ID INT);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE COUNTRIES ADD PRIMARY KEY (COUNTRY_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE DEPARTMENTS( 
+</span></span><span style="display:flex;"><span>  DEPARTMENT_ID INT(4) NOT NULL, 
+</span></span><span style="display:flex;"><span>  DEPARTMENT_NAME varchar(30) NOT NULL, 
+</span></span><span style="display:flex;"><span>  MANAGER_ID INT(6), 
+</span></span><span style="display:flex;"><span>  LOCATION_ID INT(4));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE INDEX DEPT_LOCATION_IX ON DEPARTMENTS (LOCATION_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE DEPARTMENTS ADD PRIMARY KEY (DEPARTMENT_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE EMPLOYEES(
+</span></span><span style="display:flex;"><span>  EMPLOYEE_ID INT(6) NOT NULL, 
+</span></span><span style="display:flex;"><span>  FIRST_NAME varchar(20), 
+</span></span><span style="display:flex;"><span>  LAST_NAME varchar(25) NOT NULL, 
+</span></span><span style="display:flex;"><span>  EMAIL varchar(25) NOT NULL, 
+</span></span><span style="display:flex;"><span>  PHONE_NUMBER varchar (20), 
+</span></span><span style="display:flex;"><span>  HIRE_DATE DATE NOT NULL, 
+</span></span><span style="display:flex;"><span>  JOB_ID varchar(10) NOT NULL, 
+</span></span><span style="display:flex;"><span>  SALARY DOUBLE(8,2), 
+</span></span><span style="display:flex;"><span>  COMMISSION_PCT DOUBLE(2,2), 
+</span></span><span style="display:flex;"><span>  MANAGER_ID INT(6), 
+</span></span><span style="display:flex;"><span>  DEPARTMENT_ID INT(4));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE INDEX EMP_DEPARTMENT_IX ON EMPLOYEES (DEPARTMENT_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE INDEX EMP_NAME_IX ON EMPLOYEES (LAST_NAME ASC, FIRST_NAME ASC);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE INDEX EMP_JOB_IX ON EMPLOYEES (JOB_ID ASC);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE JOBS(
+</span></span><span style="display:flex;"><span>  JOB_ID varchar(10) NOT NULL, 
+</span></span><span style="display:flex;"><span>  JOB_TITLE varchar (35) NOT NULL, 
+</span></span><span style="display:flex;"><span>  MIN_SALARY INT(6), 
+</span></span><span style="display:flex;"><span>  MAX_SALARY INT(6));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE JOBS ADD CONSTRAINT JOB_ID_PK PRIMARY KEY (JOB_ID);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE JOB_HISTORY( 
+</span></span><span style="display:flex;"><span>  EMPLOYEE_ID INT(6) NOT NULL, 
+</span></span><span style="display:flex;"><span>  START_DATE DATE NOT NULL, 
+</span></span><span style="display:flex;"><span>  END_DATE DATE NOT NULL, 
+</span></span><span style="display:flex;"><span>  JOB_ID varchar(10) NOT NULL, 
+</span></span><span style="display:flex;"><span>  DEPARTMENT_ID INT(4));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE TABLE LOCATIONS(
+</span></span><span style="display:flex;"><span>  LOCATION_ID INT(4) NOT NULL, 
+</span></span><span style="display:flex;"><span>  STREET_ADDRESS varchar(40), 
+</span></span><span style="display:flex;"><span>  POSTAL_CODE varchar(12), 
+</span></span><span style="display:flex;"><span>  CITY varchar(30) NOT NULL, 
+</span></span><span style="display:flex;"><span>  STATE_PROVINCE varchar(25), 
+</span></span><span style="display:flex;"><span>  COUNTRY_ID CHAR(2)); 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CREATE INDEX LOC_CITY_IX ON LOCATIONS (CITY);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ALTER TABLE LOCATIONS ADD CONSTRAINT LOC_ID_PK PRIMARY KEY (LOCATION_ID);
+</span></span></code></pre></div><p>2.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE TABLE STUDENT_AUDIT (
+</span></span><span style="display:flex;"><span>  name varchar(20),
+</span></span><span style="display:flex;"><span>  GENDER enum(&#39;F&#39;,&#39;M&#39;),
+</span></span><span style="display:flex;"><span>  STUDENT_ID INT unsigned,
+</span></span><span style="display:flex;"><span>  CREATE_DATE DATE,
+</span></span><span style="display:flex;"><span>  ACTION_TYPE varchar(10),
+</span></span><span style="display:flex;"><span>  USER varchar(20));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DELIMITER //
+</span></span><span style="display:flex;"><span>CREATE TRIGGER insert_trigger
+</span></span><span style="display:flex;"><span>AFTER INSERT ON STUDENT
+</span></span><span style="display:flex;"><span>FOR EACH ROW
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
+</span></span><span style="display:flex;"><span>  VALUES (NEW.name, new.GENDER, new.STUDENT_ID, NOW(), &#39;INSERTED&#39;, USER());
+</span></span><span style="display:flex;"><span>END //
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DELIMITER //
+</span></span><span style="display:flex;"><span>CREATE TRIGGER delete_trigger
+</span></span><span style="display:flex;"><span>AFTER DELETE ON STUDENT
+</span></span><span style="display:flex;"><span>FOR EACH ROW
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
+</span></span><span style="display:flex;"><span>  VALUES (OLD.name, OLD.GENDER, OLD.STUDENT_ID, NOW(), &#39;DELETED&#39;, USER());
+</span></span><span style="display:flex;"><span>END //
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DELIMITER //
+</span></span><span style="display:flex;"><span>CREATE TRIGGER update_trigger
+</span></span><span style="display:flex;"><span>AFTER UPDATE ON STUDENT
+</span></span><span style="display:flex;"><span>FOR EACH ROW
+</span></span><span style="display:flex;"><span>BEGIN
+</span></span><span style="display:flex;"><span>  INSERT INTO STUDENT_AUDIT (name, GENDER, STUDENT_ID, CREATE_DATE, ACTION_TYPE, USER)
+</span></span><span style="display:flex;"><span>  VALUES (NEW.name, new.GENDER, new.STUDENT_ID, NOW(), &#39;UPDATED&#39;, USER());
+</span></span><span style="display:flex;"><span>END //
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>INSERT INTO STUDENT(name, GENDER, STUDENT_ID) VALUES(&#39;test1&#39;, &#39;M&#39;, &#39;111&#39;);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>UPDATE STUDENT SET name=&#39;test22&#39; WHERE name=&#39;test1&#39;;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DELETE FROM STUDENT WHERE name=&#39;test22&#39;;
+</span></span></code></pre></div><h1 id="database-transactions">Database Transactions</h1>
 <p>Transactions in MySQL are used to ensure data integrity and consistency. They provide a way to guarantee that multiple operations on the database are completed successfully or not at all, even if the database is accessed by multiple users concurrently.</p>
 <p>A transaction typically consists of four main operations, known as the ACID properties:</p>
 <table>
@@ -687,14 +706,14 @@ DELETE FROM STUDENT WHERE name=&#39;test22&#39;;
 <p>From the 1st session, delete from SCORE table where student_id=20 and event_id=5. Check if the data is deleted or not from 2nd session. Take a screenshot. Go back now to 1st session and perform ROLLBACK. Now check the data from both 1st and 2nd session. Take a screenshot.</p>
 </li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">use studentdb;
-
-SET autocommit = 0; --set autocommit option OFF
-
-INSERT INTO STUDENT (name, GENDER, STUDENT_ID) VALUES (&#39;Joey Schmoey&#39;, &#39;M&#39;, 1001);
-
-SELECT * FROM STUDENT; --check from second session
-</code></pre></div><p>Noticable however, the 2nd session does not update the table. Recall that earlier, we turned off autocommit. From the mysql manual:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>use studentdb;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SET autocommit = 0; --set autocommit option OFF
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>INSERT INTO STUDENT (name, GENDER, STUDENT_ID) VALUES (&#39;Joey Schmoey&#39;, &#39;M&#39;, 1001);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SELECT * FROM STUDENT; --check from second session
+</span></span></code></pre></div><p>Noticable however, the 2nd session does not update the table. Recall that earlier, we turned off autocommit. From the mysql manual:</p>
 <blockquote>
 <p>By default, MySQL runs with autocommit mode enabled. This means that, when not otherwise inside a transaction, each statement is atomic, as if it were surrounded by START TRANSACTION and COMMIT.</p>
 </blockquote>
@@ -702,8 +721,8 @@ SELECT * FROM STUDENT; --check from second session
 <blockquote>
 <p>After disabling autocommit mode by setting the autocommit variable to zero, changes to transaction-safe tables (such as those for InnoDB or NDB) <strong>are not made permanent immediately</strong>. You must use COMMIT to store your changes to disk or ROLLBACK to ignore the changes.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">UPDATE score SET STUDENT_ID=20, EVENT_ID=15 WHERE STUDENT_ID=10 AND EVENT_ID=5;
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>UPDATE score SET STUDENT_ID=20, EVENT_ID=15 WHERE STUDENT_ID=10 AND EVENT_ID=5;
+</span></span></code></pre></div>
 </div>
 <div class="tags">
 <div class="taxosfloating_left">
@@ -732,7 +751,7 @@ SELECT * FROM STUDENT; --check from second session
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

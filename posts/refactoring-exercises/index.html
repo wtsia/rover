@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Refactoring Exercises | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="tag1, tag2">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -58,7 +58,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -107,58 +107,57 @@ src="/rover/">
 </figure></p>
 <h2 id="java">Java</h2>
 <h3 id="refactoring-a-highway-identifer-program">Refactoring a highway identifer program:</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import java.util.Scanner; 
-
-public class LabProgram {
-   public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in); 
-      int highwayNumber = 0;
-      int primaryNumber = 0;
-      String highwayNumStr = &#34;&#34;;
-      String direction = &#34;&#34;;
-       char lastStrChar;
-       char secondLastStrChar;
-       
-
-      highwayNumber = scnr.nextInt();
-      primaryNumber = highwayNumber;
-      String notValid = highwayNumber + &#34; is not a valid interstate highway number.&#34;;
-      
-      /* Type your code here. */
-      highwayNumStr = highwayNumStr.valueOf(highwayNumber);
-       
-       
-       if (highwayNumber%2 == 0) {
-         direction = &#34;east/west.&#34;;
-      } else {
-         direction = &#34;north/south.&#34;;
-      }
-                
-      if (highwayNumber &gt; 0) {
-         if (highwayNumber &lt; 100) {
-            System.out.println(&#34;I-&#34; + highwayNumber + &#34; is primary, going &#34; + direction);
-         } else {
-            lastStrChar = highwayNumStr.charAt(highwayNumStr.length()-1);
-             secondLastStrChar = highwayNumStr.charAt(highwayNumStr.length()-2);
-            if (highwayNumber &lt; 1000) {
-               if ((lastStrChar == &#39;0&#39;) &amp; (secondLastStrChar == &#39;0&#39;)) {
-                  System.out.println(notValid);
-               } else if (secondLastStrChar == &#39;0&#39;) {
-                  System.out.println(&#34;I-&#34; + highwayNumber + &#34; is auxiliary, serving I-&#34; + lastStrChar + &#34;, going &#34; + direction);
-               } else {
-                  System.out.println(&#34;I-&#34; + highwayNumber + &#34; is auxiliary, serving I-&#34; + secondLastStrChar + lastStrChar + &#34;, going &#34; + direction);
-               }
-            } else {
-               System.out.println(notValid);
-            }
-         }
-      } else {
-         System.out.println(notValid);
-      }
-   }
-}
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>public class LabProgram {
+</span></span><span style="display:flex;"><span>   public static void main(String[] args) {
+</span></span><span style="display:flex;"><span>      Scanner scnr = new Scanner(System.in); 
+</span></span><span style="display:flex;"><span>      int highwayNumber = 0;
+</span></span><span style="display:flex;"><span>      int primaryNumber = 0;
+</span></span><span style="display:flex;"><span>      String highwayNumStr = &#34;&#34;;
+</span></span><span style="display:flex;"><span>      String direction = &#34;&#34;;
+</span></span><span style="display:flex;"><span>       char lastStrChar;
+</span></span><span style="display:flex;"><span>       char secondLastStrChar;
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      highwayNumber = scnr.nextInt();
+</span></span><span style="display:flex;"><span>      primaryNumber = highwayNumber;
+</span></span><span style="display:flex;"><span>      String notValid = highwayNumber + &#34; is not a valid interstate highway number.&#34;;
+</span></span><span style="display:flex;"><span>      
+</span></span><span style="display:flex;"><span>      /* Type your code here. */
+</span></span><span style="display:flex;"><span>      highwayNumStr = highwayNumStr.valueOf(highwayNumber);
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>       
+</span></span><span style="display:flex;"><span>       if (highwayNumber%2 == 0) {
+</span></span><span style="display:flex;"><span>         direction = &#34;east/west.&#34;;
+</span></span><span style="display:flex;"><span>      } else {
+</span></span><span style="display:flex;"><span>         direction = &#34;north/south.&#34;;
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>                
+</span></span><span style="display:flex;"><span>      if (highwayNumber &gt; 0) {
+</span></span><span style="display:flex;"><span>         if (highwayNumber &lt; 100) {
+</span></span><span style="display:flex;"><span>            System.out.println(&#34;I-&#34; + highwayNumber + &#34; is primary, going &#34; + direction);
+</span></span><span style="display:flex;"><span>         } else {
+</span></span><span style="display:flex;"><span>            lastStrChar = highwayNumStr.charAt(highwayNumStr.length()-1);
+</span></span><span style="display:flex;"><span>             secondLastStrChar = highwayNumStr.charAt(highwayNumStr.length()-2);
+</span></span><span style="display:flex;"><span>            if (highwayNumber &lt; 1000) {
+</span></span><span style="display:flex;"><span>               if ((lastStrChar == &#39;0&#39;) &amp; (secondLastStrChar == &#39;0&#39;)) {
+</span></span><span style="display:flex;"><span>                  System.out.println(notValid);
+</span></span><span style="display:flex;"><span>               } else if (secondLastStrChar == &#39;0&#39;) {
+</span></span><span style="display:flex;"><span>                  System.out.println(&#34;I-&#34; + highwayNumber + &#34; is auxiliary, serving I-&#34; + lastStrChar + &#34;, going &#34; + direction);
+</span></span><span style="display:flex;"><span>               } else {
+</span></span><span style="display:flex;"><span>                  System.out.println(&#34;I-&#34; + highwayNumber + &#34; is auxiliary, serving I-&#34; + secondLastStrChar + lastStrChar + &#34;, going &#34; + direction);
+</span></span><span style="display:flex;"><span>               }
+</span></span><span style="display:flex;"><span>            } else {
+</span></span><span style="display:flex;"><span>               System.out.println(notValid);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>         }
+</span></span><span style="display:flex;"><span>      } else {
+</span></span><span style="display:flex;"><span>         System.out.println(notValid);
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 </div>
 <div class="tags">
 <div class="taxosfloating_left">
@@ -187,7 +186,7 @@ public class LabProgram {
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

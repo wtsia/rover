@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Computer Organization Systems Programming | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="tag1, tag2">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -58,7 +58,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -131,16 +131,16 @@ src="/rover/">
 <h3 id="c-vs-assembly">C++ vs Assembly:</h3>
 <p>C++ has limitations if it uses certain libraries on a single operating system. <em>Assembly</em> is <strong>not</strong> portable. They are designed for specific processor families (Motorola 68x00, x86, SUN Sparc, Vax, and IBM-370). Language may be translated during execution in a processor by a <em>microcode interpreter</em>.</p>
 <h4 id="c">C++</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">int Y;
-int X = (Y + 4) * 3;
-</code></pre></div><h4 id="assembly">Assembly</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int Y;
+</span></span><span style="display:flex;"><span>int X = (Y + 4) * 3;
+</span></span></code></pre></div><h4 id="assembly">Assembly</h4>
 <p>Example program:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mov  eax,Y   ; move Y to the EAX register
-add  eax,4   ; add 4 to the EAX register
-mov  ebx,3   ; move 3 to the EBX register
-imul ebx     ; multiply EAX by EBX
-mov  X,eax   ; move EAX to X
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mov  eax,Y   ; move Y to the EAX register
+</span></span><span style="display:flex;"><span>add  eax,4   ; add 4 to the EAX register
+</span></span><span style="display:flex;"><span>mov  ebx,3   ; move 3 to the EBX register
+</span></span><span style="display:flex;"><span>imul ebx     ; multiply EAX by EBX
+</span></span><span style="display:flex;"><span>mov  X,eax   ; move EAX to X
+</span></span></code></pre></div><ul>
 <li>linkers vs assemblers: assemblers compile the s.c. programs from assembly into machine instruction, linkers are a utility program that combine individual files made by assemblers into an executable program</li>
 <li><em>virtual machine</em>: a software program that emulates the functions of some physical or virtual computer</li>
 </ul>
@@ -205,7 +205,7 @@ mov  X,eax   ; move EAX to X
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

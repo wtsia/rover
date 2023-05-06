@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Python | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="Python">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -56,7 +56,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -101,20 +101,20 @@ src="/rover/">
 <ul>
 <li>For loop:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">for x in mylist:
-    print(x)
-</code></pre></div><p>Explanation: iterates through <code>mylist</code> and prints each element <code>x</code> in it.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>for x in mylist:
+</span></span><span style="display:flex;"><span>    print(x)
+</span></span></code></pre></div><p>Explanation: iterates through <code>mylist</code> and prints each element <code>x</code> in it.
 - range vs xrange: range function returns a new list with numbers of that specified range, while xrange returns an iterator (more efficient)</p>
 <ul>
 <li>While loop: repeats as long as certain boolean conditions are met</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># Prints out 0,1,2,3,4
-
-count = 0
-while count &lt; 5:
-    print(count)
-    count += 1  # This is the same as count = count + 1
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Prints out 0,1,2,3,4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>count = 0
+</span></span><span style="display:flex;"><span>while count &lt; 5:
+</span></span><span style="display:flex;"><span>    print(count)
+</span></span><span style="display:flex;"><span>    count += 1  # This is the same as count = count + 1
+</span></span></code></pre></div><ul>
 <li>&ldquo;break&rdquo; and &ldquo;continue&rdquo;: break exits a for or while loop. Continue skips the current block</li>
 <li>&ldquo;else&rdquo; clause can be used for loops</li>
 </ul>
@@ -134,9 +134,9 @@ while count &lt; 5:
 <ul>
 <li>i.e. <code>%s</code> for a string</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">name = &#34;John&#34;
-print(&#34;Hello, %s!&#34; % name)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>name = &#34;John&#34;
+</span></span><span style="display:flex;"><span>print(&#34;Hello, %s!&#34; % name)
+</span></span></code></pre></div><ul>
 <li><code>%f</code> for floating point numbers</li>
 <li><code>%d</code> for a number</li>
 <li><code>%.&lt;number of digits&gt;f</code> - Floating point numbers with a fixed amount of digits to the right of the dot.</li>
@@ -144,24 +144,24 @@ print(&#34;Hello, %s!&#34; % name)
 </ul>
 </li>
 <li>using &lsquo;in&rsquo; operator:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">name = &#34;John&#34;
-if name in [&#34;John&#34;, &#34;Rick&#34;]:
-    print(&#34;Your name is either John or Rick.&#34;)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>name = &#34;John&#34;
+</span></span><span style="display:flex;"><span>if name in [&#34;John&#34;, &#34;Rick&#34;]:
+</span></span><span style="display:flex;"><span>    print(&#34;Your name is either John or Rick.&#34;)
+</span></span></code></pre></div></li>
 <li>using &lsquo;is&rsquo; operator: instead of equating value, it equates the instance</li>
 <li><code>block_keyword block_name(argument1,argument2, ...)</code> Block keywords you already know are &ldquo;if&rdquo;, &ldquo;for&rdquo;, and &ldquo;while&rdquo;.
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">def my_function():
-print(&#34;Hello From My Function!&#34;)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>def my_function():
+</span></span><span style="display:flex;"><span>print(&#34;Hello From My Function!&#34;)
+</span></span></code></pre></div></li>
 <li>creating a class and modifying a variable in the new iteration:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">class MyClass:
-    variable = &#34;blah&#34;
-    def function(self):
-        print(&#34;This is a message inside the class.&#34;)
-
-objectx = MyClass()
-objectx.variable = &#34;blah2.0&#34; 
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class MyClass:
+</span></span><span style="display:flex;"><span>    variable = &#34;blah&#34;
+</span></span><span style="display:flex;"><span>    def function(self):
+</span></span><span style="display:flex;"><span>        print(&#34;This is a message inside the class.&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>objectx = MyClass()
+</span></span><span style="display:flex;"><span>objectx.variable = &#34;blah2.0&#34; 
+</span></span></code></pre></div></li>
 </ul>
 <h1 id="concepts">Concepts</h1>
 <h2 id="basics">Basics</h2>
@@ -233,14 +233,14 @@ objectx.variable = &#34;blah2.0&#34;
 <ul>
 <li>construct strings from information</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">age = 20
-name = &#39;Swaroop&#39;
-
-print(&#39;{0} was {1} years old when he wrote this book&#39;.format(name, age))
-
-# output:
-Swaroop was 20 years old when he wrote this book
-</code></pre></div><p>interpretation: string concatenation can be used to achieve the same goal. However, when the format method is called, the specifications are substituted into the string.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>age = 20
+</span></span><span style="display:flex;"><span>name = &#39;Swaroop&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;{0} was {1} years old when he wrote this book&#39;.format(name, age))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># output:
+</span></span><span style="display:flex;"><span>Swaroop was 20 years old when he wrote this book
+</span></span></code></pre></div><p>interpretation: string concatenation can be used to achieve the same goal. However, when the format method is called, the specifications are substituted into the string.</p>
 <ul>
 <li><code>print</code> always ends with an invisible &ldquo;new line&rdquo; character <code>\n</code> so that repeated <code>print</code> calls will separate on each line.</li>
 </ul>
@@ -310,10 +310,10 @@ Swaroop was 20 years old when he wrote this book
 </ul>
 <h3 id="docstrings">DocStrings</h3>
 <p>documentation strings helps document the program better and more understandable.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&#39;&#39;&#39;Description of program.
-
-Conditional information for user.&#39;&#39;&#39;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#39;&#39;&#39;Description of program.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Conditional information for user.&#39;&#39;&#39;
+</span></span></code></pre></div><ul>
 <li>Note: DocStrings apply to modules and classes.</li>
 <li><em>Convention</em>: multi-line string where first line starts with a capital letter and ends with a dot. Then a second line is blank followed by any detailed explanation starting from the third line. (important for non-trivial functions!)</li>
 </ul>
@@ -328,27 +328,27 @@ Conditional information for user.&#39;&#39;&#39;
 <ul>
 <li><code>import sys</code> imports module <code>sys</code>.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">import sys
-
-print(&#39;The command line arguments are:&#39;)
-for i in sys.argv:
-    print(i)
-
-print(&#39;\n\nThe PYTHONPATH is&#39;, sys.path, &#39;\n&#39;)
-</code></pre></div><p>Output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ python module_using_sys.py we are arguments    # each arg is separated by white space
-The command line arguments are:
-module_using_sys.py
-we
-are
-arguments
-
-
-The PYTHONPATH is [&#39;/tmp/py&#39;,
-# many entries here, not shown here
-&#39;/Library/Python/2.7/site-packages&#39;,
-&#39;/usr/local/lib/python2.7/site-packages&#39;]
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import sys
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;The command line arguments are:&#39;)
+</span></span><span style="display:flex;"><span>for i in sys.argv:
+</span></span><span style="display:flex;"><span>    print(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(&#39;\n\nThe PYTHONPATH is&#39;, sys.path, &#39;\n&#39;)
+</span></span></code></pre></div><p>Output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ python module_using_sys.py we are arguments    # each arg is separated by white space
+</span></span><span style="display:flex;"><span>The command line arguments are:
+</span></span><span style="display:flex;"><span>module_using_sys.py
+</span></span><span style="display:flex;"><span>we
+</span></span><span style="display:flex;"><span>are
+</span></span><span style="display:flex;"><span>arguments
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The PYTHONPATH is [&#39;/tmp/py&#39;,
+</span></span><span style="display:flex;"><span># many entries here, not shown here
+</span></span><span style="display:flex;"><span>&#39;/Library/Python/2.7/site-packages&#39;,
+</span></span><span style="display:flex;"><span>&#39;/usr/local/lib/python2.7/site-packages&#39;]
+</span></span></code></pre></div><ul>
 <li>searches for the imported module within Python then in <code>sys.path</code> directories</li>
 <li>program iterates through statements then makes them available for use</li>
 <li>name of running script is always the first elemnt in <code>sys.argv</code> list</li>
@@ -495,28 +495,28 @@ The PYTHONPATH is [&#39;/tmp/py&#39;,
 <p>Note for C++/Java/C# Programmers: The self in Python is equivalent to the this pointer in C++ and the this reference in Java and C#.</p>
 </blockquote>
 <p>Example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">class Person:
-    pass  # An empty block
-
-p = Person()
-print(p)
-
-# Output:
-# $ python this_simplestclass.py
-# &lt;__main__.Person instance at 0x10171f518&gt;
-</code></pre></div><h3 id="methods-1">Methods</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">class Person:
-    def say_hi(self):
-        print(&#39;Hello, how are you?&#39;)
-
-p = Person()
-p.say_hi()
-# The previous 2 lines can also be written as
-# Person().say_hi()
-# Output:
-# $ python this_method.py
-# Hello, how are you?
-</code></pre></div><h3 id="the-__init__-method">The <strong>init</strong> method</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Person:
+</span></span><span style="display:flex;"><span>    pass  # An empty block
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p = Person()
+</span></span><span style="display:flex;"><span>print(p)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span># $ python this_simplestclass.py
+</span></span><span style="display:flex;"><span># &lt;__main__.Person instance at 0x10171f518&gt;
+</span></span></code></pre></div><h3 id="methods-1">Methods</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Person:
+</span></span><span style="display:flex;"><span>    def say_hi(self):
+</span></span><span style="display:flex;"><span>        print(&#39;Hello, how are you?&#39;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>p = Person()
+</span></span><span style="display:flex;"><span>p.say_hi()
+</span></span><span style="display:flex;"><span># The previous 2 lines can also be written as
+</span></span><span style="display:flex;"><span># Person().say_hi()
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span># $ python this_method.py
+</span></span><span style="display:flex;"><span># Hello, how are you?
+</span></span></code></pre></div><h3 id="the-__init__-method">The <strong>init</strong> method</h3>
 <ul>
 <li>method is used to do any initialization, or passing initial values to your object</li>
 <li>the <code>__init__</code> method does not need to be explicitly called</li>
@@ -536,63 +536,63 @@ p.say_hi()
 <ul>
 <li>a type and subtype relationship between classes, where a major benefit of OOP is being able to reuse code</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">class SchoolMember:
-    &#39;&#39;&#39;Represents any school member.&#39;&#39;&#39;
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        print(&#39;(Initialized SchoolMember: {})&#39;.format(self.name))
-
-    def tell(self):
-        &#39;&#39;&#39;Tell my details.&#39;&#39;&#39;
-        print(&#39;Name:&#34;{}&#34; Age:&#34;{}&#34;&#39;.format(self.name, self.age), end=&#34; &#34;)
-
-
-class Teacher(SchoolMember):
-    &#39;&#39;&#39;Represents a teacher.&#39;&#39;&#39;
-    def __init__(self, name, age, salary):
-        SchoolMember.__init__(self, name, age)
-        self.salary = salary
-        print(&#39;(Initialized Teacher: {})&#39;.format(self.name))
-
-    def tell(self):
-        SchoolMember.tell(self)
-        print(&#39;Salary: &#34;{:d}&#34;&#39;.format(self.salary))
-
-
-class Student(SchoolMember):
-    &#39;&#39;&#39;Represents a student.&#39;&#39;&#39;
-    def __init__(self, name, age, marks):
-        SchoolMember.__init__(self, name, age)
-        self.marks = marks
-        print(&#39;(Initialized Student: {})&#39;.format(self.name))
-
-    def tell(self):
-        SchoolMember.tell(self)
-        print(&#39;Marks: &#34;{:d}&#34;&#39;.format(self.marks))
-
-t = Teacher(&#39;Mrs. Shrividya&#39;, 40, 30000)
-s = Student(&#39;Swaroop&#39;, 25, 75)
-
-# prints a blank line
-print()
-
-members = [t, s]
-for member in members:
-    # Works for both Teachers and Students
-    member.tell()
-
-# Output:
-
-# $ python oop_subclass.py
-# (Initialized SchoolMember: Mrs. Shrividya)
-# (Initialized Teacher: Mrs. Shrividya)
-# (Initialized SchoolMember: Swaroop)
-# (Initialized Student: Swaroop)
-
-# Name:&#34;Mrs. Shrividya&#34; Age:&#34;40&#34; Salary: &#34;30000&#34;
-# Name:&#34;Swaroop&#34; Age:&#34;25&#34; Marks: &#34;75&#34;
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class SchoolMember:
+</span></span><span style="display:flex;"><span>    &#39;&#39;&#39;Represents any school member.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>    def __init__(self, name, age):
+</span></span><span style="display:flex;"><span>        self.name = name
+</span></span><span style="display:flex;"><span>        self.age = age
+</span></span><span style="display:flex;"><span>        print(&#39;(Initialized SchoolMember: {})&#39;.format(self.name))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def tell(self):
+</span></span><span style="display:flex;"><span>        &#39;&#39;&#39;Tell my details.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>        print(&#39;Name:&#34;{}&#34; Age:&#34;{}&#34;&#39;.format(self.name, self.age), end=&#34; &#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Teacher(SchoolMember):
+</span></span><span style="display:flex;"><span>    &#39;&#39;&#39;Represents a teacher.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>    def __init__(self, name, age, salary):
+</span></span><span style="display:flex;"><span>        SchoolMember.__init__(self, name, age)
+</span></span><span style="display:flex;"><span>        self.salary = salary
+</span></span><span style="display:flex;"><span>        print(&#39;(Initialized Teacher: {})&#39;.format(self.name))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def tell(self):
+</span></span><span style="display:flex;"><span>        SchoolMember.tell(self)
+</span></span><span style="display:flex;"><span>        print(&#39;Salary: &#34;{:d}&#34;&#39;.format(self.salary))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Student(SchoolMember):
+</span></span><span style="display:flex;"><span>    &#39;&#39;&#39;Represents a student.&#39;&#39;&#39;
+</span></span><span style="display:flex;"><span>    def __init__(self, name, age, marks):
+</span></span><span style="display:flex;"><span>        SchoolMember.__init__(self, name, age)
+</span></span><span style="display:flex;"><span>        self.marks = marks
+</span></span><span style="display:flex;"><span>        print(&#39;(Initialized Student: {})&#39;.format(self.name))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def tell(self):
+</span></span><span style="display:flex;"><span>        SchoolMember.tell(self)
+</span></span><span style="display:flex;"><span>        print(&#39;Marks: &#34;{:d}&#34;&#39;.format(self.marks))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>t = Teacher(&#39;Mrs. Shrividya&#39;, 40, 30000)
+</span></span><span style="display:flex;"><span>s = Student(&#39;Swaroop&#39;, 25, 75)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># prints a blank line
+</span></span><span style="display:flex;"><span>print()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>members = [t, s]
+</span></span><span style="display:flex;"><span>for member in members:
+</span></span><span style="display:flex;"><span>    # Works for both Teachers and Students
+</span></span><span style="display:flex;"><span>    member.tell()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># $ python oop_subclass.py
+</span></span><span style="display:flex;"><span># (Initialized SchoolMember: Mrs. Shrividya)
+</span></span><span style="display:flex;"><span># (Initialized Teacher: Mrs. Shrividya)
+</span></span><span style="display:flex;"><span># (Initialized SchoolMember: Swaroop)
+</span></span><span style="display:flex;"><span># (Initialized Student: Swaroop)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Name:&#34;Mrs. Shrividya&#34; Age:&#34;40&#34; Salary: &#34;30000&#34;
+</span></span><span style="display:flex;"><span># Name:&#34;Swaroop&#34; Age:&#34;25&#34; Marks: &#34;75&#34;
+</span></span></code></pre></div><blockquote>
 <p>Summary: We have now explored the various aspects of classes and objects as well as the various terminologies associated with it. We have also seen the benefits and pitfalls of object-oriented programming. Python is highly object-oriented and understanding these concepts carefully will help you a lot in the long run.</p>
 </blockquote>
 <h2 id="input-and-output">Input and Output</h2>
@@ -601,21 +601,21 @@ for member in members:
 <li>for output, <code>str</code> methods may be utilized. i.e. <code>rjust</code>, while <code>help(str)</code> can give more details.</li>
 </ul>
 <p>Improved Palindrome:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">def reverse(text):
-    return text[::-1]
-
-
-def is_palindrome(text):
-    return text == reverse(text)
-
-forbidden = (!, ?, ., &#39;,&#39;, )
-
-something = input(&#34;Enter text: &#34;)
-if is_palindrome(something):
-    print(&#34;Yes, it is a palindrome&#34;)
-else:
-    print(&#34;No, it is not a palindrome&#34;)
-</code></pre></div><h3 id="files">Files</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>def reverse(text):
+</span></span><span style="display:flex;"><span>    return text[::-1]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def is_palindrome(text):
+</span></span><span style="display:flex;"><span>    return text == reverse(text)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>forbidden = (!, ?, ., &#39;,&#39;, )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>something = input(&#34;Enter text: &#34;)
+</span></span><span style="display:flex;"><span>if is_palindrome(something):
+</span></span><span style="display:flex;"><span>    print(&#34;Yes, it is a palindrome&#34;)
+</span></span><span style="display:flex;"><span>else:
+</span></span><span style="display:flex;"><span>    print(&#34;No, it is not a palindrome&#34;)
+</span></span></code></pre></div><h3 id="files">Files</h3>
 <ul>
 <li><code>open()</code> by default considers files to be a &rsquo;t&rsquo;ext file and opens it in &lsquo;r&rsquo;ead mode</li>
 <li><code>open('file.txt', w)</code> means open a file.txt with write permissions</li>
@@ -640,15 +640,15 @@ else:
 <ul>
 <li><code>try..except</code> can be used to handle exceptions</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">try:
-    text = input(&#39;Enter something --&gt; &#39;)
-except EOFError:
-    print(&#39;Why did you do an EOF on me?&#39;)
-except KeyboardInterrupt:
-    print(&#39;You cancelled the operation.&#39;)
-else:
-    print(&#39;You entered {}&#39;.format(text))
-</code></pre></div><h3 id="tryfinally">Try&hellip;Finally</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>try:
+</span></span><span style="display:flex;"><span>    text = input(&#39;Enter something --&gt; &#39;)
+</span></span><span style="display:flex;"><span>except EOFError:
+</span></span><span style="display:flex;"><span>    print(&#39;Why did you do an EOF on me?&#39;)
+</span></span><span style="display:flex;"><span>except KeyboardInterrupt:
+</span></span><span style="display:flex;"><span>    print(&#39;You cancelled the operation.&#39;)
+</span></span><span style="display:flex;"><span>else:
+</span></span><span style="display:flex;"><span>    print(&#39;You entered {}&#39;.format(text))
+</span></span></code></pre></div><h3 id="tryfinally">Try&hellip;Finally</h3>
 <ul>
 <li>Whether or not an exception was raised, using <code>finally</code> will ensure the file object is closed properly</li>
 </ul>
@@ -656,12 +656,12 @@ else:
 <ul>
 <li>try and finally block is useful for acquiring and releasing a resource respectively. This can be cleaning done using <code>with</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">with open(&#34;poem.txt&#34;) as f:
-    for line in f:
-        print(line, end=&#39;&#39;)
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>with open(&#34;poem.txt&#34;) as f:
+</span></span><span style="display:flex;"><span>    for line in f:
+</span></span><span style="display:flex;"><span>        print(line, end=&#39;&#39;)
+</span></span></code></pre></div><ul>
 <li>with statement. It fetches the object returned by the open statement</li>
-<li>for some &lsquo;thefile&rsquo; object, it always calls the <code>thefile.__enter__</code> and <code>thefile.__exit__</code> before and after respectively</li>
+<li>for some &rsquo;thefile&rsquo; object, it always calls the <code>thefile.__enter__</code> and <code>thefile.__exit__</code> before and after respectively</li>
 </ul>
 <blockquote>
 <p>Summary: We have discussed the usage of the try..except and try..finally statements. We have seen how to create our own exception types and how to raise exceptions as well.</p>
@@ -706,26 +706,26 @@ else:
 </li>
 </ul>
 <h3 id="single-statement-blocks">Single Statement Blocks</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">&gt;&gt;&gt; flag = True
-&gt;&gt;&gt; if flag: print(&#39;Yes&#39;)
-...
-Yes
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt;&gt;&gt; flag = True
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; if flag: print(&#39;Yes&#39;)
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Yes
+</span></span></code></pre></div><ul>
 <li>Reccomendation: avoid this short-cut method except for erro checking</li>
 </ul>
 <h3 id="lambda-forms">Lambda Forms</h3>
 <ul>
 <li>A lambda statement is used to create new function objects. Essentially, the lambda takes a parameter followed by a single expression</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">points = [{&#39;x&#39;: 2, &#39;y&#39;: 3},
-          {&#39;x&#39;: 4, &#39;y&#39;: 1}]
-points.sort(key=lambda i: i[&#39;y&#39;])
-print(points)
-
-# Output:
-# $ python more_lambda.py
-# [{&#39;y&#39;: 1, &#39;x&#39;: 4}, {&#39;y&#39;: 3, &#39;x&#39;: 2}]
-</code></pre></div><h1 id="standard-library">Standard Library</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>points = [{&#39;x&#39;: 2, &#39;y&#39;: 3},
+</span></span><span style="display:flex;"><span>          {&#39;x&#39;: 4, &#39;y&#39;: 1}]
+</span></span><span style="display:flex;"><span>points.sort(key=lambda i: i[&#39;y&#39;])
+</span></span><span style="display:flex;"><span>print(points)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span># $ python more_lambda.py
+</span></span><span style="display:flex;"><span># [{&#39;y&#39;: 1, &#39;x&#39;: 4}, {&#39;y&#39;: 3, &#39;x&#39;: 2}]
+</span></span></code></pre></div><h1 id="standard-library">Standard Library</h1>
 <h2 id="sys-module"><code>sys</code> module</h2>
 <ul>
 <li>contains system-specific functionality</li>
@@ -733,7 +733,7 @@ print(points)
 <h2 id="logging-module"><code>logging</code> module</h2>
 <ul>
 <li>useful for storing debugging or important messages</li>
-<li>The cat command is used in the command line to read the &lsquo;test.log&rsquo; file. If the cat command is not available, you can open the test.log file in a text editor instead.</li>
+<li>The cat command is used in the command line to read the &rsquo;test.log&rsquo; file. If the cat command is not available, you can open the test.log file in a text editor instead.</li>
 </ul>
 
 </div>
@@ -763,7 +763,7 @@ print(points)
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>

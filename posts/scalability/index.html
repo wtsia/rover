@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Scalability | Rover</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
 <meta name="keywords" content="Scalability">
@@ -12,8 +12,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
-<script defer src="/rover/js/katex.js"  integrity="sha384-PFWG8XW41D5NzhNv5FegM1CUkw9nNLdWug8DuwnUoNEVop9n5frjcnbtsZtxTNjw" crossorigin="anonymous"></script>
-<script defer src="/rover/js/auto-render.js" integrity="sha384-EN2q+JG5/3Z8gD7hT5WZqq+W+9wQR4P3IezfuZmGG5RkNXaaaks85seDJO7WkZlY" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
 </script>
@@ -56,7 +56,7 @@ src="/rover/">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
 </div>
 <div id="title-description">
-<p id="subtitle"><a href="https://wtsia.github.io/rover/">Rover</a> is a blog for teaching or storing concepts.</p>
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
 <div id="social">
 <nav><ul>
 <li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
@@ -174,7 +174,7 @@ src="/rover/">
 <p>CPU - Cores &ndash;&gt; Threads, etc..</p>
 </li>
 <li>
-<p>More resources means chopping servers into smaller VPS'</p>
+<p>More resources means chopping servers into smaller VPS&rsquo;</p>
 </li>
 <li>
 <p>SAS: drives spin at over 7200 RPM at 15000 (2012), stores in bits</p>
@@ -401,7 +401,7 @@ src="/rover/">
 </li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 As soon as you have too many users, new problems arise</p>
 </blockquote>
 <h1 id="scalability-for-dummies-notes">Scalability for Dummies: Notes</h1>
@@ -419,7 +419,7 @@ As soon as you have too many users, new problems arise</p>
 </li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 updating the codebase uniformly requires access to a central db or persistent cache, using a tool like Capistrano, then forming a &lsquo;super clone&rsquo; to propogate further.</p>
 </blockquote>
 <h2 id="database">Database</h2>
@@ -433,7 +433,7 @@ updating the codebase uniformly requires access to a central db or persistent ca
 <h4 id="path-2">Path 2:</h4>
 <p>denormalize from the beginning and include no Joins in any db query. Use MySQL as NoSQL if staying, or switch to an easier NoSQL i.e. MongoDB, CouchDB. Joins in app code (sooner the better). Even so, db requests will again be slower and slower and need a cache.</p>
 <blockquote>
-<p>Summary of 2 paths:
+<p>Summary of 2 paths: 
 (1) Use MySQL and apply master-slave replication and expanding RAM on the master server, and (2) remove joins in db query and convert the MySQL to a NoSQL in usage or migrate to MongoDB, CouchDB and place joins in app code.</p>
 </blockquote>
 <h2 id="cache">Cache</h2>
@@ -449,7 +449,7 @@ updating the codebase uniformly requires access to a central db or persistent ca
 </li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 Cacheing is faster, but never do file-based. It is stored as a key-value between app and storage, and any query should first go down the chain from the cache, then and only then to the source.</p>
 </blockquote>
 <p>2 data caching patterns:</p>
@@ -461,7 +461,7 @@ Cacheing is faster, but never do file-based. It is stored as a key-value between
 <li>issues: expiration, it is hard to delete cache if it is a complex query, and changing one table cell would require deleting all cached queries including that table cell</li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 hashed version of query is stored as cache key for the dataset in the cache, but may have issues with complex queries or changing a table cell.</p>
 </blockquote>
 <h4 id="cached-objects">Cached Objects</h4>
@@ -504,7 +504,7 @@ Memacached: if only caching, and scales easily</p>
 </li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 Cached Objects is the preferred pattern, where the class stores complete instance in cache after assembly. If change occurs, discard object, and allows asynchronism. Redis is more feature rich in caching.</p>
 </blockquote>
 <h2 id="asynchronism">Asynchronism</h2>
@@ -522,7 +522,7 @@ Cached Objects is the preferred pattern, where the class stores complete instanc
 <li>Imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network!</li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 Preloading dynamic pages into static HTML allows serving at low request times, and computing tasks done regularly.</p>
 </blockquote>
 <h4 id="async-2">Async #2</h4>
@@ -534,7 +534,7 @@ Preloading dynamic pages into static HTML allows serving at low request times, a
 <li>Time consuming? do it asynchronously</li>
 </ul>
 <blockquote>
-<p>Summary:
+<p>Summary: 
 Second method of asynch is to queue tasks, and using systems to implenet asynchronous processing like ActiveMQ or Redis list</p>
 </blockquote>
 <h1 id="google-io-2009---transactions-across-datacenters">Google I/O 2009 - Transactions Across Datacenters..</h1>
@@ -835,7 +835,7 @@ Second method of asynch is to queue tasks, and using systems to implenet asynchr
 </div>
 </main>
 <footer>
-© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae">Vitae</a> theme for <a href="https://gohugo.io">Hugo</a>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
 </footer><script src="/rover/js/dark-mode.js"></script>
 
 </body>
