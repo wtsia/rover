@@ -7,8 +7,17 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Mon, 23 Jan 2023 23:09:27 -0800</lastBuildDate>
+		<lastBuildDate>Tue, 30 May 2023 14:36:42 -0700</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>API Design</title>
+			<link>https://wtsia.github.io/rover/posts/api-design/</link>
+			<pubDate>Tue, 30 May 2023 14:36:42 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/api-design/</guid>
+			<description>
+			Notes on API Design
+			</description>
+		</item>
 		<item>
 			<title>C Programming</title>
 			<link>https://wtsia.github.io/rover/posts/c-programming/</link>

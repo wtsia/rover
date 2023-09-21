@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/api-design/
 Disallow: /rover/posts/c-programming/
 Disallow: /rover/posts/computer-organization-systems-prog/
 Disallow: /rover/posts/relational-databases/

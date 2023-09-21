@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Networks">
 <meta itemprop="description" content="Scaling Networks">
 
-<meta itemprop="wordCount" content="3390">
+<meta itemprop="wordCount" content="4942">
 <meta itemprop="keywords" content="Scalability," />
 </head>
 <body>
@@ -69,7 +69,8 @@ src="/rover/">
 <nav>
 <ul>
 <li><a href="/rover/">Home</a></li>
-<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
 <li><a href="/rover/about">About</a></li>
 <li><a href="/rover/tags">Tags</a></li>
 <li><a href="/rover/categories">Categories</a></li>
@@ -128,10 +129,16 @@ network management.</p>
 </li>
 </ul>
 </li>
-<li><a href="#unit-review-1">Unit Review 1</a>
+<li><a href="#content-review">Content Review</a>
 <ul>
-<li><a href="#content-review">Content Review:</a></li>
-<li><a href="#study-guide-questions">Study Guide Questions</a></li>
+<li><a href="#csmacd"><strong>CSMA/CD</strong></a></li>
+<li><a href="#guide-questions">Guide Questions</a>
+<ul>
+<li><a href="#sin-wave-frequency-and-wavelength"><strong>Sin wave, Frequency, and Wavelength</strong></a></li>
+<li><a href="#amplitude-period-and-frequency-and-wavelength"><strong>Amplitude, Period, and Frequency, and Wavelength</strong></a></li>
+<li><a href="#hamming-code-and-finding-the-hamming-code-for-4-bits"><strong>Hamming Code, and Finding the Hamming Code for 4 Bits</strong></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#devices">Devices</a>
@@ -144,7 +151,13 @@ network management.</p>
 </li>
 </ul>
 </li>
-<li><a href="#unit-review-2">Unit Review 2</a></li>
+<li><a href="#content-review-2">Content Review 2</a></li>
+<li><a href="#programming">Programming</a>
+<ul>
+<li><a href="#commands">Commands</a></li>
+</ul>
+</li>
+<li><a href="#summary-of-notes">Summary of Notes</a></li>
 </ul>
 <h1 id="networks-an-introduction">Networks: An Introduction</h1>
 <ul>
@@ -158,15 +171,30 @@ network management.</p>
 <li><em>communication protocol</em>: agreement/rule</li>
 </ul>
 <h3 id="osi"><strong>OSI</strong></h3>
-<p>Open System Interconnect (by International Standard Organization, or ISO)</p>
-<ul>
-<li>Physical: sending bits via physical property i.e. voltage</li>
-<li>Data Link: CRC (different error detection), Hamming, Flow Control, sliding window, shared ethernet channel
-<ul>
-<li>MAC: bluetooth tech, RFID</li>
-</ul>
+<p>Open System Interconnect (by International Standard Organization, or ISO):</p>
+<ol>
+<li>
+<p>Physical Layer: This layer is responsible for the physical transmission of data between devices, including the electrical, mechanical, and physical specifications of the physical medium.</p>
 </li>
-</ul>
+<li>
+<p>Data Link Layer: This layer is responsible for the reliable transmission of data between devices on the same network, including error detection and correction, flow control, and access to the physical layer. Examples of protocols operating at this layer include Ethernet, Point-to-Point Protocol (PPP), and Wi-Fi.</p>
+</li>
+<li>
+<p>Network Layer: This layer is responsible for the logical addressing and routing of data between devices on different networks, including network addressing, packet forwarding, and congestion control.</p>
+</li>
+<li>
+<p>Transport Layer: This layer is responsible for the end-to-end transmission of data between devices, including segmentation, flow control, error recovery, and reassembly. Prominent protocols operating at this layer include Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).</p>
+</li>
+<li>
+<p>Session Layer: This layer is responsible for establishing, managing, and terminating communication sessions between devices, including authentication, authorization, and accounting.</p>
+</li>
+<li>
+<p>Presentation Layer: This layer is responsible for the translation of data between the application layer and the lower layers, including data compression, encryption, and decryption.</p>
+</li>
+<li>
+<p>Application Layer: This layer is responsible for providing services to user applications, including protocols such as HTTP, FTP, SMTP, and DNS.</p>
+</li>
+</ol>
 <h3 id="number-bases-and-conversion">Number Bases and Conversion</h3>
 <ul>
 <li>Base:
@@ -179,15 +207,15 @@ network management.</p>
 </li>
 </ul>
 <p><code>0x101</code> equivalent hex to decimal is:</p>
-<p>$$
-1<em>16^2 + 0</em>16^1 + 1*16^0 = 256 + 0 + 1 = 257
-$$</p>
+<p>$$</p>
+<p>1<em>16^2 + 0</em>16^1 + 1*16^0 = 256 + 0 + 1 = 257</p>
+<p>$$</p>
 <h4 id="binary-to-hex"><strong>Binary to Hex</strong></h4>
-<p>Binary: 1, 0 -&gt; Hex: 1, 0, A-F</p>
+<p>Binary: <code>1, 0</code> -&gt; Hex: <code>1, 0, A-F</code></p>
 <ul>
-<li>0000 -&gt; 0</li>
-<li>1111 -&gt; F</li>
-<li>Order of binary: 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, &hellip;</li>
+<li><code>0000</code> -&gt; <code>0</code></li>
+<li><code>1111</code> -&gt; <code>F</code></li>
+<li>Order of binary: <code>0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, ...</code></li>
 </ul>
 <h4 id="binary-to-decimal"><strong>Binary to Decimal</strong></h4>
 <p>Convert to hex first</p>
@@ -318,24 +346,48 @@ $$</p>
 <blockquote>
 <p>Summary: Push CDNs are good for sites that doesn&rsquo;t update content frequently, Pull CDNs for cites that need to update frequently. CDNs involve changing URLs for content to point to the CDN.</p>
 </blockquote>
-<h1 id="unit-review-1">Unit Review 1</h1>
-<h2 id="content-review">Content Review:</h2>
-<p>Seven layers of OSI and the function of each layer</p>
+<h1 id="content-review">Content Review</h1>
+<p><strong>Seven layers of OSI and the function of each layer</strong></p>
 <blockquote>
 <p>(1) physical, (2) data link, medium access control (MAC, sublayer), (3) network, (4) transport, (5) session, (6) presentation, (7) application</p>
 </blockquote>
-<p>Sine waves (amplitude, phase, frequency and period), composite signals</p>
+<p><strong>Sine waves (amplitude, phase, frequency and period), composite signals</strong></p>
 <blockquote>
+<p>Sine waves are fundamental waveforms in signal processing and represent a smooth, periodic oscillation. They are characterized by their amplitude, phase, frequency, and period.</p>
+<p><strong>Amplitude</strong>:
+The amplitude of a sine wave represents the maximum displacement or height of the waveform from its center or equilibrium position. It indicates the strength or intensity of the signal and is typically measured in units such as volts (V) or decibels (dB).</p>
+<p><strong>Phase</strong>:
+The phase of a sine wave determines its position within a complete cycle. It represents the fraction of the cycle that has elapsed from a reference point. The phase is often measured in degrees or radians. A phase shift refers to a change in the starting point or timing of a waveform relative to a reference.</p>
+<p><strong>Frequency</strong>:
+The frequency of a sine wave indicates the number of complete cycles or oscillations that occur per unit of time. It is measured in hertz (Hz) and represents the rate of change of the waveform. A higher frequency corresponds to a greater number of cycles per unit of time.</p>
+<p><strong>Period</strong>:
+The period of a sine wave is the time it takes to complete one full cycle. It is the reciprocal of the frequency and is represented in units of time (e.g., seconds). The period and frequency are inversely related: a higher frequency corresponds to a shorter period, and vice versa.</p>
+<p><strong>Composite signals</strong>, also known as complex or compound signals, are formed by combining multiple individual signals of different frequencies, amplitudes, and phases. These individual signals are often sine waves, and their combination results in a complex waveform with a more intricate pattern. Composite signals can be created through techniques such as amplitude modulation (AM), frequency modulation (FM), or by adding together multiple sine waves with different frequencies and amplitudes.</p>
+<p><strong>Composite signals</strong> are commonly encountered in various fields, including telecommunications, audio processing, and radio frequency (RF) engineering. By analyzing composite signals, one can examine the different frequency components present and understand how they contribute to the overall signal&rsquo;s characteristics.</p>
 </blockquote>
 <p>Know how hamming code works and how we can add redundant bits for hamming</p>
-<p>Understand CSMA/CD and how it works.</p>
+<h3 id="csmacd"><strong>CSMA/CD</strong></h3>
+<blockquote>
+<p>CSMA/CD (Carrier Sense Multiple Access with Collision Detection) is a protocol used in Ethernet networks to regulate access to the network medium and handle collisions that may occur when multiple devices attempt to transmit data simultaneously. CSMA/CD is specifically designed for half-duplex Ethernet networks, where devices can either transmit or receive data but not both simultaneously.</p>
+<p>Here&rsquo;s how CSMA/CD works:</p>
+<p><strong>Carrier Sense (CS)</strong>:
+Before transmitting data, a device using CSMA/CD listens to the network medium to check if it is idle (no other device is currently transmitting). If the medium is sensed as busy, the device waits for it to become idle before attempting to transmit.</p>
+<p><strong>Multiple Access (MA)</strong>:
+Once the medium is determined to be idle, the device can start transmitting its data.</p>
+<p><strong>Collision Detection (CD)</strong>:
+While transmitting, the device continuously monitors the medium to detect if a collision occurs. A collision happens when two or more devices start transmitting at the same time, causing their signals to interfere with each other and resulting in garbled data.</p>
+<p><strong>Collision Handling</strong>:
+When a device detects a collision, it immediately stops transmitting and sends a jam signal to notify other devices on the network about the collision. The devices that initiated the collision then enter a backoff period, during which they wait for a random amount of time before attempting to retransmit.</p>
+<p>The purpose of CSMA/CD is to ensure fair and efficient access to the network medium in shared Ethernet networks. By sensing the medium before transmitting, devices can minimize the chances of collisions. However, if collisions do occur, CD allows for their detection and subsequent handling to prevent data corruption.</p>
+<p>It&rsquo;s worth noting that CSMA/CD is primarily used in legacy Ethernet networks operating at lower speeds, such as 10 Mbps and 100 Mbps. Higher-speed Ethernet networks, such as Gigabit Ethernet, utilize full-duplex communication and employ different protocols, such as CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance), which is used in switched Ethernet networks.</p>
+</blockquote>
 <p>Know how CRC technique works and how we add redundant bits and the number of redundant bits that we add.</p>
 <p>The type of transmission impairments and cause of them</p>
 <p>Signal power and meaning of db values</p>
 <p>Frequency domain and how we know if a signal is periodic or nonperiodic.</p>
 <p>Know bit rate</p>
 <p>Broadband and baseband and know which signals are baseband and which are broadband.</p>
-<h2 id="study-guide-questions">Study Guide Questions</h2>
+<h2 id="guide-questions">Guide Questions</h2>
 <p>Know the relation between frequency and period</p>
 <blockquote>
 <p>$$
@@ -380,6 +432,7 @@ $$</p>
 <blockquote>
 <p>Baseband refers to a signal that has not been modulated to a higher frequency. Broadband refers to a signal that has been modulated to a higher frequency, allowing multiple signals to be transmitted over the same channel simultaneously.</p>
 </blockquote>
+<h3 id="sin-wave-frequency-and-wavelength"><strong>Sin wave, Frequency, and Wavelength</strong></h3>
 <p>Calculate a sinewave phase in degrees or radians given  the cycle’s offset</p>
 <blockquote>
 <p>The phase of a sine wave can be calculated using the formula:
@@ -432,7 +485,7 @@ where $c$ is the speed of light is approximately $3*10^8$ meters per second.</p>
 <blockquote>
 <p>The appropriate characteristics for analog signals include amplitude, frequency, phase, and wavelength. These characteristics describe the physical properties of the analog signal, such as its strength, the number of cycles per second, the position of a particular point on the wave, and the distance between corresponding points on the wave.</p>
 </blockquote>
-<p>Amplitude, Frequency, phase and wavelength</p>
+<h3 id="amplitude-period-and-frequency-and-wavelength"><strong>Amplitude, Period, and Frequency, and Wavelength</strong></h3>
 <blockquote>
 <p>Amplitude, or peak amplitude, is the absolute value of its highest intensity proportional to the energy it carries. <strong>Period</strong> is the amount of time a signal needs to complete one cycle, and <strong>frequency</strong> is the number of periods in 1s. <strong>Wavelength</strong> is propogation speed times <em>period</em>, or divided by <em>frequency</em>.</p>
 </blockquote>
@@ -481,9 +534,18 @@ $$</p>
 <blockquote>
 <p>To find the redundant bits in a pattern using a generator polynomial, you would perform polynomial division of the pattern by the generator polynomial. The remainder would then be the redundant bits.</p>
 </blockquote>
-<p>Find the hamming code for 4 bits</p>
+<h3 id="hamming-code-and-finding-the-hamming-code-for-4-bits"><strong>Hamming Code, and Finding the Hamming Code for 4 Bits</strong></h3>
 <blockquote>
-<p>The Hamming code for 4 bits is a binary code that adds 3 redundant bits to the original 4 bits to create a code word of 7 bits. The code is designed to detect and correct errors in the transmission of the code word. The specific code for the 4 bits would depend on the particular algorithm used to generate the Hamming code.</p>
+<p>The basic idea behind Hamming code is to add parity bits at specific positions within a data word. These parity bits provide redundancy that enables error detection and correction. The position of the parity bits is determined by powers of $2,$ with each bit responsible for checking a specific subset of data bits.
+Here&rsquo;s a simplified explanation of how Hamming code works:</p>
+<p><strong>Data Encoding</strong>:
+Let&rsquo;s say we have a data word of n bits. The number of parity bits (r) is determined by the formula $2^r \geq n + r + 1$. The parity bits are inserted at positions that are powers of $2,$ leaving the remaining positions for the data bits.</p>
+<p><strong>Parity Bit Calculation</strong>:
+Each parity bit calculates its value based on the data bits it covers. For example, the parity bit at position $2^0$ (the least significant bit) checks all bits that have a &ldquo;1&rdquo; in their binary representation at this position. The parity bit at position $2^1$ checks every second bit, the one at $2^2$ checks every fourth bit, and so on. The calculated parity bit value is set to ensure that the total number of &ldquo;1&rdquo; bits (including the parity bit itself) in the covered positions is either odd or even, depending on the parity scheme being used (odd parity or even parity).</p>
+<p><strong>Error Detection and Correction</strong>:
+During transmission or storage, if an error occurs and flips a bit, the parity bits can be used to detect and correct the error. By recalculating the parity bits from the received data and comparing them to the received parity bits, errors can be identified. If an error is detected, the position of the erroneous bit can be determined based on the parity bits and corrected.
+Hamming code is capable of detecting and correcting single-bit errors. However, it is not designed to handle multiple or burst errors efficiently. More advanced error-correcting codes, such as Reed-Solomon codes, are used for more robust error correction in scenarios with higher error rates.</p>
+<p><em>The Hamming code for 4 bits</em> is a binary code that adds 3 redundant bits to the original 4 bits to create a code word of 7 bits. The code is designed to detect and correct errors in the transmission of the code word. The specific code for the 4 bits would depend on the particular algorithm used to generate the Hamming code.</p>
 </blockquote>
 <p>Cyclic Redundancy Coding &ndash; Know how to add extra bits and do the dividing to find the remainder</p>
 <blockquote>
@@ -502,7 +564,7 @@ $$</p>
 <ul>
 <li>ex: <code>192.168.0.1</code> $\rArr$ <code>192.168.0</code> (<code>network</code>) <code>.1</code>(<code>host</code>)</li>
 </ul>
-<h1 id="unit-review-2">Unit Review 2</h1>
+<h1 id="content-review-2">Content Review 2</h1>
 <p>IP layer header &ndash; know the reason for each field of IP header</p>
 <blockquote>
 <p>The header contains transfer information (in bits). This includes <strong>Version (4), Header Length (4), Type of Service (8), Total Length (16), Identification (16), Flags (3), Fragment Offset (13), Time to Live (8), Protocol(8), Header Checksum (16), Source IP (32), Destination IP (32), Options (variable).</strong></p>
@@ -552,6 +614,68 @@ It goes from:</p>
 <p>&ldquo;core routers&rdquo; $\rarr$ &ldquo;edge routers&rdquo;</p>
 <p>This design allows for specialized routing protocols at each level of the hierarchy and can be optimized for needs.</p>
 </blockquote>
+<h1 id="programming">Programming</h1>
+<h2 id="commands">Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>traceroute
+</span></span></code></pre></div><p>Output of <code>man traceroute</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>DESCRIPTION
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>traceroute tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol&#39;s time to live (TTL) field and attempts to  elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host.
+</span></span></code></pre></div><h1 id="summary-of-notes">Summary of Notes</h1>
+<p>Seven layers of <a href="#osi"><strong>OSI</strong></a> and the function of each layer</p>
+<blockquote>
+<p>The 7 Layers of OSI are as follows:
+(P D N T S P A -&gt; All People Seem To Need Data processing)</p>
+<ol>
+<li>Physical</li>
+<li>Data Link</li>
+<li>Network</li>
+<li>Transport</li>
+<li>Session</li>
+<li>Presentation</li>
+<li>Application</li>
+</ol>
+</blockquote>
+<p>Sine waves (amplitude, phase, frequency and period), composite signals</p>
+<blockquote>
+<p><a href="#sin-wave-frequency-and-wavelength"><strong>Sin wave, Frequency, and Wavelength</strong></a></p>
+<p>$$
+Frequency = 1/Period
+$$
+<a href="#amplitude-period-and-frequency-and-wavelength"><strong>Amplitude, Period, and Frequency, and Wavelength</strong></a>
+$$
+Phase = (Cycle_{offset} / Cycle_{length}) * 2π
+$$</p>
+</blockquote>
+<p>Know how hamming code works and how we can add redundant bits for hamming</p>
+<blockquote>
+<p><a href="#hamming-code-and-finding-the-hamming-code-for-4-bits"><strong>Hamming Code, and Finding the Hamming Code for 4 Bits</strong></a></p>
+</blockquote>
+<p>Understand CSMA/CD and how it works.</p>
+<blockquote>
+</blockquote>
+<p>Know how CRC technique works and how we add redundant bits and the number of redundant bitsthat we add.</p>
+<p>The type of transmission impairments and cause of them
+Signal power and meaning of db values</p>
+<p>Frequency domain and how we know if a signal is periodic or nonperiodic.</p>
+<p>Know bit rate</p>
+<p>Broadband and baseband and know which signals are baseband and which are broadband.</p>
+<p>IP layer header &ndash; know the reason for each field of IP header</p>
+<p>IP checksum &ndash; what does checksum do?</p>
+<p>Fragmentation &ndash; the fields of IP used for fragmentation and why packets are fragmented.</p>
+<p>IP address and class-A, class-B and class-C</p>
+<p>Subnetting &ndash; given a range of IP addresses know how to subnet a given network.</p>
+<p>Know the difference between hub, switch and router.</p>
+<p>Flooding, distance vector routing</p>
+<p>What is the problem of distance vector routing, what is the count to infinity problem</p>
+<p>What do we mean by hierarchy routing?</p>
+<p>What does TCP and UDP stands for?</p>
+<p>What is the difference between connectionless and connection oriented in layer-4?</p>
+<p>Know the header TCP source and destination ports, reason for sequence and acknowledgementfields, flags in the header.</p>
+<p>Three way handshake of TCP connection</p>
+<p>What is a socket?</p>
+<p>Client and Server programming</p>
+<p>ARP and DNS</p>
 
 </div>
 <div class="tags">

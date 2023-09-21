@@ -18,5 +18,14 @@
 			A documentation of my attempts at coding problems
 			</description>
 		</item>
+		<item>
+			<title>Python</title>
+			<link>https://wtsia.github.io/rover/posts/python/</link>
+			<pubDate>Sat, 14 May 2022 04:35:39 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/python/</guid>
+			<description>
+			General Notes on Python Usage
+			</description>
+		</item>
 	</channel>
 </rss>

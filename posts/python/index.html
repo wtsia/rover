@@ -7,7 +7,7 @@
 <meta name="generator" content="Hugo 0.97.0" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Winston Tsia">
-<meta name="keywords" content="Python">
+<meta name="keywords" content="Python, programming">
 <meta name="description" content="General Notes on Python Usage">
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
@@ -44,8 +44,8 @@ src="/rover/">
 <meta itemprop="name" content="Python">
 <meta itemprop="description" content="General Notes on Python Usage"><meta itemprop="datePublished" content="2022-05-14T04:35:39-07:00" />
 <meta itemprop="dateModified" content="2022-05-14T04:35:39-07:00" />
-<meta itemprop="wordCount" content="2888">
-<meta itemprop="keywords" content="Python," />
+<meta itemprop="wordCount" content="3192">
+<meta itemprop="keywords" content="Python,programming," />
 </head>
 <body>
 <header>
@@ -69,7 +69,8 @@ src="/rover/">
 <nav>
 <ul>
 <li><a href="/rover/">Home</a></li>
-<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
 <li><a href="/rover/about">About</a></li>
 <li><a href="/rover/tags">Tags</a></li>
 <li><a href="/rover/categories">Categories</a></li>
@@ -97,7 +98,125 @@ src="/rover/">
 </div>
 </div>
 <div class="markdown">
-<h2 id="programming-fundamentals">Programming Fundamentals</h2>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#example-program">Example Program</a></li>
+<li><a href="#programming-fundamentals">Programming Fundamentals</a>
+<ul>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#minor-concepts">Minor Concepts</a></li>
+</ul>
+</li>
+<li><a href="#concepts">Concepts</a>
+<ul>
+<li><a href="#basics">Basics</a>
+<ul>
+<li><a href="#indentation">Indentation</a></li>
+</ul>
+</li>
+<li><a href="#operators-and-expressions">Operators and Expressions</a>
+<ul>
+<li><a href="#format-method-format">Format Method: <code>format()</code></a></li>
+<li><a href="#escape-sequences">Escape Sequences</a>
+<ul>
+<li><a href="#raw-string">Raw String</a></li>
+</ul>
+</li>
+<li><a href="#variable">Variable</a></li>
+<li><a href="#naming">Naming</a></li>
+<li><a href="#logical-and-physical-line">Logical and Physical Line</a></li>
+<li><a href="#shortcut-for-math-operation-and-assignment">Shortcut for math operation and assignment</a></li>
+<li><a href="#evaluation-order">Evaluation Order</a></li>
+</ul>
+</li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#local-variables">Local Variables</a></li>
+<li><a href="#keyword-arguments">Keyword Arguments</a></li>
+<li><a href="#docstrings">DocStrings</a></li>
+<li><a href="#modules">Modules</a>
+<ul>
+<li><a href="#module-anatomy">Module anatomy</a>
+<ul>
+<li><a href="#warning-remember-that-you-should-avoid-using-import-star-ie-from-mymodule-import-">WARNING: Remember that you should avoid using import-star, i.e. from mymodule import *.</a></li>
+<li><a href="#functions-1">Functions:</a></li>
+<li><a href="#summary">Summary:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#quick-and-dirty-objects-and-classes">Quick and Dirty: Objects and Classes</a></li>
+<li><a href="#software-development-process">Software Development Process</a></li>
+<li><a href="#object-oriented-programming">Object Oriented Programming</a>
+<ul>
+<li><a href="#introduction-to-self">Introduction to <code>self</code></a></li>
+<li><a href="#methods-1">Methods</a></li>
+<li><a href="#the-init-method">The <strong>init</strong> method</a></li>
+<li><a href="#class-and-object-variables">Class and Object Variables</a></li>
+<li><a href="#inheritance">Inheritance</a></li>
+</ul>
+</li>
+<li><a href="#input-and-output">Input and Output</a>
+<ul>
+<li><a href="#files">Files</a></li>
+<li><a href="#pickle">Pickle</a></li>
+<li><a href="#unicode">Unicode</a></li>
+</ul>
+</li>
+<li><a href="#exceptions">Exceptions</a>
+<ul>
+<li><a href="#errors">Errors</a></li>
+<li><a href="#handling-exceptions">Handling Exceptions</a></li>
+<li><a href="#tryfinally">Try…Finally</a></li>
+<li><a href="#with-statement">With Statement</a></li>
+</ul>
+</li>
+<li><a href="#more">More</a>
+<ul>
+<li><a href="#passing-tuples-around">Passing Tuples Around</a></li>
+<li><a href="#special-methods">Special Methods</a></li>
+<li><a href="#single-statement-blocks">Single Statement Blocks</a></li>
+<li><a href="#lambda-forms">Lambda Forms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#standard-library">Standard Library</a>
+<ul>
+<li><a href="#sys-module"><code>sys</code> module</a></li>
+<li><a href="#logging-module"><code>logging</code> module</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="example-program">Example Program</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Function to calculate the factorial of a number
+</span></span><span style="display:flex;"><span>def factorial(n):
+</span></span><span style="display:flex;"><span>    if n == 0:
+</span></span><span style="display:flex;"><span>        return 1
+</span></span><span style="display:flex;"><span>    else:
+</span></span><span style="display:flex;"><span>        return n * factorial(n-1)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Main program
+</span></span><span style="display:flex;"><span>if __name__ == &#34;__main__&#34;:
+</span></span><span style="display:flex;"><span>    # Getting user input for a number
+</span></span><span style="display:flex;"><span>    num = int(input(&#34;Enter a number: &#34;))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    # Computing and printing the factorial of the number
+</span></span><span style="display:flex;"><span>    fact = factorial(num)
+</span></span><span style="display:flex;"><span>    print(&#34;Factorial of&#34;, num, &#34;is&#34;, fact)
+</span></span></code></pre></div><p>In this program, you&rsquo;ll learn about:</p>
+<ol>
+<li>Functions: The factorial function is defined to calculate the factorial of a number using recursion.</li>
+<li>Conditional statements: The if-else statement is used to handle the base case in the factorial function.</li>
+<li>User input: The input function is used to get user input for a number.
+Variable assignment and manipulation: The num variable is assigned the value entered by the user, and the fact variable stores the factorial calculated by the factorial function.</li>
+<li>Printing output: The print function is used to display the result.</li>
+</ol>
+<p>To run this program, save it as a Python file (e.g., factorial.py) and execute it using a Python interpreter. The program will prompt you to enter a number, and it will then calculate and display the factorial of that number.</p>
+<h1 id="programming-fundamentals">Programming Fundamentals</h1>
 <ul>
 <li>For loop:</li>
 </ul>
@@ -754,6 +873,7 @@ src="/rover/">
 </div>
 <div class="termsfloating_right">
 <p>
+<a href="/rover/tags/programming/">programming</a>
 <a href="/rover/tags/python/">python</a>
 </p>
 </div>

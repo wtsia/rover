@@ -2,28 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wtsia.github.io/rover/tags/api/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/api-design/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/applications/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/computer-science/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/posts/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/categories/software/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
+    <loc>https://wtsia.github.io/rover/tags/</loc>
+    <lastmod>2023-05-30T14:36:42-07:00</lastmod>
+  </url><url>
     <loc>https://wtsia.github.io/rover/posts/c-programming/</loc>
     <lastmod>2023-01-23T23:09:27-08:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/tags/c&#43;&#43;/</loc>
     <lastmod>2023-01-23T23:09:27-08:00</lastmod>
   </url><url>
-    <loc>https://wtsia.github.io/rover/categories/</loc>
-    <lastmod>2023-01-23T23:09:27-08:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/categories/computer-science/</loc>
-    <lastmod>2023-01-23T23:09:27-08:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/posts/</loc>
-    <lastmod>2023-01-23T23:09:27-08:00</lastmod>
-  </url><url>
     <loc>https://wtsia.github.io/rover/categories/programming/</loc>
-    <lastmod>2023-01-23T23:09:27-08:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/</loc>
-    <lastmod>2023-01-23T23:09:27-08:00</lastmod>
-  </url><url>
-    <loc>https://wtsia.github.io/rover/tags/</loc>
     <lastmod>2023-01-23T23:09:27-08:00</lastmod>
   </url><url>
     <loc>https://wtsia.github.io/rover/categories/cat1/</loc>

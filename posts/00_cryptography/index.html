@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Cryptography">
 <meta itemprop="description" content="Notes on topics in cryptography"><meta itemprop="datePublished" content="2022-06-02T14:22:54-07:00" />
 <meta itemprop="dateModified" content="2022-06-02T14:22:54-07:00" />
-<meta itemprop="wordCount" content="284">
+<meta itemprop="wordCount" content="472">
 <meta itemprop="keywords" content="Education," />
 </head>
 <body>
@@ -69,7 +69,8 @@ src="/rover/">
 <nav>
 <ul>
 <li><a href="/rover/">Home</a></li>
-<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
 <li><a href="/rover/about">About</a></li>
 <li><a href="/rover/tags">Tags</a></li>
 <li><a href="/rover/categories">Categories</a></li>
@@ -105,6 +106,14 @@ src="/rover/">
 <ul>
 <li><a href="#schneiers-law">Schneier’s Law</a></li>
 <li><a href="#kerckhoffs-principle">Kerckhoff’s principle</a></li>
+<li><a href="#rsa-rivest-shamir-adleman">RSA: Rivest Shamir Adleman</a>
+<ul>
+<li><a href="#encryption--decryption"><strong>Encryption + Decryption</strong></a></li>
+</ul>
+</li>
+<li><a href="#shors-algorithm">Shor’s Algorithm</a></li>
+<li><a href="#euclidean-algorithm">Euclidean Algorithm</a></li>
+<li><a href="#diffie-hellman">Diffie-Hellman</a></li>
 <li><a href="#stream-cipher">Stream Cipher</a></li>
 </ul>
 </li>
@@ -135,6 +144,37 @@ src="/rover/">
 <li>Given the circumstance of use, it should be easy to use and not be stressful to use, nor require a long list of rules for usage.</li>
 </ol>
 <p>Note: some are not relevant due to computer&rsquo;s ability to perform encryption (likely $3$, $5$, or $6$). $2$. However is very important.</p>
+<h2 id="rsa-rivest-shamir-adleman">RSA: Rivest Shamir Adleman</h2>
+<p>An asymmetric key exchange that utilizes prime factors.</p>
+<p>Concepts behind RSA:</p>
+<ul>
+<li><strong>Factors</strong>: The divisible components of a number s.t. $p,q \in \mathbb{Z}$, $S = (p*q)$, $p,q$ are factors</li>
+<li><strong>Prime</strong> ( $\mathbb{P}$ ): 
+$$p \in \mathbb{N}, p &gt; 1$$</li>
+<li><strong>Semi-Prime</strong>: 
+$p*q$ for $p, q \in \mathbb{P}$</li>
+<li><strong>Modular Arithmetic</strong>: For $R =$ Remainder, $a = p ($ mod $q)=R{\frac{p}{q}}$</li>
+<li><strong>Totient</strong> ( $T$ ): For some $p,q \in \mathbb{P}$, the totient is $(p-1)*(q-1)$</li>
+</ul>
+<p>For $a, b \in \mathbb{P}$, Let $S_0 = a<em>b$, and $S_1 = (a-1)</em>(b-1)$. We may generated our public and private key adhereing to the following conditions for some keys $K_0, K_1$.</p>
+<p><strong>Public Key $=K_0$</strong></p>
+<ul>
+<li>$K_0 \in \mathbb{P}$</li>
+<li>$K_0 &lt; T$</li>
+<li>$\forall n \in \mathbb{Z}, (K_0*n) \neq T$</li>
+</ul>
+<p><strong>Private Key $=K_1$</strong></p>
+<ul>
+<li>$(K_0*K_1) ($mod $T) = 1$</li>
+</ul>
+<h3 id="encryption--decryption"><strong>Encryption + Decryption</strong></h3>
+<p>For N = Product, M = message and C = cipher:</p>
+<p>$$M^{K_0} (mod N) = C$$
+$$C^{K_1} (mod N)= M$$</p>
+<p>The Public and Private keys are commutative and may be used to interchangeably be the encryption or decryption method.</p>
+<h2 id="shors-algorithm">Shor&rsquo;s Algorithm</h2>
+<h2 id="euclidean-algorithm">Euclidean Algorithm</h2>
+<h2 id="diffie-hellman">Diffie-Hellman</h2>
 <h2 id="stream-cipher">Stream Cipher</h2>
 
 </div>

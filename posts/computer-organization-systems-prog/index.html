@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="Computer Organization Systems Programming">
 <meta itemprop="description" content="Notes on Computer Organization and Systems Programming"><meta itemprop="datePublished" content="2023-01-23T00:30:07-08:00" />
 <meta itemprop="dateModified" content="2023-01-23T00:30:07-08:00" />
-<meta itemprop="wordCount" content="201"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
+<meta itemprop="wordCount" content="366"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
 <meta itemprop="keywords" content="tag1,tag2," />
 </head>
 <body>
@@ -71,7 +71,8 @@ src="/rover/">
 <nav>
 <ul>
 <li><a href="/rover/">Home</a></li>
-<li><a href="/rover/posts">All Posts</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
 <li><a href="/rover/about">About</a></li>
 <li><a href="/rover/tags">Tags</a></li>
 <li><a href="/rover/categories">Categories</a></li>
@@ -117,6 +118,25 @@ src="/rover/">
 </ul>
 </li>
 <li><a href="#data-representation">Data Representation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#c-programming">C Programming</a>
+<ul>
+<li><a href="#memory-hierarchy">Memory Hierarchy</a>
+<ul>
+<li><a href="#sram-vs-dram">SRAM vs DRAM</a></li>
+<li><a href="#rom-read-only-memory">ROM: Read-Only Memory</a></li>
+<li><a href="#nonvolatile-vs-volatile-memory">Nonvolatile vs Volatile Memory</a></li>
+<li><a href="#bus">Bus</a></li>
+<li><a href="#memory-systems">Memory Systems</a>
+<ul>
+<li><a href="#disk-drive">Disk Drive</a></li>
+<li><a href="#pci-vs-pci-express-bus">PCI vs PCI Express Bus</a></li>
+<li><a href="#process-of-dma-direct-memory-access">Process of DMA: Direct Memory Access</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -176,7 +196,51 @@ src="/rover/">
 </tr>
 </tbody>
 </table>
-
+<h1 id="c-programming">C Programming</h1>
+<h2 id="memory-hierarchy">Memory Hierarchy</h2>
+<h3 id="sram-vs-dram">SRAM vs DRAM</h3>
+<ul>
+<li>Static vs Dynamic Random-Access-Memory
+<ul>
+<li>volatile&ndash;does not maintain data when powered off</li>
+</ul>
+</li>
+</ul>
+<h3 id="rom-read-only-memory">ROM: Read-Only Memory</h3>
+<ul>
+<li>Erasable, E-Erasable, Programmable, Flash Memory</li>
+</ul>
+<h3 id="nonvolatile-vs-volatile-memory">Nonvolatile vs Volatile Memory</h3>
+<p>Nonvolatile: ROMS, maintains data when powered off</p>
+<h3 id="bus">Bus</h3>
+<p>wires that carry address data/control signals</p>
+<ul>
+<li>memory operations involving the bus take longer</li>
+</ul>
+<h3 id="memory-systems">Memory Systems</h3>
+<ul>
+<li>register operations in the CPU are sub nanoseconds</li>
+</ul>
+<h4 id="disk-drive">Disk Drive</h4>
+<ul>
+<li>made of platters that form cylinders, with tracks containing sectors separated by gaps</li>
+<li>recording zone: disjoint subsets of the track/sectors
+<ul>
+<li>capacity = average recording zone
+$$
+Capacity = byte/sector * sector/track * 
+\track/surface * surface/platter * platter/disk
+$$</li>
+</ul>
+</li>
+</ul>
+<h4 id="pci-vs-pci-express-bus">PCI vs PCI Express Bus</h4>
+<ul>
+<li>Express is point-to-point, whereas PCI is broadcast</li>
+</ul>
+<h4 id="process-of-dma-direct-memory-access">Process of DMA: Direct Memory Access</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CPU -&gt; Controller -&gt; Disk -&gt; Load to Main Memory -&gt; Controller sends signal to CPU
+</span></span></code></pre></div>
 </div>
 <div class="tags">
 <div class="taxosfloating_left">
