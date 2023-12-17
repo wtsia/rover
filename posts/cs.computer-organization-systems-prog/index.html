@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Computer Organization Systems Programming | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="tag1, tag2">
+<meta name="description" content="Notes on Computer Organization and Systems Programming">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Computer Organization Systems Programming" />
+<meta property="og:description" content="Notes on Computer Organization and Systems Programming" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/" /><meta property="og:image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-23T00:30:07-08:00" />
+<meta property="article:modified_time" content="2023-01-23T00:30:07-08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg"/>
+
+<meta name="twitter:title" content="Computer Organization Systems Programming"/>
+<meta name="twitter:description" content="Notes on Computer Organization and Systems Programming"/>
+
+<meta itemprop="name" content="Computer Organization Systems Programming">
+<meta itemprop="description" content="Notes on Computer Organization and Systems Programming"><meta itemprop="datePublished" content="2023-01-23T00:30:07-08:00" />
+<meta itemprop="dateModified" content="2023-01-23T00:30:07-08:00" />
+<meta itemprop="wordCount" content="366"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
+<meta itemprop="keywords" content="tag1,tag2," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-image">
+<img src="/rover/img/%3cfolder%3e/example.jpg" alt="An example text for an image you could add!">
+</div>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">Computer Organization Systems Programming</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#bits-bytes-and-integers">Bits, Bytes, and Integers</a></li>
+<li><a href="#assembly-x86">Assembly x86</a>
+<ul>
+<li><a href="#basics">Basics</a>
+<ul>
+<li><a href="#c-vs-assembly">C++ vs Assembly:</a>
+<ul>
+<li><a href="#c">C++</a></li>
+<li><a href="#assembly">Assembly</a></li>
+</ul>
+</li>
+<li><a href="#data-representation">Data Representation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#c-programming">C Programming</a>
+<ul>
+<li><a href="#memory-hierarchy">Memory Hierarchy</a>
+<ul>
+<li><a href="#sram-vs-dram">SRAM vs DRAM</a></li>
+<li><a href="#rom-read-only-memory">ROM: Read-Only Memory</a></li>
+<li><a href="#nonvolatile-vs-volatile-memory">Nonvolatile vs Volatile Memory</a></li>
+<li><a href="#bus">Bus</a></li>
+<li><a href="#memory-systems">Memory Systems</a>
+<ul>
+<li><a href="#disk-drive">Disk Drive</a></li>
+<li><a href="#pci-vs-pci-express-bus">PCI vs PCI Express Bus</a></li>
+<li><a href="#process-of-dma-direct-memory-access">Process of DMA: Direct Memory Access</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="bits-bytes-and-integers">Bits, Bytes, and Integers</h1>
+<p>Bits are stored as <code>0</code> or <code>1</code>.</p>
+<p>Bytes are <code>8</code> bits.</p>
+<p>Integers</p>
+<h1 id="assembly-x86">Assembly x86</h1>
+<h2 id="basics">Basics</h2>
+<h3 id="c-vs-assembly">C++ vs Assembly:</h3>
+<p>C++ has limitations if it uses certain libraries on a single operating system. <em>Assembly</em> is <strong>not</strong> portable. They are designed for specific processor families (Motorola 68x00, x86, SUN Sparc, Vax, and IBM-370). Language may be translated during execution in a processor by a <em>microcode interpreter</em>.</p>
+<h4 id="c">C++</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int Y;
+</span></span><span style="display:flex;"><span>int X = (Y + 4) * 3;
+</span></span></code></pre></div><h4 id="assembly">Assembly</h4>
+<p>Example program:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mov  eax,Y   ; move Y to the EAX register
+</span></span><span style="display:flex;"><span>add  eax,4   ; add 4 to the EAX register
+</span></span><span style="display:flex;"><span>mov  ebx,3   ; move 3 to the EBX register
+</span></span><span style="display:flex;"><span>imul ebx     ; multiply EAX by EBX
+</span></span><span style="display:flex;"><span>mov  X,eax   ; move EAX to X
+</span></span></code></pre></div><ul>
+<li>linkers vs assemblers: assemblers compile the s.c. programs from assembly into machine instruction, linkers are a utility program that combine individual files made by assemblers into an executable program</li>
+<li><em>virtual machine</em>: a software program that emulates the functions of some physical or virtual computer</li>
+</ul>
+<h3 id="data-representation">Data Representation</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Decimal</th>
+<th style="text-align:center">Binary</th>
+<th style="text-align:right">Hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:center">0000 0001</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:center">0000 1010</td>
+<td style="text-align:right">A</td>
+</tr>
+<tr>
+<td style="text-align:left">100</td>
+<td style="text-align:center">0000 0000</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:left">1024</td>
+<td style="text-align:center">0000 0000</td>
+<td style="text-align:right"></td>
+</tr>
+</tbody>
+</table>
+<h1 id="c-programming">C Programming</h1>
+<h2 id="memory-hierarchy">Memory Hierarchy</h2>
+<h3 id="sram-vs-dram">SRAM vs DRAM</h3>
+<ul>
+<li>Static vs Dynamic Random-Access-Memory
+<ul>
+<li>volatile&ndash;does not maintain data when powered off</li>
+</ul>
+</li>
+</ul>
+<h3 id="rom-read-only-memory">ROM: Read-Only Memory</h3>
+<ul>
+<li>Erasable, E-Erasable, Programmable, Flash Memory</li>
+</ul>
+<h3 id="nonvolatile-vs-volatile-memory">Nonvolatile vs Volatile Memory</h3>
+<p>Nonvolatile: ROMS, maintains data when powered off</p>
+<h3 id="bus">Bus</h3>
+<p>wires that carry address data/control signals</p>
+<ul>
+<li>memory operations involving the bus take longer</li>
+</ul>
+<h3 id="memory-systems">Memory Systems</h3>
+<ul>
+<li>register operations in the CPU are sub nanoseconds</li>
+</ul>
+<h4 id="disk-drive">Disk Drive</h4>
+<ul>
+<li>made of platters that form cylinders, with tracks containing sectors separated by gaps</li>
+<li>recording zone: disjoint subsets of the track/sectors
+<ul>
+<li>capacity = average recording zone
+$$
+Capacity = byte/sector * sector/track * 
+\track/surface * surface/platter * platter/disk
+$$</li>
+</ul>
+</li>
+</ul>
+<h4 id="pci-vs-pci-express-bus">PCI vs PCI Express Bus</h4>
+<ul>
+<li>Express is point-to-point, whereas PCI is broadcast</li>
+</ul>
+<h4 id="process-of-dma-direct-memory-access">Process of DMA: Direct Memory Access</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CPU -&gt; Controller -&gt; Disk -&gt; Load to Main Memory -&gt; Controller sends signal to CPU
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/cat1/">cat1</a>
+<a href="/rover/categories/cat2/">cat2</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/tag1/">tag1</a>
+<a href="/rover/tags/tag2/">tag2</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

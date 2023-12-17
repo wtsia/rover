@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Object Oriented Programming | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="CIS, Computer Science, Java">
+<meta name="description" content="Notes on Object Oriented Programming: Java">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Object Oriented Programming" />
+<meta property="og:description" content="Notes on Object Oriented Programming: Java" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/cs.java-oop/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-17T01:19:31-07:00" />
+<meta property="article:modified_time" content="2022-08-17T01:19:31-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Object Oriented Programming"/>
+<meta name="twitter:description" content="Notes on Object Oriented Programming: Java"/>
+
+<meta itemprop="name" content="Object Oriented Programming">
+<meta itemprop="description" content="Notes on Object Oriented Programming: Java"><meta itemprop="datePublished" content="2022-08-17T01:19:31-07:00" />
+<meta itemprop="dateModified" content="2022-08-17T01:19:31-07:00" />
+<meta itemprop="wordCount" content="4037">
+<meta itemprop="keywords" content="CIS,Computer Science,Java," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">Object Oriented Programming</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h1 id="java-topics">Java Topics</h1>
+<ul>
+<li><a href="#java-topics">Java Topics</a></li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#key-features">Key Features</a></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</li>
+<li><a href="#concepts">Concepts</a>
+<ul>
+<li><a href="#binary">Binary</a>
+<ul>
+<li><a href="#8-bit">8-bit</a></li>
+</ul>
+</li>
+<li><a href="#integer-overflow">Integer Overflow</a></li>
+</ul>
+</li>
+<li><a href="#basics-of-java">Basics of Java</a>
+<ul>
+<li><a href="#errorstroubleshooting">Errors/Troubleshooting</a></li>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#unit-tests">Unit Tests</a></li>
+<li><a href="#formatted-strings">Formatted Strings</a></li>
+<li><a href="#character-methods-return-values-each-method-must-prepend-character-as-in-characterisletter">Character methods return values. Each method must prepend <code>Character.</code>, as in <code>Character.isLetter</code></a></li>
+<li><a href="#dowhile-loop">Do/While Loop</a></li>
+<li><a href="#character-vs-string">Character vs String</a></li>
+<li><a href="#input-validation">Input Validation</a></li>
+<li><a href="#arrays">Arrays</a>
+<ul>
+<li><a href="#array-are-references">Array are references</a></li>
+<li><a href="#traversing-arrays">Traversing Arrays</a></li>
+<li><a href="#summary-so-far">Summary so far</a></li>
+</ul>
+</li>
+<li><a href="#enhanced-loops">Enhanced Loops</a></li>
+<li><a href="#hashmaps">Hashmaps</a>
+<ul>
+<li><a href="#import-javautilhashmap"><code>import java.util.HashMap;</code></a></li>
+<li><a href="#table-common-hashmap-methods">Table: Common HashMap methods.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#objects">Objects</a>
+<ul>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#static-fields-and-methods">Static Fields and Methods</a></li>
+<li><a href="#mutable-vs-immutable-objects">Mutable vs Immutable Objects</a>
+<ul>
+<li><a href="#aliasing">Aliasing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#summary-so-far-1">Summary So Far</a>
+<ul>
+<li><a href="#loops">Loops</a></li>
+</ul>
+</li>
+<li><a href="#objects-and-classes-introduction">Objects and Classes: Introduction</a>
+<ul>
+<li><a href="#operator">Operator</a></li>
+<li><a href="#methods">Methods:</a></li>
+<li><a href="#wrapper-classes">Wrapper Classes</a></li>
+<li><a href="#arraylist">ArrayList</a></li>
+<li><a href="#output-formatting">Output Formatting</a></li>
+</ul>
+</li>
+<li><a href="#objects-and-classes-design">Objects and Classes: Design</a>
+<ul>
+<li><a href="#encapsulation"><em>Encapsulation</em></a></li>
+<li><a href="#garbage-collection-in-inheritance">Garbage Collection in Inheritance</a></li>
+<li><a href="#instance-data-vs-local-variable">Instance Data vs Local Variable</a></li>
+<li><a href="#formal-vs-actual-parameter">Formal vs Actual Parameter</a>
+<ul>
+<li><a href="#new"><code>new</code></a></li>
+<li><a href="#null"><code>null</code></a></li>
+<li><a href="#tostring">toString()</a></li>
+<li><a href="#hashcode">hashCode()</a></li>
+</ul>
+</li>
+<li><a href="#primitives-review">Primitives Review</a></li>
+<li><a href="#example-program">Example Program</a></li>
+</ul>
+</li>
+<li><a href="#inheritance-and-polymorphism">Inheritance and Polymorphism</a>
+<ul>
+<li><a href="#concepts-1">Concepts</a></li>
+<li><a href="#keywords">Keywords</a></li>
+<li><a href="#inheritance">Inheritance</a>
+<ul>
+<li><a href="#design">Design</a></li>
+</ul>
+</li>
+<li><a href="#polymorphism">Polymorphism</a></li>
+<li><a href="#programming-and-common-errors">Programming and Common Errors</a></li>
+</ul>
+</li>
+<li><a href="#algorithms">Algorithms</a>
+<ul>
+<li><a href="#o-notation">O-Notation</a></li>
+<li><a href="#abstract-data-types-adt">Abstract Data Types (ADT)</a></li>
+<li><a href="#search-algos">Search Algos</a>
+<ul>
+<li><a href="#linear-search">Linear Search</a></li>
+<li><a href="#binary-search-divide-and-conquer">Binary Search (Divide and Conquer)</a></li>
+</ul>
+</li>
+<li><a href="#"></a>
+<ul>
+<li><a href="#avl-balanced-tree-adelson-velsky-and-landis">AVL Balanced Tree (Adelson-Velsky and Landis)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#data-structures">Data Structures</a>
+<ul>
+<li><a href="#hash-tables">Hash Tables</a>
+<ul>
+<li><a href="#hash-function">Hash Function</a>
+<ul>
+<li><a href="#collisions">Collisions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="introduction">Introduction</h1>
+<p><figure>
+  <img src="/rover/img/ComputerScience/introJava.jpg" alt="Introduction to Java"  />
+</figure></p>
+<p>Java is a high-level, object-oriented programming language designed for platform independence, allowing it to run on various devices without modification. Developed by James Gosling and his team at Sun Microsystems, Java was released in 1995. Known for its simplicity, portability, and robustness, Java has become a popular choice for building diverse applications, from web and mobile apps to large-scale enterprise systems.</p>
+<h2 id="key-features">Key Features</h2>
+<ol>
+<li>
+<p><strong>Write Once, Run Anywhere (WORA):</strong> Java&rsquo;s &ldquo;Write Once, Run Anywhere&rdquo; philosophy enables the execution of Java programs on any device with a Java Virtual Machine (JVM).</p>
+</li>
+<li>
+<p><strong>Object-Oriented:</strong> Java is a pure object-oriented programming language, emphasizing the use of classes and objects for modular and scalable code.</p>
+</li>
+<li>
+<p><strong>Automatic Memory Management:</strong> Java features automatic memory management through garbage collection, simplifying memory handling and reducing the risk of memory leaks.</p>
+</li>
+<li>
+<p><strong>Security:</strong> Java provides a secure runtime environment, with features such as sandboxing applets and a robust set of APIs for encryption and authentication.</p>
+</li>
+<li>
+<p><strong>Rich Standard Library:</strong> Java comes with a comprehensive standard library that simplifies common programming tasks, including input/output operations, networking, and GUI development.</p>
+</li>
+<li>
+<p><strong>Multithreading:</strong> Java supports multithreading, allowing developers to build concurrent and scalable applications efficiently.</p>
+</li>
+<li>
+<p><strong>Community Support:</strong> Java has a large and active community, providing extensive documentation, tutorials, and support through various forums and resources.</p>
+</li>
+</ol>
+<p>Java remains a prominent language in software development, widely used in web development, mobile app development (Android), enterprise systems, and cloud computing.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>At its core level, computers are switches, and store information in bytes (8 bits).
+<ul>
+<li>memory stores information in binary (1 or 0, like a switch!)</li>
+<li>instructions go to the processor, and turns executable (in binary <code>1101 1011 ...</code>), then an assembler creates the high level instruction.
+<ul>
+<li>Java takes the high level language, runs it through a compiler, which takes it through a virtual processor that turns it executable (bytecode), and finally executes in the Virtual Machine within a processor
+<ul>
+<li>Java this method allows it to execute on different processors, its design which is reflected in the intention of creating desktop applications.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>pointer</strong>: variables that store addresses of other variables. Typically occupies 4 bytes of memory. Think of this like a reference to an originally stored variable.
+<ul>
+<li>in Java, this may be like string1 = string2. This does not create a new string, but references string2.</li>
+</ul>
+</li>
+</ul>
+<h1 id="concepts">Concepts</h1>
+<h2 id="binary">Binary</h2>
+<h3 id="8-bit">8-bit</h3>
+<ul>
+<li>represented in 8 binary, or <code>10101010</code> where each number would symbolize:
+$$
+1<em>2^8 + 0</em>2^7 + 1<em>2^6 + 0</em>2^5 + 1<em>2^4 + 0</em>2^3 + 1<em>2^2 + 0</em>2^0
+$$</li>
+</ul>
+<h2 id="integer-overflow">Integer Overflow</h2>
+<ul>
+<li><strong>Integer overflow</strong> in Java occurs when the result of an arithmetic operation on integers exceeds the maximum value that can be represented by the data type. In Java, integer types (int and long) have fixed sizes and ranges.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Minimum Value</th>
+<th>Maximum Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>int</td>
+<td>-2^31</td>
+<td>2^31 - 1</td>
+</tr>
+<tr>
+<td>long</td>
+<td>-2^63</td>
+<td>2^63 - 1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="basics-of-java">Basics of Java</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner; // import scanner
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>public class Salary {                       
+</span></span><span style="display:flex;"><span>  public static void main (String [] args) {
+</span></span><span style="display:flex;"><span>    // Program starts in main and executes in main&#39;s braces {}
+</span></span><span style="display:flex;"><span>    int wage; // declare variable, does not assign 
+</span></span><span style="display:flex;"><span>    // semicolon ends statement, and declaring a variable is paramount to object manipulation
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    // wage = 20; assigns the variable&#39;s value
+</span></span><span style="display:flex;"><span>    Scanner scnr = new Scanner(System.in);
+</span></span><span style="display:flex;"><span>    // create object scanner, from System.in (keyboard input)
+</span></span><span style="display:flex;"><span>    wage = scnr.nextInt();                      
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    System.out.print(&#34;Salary is \n&#34;);
+</span></span><span style="display:flex;"><span>    // \n creates a new line       
+</span></span><span style="display:flex;"><span>    System.out.println(wage * 40 * 52 + &#34; this is example text&#34;);
+</span></span><span style="display:flex;"><span>    /*
+</span></span><span style="display:flex;"><span>     * This is weirdly valid
+</span></span><span style="display:flex;"><span>     *
+</span></span><span style="display:flex;"><span>    */
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li><code>print</code> vs <code>println</code>: ln encloses the output in its own line, sending the next line to a blank line</li>
+</ul>
+<h3 id="errorstroubleshooting">Errors/Troubleshooting</h3>
+<ul>
+<li>
+<p>sometimes a <code>;</code> can be put out as an error when its the parenthesis or something earlier up the program line</p>
+</li>
+<li>
+<p>Many programmers recommend the good practice of configuring compilers to be more picky with warnings than the default. Ex: <code>javac</code> can be run as <code>javac -Xlint yourfile.java</code> to enable all recommended warnings</p>
+</li>
+<li>
+<p><code>CamelCase</code> should be used for Java classes</p>
+</li>
+<li>
+<p><code>/</code> can be used as an escape sequence like:</p>
+</li>
+</ul>
+<p><code>(&quot;Hello \&quot;Hello\&quot; \nWorld&quot;)</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Hello &#34;Hello&#34; 
+</span></span><span style="display:flex;"><span>World
+</span></span></code></pre></div><ul>
+<li>Dereferencing: Dereferencing means the action of accessing an object&rsquo;s features through a reference. Performing any dereferencing on a primitive will result in the error “X cannot be dereferenced”, where X is a primitive type</li>
+</ul>
+<h3 id="variables">Variables</h3>
+<ul>
+<li>To declare a constant variable, use <code>final</code>: <code>final double varName = 111</code></li>
+</ul>
+<h3 id="unit-tests">Unit Tests</h3>
+<p>Unit tests test a programs intended function by inputing data, its expected output, and its real output, or a FAILED statement.</p>
+<p><strong>Single Unit Tests</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// assert testExpression: detailedMessage;
+</span></span><span style="display:flex;"><span>assert (myVal(0,1) == 0) : &#34;Assertion (0,1) failed&#34;; 
+</span></span></code></pre></div><p><strong>Class-wide</strong>:
+You can test across a class using multiple methods and printing FAIL statements.</p>
+<h3 id="formatted-strings">Formatted Strings</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>%a	floating point (except BigDecimal)	Hex output of floating point number
+</span></span><span style="display:flex;"><span>%b	Any type	“true” if non-null, “false” if null
+</span></span><span style="display:flex;"><span>%c	character	Unicode character
+</span></span><span style="display:flex;"><span>%d	integer (incl. byte, short, int, long, bigint)	Decimal Integer
+</span></span><span style="display:flex;"><span>%e	floating point	decimal number in scientific notation
+</span></span><span style="display:flex;"><span>.n%f	floating point	decimal number with n trailing
+</span></span><span style="display:flex;"><span>%g	floating point	decimal number, possibly in scientific notation depending on the precision and value.
+</span></span><span style="display:flex;"><span>%h	any type	Hex String of value from hashCode() method.
+</span></span><span style="display:flex;"><span> %n	none	Platform-specific line separator.
+</span></span><span style="display:flex;"><span>%o	integer (incl. byte, short, int, long, bigint)	Octal number
+</span></span><span style="display:flex;"><span>%s	any type	String value
+</span></span><span style="display:flex;"><span>%t	Date/Time (incl. long, Calendar, Date and TemporalAccessor)	%t is the prefix for Date/Time conversions. More formatting flags are needed after this. See Date/Time conversion below.
+</span></span><span style="display:flex;"><span>%x	integer (incl. byte, short, int, long, bigint)	
+</span></span><span style="display:flex;"><span>Hex string.
+</span></span></code></pre></div><h3 id="character-methods-return-values-each-method-must-prepend-character-as-in-characterisletter">Character methods return values. Each method must prepend <code>Character.</code>, as in <code>Character.isLetter</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>isLetter(c) true if alphabetic:
+</span></span><span style="display:flex;"><span>a-z or A-Z  
+</span></span><span style="display:flex;"><span>isLetter(&#39;x&#39;) // true
+</span></span><span style="display:flex;"><span>isLetter(&#39;6&#39;) // false
+</span></span><span style="display:flex;"><span>isLetter(&#39;!&#39;) // false
+</span></span><span style="display:flex;"><span>  toUpperCase(c)  Uppercase version 
+</span></span><span style="display:flex;"><span>toUpperCase(&#39;a&#39;)  // A
+</span></span><span style="display:flex;"><span>toUpperCase(&#39;A&#39;)  // A
+</span></span><span style="display:flex;"><span>toUpperCase(&#39;3&#39;)  // 3
+</span></span><span style="display:flex;"><span>isDigit(c)  true if digit: 0-9. 
+</span></span><span style="display:flex;"><span>isDigit(&#39;x&#39;) // false
+</span></span><span style="display:flex;"><span>isDigit(&#39;6&#39;) // true
+</span></span><span style="display:flex;"><span>  toLowerCase(c)  Lowercase version 
+</span></span><span style="display:flex;"><span>toLowerCase(&#39;A&#39;)  // a
+</span></span><span style="display:flex;"><span>toLowerCase(&#39;a&#39;)  // a
+</span></span><span style="display:flex;"><span>toLowerCase(&#39;3&#39;)  // 3
+</span></span><span style="display:flex;"><span>isWhitespace(c) true if whitespace. 
+</span></span><span style="display:flex;"><span>isWhitespace(&#39; &#39;)  // true
+</span></span><span style="display:flex;"><span>isWhitespace(&#39;\n&#39;) // true
+</span></span><span style="display:flex;"><span>isWhitespace(&#39;x&#39;)  // false
+</span></span></code></pre></div><h3 id="dowhile-loop">Do/While Loop</h3>
+<ul>
+<li>separate the while loop from executing a code block (i.e. a menu)</li>
+<li>for something to happen regardless of condition</li>
+<li><code>do/while</code> vs <code>while</code>:
+<ul>
+<li><code>do/while</code> executes a code block once before condition checking</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>count = 0;
+</span></span><span style="display:flex;"><span>num = 6;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>do {
+</span></span><span style="display:flex;"><span>   num = num - 1;
+</span></span><span style="display:flex;"><span>   count = count + 1;
+</span></span><span style="display:flex;"><span>} while (num &gt; 4); 
+</span></span><span style="display:flex;"><span>// executes twice, but DO always executes!
+</span></span><span style="display:flex;"><span>// for all num, DO will execute!
+</span></span></code></pre></div><h3 id="character-vs-string">Character vs String</h3>
+<ul>
+<li>ASCII - merican Standard Code for Information Interchange</li>
+<li>&lsquo;char&rsquo; vs &ldquo;String&rdquo;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;String&gt;.length(): returns length of *String*
+</span></span><span style="display:flex;"><span>&lt;String&gt;.indexOf(&lt;char/string&gt;): returns index of occurrence
+</span></span><span style="display:flex;"><span>&lt;String&gt;.subString(n, m): returns characters in the form of a string at n and before m
+</span></span><span style="display:flex;"><span>word.toLowerCase();
+</span></span><span style="display:flex;"><span>word.toUpperCase();
+</span></span></code></pre></div><h3 id="input-validation">Input Validation</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (!in.**hasNextDouble()**) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    String word = in.next();
+</span></span><span style="display:flex;"><span>    System.err.println(word + &#34;is not a number&#34;);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>De Morgans Law:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>!(A &amp;&amp; B)  is the same as   !A || !B
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>!(A || B)  is the same as   !A &amp;&amp; !B
+</span></span></code></pre></div><h2 id="arrays">Arrays</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// Create Arrays
+</span></span><span style="display:flex;"><span>String[] names;
+</span></span><span style="display:flex;"><span>double[] values;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>values = new double[size]; 
+</span></span><span style="display:flex;"><span>// new operator allocates memory for the array and automatically initializes all of its elements to a default value
+</span></span><span style="display:flex;"><span>// values refer to an array of doubles; 
+</span></span><span style="display:flex;"><span>// how many elements depends on the value of size 
+</span></span><span style="display:flex;"><span>// (at the time the array is created)
+</span></span></code></pre></div><ul>
+<li><code>toString()</code>, returns a string representation of an array.</li>
+<li><code>copyOf()</code> , copies an array
+<ul>
+<li><code>double[] data = Arrays.copyOf(values, 3);</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="array-are-references">Array are references</h4>
+<p>When you make an assignment to an array variable, it simply <strong>copies the reference</strong>. But it doesn’t copy the array itself. For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>double[] values = new double[3];
+</span></span><span style="display:flex;"><span>double[] data = values;
+</span></span></code></pre></div><h4 id="traversing-arrays">Traversing Arrays</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] array = {1, 2, 3, 4, 5};
+</span></span><span style="display:flex;"><span>for (int i = 0; i &lt; array.length; i++) {
+</span></span><span style="display:flex;"><span>    array[i] *= array[i];
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// Values after the loop: {1, 4, 9, 16, 25}
+</span></span></code></pre></div><ul>
+<li>Search (returning index of occurence), Reducing (i.e. Sum),</li>
+</ul>
+<h3 id="summary-so-far">Summary so far</h3>
+<ul>
+<li>Definition of methods besides the main method
+<ul>
+<li>A method  is a list of statements executed by invoking the method&rsquo;s name (this is known as a method call). There are user defined methods and built in methods.
+<ul>
+<li>i.e. <code>sqrt(x), pow(x,y), abs(x)</code></li>
+</ul>
+</li>
+<li>These methods may receive arguments/parameters and may or may not return values.</li>
+<li>Values passed as arguments to methods may be of any type, such as, but not limited to: -
+<ul>
+<li><code>int, double, String</code>.</li>
+</ul>
+</li>
+<li>Values returned by methods may be of any type, such as, but not limited to:
+<ul>
+<li><code>boolean, int, double, String</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;access_modifier&gt; &lt;return_type&gt; &lt;method_name&gt;( list_of_parameters) {
+</span></span><span style="display:flex;"><span>    //body
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>public int subtractNumbers(int m, int n) {
+</span></span><span style="display:flex;"><span>    int p = 0;
+</span></span><span style="display:flex;"><span>    p = m - n;
+</span></span><span style="display:flex;"><span>    System.out.println(p);
+</span></span><span style="display:flex;"><span>    return p;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>we can see that <code>public</code> corresponse to the access modifier, <code>int</code> to return type, and <code>subtractNumbers</code> to method name. You can infer what the other parts are.</p>
+</blockquote>
+<ul>
+<li><code>public static</code>:
+<ul>
+<li><code>public</code> means the method may be called from any class in the program</li>
+<li><code>static</code> means the method only uses values that are passed to the method</li>
+</ul>
+</li>
+</ul>
+<h2 id="enhanced-loops">Enhanced Loops</h2>
+<ul>
+<li>for-each: reduces programming burden but removes incrementing capabilities
+<ul>
+<li>cannot change your &lsquo;value&rsquo; within the for each loop.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] values = { 1, 2, 3, 4, 5 };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>for (int value:values) {
+</span></span><span style="display:flex;"><span>  System.out.println(value);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="hashmaps">Hashmaps</h2>
+<h3 id="import-javautilhashmap"><code>import java.util.HashMap;</code></h3>
+<ul>
+<li>The HashMap type is an ADT implemented as a generic class (discussed elsewhere) that supports different types of keys and values. Generically, a HashMap can be declared and created as <code>HashMap&lt;K, V&gt; hashMap = new HashMap&lt;K, V&gt;();</code> where K represents the HashMap&rsquo;s key type and V represents the HashMap&rsquo;s value type.</li>
+</ul>
+<h3 id="table-common-hashmap-methods">Table: Common HashMap methods.</h3>
+<p>What is a <strong>Hashmap</strong>?</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Description</th>
+<th style="text-align:center">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">put() put(key, value)</td>
+<td style="text-align:center">Associates key with specified value. If key already exists, replaces previous value with specified value.</td>
+<td style="text-align:center">Map originally empty</td>
+</tr>
+<tr>
+<td style="text-align:center">exMap.put(&ldquo;Tom&rdquo;, 14);</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// Map now: Tom-&gt;14,  
+</span></span><span style="display:flex;"><span>exMap.put(&#34;John&#34;, 86); 
+</span></span><span style="display:flex;"><span>// Map now: Tom-&gt;14, John-&gt;86
+</span></span><span style="display:flex;"><span>putIfAbsent() putIfAbsent(key, value) 
+</span></span><span style="display:flex;"><span>Associates key with specified value if the key does not already exist or is mapped to null. 
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86
+</span></span><span style="display:flex;"><span>exMap.putIfAbsent(&#34;Tom&#34;, 20); 
+</span></span><span style="display:flex;"><span>// Key &#34;Tom&#34; already exists. Map is unchanged.
+</span></span><span style="display:flex;"><span>exMap.putIfAbsent(&#34;Mary&#34;, 13); 
+</span></span><span style="display:flex;"><span>// Map is now: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>get() get(key)
+</span></span><span style="display:flex;"><span>Returns the value associated with key. If key does not exist, return null.  
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>exMap.get(&#34;Tom&#34;)  // returns 14 
+</span></span><span style="display:flex;"><span>exMap.get(&#34;Bob&#34;)  // returns null
+</span></span><span style="display:flex;"><span>containsKey() containsKey(key) 
+</span></span><span style="display:flex;"><span>Returns true if key exists, otherwise returns false.  
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>exMap.containsKey(&#34;Tom&#34;)  // returns true 
+</span></span><span style="display:flex;"><span>exMap.containsKey(&#34;Bob&#34;)  // returns false
+</span></span><span style="display:flex;"><span>containsValue() containsValue(value) 
+</span></span><span style="display:flex;"><span>Returns true if at least one key is associated with the specified value, otherwise returns false. 
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>exMap.containsValue(86)  // returns true (key &#34;John&#34; associated with value 86)
+</span></span><span style="display:flex;"><span>exMap.containsValue(17)  // returns false (no key associated with value 17)
+</span></span><span style="display:flex;"><span>remove()  remove(key) 
+</span></span><span style="display:flex;"><span>Removes the map entry for the specified key if the key exists.  
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>exMap.remove(&#34;John&#34;);  
+</span></span><span style="display:flex;"><span>// Map is now: Tom-&gt;14, Mary-&gt;13
+</span></span><span style="display:flex;"><span>clear() clear() 
+</span></span><span style="display:flex;"><span>Removes all map entries.  
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>exMap.clear();  
+</span></span><span style="display:flex;"><span>// Map is now empty
+</span></span><span style="display:flex;"><span>keySet()  keySet() 
+</span></span><span style="display:flex;"><span>Returns a Set containing all keys within the map. 
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>keys = exMap.keySet();
+</span></span><span style="display:flex;"><span>// keys contains: &#34;Tom&#34;, &#34;John&#34;, &#34;Mary&#34;
+</span></span><span style="display:flex;"><span>values()  values() 
+</span></span><span style="display:flex;"><span>Returns a Collection containing all values within the map.  
+</span></span><span style="display:flex;"><span>// Assume Map is: Tom-&gt;14, John-&gt;86, Mary-&gt;13
+</span></span><span style="display:flex;"><span>values = exMap.values();
+</span></span><span style="display:flex;"><span>// values contains: 14, 86, 13
+</span></span></code></pre></div><h1 id="objects">Objects</h1>
+<ul>
+<li>objects have features, qualities, functions</li>
+<li><strong>abstraction</strong>: interaction at a high level with no lower level understanding (encapsulation) i.e. tech priest</li>
+<li>objects highly support abstraction</li>
+</ul>
+<h3 id="classes">Classes</h3>
+<ul>
+<li>defines new type that can group data and methods to create objects
+<ul>
+<li>public member methods: operations a class user can perform on an object</li>
+</ul>
+</li>
+<li>A <strong>field</strong> is a variable of any type that is declared directly in a class or struct
+<ul>
+<li><strong>private</strong> field: accessible to class method but not class users</li>
+</ul>
+</li>
+<li><strong>constructor</strong>: class member method that initializes fields</li>
+</ul>
+<h3 id="static-fields-and-methods">Static Fields and Methods</h3>
+<ul>
+<li><strong>static</strong> indicates the variable is allocated once in memory. However due to being stored in static memory, it has global scope.</li>
+<li><strong>static field</strong> is the field of a class instead of distributively to each class object</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>add()	add(element) 
+</span></span><span style="display:flex;"><span>Create space for and add the element at the end of the list.	
+</span></span><span style="display:flex;"><span>// List originally empty
+</span></span><span style="display:flex;"><span>valsList.add(31); // List now: 31 
+</span></span><span style="display:flex;"><span>valsList.add(41); // List now: 31 41
+</span></span><span style="display:flex;"><span>get()	get(index) 
+</span></span><span style="display:flex;"><span>Returns the element at the specified list location known as the index. Indices start at 0.	
+</span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
+</span></span><span style="display:flex;"><span>x = valsList.get(0);  // Assigns 31 to x
+</span></span><span style="display:flex;"><span>x = valsList.get(1);  // Assigns 41
+</span></span><span style="display:flex;"><span>x = valsList.get(2);  // Assigns 59
+</span></span><span style="display:flex;"><span>x = valsList.get(3);  // Error: No such element
+</span></span><span style="display:flex;"><span>set()	set(index, element) 
+</span></span><span style="display:flex;"><span>Replaces the element at the specified position in this list with the specified element.	
+</span></span><span style="display:flex;"><span>// List originally: 31 41 59 
+</span></span><span style="display:flex;"><span>valsList.set(1, 119);  // List now 31 119 59
+</span></span><span style="display:flex;"><span>size()	size()
+</span></span><span style="display:flex;"><span>Returns the number of list elements.	
+</span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
+</span></span><span style="display:flex;"><span>x = valsList.size();  // Assigns x with 3
+</span></span></code></pre></div><h3 id="mutable-vs-immutable-objects">Mutable vs Immutable Objects</h3>
+<ul>
+<li><strong>mutable</strong>: may be changed after creation</li>
+<li><strong>immutable</strong>: cannot be changed after creation</li>
+</ul>
+<h4 id="aliasing">Aliasing</h4>
+<ul>
+<li>more than one reference to the same object. Below is an example where a new object is not created, but the object box1 is referenced by box2.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Rectangle box1 = new Rectangle(0, 0, 100, 200);
+</span></span><span style="display:flex;"><span>Rectangle box2 = box1;
+</span></span></code></pre></div><h1 id="summary-so-far-1">Summary So Far</h1>
+<ul>
+<li>Definition of methods besides the main method
+<ul>
+<li>A method  is a list of statements executed by invoking the method&rsquo;s name (this is known as a method call). There are user defined methods and built in methods.
+<ul>
+<li>i.e. <code>sqrt(x), pow(x,y), abs(x)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>These methods may receive arguments/parameters and may or may not return values.
+<ul>
+<li>Values passed as arguments to methods may be of any type, such as, but not limited to: -
+<ul>
+<li><code>int, double, String</code>.</li>
+</ul>
+</li>
+<li>Values returned by methods may be of any type, such as, but not limited to:
+<ul>
+<li><code>boolean, int, double, String</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Call methods in main to perform a calculation or an action.</li>
+<li>To call a method:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class VeganClass { 
+</span></span><span style="display:flex;"><span>   public static double calcVegan() {
+</span></span><span style="display:flex;"><span>      // some calculations and logic
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   public static void main(String[] args) {
+</span></span><span style="display:flex;"><span>      // Calls method calcVegan and prints the result
+</span></span><span style="display:flex;"><span>      System.out.println(calcVegan());
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Input values from the standard input using the Scanner object.</li>
+<li>Output values on the screen.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>public class MyClass {
+</span></span><span style="display:flex;"><span>  public static void main (String [] args) {
+</span></span><span style="display:flex;"><span>    Scanner input = new Scanner(System.in);
+</span></span><span style="display:flex;"><span>    // create new Scanner object called &#39;input&#39; which takes &#39;System.in&#39;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Strings and string methods, such as: charAt(), indexOf, length(), equals(), equalsIgnoreCase(), compareTo()
+<ul>
+<li><code>charAt()</code>: determines the character at index x of a string</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>String userWord = &#34;myWord&#34;;
+</span></span></code></pre></div><ul>
+<li>One-dimensional arrays
+<ul>
+<li><code>myArray = [1, 2, 3, 4, 5];</code></li>
+<li>Two-dim: <code>int [][] myArray = new int[3][3] // 3x3, 9 elements</code></li>
+</ul>
+</li>
+<li>if-else statements</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (myThing == myNum) {
+</span></span><span style="display:flex;"><span>  // do stuff
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>switch statements</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>switch (userVal) {
+</span></span><span style="display:flex;"><span>   case 1: // case userVal == 1
+</span></span><span style="display:flex;"><span>      numItems = 5; 
+</span></span><span style="display:flex;"><span>      break;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   case 3: // case userVal == 3
+</span></span><span style="display:flex;"><span>      numItems = 12; 
+</span></span><span style="display:flex;"><span>      break;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   default:
+</span></span><span style="display:flex;"><span>      numItems = 55;
+</span></span><span style="display:flex;"><span>      break;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="loops">Loops</h3>
+<ul>
+<li>for and for-each (Find: <strong>Enhanced Loops</strong>)</li>
+<li>while and do-while (Find: <strong>Do/While Loop</strong>)</li>
+<li>Mutable and Immutable Objects
+<ul>
+<li>Mutable: can be changed
+<ul>
+<li><code>StringBuilder</code>, <code>Point origin</code>, <code>Point blank</code>, <code>double dist</code></li>
+</ul>
+</li>
+<li>Immutable: cannot change the content of object once created
+<ul>
+<li><code>String</code>
+<ul>
+<li>creating <code>for</code> loop that creates new <code>String</code> objects and concatenates them can create a lot of garbage, because a new <code>String</code> is declared and stored for use.</li>
+<li>i.e. <code>This String</code> + <code>This String and more</code> + <code>This String and more more</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Aliasing</em>: more than one reference to the same object</li>
+</ul>
+</li>
+<li>Designing your own classes (recall lab):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class myObject {
+</span></span><span style="display:flex;"><span>  // declare private variable (accessible only to method)
+</span></span><span style="display:flex;"><span>	private double thing;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	public myObject() {
+</span></span><span style="display:flex;"><span>    // initialize value
+</span></span><span style="display:flex;"><span>		this.thing = // some value;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	public double myMethod(double myInput) {
+</span></span><span style="display:flex;"><span>    // example method
+</span></span><span style="display:flex;"><span>		thing = thing + myInput;
+</span></span><span style="display:flex;"><span>		return thing;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>  // get and set methods
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Creating objects of classes and calling methods on those objects
+<code>myObject myInstanceObject = new myObject();</code></li>
+<li>The basics of GUI (Swing/SWT)
+<ul>
+<li>use Eclipse to generate default Swing application (Final Lab):
+<ul>
+<li>File&raquo;New&raquo;Create Java Project&raquo;New&raquo;Project Explorer&raquo;New&raquo;Other&raquo;Swing Designer&raquo;Application Window</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>It is helpful to review Discussion posts, homework assignments, group projects and quizzes.</li>
+</ul>
+<h1 id="objects-and-classes-introduction">Objects and Classes: Introduction</h1>
+<h3 id="operator">Operator</h3>
+<ul>
+<li><code>instanceof</code>
+<ul>
+<li>example: <code>if(obj instanceof MyObject) { }</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="methods">Methods:</h3>
+<ul>
+<li><code>equals()</code>: checks if two objects have the same <em>reference</em>.
+<ul>
+<li><code>equalsIgnoreCase()</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="wrapper-classes">Wrapper Classes</h2>
+<p>Java&rsquo;s Collectin library only works with objects. For example, you can create an ArrayList of <code>Integer</code> elements (not <code>int</code>)</p>
+<h2 id="arraylist">ArrayList</h2>
+<p>Common Methods:</p>
+<ul>
+<li><code>add()</code>: Create space for and add the element at the end of the list.</li>
+<li><code>get()</code>: Returns the element at the specified list location known as the index. Indices start at 0.</li>
+<li><code>set()</code>: Returns the element at the specified list location known as the index. Indices start at 0.</li>
+<li><code>size()</code>: Returns the number of list elements.</li>
+</ul>
+<h2 id="output-formatting">Output Formatting</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Format specifier</th>
+<th style="text-align:center">Data type(s)</th>
+<th style="text-align:center">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">%c</td>
+<td style="text-align:center">char</td>
+<td style="text-align:center">Prints a single Unicode character</td>
+</tr>
+<tr>
+<td style="text-align:center">%d</td>
+<td style="text-align:center">int, long, short</td>
+<td style="text-align:center">Prints a decimal integer value.</td>
+</tr>
+<tr>
+<td style="text-align:center">%o</td>
+<td style="text-align:center">int, long, short</td>
+<td style="text-align:center">Prints an octal integer value.</td>
+</tr>
+<tr>
+<td style="text-align:center">%h</td>
+<td style="text-align:center">int, char, long, short</td>
+<td style="text-align:center">Prints a hexadecimal integer value.</td>
+</tr>
+<tr>
+<td style="text-align:center">%f</td>
+<td style="text-align:center">float, double</td>
+<td style="text-align:center">Prints a floating-point value.</td>
+</tr>
+<tr>
+<td style="text-align:center">%e</td>
+<td style="text-align:center">float, double</td>
+<td style="text-align:center">Prints a floating-point value in scientific notation.</td>
+</tr>
+<tr>
+<td style="text-align:center">%s</td>
+<td style="text-align:center">String</td>
+<td style="text-align:center">Prints the characters in a String variable or literal.</td>
+</tr>
+<tr>
+<td style="text-align:center">%%</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Prints the &ldquo;%&rdquo; character.</td>
+</tr>
+<tr>
+<td style="text-align:center">%n</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Prints the platform-specific new-line character.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Sub-specifier	Description	Example
+</span></span><span style="display:flex;"><span>width	Specifies the minimum number of characters to print. If the formatted value has more characters than the width, the value will not be truncated. If the formatted value has fewer characters than the width, the output will be padded with spaces (or 0&#39;s if the &#39;0&#39; flag is specified).	printf(&#34;Value: %7.2f&#34;, myFloat);
+</span></span><span style="display:flex;"><span>Value:   12.34
+</span></span><span style="display:flex;"><span>.precision	Specifies the number of digits to print following the decimal point. If the precision is not specified, a default precision of 6 is used.	printf(&#34;%.4f&#34;, myFloat);
+</span></span><span style="display:flex;"><span>12.3400
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>printf(&#34;%3.4e&#34;, myFloat);
+</span></span><span style="display:flex;"><span>1.2340e+01
+</span></span><span style="display:flex;"><span>flags	-: Left aligns the output given the specified width, padding the output with spaces.
+</span></span><span style="display:flex;"><span>+: Prints a preceding + sign for positive values. Negative numbers are always printed with the - sign.
+</span></span><span style="display:flex;"><span>0: Pads the output with 0&#39;s when the formatted value has fewer characters than the width.
+</span></span><span style="display:flex;"><span>space: Prints a preceding space for positive value.	printf(&#34;%+f&#34;, myFloat);
+</span></span><span style="display:flex;"><span>+12.340000
+</span></span><span style="display:flex;"><span>printf(&#34;%08.2f&#34;, myFloat);
+</span></span><span style="display:flex;"><span>00012.3
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>width	Specifies the minimum number of characters to print. If the formatted value has more characters than the width, the value will not be truncated. If the formatted value has fewer characters than the width, the output will be padded with spaces (or 0&#39;s if the &#39;0&#39; flag is specified).	printf(&#34;Value: %7d&#34;, myInt);
+</span></span><span style="display:flex;"><span>Value:     301
+</span></span><span style="display:flex;"><span>flags	-: Left aligns the output given the specified width, padding the output with spaces.
+</span></span><span style="display:flex;"><span>+: Print a preceding + sign for positive values. Negative numbers are always printed with the - sign.
+</span></span><span style="display:flex;"><span>0: Pads the output with 0&#39;s when the formatted value has fewer characters than the width.
+</span></span><span style="display:flex;"><span>space: Prints a preceding space for positive value.	printf(&#34;%+d&#34;, myInt);
+</span></span><span style="display:flex;"><span>+301
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>printf(&#34;%08d&#34;, myInt);
+</span></span><span style="display:flex;"><span>00000301
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>printf(&#34;%+08d&#34;, myInt);
+</span></span><span style="display:flex;"><span>+0000301
+</span></span></code></pre></div><h1 id="objects-and-classes-design">Objects and Classes: Design</h1>
+<h3 id="encapsulation"><em>Encapsulation</em></h3>
+<ul>
+<li>single class in charge of respective data/functionality. Self-governing, and implementation hidden from user</li>
+</ul>
+<h2 id="garbage-collection-in-inheritance">Garbage Collection in Inheritance</h2>
+<ul>
+<li>Local and formal released to garbage collecion</li>
+</ul>
+<h2 id="instance-data-vs-local-variable">Instance Data vs Local Variable</h2>
+<ul>
+<li>Instance Data Variables exist as long as the object does
+<ul>
+<li>Local variables are released for garbage collection for method runtime</li>
+</ul>
+</li>
+</ul>
+<h2 id="formal-vs-actual-parameter">Formal vs Actual Parameter</h2>
+<ul>
+<li>Formal is declared by method header with method scope, for external info</li>
+<li>Actual passed during invocation for sending info to a method</li>
+</ul>
+<h3 id="new"><code>new</code></h3>
+<ul>
+<li>allocates memory, executes constructor, and returns reference to object</li>
+</ul>
+<h3 id="null"><code>null</code></h3>
+<ul>
+<li>allowed as assignment to <em>Primitives</em></li>
+</ul>
+<blockquote>
+<h4 id="allowedallowed-operations">Allowed/!Allowed Operations</h4>
+<p>Compare with <code>==</code>. Can be short-circuiting as null-check.
+Cannot invoke methods on <code>null</code>.</p>
+</blockquote>
+<h3 id="tostring">toString()</h3>
+<ul>
+<li>String representation of object</li>
+</ul>
+<h3 id="hashcode">hashCode()</h3>
+<ul>
+<li>returns unique identifier for an object</li>
+</ul>
+<h2 id="primitives-review">Primitives Review</h2>
+<p>In Java, primitives are basic data types that represent the most fundamental values. They are built-in types provided by the Java language itself. Java has eight primitive types, which include:</p>
+<ul>
+<li><code>byte</code>:
+<ul>
+<li>A 1-byte integer type representing values from -128 to 127.</li>
+</ul>
+</li>
+<li><code>short</code>:
+<ul>
+<li>A 2-byte integer type representing values from -32,768 to 32,767.</li>
+</ul>
+</li>
+<li><code>int</code>:
+<ul>
+<li>A 4-byte integer type representing values from -2,147,483,648 to 2,147,483,647.</li>
+</ul>
+</li>
+<li><code>long</code>:
+<ul>
+<li>An 8-byte integer type representing larger integer values.</li>
+</ul>
+</li>
+<li><code>float</code>:
+<ul>
+<li>A 4-byte floating-point type representing single-precision decimal values.</li>
+</ul>
+</li>
+<li><code>double</code>:
+<ul>
+<li>An 8-byte floating-point type representing double-precision decimal values.</li>
+</ul>
+</li>
+<li><code>char</code>:
+<ul>
+<li>A 2-byte type representing a single character using the Unicode encoding scheme.</li>
+</ul>
+</li>
+<li><code>boolean</code>:
+<ul>
+<li>A 1-bit type representing true or false values.</li>
+</ul>
+</li>
+</ul>
+<h2 id="example-program">Example Program</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class myObject {
+</span></span><span style="display:flex;"><span>	private double myInstanceDataVar; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	public myConstructor(FormalParameter myData) {
+</span></span><span style="display:flex;"><span>    myInstanceDataVar = myData;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	public double myMethod(double myInput) {
+</span></span><span style="display:flex;"><span>    // example method
+</span></span><span style="display:flex;"><span>		thing = thing + myInput;
+</span></span><span style="display:flex;"><span>		return thing;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  public static void main(String[] args) {
+</span></span><span style="display:flex;"><span>    FormalParameter myActualParameter = new FormalParameter();
+</span></span><span style="display:flex;"><span>    myClassMethod(myActualParameter);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="inheritance-and-polymorphism">Inheritance and Polymorphism</h1>
+<h2 id="concepts-1">Concepts</h2>
+<ul>
+<li>Downcasting/Upcasting:
+<ul>
+<li>Casting an object down and up a hierarchy</li>
+<li><code>Animal myAnimal = new Dog()</code>
+<ul>
+<li>Dog is subclass of animal, therefore Dog is upacasted to Animal Animal</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="keywords">Keywords</h2>
+<ul>
+<li><code>final</code>: restricts Inheritance</li>
+</ul>
+<h2 id="inheritance">Inheritance</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Re-usability</th>
+<th style="text-align:center">Abstraction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Inheritance</td>
+<td style="text-align:center">Extending</td>
+<td style="text-align:center">Parent Classes</td>
+</tr>
+<tr>
+<td style="text-align:center">Composition</td>
+<td style="text-align:center">Using</td>
+<td style="text-align:center">Interfaces</td>
+</tr>
+</tbody>
+</table>
+<h3 id="design">Design</h3>
+<ol>
+<li>Always is-a</li>
+<li>Optimize Reuse&ndash;push methods high in the hierarchy</li>
+<li>Purposeful Overriding</li>
+<li>Encapsulation</li>
+<li>Override general Object methods (<code>toStirng</code>, <code>equals</code>)</li>
+<li>Optimize visibility modifiers&ndash;zero trust</li>
+</ol>
+<h2 id="polymorphism">Polymorphism</h2>
+<p>Treating different classes as objects of one superclass. Objects have declared and actual types. Utilizes <code>instanceof</code> and downcasting. Uses a single interface.</p>
+<p>There are two main types of polymorphism: compile-time polymorphism (<strong>overloading</strong>) and runtime polymorphism (<strong>overriding</strong>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class Animal {
+</span></span><span style="display:flex;"><span>    public void makeSound() {
+</span></span><span style="display:flex;"><span>        System.out.println(&#34;Animal makes a sound&#34;);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    // Overloading
+</span></span><span style="display:flex;"><span>    public int add(int a, int b) {
+</span></span><span style="display:flex;"><span>        return a + b;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    public double add(double a, double b) {
+</span></span><span style="display:flex;"><span>        return a + b;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>public class Dog extends Animal {
+</span></span><span style="display:flex;"><span>    @Override
+</span></span><span style="display:flex;"><span>    public void makeSound() {
+</span></span><span style="display:flex;"><span>        System.out.println(&#34;Dog barks&#34;);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="programming-and-common-errors">Programming and Common Errors</h2>
+<ul>
+<li><code>equals</code> Method header (Overriding <code>equals()</code>):</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public boolean Object(Employee e) {
+</span></span><span style="display:flex;"><span>// Should be type Object, not Employee i.e. (Object obj)
+</span></span><span style="display:flex;"><span>  if (obj instanceof Employee) {
+</span></span><span style="display:flex;"><span>    Employee otherEmployee = (Employee) obj; // Casting to type Employee
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="algorithmspostscs0algorithms"><a href="./posts/cs.0.algorithms">Algorithms</a></h1>
+<h2 id="o-notation">O-Notation</h2>
+<p><a href="./posts/cs.algorithm-analysis">O-Notation notes</a></p>
+<h2 id="abstract-data-types-adt">Abstract Data Types (ADT)</h2>
+<p><strong>Stacks</strong> are a Last In First Out (<strong>LIFO</strong>) ADT.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Description</th>
+<th>Example starting with stack: 99, 77 (top is 99).</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Push(stack, x)</td>
+<td>Inserts x on top of stack</td>
+<td>Push(stack, 44). Stack: 44, 99, 77</td>
+</tr>
+<tr>
+<td>Pop(stack)</td>
+<td>Returns and removes item at top of stack</td>
+<td>Pop(stack) returns: 99. Stack: 77</td>
+</tr>
+<tr>
+<td>Peek(stack)</td>
+<td>Returns but does not remove item at top</td>
+<td>Peek(stack) returns 99. Stack still: 99, 77</td>
+</tr>
+<tr>
+<td>IsEmpty(stack)</td>
+<td>Returns true if stack has no items</td>
+<td>IsEmpty(stack) returns false.</td>
+</tr>
+<tr>
+<td>GetLength(stack)</td>
+<td>Returns the number of items in the stack</td>
+<td>GetLength(stack) returns 2.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search-algos">Search Algos</h2>
+<h3 id="linear-search">Linear Search</h3>
+<p>Sequentially evaluating each element. Pseudocode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public static int linearSearch {
+</span></span><span style="display:flex;"><span>  for (start; end; increment) {
+</span></span><span style="display:flex;"><span>    if (element == target) {
+</span></span><span style="display:flex;"><span>      return element;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  return -1; // not found
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="binary-search-divide-and-conquer">Binary Search (Divide and Conquer)</h3>
+<p>Utilizes sorted inputs and divides the list in half repeatedly. For $N$ elements, max steps to reduce searches pace is $[log_{2}N] + 1$.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public static int binarySearch {
+</span></span><span style="display:flex;"><span>  int left = beginning;
+</span></span><span style="display:flex;"><span>  int right = end;
+</span></span><span style="display:flex;"><span>  while (left &lt;= right) {
+</span></span><span style="display:flex;"><span>    // take middle value
+</span></span><span style="display:flex;"><span>    // if middle is target, FOUND!
+</span></span><span style="display:flex;"><span>    // compare and either:
+</span></span><span style="display:flex;"><span>    // set left and right to left partition
+</span></span><span style="display:flex;"><span>    // left and right to right partition
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  return -1
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="heading"></h2>
+<h3 id="avl-balanced-tree-adelson-velsky-and-landis">AVL Balanced Tree (Adelson-Velsky and Landis)</h3>
+<p>An AVL tree is a BST with a height balance property and specific operations to rebalance the tree when a node is inserted or removed. This section discusses the balance property; another section discusses the operations. A BST is height balanced if for any node, the heights of the node&rsquo;s left and right subtrees differ by only 0 or 1. Guarantees $O(log\ n)$ search, insertion, and delete.</p>
+<h1 id="data-structures">Data Structures</h1>
+<h2 id="hash-tables">Hash Tables</h2>
+<p>$O(1)$ time complexity.</p>
+<h3 id="hash-function">Hash Function</h3>
+<p>index = key % table_size</p>
+<h4 id="collisions">Collisions</h4>
+<p>Separate Chaining</p>
+<ul>
+<li>Index points to a linked list for same-index values
+Open Addressing</li>
+<li>Look for next available slot (linear/quadratic probing or double hashing)</li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-science/">computer-science</a>
+<a href="/rover/categories/education/">education</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/cis/">cis</a>
+<a href="/rover/tags/computer-science/">computer-science</a>
+<a href="/rover/tags/java/">java</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

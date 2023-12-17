@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Design and Analysis of Algorithms | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="Algorithms">
+<meta name="description" content="MIT 6.046J 2015">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Design and Analysis of Algorithms" />
+<meta property="og:description" content="MIT 6.046J 2015" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/cs.0.algorithms/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Design and Analysis of Algorithms"/>
+<meta name="twitter:description" content="MIT 6.046J 2015"/>
+
+<meta itemprop="name" content="Design and Analysis of Algorithms">
+<meta itemprop="description" content="MIT 6.046J 2015">
+
+<meta itemprop="wordCount" content="2235">
+<meta itemprop="keywords" content="Algorithms," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">Design and Analysis of Algorithms</h1>
+</div>
+</div>
+<div class="markdown">
+<p>MIT 6.046J Design and Analysis of Algorithms, Spring 2015 <a href="http://ocw.mit.edu/6-046JS15" target="_blank">here</a></p>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#definitions">Definitions</a>
+<ul>
+<li><a href="#time-complexity-tc">Time Complexity (TC)</a></li>
+<li><a href="#space-complexity-sc">Space Complexity (SC)</a></li>
+</ul>
+</li>
+<li><a href="#algorithm-runtime-complexity">Algorithm Runtime Complexity</a>
+<ul>
+<li><a href="#constant-time-o1">Constant Time $O(1)$</a></li>
+<li><a href="#upper-bound-lower-bound">Upper Bound, Lower Bound</a></li>
+<li><a href="#search">Search</a>
+<ul>
+<li><a href="#binary-search">Binary Search</a></li>
+<li><a href="#depth-first-search">Depth First Search:</a></li>
+<li><a href="#breadth-first-search">Breadth First Search:</a></li>
+</ul>
+</li>
+<li><a href="#sort">Sort</a>
+<ul>
+<li><a href="#selection-sort">Selection Sort</a></li>
+<li><a href="#insertion-sort">Insertion Sort</a></li>
+<li><a href="#shell-sort">Shell Sort</a></li>
+<li><a href="#quicksort">Quicksort</a></li>
+<li><a href="#merge-sort">Merge sort:</a></li>
+<li><a href="#radix-sort">Radix Sort</a></li>
+<li><a href="#topological-sort">Topological Sort</a></li>
+</ul>
+</li>
+<li><a href="#data-structures">Data Structures</a>
+<ul>
+<li><a href="#binary-tree">Binary tree</a></li>
+<li><a href="#heap">Heap:</a></li>
+<li><a href="#edges-and-vertices">Edges and Vertices</a>
+<ul>
+<li><a href="#hash-map">Hash Map</a></li>
+<li><a href="#references-differences-between-time-complexity-and-space-complexity">References: Differences between time complexity and space complexity?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#notable-algorithms">Notable Algorithms</a>
+<ul>
+<li><a href="#dijkstras-algorithm">Dijkstra’s Algorithm</a>
+<ul>
+<li><a href="#mit-6046j-subtopic-overview">MIT 6.046J Subtopic Overview:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#design-and-analysis-of-algorithms-mit-6046j-2015">Design and Analysis of Algorithms, MIT 6.046J 2015</a>
+<ul>
+<li><a href="#notes-summary">Notes Summary</a></li>
+<li><a href="#amortized-analysis">Amortized Analysis</a>
+- <a href="#1-course-overview-interval-scheduling">1. Course Overview, Interval Scheduling</a></li>
+<li><a href="#1-course-overview-interval-scheduling-1">1. Course Overview, Interval Scheduling</a>
+<ul>
+<li><a href="#theme-of-lecture">Theme of Lecture:</a></li>
+<li><a href="#weighted-interval-scheduling">Weighted Interval Scheduling</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="definitions">Definitions</h1>
+<h2 id="time-complexity-tc">Time Complexity (TC)</h2>
+<p>Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
+$$
+f(l) = t
+$$</p>
+<p>or more commonly:
+$$
+O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! &hellip;
+$$</p>
+<p>Where $O(x)$ denotes O-notation, or &ldquo;Order&rdquo; notation.</p>
+<p>A time-complexity analysis will require evaluating run time on each step of a program.</p>
+<blockquote>
+<p>Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.</p>
+</blockquote>
+<h2 id="space-complexity-sc">Space Complexity (SC)</h2>
+<p>While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.</p>
+<p>A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.</p>
+<blockquote>
+<p>Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.</p>
+</blockquote>
+<h1 id="algorithm-runtime-complexity">Algorithm Runtime Complexity</h1>
+<h2 id="constant-time-o1">Constant Time $O(1)$</h2>
+<p>Same time regardless of input size.</p>
+<p>Generally constant operations</p>
+<ul>
+<li>Arithmetic of fixed size/floating point values</li>
+<li>Assignment of fixed size data value (reference, pointer)</li>
+<li>Comparison of two fixed values</li>
+<li>Read or write an arr element</li>
+</ul>
+<h2 id="upper-bound-lower-bound">Upper Bound, Lower Bound</h2>
+<p>Analyzing upper and lower bounds render insights into algorithm performance.</p>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O notation</td>
+<td>Provides a growth rate for an algorithm&rsquo;s upper bound.</td>
+</tr>
+<tr>
+<td>Ω notation</td>
+<td>Provides a growth rate for an algorithm&rsquo;s lower bound.</td>
+</tr>
+<tr>
+<td>Θ notation</td>
+<td>Provides a growth rate that is both an upper and lower bound.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="search">Search</h2>
+<h3 id="binary-search">Binary Search</h3>
+<ul>
+<li>Check middle element and search from middle element going left or right, similar to math approximation algorithm when finding root values.</li>
+</ul>
+<h3 id="depth-first-search">Depth First Search:</h3>
+<p>iterates vertically through first branch to the end, then the other leaf nodes</p>
+<ul>
+<li>Stack: a collection that supports push (add to end) and pop (remove from end)
+<ul>
+<li>Last in First Out</li>
+<li>Recursion
+<ul>
+<li>if Recursion exceeds amount of depth, you get stack overflow</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="breadth-first-search">Breadth First Search:</h3>
+<p>iterates through horizontal branches and progresses downward</p>
+<ul>
+<li>Queue: First in First Out</li>
+</ul>
+<h2 id="sort">Sort</h2>
+<h3 id="selection-sort">Selection Sort</h3>
+<p>A sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part.</p>
+<ul>
+<li>$O(n^2)$</li>
+</ul>
+<h3 id="insertion-sort">Insertion Sort</h3>
+<p>is a sorting algorithm that treats the input as two parts, a sorted part and an unsorted part, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part.</p>
+<p>The algorithm iterates over the data like so:
+$$
+N + (N-1) + (N-1) + &hellip; + 2
+= N(N+1)/2 - 2 
+\ = 1/2(N^2 + N) - 2
+$$</p>
+<ul>
+<li>The time complexity reduces to $O(n^2)$</li>
+</ul>
+<h3 id="shell-sort">Shell Sort</h3>
+<p>A sorting algorithm that treats the input as a collection of interleaved lists, and sorts each list individually with a variant of the insertion sort algorithm. Shell sort uses gap values to determine the number of interleaved lists. A gap value is a positive integer representing the distance between elements in an interleaved list. For each interleaved list, if an element is at index i, the next element is at index i + gap value.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mainArray = [ 79, 13, 91, 67, 65, 98 ];
+</span></span><span style="display:flex;"><span>gapArray = [ 3, 2, 1 ];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Shell sort of the original array with a gap value of 3 sorts 3 interleaved arrays:
+</span></span><span style="display:flex;"><span>[ 79, 67 ] -&gt; [ 67, 79 ]
+</span></span><span style="display:flex;"><span>[ 13, 65 ] -&gt; [ 13, 65 ]
+</span></span><span style="display:flex;"><span>[ 91, 98 ] -&gt; [ 91, 98 ]
+</span></span><span style="display:flex;"><span>Resulting array: [ 67, 13, 91, 79, 65, 98 ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Shell sort of the resulting array with a gap value of 2 sorts 2 interleaved arrays:
+</span></span><span style="display:flex;"><span>[ 67, 91, 65 ] -&gt; [ 65, 67, 91 ]
+</span></span><span style="display:flex;"><span>[ 13, 79, 98 ] -&gt; [ 13, 79, 98 ]
+</span></span><span style="display:flex;"><span>Resulting array: [ 65, 13, 67, 79, 91, 98 ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Shell sort of the resulting array with a gap value of 1 is a regular insertion sort and gives the sorted array: [ 13, 65, 67, 79, 91, 98 ]
+</span></span></code></pre></div><p>Shell sort begins by choosing a gap value K and sorting K interleaved lists in place. Shell sort finishes by performing a standard insertion sort on the entire array. Because the interleaved parts have already been sorted, smaller elements will be close to the array&rsquo;s beginning and larger elements towards the end. Insertion sort can then quickly sort the nearly-sorted array.</p>
+<p>Any positive integer gap value can be chosen. In the case that the array size is not evenly divisible by the gap value, some interleaved lists will have fewer items than others.</p>
+<p>The algorithm iterates over the data like so:
+$$</p>
+<p>$$</p>
+<h3 id="quicksort">Quicksort</h3>
+<p>A sorting algorithm that repeatedly partitions the input into low and high parts (each part unsorted), and then recursively sorts each of those parts. To partition the input, quicksort chooses a pivot to divide the data into low and high parts. The pivot can be any value within the array being sorted, commonly the value of the middle array element. Ex: For the list (4, 34, 10, 25, 1), the middle element is located at index 2 (the middle of indices [0, 4]) and has a value of 10.</p>
+<p>Once the pivot is chosen, the quicksort algorithm divides the array into two parts, referred to as the low partition and the high partition. All values in the low partition are less than or equal to the pivot value. All values in the high partition are greater than or equal to the pivot value. The values in each partition are not necessarily sorted. Ex: Partitioning (4, 34, 10, 25, 1) with a pivot value of 10 results in a low partition of (4, 1, 10) and a high partition of (25, 34). Values equal to the pivot may appear in either or both of the partitions.</p>
+<h3 id="merge-sort">Merge sort:</h3>
+<p>A sorting algorithm that divides a list into two halves, recursively sorts each half, and then merges the sorted halves to produce a sorted list. The recursive partitioning continues until a list of 1 element is reached, as a list of 1 element is already sorted</p>
+<ul>
+<li>
+<p>splits collection into subcollections that can be sorted in constant time</p>
+</li>
+<li>
+<p>merge $log(n)$ sublists</p>
+</li>
+<li>
+<p>cost of merging 2 sorted lists $O(n)$</p>
+</li>
+<li>
+<p>merge sort runs $n*log(n) = O(n\ log(n))$</p>
+</li>
+<li>
+<p><code>array</code>: continuous memory space</p>
+</li>
+<li>
+<p><code>linked list</code>: packed data into nodes that point to another node, null is end of the list</p>
+<ul>
+<li>appending to dynamically sized array costs $O(1)$ average time complexity</li>
+</ul>
+</li>
+</ul>
+<h3 id="radix-sort">Radix Sort</h3>
+<p>Radix sort is a sorting algorithm designed specifically for integers. The algorithm makes use of a concept called buckets and is a type of bucket sort.</p>
+<p>Any array of integer values can be subdivided into buckets by using the integer values&rsquo; digits. A bucket is a collection of integer values that all share a particular digit value. Ex: Values 57, 97, 77, and 17 all have a 7 as the 1&rsquo;s digit, and would all be placed into bucket 7 when subdividing by the 1&rsquo;s digit.</p>
+<h3 id="topological-sort">Topological Sort</h3>
+<h2 id="data-structures">Data Structures</h2>
+<h3 id="binary-tree">Binary tree</h3>
+<ul>
+<li>node with no children is called leaf node</li>
+<li>Binary Search Tree: Value of the key of the left sub-tree is less than the value of its parent node&rsquo;s key, while right is greater or equal to the value of parent&rsquo;s (root) node key
+<ul>
+<li>$O(H)$ where H is height of the tree, for operations of search, insert, and delete</li>
+<li>Red/Black trees: maintain features to accomplish $O(log(n))$</li>
+</ul>
+</li>
+</ul>
+<h3 id="heap">Heap:</h3>
+<p>A tree based data structure where parent nodes have &gt;= priority as children nodes</p>
+<ul>
+<li>Priority Queue: abstract data type where elements have priority and higher priority elements are served first (common in heap)</li>
+<li>Min heap, max heap</li>
+<li>Heap Insertion/Deletion costs $O(log(n))$</li>
+<li>Retrieving highest priority costs $O(1)$</li>
+<li>building heap costs $O(n)$</li>
+</ul>
+<h3 id="edges-and-vertices">Edges and Vertices</h3>
+<ul>
+<li>Edges are relationships between vertices</li>
+<li>ex. Google Maps
+<ul>
+<li>vertices of 3 places, where distance between a home node to a destination is 8 (home to secondary) + 8 (secondary to destination) on one end and a direct edge of 20 (home to destination) on the other
+<ul>
+<li>BFS gives shortest path by vertices, not by weight (length), so use Dijkstra&rsquo;s Algorithm</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="hash-map">Hash Map</h4>
+<ul>
+<li>Data structure built on top of an array optimized to store key-value pairs</li>
+<li>Can retrieve delete and store data in $O(1)$ (but not strictly)</li>
+<li>Hash function: takes key and returns hash code
+<ul>
+<li>given same key, should return same hash code</li>
+<li>ex. dict (python), or object (js)</li>
+</ul>
+</li>
+</ul>
+<h4 id="references-differences-between-time-complexity-and-space-complexityhttpsstackoverflowcomquestions18686121differences-between-time-complexity-and-space-complexitytexttime20complexity20deals20with20findingchange20in20the20input20size">References: <a href="https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size." target="_blank">Differences between time complexity and space complexity?</a></h4>
+<h1 id="notable-algorithms">Notable Algorithms</h1>
+<h2 id="dijkstras-algorithm">Dijkstra&rsquo;s Algorithm</h2>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=GazC3A4OQTE" target="_blank">Computerphile - Dijikstra’s Algorithm</a></p>
+</li>
+<li>
+<p>A path-finding algorithm, useful for routing</p>
+</li>
+<li>
+<p>Analogy: Roads</p>
+<ul>
+<li>Smaller = better</li>
+<li>How do you find a route from point A to B? (S to E)</li>
+<li>How do you know this route is the shortest path?</li>
+</ul>
+</li>
+<li>
+<p>Analogous to brute-forcing, storing paths in priority queue where shortest path to a specific node is pushed up a queue</p>
+<ol>
+<li>let initial node be 0, and distance of unvisited nodes in some unvisited set be infinity</li>
+<li>tentative distance is length of the shortest path discovered so far between generic node and starting node
+<ul>
+<li>set initial node as current</li>
+</ul>
+</li>
+<li>On current node, visit unvisited neighboring nodes to current and calculate tentative distance through current.
+<ul>
+<li>assign smallest tentative distance to currently assigned value for current</li>
+</ul>
+</li>
+<li>after considering unvisited nodes, mark current nodes, remove from unvisited set</li>
+<li>if destination has been visited, or smallest tentative distance among unvisited nodes is infinity, return finished.</li>
+<li>else select unvisited node that is marked with smallest tentative distance and set it as new current node, return to step 3.</li>
+</ol>
+</li>
+</ul>
+<h3 id="mit-6046j-subtopic-overview">MIT 6.046J Subtopic Overview:</h3>
+<ul>
+<li>Divide and Conquer</li>
+<li>Optimization: Greedy, Dynamic programming</li>
+<li>Network Flow</li>
+<li>Intractibility &ndash; approximation</li>
+<li>Distributed Algorithmns Plan</li>
+<li>Cryptography</li>
+</ul>
+<h1 id="design-and-analysis-of-algorithms-mit-6046j-2015">Design and Analysis of Algorithms, MIT 6.046J 2015</h1>
+<h2 id="notes-summary">Notes Summary</h2>
+<h2 id="amortized-analysis">Amortized Analysis</h2>
+<p>In computer science and algorithms, amortized analysis is a technique used to estimate the average time complexity of an algorithm over a sequence of operations, rather than the worst-case complexity of individual operations</p>
+<h5 id="1-course-overview-interval-scheduling">1. Course Overview, Interval Scheduling</h5>
+<p><code>P vs NP: class of problems solvable in polynomial time O(n^k) vs non-deterministic polynomial time, which is verifiable in poly. time.</code> Claims:
+1. Greedy algorithm produces a list of intervals s.t. starts and finishes are chronological
+2. Given a list of Intervals L, greedy algorithms with earliest finish time produces k* intervals where k* is maximum
+- Conclusion: earliest finish time is mathematically the most optimal algorithm</p>
+<h2 id="1-course-overview-interval-scheduling-1">1. Course Overview, Interval Scheduling</h2>
+<h3 id="theme-of-lecture">Theme of Lecture:</h3>
+<ul>
+<li>similar problems can have different complexity</li>
+<li>$P$: class of problems solvable in polynomial time $O(n^k)$ for some constant $k$.
+<ul>
+<li>Shortest-path: $O(v^2)$, for $v = vertices$ in graph</li>
+</ul>
+</li>
+<li>$NP$: Non-deterministic polynomial time. Class of probs. solution is verifiable in polynomial time.
+<ul>
+<li>Hamiltonian cycle: given a directed graph, find a simple cycle that contain each vertex in $V$</li>
+</ul>
+</li>
+<li>$NP-complete$: problem is in $NP$ and is as hard as any problem in $NP$.</li>
+<li>Given requests $1, 2, &hellip;, i, j, &hellip;, n,$ with $s(i)$ being start time, $f(i)$ finishing time, $s(i) &lt; f(i)$</li>
+<li>Greedy Algorithm: a myopic algorithm that processes inputs one piece at a time.
+<ul>
+<li>Greedy Interval Scheduling: use a simple rule to request $i$, reject incompatible to $i$, and repeat until process is done
+<ul>
+<li>$min(s(i))$? longest early segment&hellip; bad</li>
+<li>$min(f(i) - s(i))$? smallest segment.. bad</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Claim 1: Greedy algo outputs a list of intervals $&lt;s(i_1), f(i_1)&gt;, &hellip; s.t. s(i_1) &lt; f(i_1) &lt;= s(i_2) &hellip;$
+<ul>
+<li>Proof: by contradiction. if finish of &lsquo;$j$&rsquo; is greater than start if &lsquo;$j+1$&rsquo;, it contradicts step 2 of algo.</li>
+</ul>
+</li>
+<li>Claim 2: Given list of intervals $L$, greedy algorithm with earliest finish time produces $k^<em>$ intervals where $k^</em>$ is optimal
+<ul>
+<li>Proof: Induction on $k^<em>$. $k^</em>=1$, then suppose it holds true for $k^<em>$, apply inductive step for $k^</em> + 1$ intervals.
+$$S*[1, 2, &hellip;, k* + 1] = &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_(k*+1)), f(j_(k*+1))&gt;$$
+Say for some generic $k$, 
+$$S[1, 2, &hellip;, k] = &lt;s(i_1), f(i_1)&gt;, &hellip;, &lt;s(i_k), f(i_k)&gt;$$
+By construction we know $f(i_1) &lt;= f(j_1)$ since algo picks earliest finish time. Construct schedule 
+$$S^{<strong>} = &lt;s(i_1), f(i_1)&gt;, &lt;s(j_1), f(j_1)&gt;, &hellip;, &lt;s(j_k*+1), f(j_k*+1)&gt;$$
+Then $S^{</strong>}$ is optimal due to being length $k^* + 1$. Define $L&rsquo;$ s.t. $s(i) &gt;= f(i_1)$. Since $S^{<strong>}$ is optimal for $L$, $S^{</strong>}[2, 3, &hellip;, k* + 1]$ is optimal for $L&rsquo;$, implying optimal schedule for $L&rsquo;$ has $k*$ size. Hence, $k - 1 = k*$, implying $S[1, &hellip;, k]$ is optimal.</li>
+</ul>
+</li>
+</ul>
+<h3 id="weighted-interval-scheduling">Weighted Interval Scheduling</h3>
+<ul>
+<li>Each request $i$ has weight $w(i)$. Schedule subset of requests that are non-overlapping with maximum weight.
+<ul>
+<li>A key observation here is that the greedy algorithm no longer works.</li>
+</ul>
+</li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-science/">computer-science</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/algorithms/">algorithms</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

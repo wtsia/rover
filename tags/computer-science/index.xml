@@ -11,18 +11,18 @@
 		<atom:link href="https://wtsia.github.io/rover/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>UNIX</title>
-			<link>https://wtsia.github.io/rover/posts/unix/</link>
+			<link>https://wtsia.github.io/rover/posts/linux.unix/</link>
 			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/unix/</guid>
+			<guid>https://wtsia.github.io/rover/posts/linux.unix/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Object Oriented Programming</title>
-			<link>https://wtsia.github.io/rover/posts/objectorientedprogjava/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.java-oop/</link>
 			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/objectorientedprogjava/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.java-oop/</guid>
 			<description>
 			Notes on Object Oriented Programming: Java
 			</description>

@@ -11,9 +11,9 @@
 		<atom:link href="https://wtsia.github.io/rover/tags/data-structures/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Computer Science Notes</title>
-			<link>https://wtsia.github.io/rover/posts/csnotes/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.main_notes/</link>
 			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/csnotes/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.main_notes/</guid>
 			<description>
 			Notes on Data Structures, Algorithms, and other broad topics in computer science
 			</description>

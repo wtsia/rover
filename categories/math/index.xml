@@ -11,18 +11,18 @@
 		<atom:link href="https://wtsia.github.io/rover/categories/math/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>Learning Math</title>
-			<link>https://wtsia.github.io/rover/posts/learningmath/</link>
+			<link>https://wtsia.github.io/rover/posts/math.learningmath/</link>
 			<pubDate>Tue, 10 May 2022 01:26:45 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/learningmath/</guid>
+			<guid>https://wtsia.github.io/rover/posts/math.learningmath/</guid>
 			<description>
 			Post detailing how to learn math!
 			</description>
 		</item>
 		<item>
 			<title>Trigonometry</title>
-			<link>https://wtsia.github.io/rover/posts/trigonometry/</link>
+			<link>https://wtsia.github.io/rover/posts/math.trigonometry/</link>
 			<pubDate>Tue, 10 May 2022 01:18:00 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/trigonometry/</guid>
+			<guid>https://wtsia.github.io/rover/posts/math.trigonometry/</guid>
 			<description>
 			Reviewing Trigonometry Concepts
 			</description>

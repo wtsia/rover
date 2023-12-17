@@ -7,292 +7,418 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>Â© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Tue, 30 May 2023 14:36:42 -0700</lastBuildDate>
+		<lastBuildDate>Sun, 12 Nov 2023 14:59:40 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/index.xml" rel="self" type="application/rss+xml" />
 		<item>
+			<title>Nvim</title>
+			<link>https://wtsia.github.io/rover/posts/cs.nvim/</link>
+			<pubDate>Sun, 12 Nov 2023 14:59:40 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.nvim/</guid>
+			<description>
+			Notes on Cs.nvim
+			</description>
+		</item>
+		<item>
+			<title>Leetcode - Hard</title>
+			<link>https://wtsia.github.io/rover/posts/cs.leetcode.hard/</link>
+			<pubDate>Sat, 04 Nov 2023 02:35:57 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.leetcode.hard/</guid>
+			<description>
+			Notes on Cs.leetcode.hard
+			</description>
+		</item>
+		<item>
+			<title>Leetcode - Medium</title>
+			<link>https://wtsia.github.io/rover/posts/cs.leetcode.medium/</link>
+			<pubDate>Sat, 04 Nov 2023 02:35:51 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.leetcode.medium/</guid>
+			<description>
+			Notes on Cs.leetcode.medium
+			</description>
+		</item>
+		<item>
+			<title>Leetcode - Easy</title>
+			<link>https://wtsia.github.io/rover/posts/cs.leetcode.easy/</link>
+			<pubDate>Sat, 04 Nov 2023 02:35:42 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.leetcode.easy/</guid>
+			<description>
+			Notes on Cs.leetcode.easy
+			</description>
+		</item>
+		<item>
+			<title>Java Skill Quiz</title>
+			<link>https://wtsia.github.io/rover/posts/cs.java-skill-quiz/</link>
+			<pubDate>Sat, 30 Sep 2023 00:02:04 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.java-skill-quiz/</guid>
+			<description>
+			Notes on Cs.java Skill Quiz
+			</description>
+		</item>
+		<item>
+			<title>Javascript</title>
+			<link>https://wtsia.github.io/rover/posts/cs.javascript/</link>
+			<pubDate>Fri, 29 Sep 2023 23:31:11 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.javascript/</guid>
+			<description>
+			Notes on Javascript
+			</description>
+		</item>
+		<item>
+			<title>API Product Manager</title>
+			<link>https://wtsia.github.io/rover/posts/cs.api-product-manager/</link>
+			<pubDate>Wed, 20 Sep 2023 23:57:12 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.api-product-manager/</guid>
+			<description>
+			Notes on API Product Manager
+			</description>
+		</item>
+		<item>
+			<title>API Security Architect</title>
+			<link>https://wtsia.github.io/rover/posts/cs.api-security-architect/</link>
+			<pubDate>Wed, 20 Sep 2023 23:56:49 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.api-security-architect/</guid>
+			<description>
+			Notes on API Security Architect
+			</description>
+		</item>
+		<item>
+			<title>Computer_science.sierpenski_triangle</title>
+			<link>https://wtsia.github.io/rover/posts/cs.sierpenski_triangle/</link>
+			<pubDate>Sat, 16 Sep 2023 19:47:08 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.sierpenski_triangle/</guid>
+			<description>
+			Notes on Computer_science.sierpenski_triangle
+			</description>
+		</item>
+		<item>
+			<title>ISC2 CC</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.isc2-cc/</link>
+			<pubDate>Thu, 10 Aug 2023 17:50:41 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.isc2-cc/</guid>
+			<description>
+			Notes on ISC2 CC
+			</description>
+		</item>
+		<item>
+			<title>CCNA</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.ccna/</link>
+			<pubDate>Thu, 10 Aug 2023 17:50:11 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.ccna/</guid>
+			<description>
+			Notes on CCNA
+			</description>
+		</item>
+		<item>
+			<title>Sec&#43;</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.sec&#43;/</link>
+			<pubDate>Fri, 21 Jul 2023 04:40:30 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.sec&#43;/</guid>
+			<description>
+			Notes on Sec&#43;
+			</description>
+		</item>
+		<item>
+			<title>Git</title>
+			<link>https://wtsia.github.io/rover/posts/swe.git/</link>
+			<pubDate>Sun, 16 Jul 2023 19:47:45 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/swe.git/</guid>
+			<description>
+			Notes on Git
+			</description>
+		</item>
+		<item>
+			<title>Dockerfile</title>
+			<link>https://wtsia.github.io/rover/posts/swe.dockerfile-info/</link>
+			<pubDate>Sun, 18 Jun 2023 00:50:28 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/swe.dockerfile-info/</guid>
+			<description>
+			Notes on Dockerfile
+			</description>
+		</item>
+		<item>
 			<title>API Design</title>
-			<link>https://wtsia.github.io/rover/posts/api-design/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.api-design/</link>
 			<pubDate>Tue, 30 May 2023 14:36:42 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/api-design/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.api-design/</guid>
 			<description>
 			Notes on API Design
 			</description>
 		</item>
 		<item>
 			<title>C Programming</title>
-			<link>https://wtsia.github.io/rover/posts/c-programming/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.c-programming/</link>
 			<pubDate>Mon, 23 Jan 2023 23:09:27 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/c-programming/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.c-programming/</guid>
 			<description>
 			Notes on C Programming
 			</description>
 		</item>
 		<item>
 			<title>Computer Organization Systems Programming</title>
-			<link>https://wtsia.github.io/rover/posts/computer-organization-systems-prog/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</link>
 			<pubDate>Mon, 23 Jan 2023 00:30:07 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/computer-organization-systems-prog/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</guid>
 			<description>
 			Notes on Computer Organization and Systems Programming
 			</description>
 		</item>
 		<item>
 			<title>Relational Databases</title>
-			<link>https://wtsia.github.io/rover/posts/relational-databases/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.relational-databases/</link>
 			<pubDate>Tue, 17 Jan 2023 19:29:32 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/relational-databases/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.relational-databases/</guid>
 			<description>
 			Notes on Relational Databases
 			</description>
 		</item>
 		<item>
 			<title>Arithmetic Proofs</title>
-			<link>https://wtsia.github.io/rover/posts/arithmetic-proofs/</link>
+			<link>https://wtsia.github.io/rover/posts/math.arithmetic-proofs/</link>
 			<pubDate>Tue, 10 Jan 2023 11:52:33 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/arithmetic-proofs/</guid>
+			<guid>https://wtsia.github.io/rover/posts/math.arithmetic-proofs/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Containerization</title>
-			<link>https://wtsia.github.io/rover/posts/containerization/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.container-vm/</link>
 			<pubDate>Sat, 31 Dec 2022 22:49:03 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/containerization/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.container-vm/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Aws Cloud Practitioner 2023</title>
-			<link>https://wtsia.github.io/rover/posts/aws-cloud-practitioner-2023/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.aws-cloud-practitioner-2023/</link>
 			<pubDate>Fri, 30 Dec 2022 16:09:58 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/aws-cloud-practitioner-2023/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.aws-cloud-practitioner-2023/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>React Framework</title>
-			<link>https://wtsia.github.io/rover/posts/react-framework/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.react-framework/</link>
 			<pubDate>Fri, 30 Dec 2022 02:07:08 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/react-framework/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.react-framework/</guid>
 			<description>
 			Notes on React
 			</description>
 		</item>
 		<item>
 			<title>Refactoring Exercises</title>
-			<link>https://wtsia.github.io/rover/posts/refactoring-exercises/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.refactoring-exercises/</link>
 			<pubDate>Tue, 27 Sep 2022 13:34:38 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/refactoring-exercises/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.refactoring-exercises/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Tips for an Ubuntu Server</title>
-			<link>https://wtsia.github.io/rover/posts/ubuntu-server/</link>
+			<link>https://wtsia.github.io/rover/posts/linux.ubuntu-server/</link>
 			<pubDate>Mon, 26 Sep 2022 21:24:43 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/ubuntu-server/</guid>
+			<guid>https://wtsia.github.io/rover/posts/linux.ubuntu-server/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Computer Science Notes</title>
-			<link>https://wtsia.github.io/rover/posts/csnotes/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.main_notes/</link>
 			<pubDate>Sun, 28 Aug 2022 16:52:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/csnotes/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.main_notes/</guid>
 			<description>
 			Notes on Data Structures, Algorithms, and other broad topics in computer science
 			</description>
 		</item>
 		<item>
 			<title>Coding Challenges</title>
-			<link>https://wtsia.github.io/rover/posts/00_codingchallenges/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.codingchallenges/</link>
 			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_codingchallenges/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.codingchallenges/</guid>
 			<description>
 			A documentation of my attempts at coding problems
 			</description>
 		</item>
 		<item>
 			<title>Electricity, Magnetism, AC/DC Circuits</title>
-			<link>https://wtsia.github.io/rover/posts/physicselectricitymagnitism/</link>
+			<link>https://wtsia.github.io/rover/posts/phys.physicselectricitymagnitism/</link>
 			<pubDate>Mon, 22 Aug 2022 01:39:09 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/physicselectricitymagnitism/</guid>
+			<guid>https://wtsia.github.io/rover/posts/phys.physicselectricitymagnitism/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Intrapersonal Communication</title>
-			<link>https://wtsia.github.io/rover/posts/intrapersonalcommunication/</link>
+			<link>https://wtsia.github.io/rover/posts/study.intrapersonalcommunication/</link>
 			<pubDate>Mon, 22 Aug 2022 00:17:25 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/intrapersonalcommunication/</guid>
+			<guid>https://wtsia.github.io/rover/posts/study.intrapersonalcommunication/</guid>
 			<description>
 			Notes on Looking Out Looking In, 15th Edition
 			</description>
 		</item>
 		<item>
 			<title>UNIX</title>
-			<link>https://wtsia.github.io/rover/posts/unix/</link>
+			<link>https://wtsia.github.io/rover/posts/linux.unix/</link>
 			<pubDate>Thu, 18 Aug 2022 14:01:59 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/unix/</guid>
+			<guid>https://wtsia.github.io/rover/posts/linux.unix/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Computational Methods: MATLAB</title>
-			<link>https://wtsia.github.io/rover/posts/computationalmethods/</link>
+			<link>https://wtsia.github.io/rover/posts/matlab.computationalmethods/</link>
 			<pubDate>Wed, 17 Aug 2022 15:31:42 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/computationalmethods/</guid>
+			<guid>https://wtsia.github.io/rover/posts/matlab.computationalmethods/</guid>
 			<description>
 			Notes on using MATLAB for scientific problems.
 			</description>
 		</item>
 		<item>
 			<title>Object Oriented Programming</title>
-			<link>https://wtsia.github.io/rover/posts/objectorientedprogjava/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.java-oop/</link>
 			<pubDate>Wed, 17 Aug 2022 01:19:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/objectorientedprogjava/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.java-oop/</guid>
 			<description>
 			Notes on Object Oriented Programming: Java
 			</description>
 		</item>
 		<item>
 			<title>Physics Mechanics</title>
-			<link>https://wtsia.github.io/rover/posts/physicsmechanics/</link>
+			<link>https://wtsia.github.io/rover/posts/phys.physicsmechanics/</link>
 			<pubDate>Mon, 01 Aug 2022 16:10:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/physicsmechanics/</guid>
+			<guid>https://wtsia.github.io/rover/posts/phys.physicsmechanics/</guid>
 			<description>
 			Notes on Physics, on the subtopic of mechanics
 			</description>
 		</item>
 		<item>
 			<title>Bite Sized Productivity</title>
-			<link>https://wtsia.github.io/rover/posts/bitesizedproductivity/</link>
+			<link>https://wtsia.github.io/rover/posts/study.bitesizedproductivity/</link>
 			<pubDate>Mon, 18 Jul 2022 00:10:31 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/bitesizedproductivity/</guid>
+			<guid>https://wtsia.github.io/rover/posts/study.bitesizedproductivity/</guid>
 			<description>
 			Tips on how to speed read, learn, and other quick notes on productivity
 			</description>
 		</item>
 		<item>
 			<title>Human Anatomy</title>
-			<link>https://wtsia.github.io/rover/posts/humananatomy/</link>
+			<link>https://wtsia.github.io/rover/posts/life.humananatomy/</link>
 			<pubDate>Mon, 04 Jul 2022 16:44:10 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/humananatomy/</guid>
+			<guid>https://wtsia.github.io/rover/posts/life.humananatomy/</guid>
 			<description>
 			Notes on human anatomy
 			</description>
 		</item>
 		<item>
 			<title>Pomology</title>
-			<link>https://wtsia.github.io/rover/posts/pomology/</link>
+			<link>https://wtsia.github.io/rover/posts/study.pomology/</link>
 			<pubDate>Tue, 28 Jun 2022 22:41:20 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/pomology/</guid>
+			<guid>https://wtsia.github.io/rover/posts/study.pomology/</guid>
 			<description>
 			Notes on Pomology and Gardening
 			</description>
 		</item>
 		<item>
 			<title>Physics</title>
-			<link>https://wtsia.github.io/rover/posts/physics/</link>
+			<link>https://wtsia.github.io/rover/posts/phys.physics/</link>
 			<pubDate>Tue, 21 Jun 2022 14:24:16 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/physics/</guid>
+			<guid>https://wtsia.github.io/rover/posts/phys.physics/</guid>
 			<description>
 			Basic Laws, Concepts, or Proofs
 			</description>
 		</item>
 		<item>
 			<title>Interview Tips</title>
-			<link>https://wtsia.github.io/rover/posts/interviewtips/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.interviewtips/</link>
 			<pubDate>Tue, 07 Jun 2022 01:22:05 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/interviewtips/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.interviewtips/</guid>
 			<description>
 			Tips for passing programming interviews
 			</description>
 		</item>
 		<item>
 			<title>Cryptography</title>
-			<link>https://wtsia.github.io/rover/posts/00_cryptography/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.cryptography/</link>
 			<pubDate>Thu, 02 Jun 2022 14:22:54 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_cryptography/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.cryptography/</guid>
 			<description>
 			Notes on topics in cryptography
 			</description>
 		</item>
 		<item>
 			<title>Educational Savings/Tax Notes</title>
-			<link>https://wtsia.github.io/rover/posts/educationaltaxnotes/</link>
+			<link>https://wtsia.github.io/rover/posts/life.educationaltaxnotes/</link>
 			<pubDate>Thu, 02 Jun 2022 04:04:36 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/educationaltaxnotes/</guid>
+			<guid>https://wtsia.github.io/rover/posts/life.educationaltaxnotes/</guid>
 			<description>
 			Notes on savings and 529 taxes for education
 			</description>
 		</item>
 		<item>
 			<title>Macroeconomics</title>
-			<link>https://wtsia.github.io/rover/posts/macroeconomics/</link>
+			<link>https://wtsia.github.io/rover/posts/econ.macroeconomics/</link>
 			<pubDate>Sun, 29 May 2022 02:18:43 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/macroeconomics/</guid>
+			<guid>https://wtsia.github.io/rover/posts/econ.macroeconomics/</guid>
 			<description>
 			Macroeconomics Notes
 			</description>
 		</item>
 		<item>
 			<title>Studying Methodology</title>
-			<link>https://wtsia.github.io/rover/posts/studying_methodology/</link>
+			<link>https://wtsia.github.io/rover/posts/study.studying_methodology/</link>
 			<pubDate>Sat, 28 May 2022 01:26:45 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/studying_methodology/</guid>
+			<guid>https://wtsia.github.io/rover/posts/study.studying_methodology/</guid>
 			<description>
 			Strategies on applying encode learning
 			</description>
 		</item>
 		<item>
 			<title>Mythical Man-Month</title>
-			<link>https://wtsia.github.io/rover/posts/mythicalmanmonth/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.mythicalmanmonth/</link>
 			<pubDate>Sun, 15 May 2022 19:45:01 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/mythicalmanmonth/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.mythicalmanmonth/</guid>
 			<description>
 			notes on a book by Fredrick P. Brooks
 			</description>
 		</item>
 		<item>
 			<title>Python</title>
-			<link>https://wtsia.github.io/rover/posts/python/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.python/</link>
 			<pubDate>Sat, 14 May 2022 04:35:39 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/python/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.python/</guid>
 			<description>
 			General Notes on Python Usage
 			</description>
 		</item>
 		<item>
 			<title>Learning Math</title>
-			<link>https://wtsia.github.io/rover/posts/learningmath/</link>
+			<link>https://wtsia.github.io/rover/posts/math.learningmath/</link>
 			<pubDate>Tue, 10 May 2022 01:26:45 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/learningmath/</guid>
+			<guid>https://wtsia.github.io/rover/posts/math.learningmath/</guid>
 			<description>
 			Post detailing how to learn math!
 			</description>
 		</item>
 		<item>
 			<title>Trigonometry</title>
-			<link>https://wtsia.github.io/rover/posts/trigonometry/</link>
+			<link>https://wtsia.github.io/rover/posts/math.trigonometry/</link>
 			<pubDate>Tue, 10 May 2022 01:18:00 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/trigonometry/</guid>
+			<guid>https://wtsia.github.io/rover/posts/math.trigonometry/</guid>
 			<description>
 			Reviewing Trigonometry Concepts
 			</description>
 		</item>
 		<item>
 			<title>Medical Research: Methods</title>
-			<link>https://wtsia.github.io/rover/posts/medicalresearch/</link>
+			<link>https://wtsia.github.io/rover/posts/life.medicalresearch/</link>
 			<pubDate>Sat, 07 May 2022 12:59:32 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/medicalresearch/</guid>
+			<guid>https://wtsia.github.io/rover/posts/life.medicalresearch/</guid>
 			<description>
 			A Post detailing research methods accessible for the general population in medical research
 			</description>
@@ -327,18 +453,18 @@ Medical Articles Mercury Is dental amalgam safe for humans? The opinion of the â
 		</item>
 		<item>
 			<title>Databases</title>
-			<link>https://wtsia.github.io/rover/posts/00_databases/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.databases/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_databases/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.databases/</guid>
 			<description>
 			Unfinished
 			</description>
 		</item>
 		<item>
 			<title>Design and Analysis of Algorithms</title>
-			<link>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.algorithms/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/designandanalysisofalgorithms/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.algorithms/</guid>
 			<description>
 			MIT 6.046J 2015
 			</description>
@@ -354,63 +480,63 @@ Medical Articles Mercury Is dental amalgam safe for humans? The opinion of the â
 		</item>
 		<item>
 			<title>Languages Overview</title>
-			<link>https://wtsia.github.io/rover/posts/languagesoverview/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.languagesoverview/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/languagesoverview/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.languagesoverview/</guid>
 			<description>
 			Covers major languages used in the Software industry
 			</description>
 		</item>
 		<item>
 			<title>Nash Equilibrium</title>
-			<link>https://wtsia.github.io/rover/posts/nash-equilibrium/</link>
+			<link>https://wtsia.github.io/rover/posts/econ.nash-equilibrium/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/nash-equilibrium/</guid>
+			<guid>https://wtsia.github.io/rover/posts/econ.nash-equilibrium/</guid>
 			<description>
 			Needs Editing
 			</description>
 		</item>
 		<item>
 			<title>Networks</title>
-			<link>https://wtsia.github.io/rover/posts/networks/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.networks/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/networks/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.networks/</guid>
 			<description>
 			Scaling Networks
 			</description>
 		</item>
 		<item>
 			<title>P vs NP</title>
-			<link>https://wtsia.github.io/rover/posts/pvsnp/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.pvsnp/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/pvsnp/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.pvsnp/</guid>
 			<description>
 			P, NP, and NP-completeness
 			</description>
 		</item>
 		<item>
 			<title>Scalability</title>
-			<link>https://wtsia.github.io/rover/posts/scalability/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.scalability/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/scalability/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.scalability/</guid>
 			<description>
 			Topics covering scalability of systems
 			</description>
 		</item>
 		<item>
 			<title>Scalability: Tradeoffs</title>
-			<link>https://wtsia.github.io/rover/posts/tradeoffs/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.tradeoffs/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/tradeoffs/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.tradeoffs/</guid>
 			<description>
 			Scalability topics covering tradoffs
 			</description>
 		</item>
 		<item>
 			<title>Security</title>
-			<link>https://wtsia.github.io/rover/posts/00_security/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.0.security/</link>
 			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_security/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.0.security/</guid>
 			<description>
 			Unfinished
 			</description>

@@ -7,49 +7,166 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Mon, 23 Jan 2023 00:30:07 -0800</lastBuildDate>
+		<lastBuildDate>Sun, 12 Nov 2023 14:59:40 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
 		<item>
+			<title>Nvim</title>
+			<link>https://wtsia.github.io/rover/posts/cs.nvim/</link>
+			<pubDate>Sun, 12 Nov 2023 14:59:40 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.nvim/</guid>
+			<description>
+			Notes on Cs.nvim
+			</description>
+		</item>
+		<item>
+			<title>Leetcode - Hard</title>
+			<link>https://wtsia.github.io/rover/posts/cs.leetcode.hard/</link>
+			<pubDate>Sat, 04 Nov 2023 02:35:57 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.leetcode.hard/</guid>
+			<description>
+			Notes on Cs.leetcode.hard
+			</description>
+		</item>
+		<item>
+			<title>Leetcode - Medium</title>
+			<link>https://wtsia.github.io/rover/posts/cs.leetcode.medium/</link>
+			<pubDate>Sat, 04 Nov 2023 02:35:51 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.leetcode.medium/</guid>
+			<description>
+			Notes on Cs.leetcode.medium
+			</description>
+		</item>
+		<item>
+			<title>Leetcode - Easy</title>
+			<link>https://wtsia.github.io/rover/posts/cs.leetcode.easy/</link>
+			<pubDate>Sat, 04 Nov 2023 02:35:42 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.leetcode.easy/</guid>
+			<description>
+			Notes on Cs.leetcode.easy
+			</description>
+		</item>
+		<item>
+			<title>Java Skill Quiz</title>
+			<link>https://wtsia.github.io/rover/posts/cs.java-skill-quiz/</link>
+			<pubDate>Sat, 30 Sep 2023 00:02:04 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.java-skill-quiz/</guid>
+			<description>
+			Notes on Cs.java Skill Quiz
+			</description>
+		</item>
+		<item>
+			<title>Javascript</title>
+			<link>https://wtsia.github.io/rover/posts/cs.javascript/</link>
+			<pubDate>Fri, 29 Sep 2023 23:31:11 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.javascript/</guid>
+			<description>
+			Notes on Javascript
+			</description>
+		</item>
+		<item>
+			<title>API Product Manager</title>
+			<link>https://wtsia.github.io/rover/posts/cs.api-product-manager/</link>
+			<pubDate>Wed, 20 Sep 2023 23:57:12 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.api-product-manager/</guid>
+			<description>
+			Notes on API Product Manager
+			</description>
+		</item>
+		<item>
+			<title>API Security Architect</title>
+			<link>https://wtsia.github.io/rover/posts/cs.api-security-architect/</link>
+			<pubDate>Wed, 20 Sep 2023 23:56:49 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.api-security-architect/</guid>
+			<description>
+			Notes on API Security Architect
+			</description>
+		</item>
+		<item>
+			<title>Computer_science.sierpenski_triangle</title>
+			<link>https://wtsia.github.io/rover/posts/cs.sierpenski_triangle/</link>
+			<pubDate>Sat, 16 Sep 2023 19:47:08 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.sierpenski_triangle/</guid>
+			<description>
+			Notes on Computer_science.sierpenski_triangle
+			</description>
+		</item>
+		<item>
+			<title>ISC2 CC</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.isc2-cc/</link>
+			<pubDate>Thu, 10 Aug 2023 17:50:41 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.isc2-cc/</guid>
+			<description>
+			Notes on ISC2 CC
+			</description>
+		</item>
+		<item>
+			<title>CCNA</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.ccna/</link>
+			<pubDate>Thu, 10 Aug 2023 17:50:11 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.ccna/</guid>
+			<description>
+			Notes on CCNA
+			</description>
+		</item>
+		<item>
+			<title>Sec&#43;</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.sec&#43;/</link>
+			<pubDate>Fri, 21 Jul 2023 04:40:30 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.sec&#43;/</guid>
+			<description>
+			Notes on Sec&#43;
+			</description>
+		</item>
+		<item>
+			<title>Git</title>
+			<link>https://wtsia.github.io/rover/posts/swe.git/</link>
+			<pubDate>Sun, 16 Jul 2023 19:47:45 -0700</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/swe.git/</guid>
+			<description>
+			Notes on Git
+			</description>
+		</item>
+		<item>
 			<title>Computer Organization Systems Programming</title>
-			<link>https://wtsia.github.io/rover/posts/computer-organization-systems-prog/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</link>
 			<pubDate>Mon, 23 Jan 2023 00:30:07 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/computer-organization-systems-prog/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</guid>
 			<description>
 			Notes on Computer Organization and Systems Programming
 			</description>
 		</item>
 		<item>
 			<title>Containerization</title>
-			<link>https://wtsia.github.io/rover/posts/containerization/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.container-vm/</link>
 			<pubDate>Sat, 31 Dec 2022 22:49:03 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/containerization/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.container-vm/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>Aws Cloud Practitioner 2023</title>
-			<link>https://wtsia.github.io/rover/posts/aws-cloud-practitioner-2023/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.aws-cloud-practitioner-2023/</link>
 			<pubDate>Fri, 30 Dec 2022 16:09:58 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/aws-cloud-practitioner-2023/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.aws-cloud-practitioner-2023/</guid>
 			<description>
 			Description
 			</description>
 		</item>
 		<item>
 			<title>React Framework</title>
-			<link>https://wtsia.github.io/rover/posts/react-framework/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.react-framework/</link>
 			<pubDate>Fri, 30 Dec 2022 02:07:08 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/react-framework/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.react-framework/</guid>
 			<description>
 			Notes on React
 			</description>
 		</item>
 		<item>
 			<title>Refactoring Exercises</title>
-			<link>https://wtsia.github.io/rover/posts/refactoring-exercises/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.refactoring-exercises/</link>
 			<pubDate>Tue, 27 Sep 2022 13:34:38 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/refactoring-exercises/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.refactoring-exercises/</guid>
 			<description>
 			Description
 			</description>

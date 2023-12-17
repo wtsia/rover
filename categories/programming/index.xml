@@ -11,27 +11,27 @@
 		<atom:link href="https://wtsia.github.io/rover/categories/programming/index.xml" rel="self" type="application/rss+xml" />
 		<item>
 			<title>C Programming</title>
-			<link>https://wtsia.github.io/rover/posts/c-programming/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.c-programming/</link>
 			<pubDate>Mon, 23 Jan 2023 23:09:27 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/c-programming/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.c-programming/</guid>
 			<description>
 			Notes on C Programming
 			</description>
 		</item>
 		<item>
 			<title>Coding Challenges</title>
-			<link>https://wtsia.github.io/rover/posts/00_codingchallenges/</link>
+			<link>https://wtsia.github.io/rover/posts/cs.codingchallenges/</link>
 			<pubDate>Sun, 28 Aug 2022 14:32:17 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/00_codingchallenges/</guid>
+			<guid>https://wtsia.github.io/rover/posts/cs.codingchallenges/</guid>
 			<description>
 			A documentation of my attempts at coding problems
 			</description>
 		</item>
 		<item>
 			<title>Interview Tips</title>
-			<link>https://wtsia.github.io/rover/posts/interviewtips/</link>
+			<link>https://wtsia.github.io/rover/posts/swe.interviewtips/</link>
 			<pubDate>Tue, 07 Jun 2022 01:22:05 -0700</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/interviewtips/</guid>
+			<guid>https://wtsia.github.io/rover/posts/swe.interviewtips/</guid>
 			<description>
 			Tips for passing programming interviews
 			</description>

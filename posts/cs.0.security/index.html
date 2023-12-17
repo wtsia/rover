@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Security | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="Security">
+<meta name="description" content="Unfinished">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Security" />
+<meta property="og:description" content="Unfinished" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/cs.0.security/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Security"/>
+<meta name="twitter:description" content="Unfinished"/>
+
+<meta itemprop="name" content="Security">
+<meta itemprop="description" content="Unfinished">
+
+<meta itemprop="wordCount" content="157">
+<meta itemprop="keywords" content="Security," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">Security</h1>
+</div>
+</div>
+<div class="markdown">
+<h1 id="security-topics">Security Topics</h1>
+<ul>
+<li><a href="#security-topics">Security Topics</a></li>
+<li><a href="#secure-shell-ssh">Secure Shell (SSH)</a></li>
+<li><a href="#hypertext-transfer-protocol-secure-https">Hypertext Transfer Protocol Secure (HTTPS)</a>
+<ul>
+<li><a href="#transport-layer-security-tls">Transport Layer Security (TLS)</a>
+<ul>
+<li><a href="#rsa-or-diffie-hellman">RSA or Diffie-Hellman</a>
+<ul>
+<li><a href="#diffie-hellman">Diffie-Hellman</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#x509-digital-certificates">X.509 Digital Certificates</a></li>
+<li><a href="#ghidra">Ghidra</a></li>
+<li><a href="#golang">Golang</a></li>
+<li><a href="#reverse-engineering">Reverse Engineering</a></li>
+</ul>
+<h1 id="secure-shell-ssh">Secure Shell (SSH)</h1>
+<p><figure>
+  <img src="https://i.stack.imgur.com/VhMqi.jpg" alt="Secure Shell"  />
+</figure></p>
+<h1 id="hypertext-transfer-protocol-secure-https">Hypertext Transfer Protocol Secure (HTTPS)</h1>
+<h2 id="transport-layer-security-tls">Transport Layer Security (TLS)</h2>
+<ul>
+<li>Formerly known as Secure Socket Layer (SSL)
+<ul>
+<li>&ldquo;Public&rdquo; key is made public, while &ldquo;Private&rdquo; key is owned by a client or origin server.</li>
+<li>Information is scrambled with a key to make cyphertext, and said key can unscramble the cyphertext</li>
+<li>Public key cryptography utilizes two keys, one asymmetric for handshake, and the other for symmetric encryption</li>
+</ul>
+</li>
+</ul>
+<h3 id="rsa-or-diffie-hellman">RSA or Diffie-Hellman</h3>
+<h4 id="diffie-hellman">Diffie-Hellman</h4>
+<ul>
+<li>exponential key exchange</li>
+</ul>
+<h1 id="x509-digital-certificates">X.509 Digital Certificates</h1>
+<h1 id="ghidra">Ghidra</h1>
+<ul>
+<li>an open source reverse engineering tool introduced in RSA Conference, first leaked in Wikileaks and released by the NSA in 2019.</li>
+</ul>
+<h1 id="golang">Golang</h1>
+<h1 id="reverse-engineering">Reverse Engineering</h1>
+<ul>
+<li>Golang compiler preverses some data that may be reverse engineered, and is untouched by the strip utility (on UNIX, see <code>man strip</code> for manual pages on strip utility).</li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-science/">computer-science</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/security/">security</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

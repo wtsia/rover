@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tips for an Ubuntu Server | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="Ubuntu">
+<meta name="description" content="Description">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Tips for an Ubuntu Server" />
+<meta property="og:description" content="Description" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/linux.ubuntu-server/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-26T21:24:43-07:00" />
+<meta property="article:modified_time" content="2022-09-26T21:24:43-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Tips for an Ubuntu Server"/>
+<meta name="twitter:description" content="Description"/>
+
+<meta itemprop="name" content="Tips for an Ubuntu Server">
+<meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-09-26T21:24:43-07:00" />
+<meta itemprop="dateModified" content="2022-09-26T21:24:43-07:00" />
+<meta itemprop="wordCount" content="1597">
+<meta itemprop="keywords" content="Ubuntu," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">Tips for an Ubuntu Server</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a>
+<ul>
+<li><a href="#useful-commands">Useful Commands</a>
+<ul>
+<li><a href="#ubuntu-server-troubleshooting">Ubuntu Server Troubleshooting</a></li>
+</ul>
+</li>
+<li><a href="#useful-text-editor-shortcuts">useful text editor shortcuts</a></li>
+</ul>
+</li>
+<li><a href="#setting-up-reverse-proxy-with-caddy-or-nginx">Setting up Reverse Proxy with Caddy or Nginx</a>
+<ul>
+<li><a href="#caddy">Caddy</a></li>
+</ul>
+</li>
+<li><a href="#docker">Docker</a>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#docker-portainer">Docker: Portainer</a>
+<ul>
+<li><a href="#docker-commandsoperations">Docker Commands/Operations</a></li>
+</ul>
+</li>
+<li><a href="#docker-nginx-proxy-manager">Docker: Nginx Proxy Manager</a></li>
+</ul>
+</li>
+<li><a href="#nginx">Nginx</a>
+<ul>
+<li><a href="#port-forwarding">Port Forwarding</a></li>
+</ul>
+</li>
+<li><a href="#server-security">Server Security</a>
+<ul>
+<li><a href="#fail2ban">Fail2ban</a></li>
+<li><a href="#maldet-linux-malware-detection">Maldet: Linux Malware Detection</a>
+<ul>
+<li><a href="#installation-1">Installation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#media">Media</a>
+<ul>
+<li><a href="#installing-jellyfin-docker">Installing Jellyfin (Docker)</a></li>
+<li><a href="#transcoding">Transcoding</a></li>
+<li><a href="#converting-mkv-to-h264-with-ffmpeg">Converting mkv to h264 with FFmpeg</a></li>
+<li><a href="#hevc-x265-to-mp4-x264">HEVC x265 to MP4 x264</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="useful-commands">Useful Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>//useful for monitoring changes to a `.log` file in real time.
+</span></span><span style="display:flex;"><span>watch -n 1 tail /var/log/&lt;webserver&gt;/&lt;something&gt;.log
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// query icanhazip.com for your ip address
+</span></span><span style="display:flex;"><span>curl -4 icanhazip.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// show ubuntu firewall status&#39; numbered
+</span></span><span style="display:flex;"><span>sudo ufw status numbered
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// delete &#39;n&#39; rule
+</span></span><span style="display:flex;"><span>sudo ufw delete &#39;n&#39;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// mounting drives
+</span></span><span style="display:flex;"><span>sudo lsblk
+</span></span><span style="display:flex;"><span>sudo fdisk -l           // list drives
+</span></span><span style="display:flex;"><span>sudo blkid              // get uuid of drive
+</span></span><span style="display:flex;"><span>sudo nano /etc/fstab    // edit fstab using nano
+</span></span><span style="display:flex;"><span># example of a disk mount
+</span></span><span style="display:flex;"><span>/dev/disk/by-uuid/6cb3542a-02ab-4df6-8bce-4c193a2f839b  /&lt;directory for mount&gt;  &lt;storage type like ext4&gt;    defaults    0   0    
+</span></span><span style="display:flex;"><span>sudo mount -a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// show video card drivers
+</span></span><span style="display:flex;"><span>lshw -c video
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// traceroute
+</span></span><span style="display:flex;"><span>traceroute -m &lt;max num hops&gt; -p &lt;port&gt; &lt;site&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// unlocking Luks Drive
+</span></span><span style="display:flex;"><span>sudo cryptsetup open /dev/sdd3 luksrecoverytarget  --type luks
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// view formatted systemctl logs
+</span></span><span style="display:flex;"><span>journalctl -u &lt;service&gt; --no-pager | less
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// rsync
+</span></span><span style="display:flex;"><span>rsync -rtvu source_folder/ destination_folder/
+</span></span><span style="display:flex;"><span>// -v verbose
+</span></span><span style="display:flex;"><span>// -t 
+</span></span><span style="display:flex;"><span>// -u 
+</span></span><span style="display:flex;"><span>// -r recursive
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//ubuntu drivers
+</span></span><span style="display:flex;"><span>sudo ubuntu-drivers devices
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// make filename.sh executable
+</span></span><span style="display:flex;"><span>chmod +x filename.sh
+</span></span></code></pre></div><h3 id="ubuntu-server-troubleshooting">Ubuntu Server Troubleshooting</h3>
+<ul>
+<li>allocated space not totally filled (seen after <code>lsblk</code>)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// ubuntu stack overflow
+</span></span><span style="display:flex;"><span>I also used the default Ubuntu 20.04 install from ISO w/ lvm option selected. I had the same problem with the OS disk not occupying what I had allocated. Eddie&#39;s suggestion and the provided link did it for me. To summarize:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>root@util:~# vgdisplay
+</span></span><span style="display:flex;"><span>&lt;snip&gt;
+</span></span><span style="display:flex;"><span>root@util:~# lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+</span></span><span style="display:flex;"><span>&lt;snip&gt;
+</span></span><span style="display:flex;"><span>root@util:~# resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+</span></span><span style="display:flex;"><span>&lt;snip&gt;
+</span></span></code></pre></div><h2 id="useful-text-editor-shortcuts">useful text editor shortcuts</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// NANO
+</span></span><span style="display:flex;"><span>Ctrl + 6 to set a mark.
+</span></span><span style="display:flex;"><span>Alt + T will delete all content in a file.
+</span></span><span style="display:flex;"><span>Ctrl + K will delete the current line at your cursor.
+</span></span></code></pre></div><h1 id="setting-up-reverse-proxy-with-caddy-or-nginx">Setting up Reverse Proxy with Caddy or Nginx</h1>
+<p>To create a web server that is accessible from a domain, we will be using Caddy or Nginx proxy manager to set up our local reverse proxy and manage Nginx from a friendly UI.</p>
+<h2 id="caddy">Caddy</h2>
+<p><a href="https://caddyserver.com/docs/install" target="_blank">Caddy Installation Documentation</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl -1sLf &#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&#39; | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>curl -1sLf &#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&#39; | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install caddy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo systemctl start caddy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// edit caddy file
+</span></span><span style="display:flex;"><span>sudo nano /etc/caddy/Caddyfile
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>site:port {
+</span></span><span style="display:flex;"><span>    reverse_proxy address:internal_port
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo systemctl reload caddy
+</span></span></code></pre></div><h1 id="docker">Docker</h1>
+<h2 id="installation">Installation</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// update list. If your output seems abnormal, take a moment to think on your next step. This is a guide that worked for me on Ubuntu 22.04.1 LTS
+</span></span><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// install prerequisites:
+</span></span><span style="display:flex;"><span>sudo apt install apt-transport-https ca-certificates curl software-properties-common
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// add a GPG key for the official Docker repo:
+</span></span><span style="display:flex;"><span>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// Add docker repo to APT sources:
+</span></span><span style="display:flex;"><span>echo &#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&#34; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// update existing list of packages
+</span></span><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// check you are installing from the Docker repo
+</span></span><span style="display:flex;"><span>apt-cache policy docker-ce
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// install docker, docker container, containerd, cli and plugins
+</span></span><span style="display:flex;"><span>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// check docker is installed
+</span></span><span style="display:flex;"><span>sudo systemctl status docker
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// adding yourself as part of the docker group
+</span></span><span style="display:flex;"><span>sudo usermod -aG docker ${USER}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>//log out and log back in or:
+</span></span><span style="display:flex;"><span>su - ${USER}
+</span></span></code></pre></div><h2 id="docker-portainer">Docker: Portainer</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>docker run -d --restart always -p 8000:8000 -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock --name portainer portainer/portainer-ce
+</span></span></code></pre></div><h3 id="docker-commandsoperations">Docker Commands/Operations</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// run docker container from docker-compose.yml in (-d) background
+</span></span><span style="display:flex;"><span>docker-compose up -d 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// list docker images
+</span></span><span style="display:flex;"><span>docker image ls 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// restart all containers
+</span></span><span style="display:flex;"><span>docker restart $(docker ps -q) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// remove all containers
+</span></span><span style="display:flex;"><span>docker rm $(docker ps -aq) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// run shell in docker
+</span></span><span style="display:flex;"><span>$ docker exec -it &lt;container id&gt; &lt;bash or sh&gt; 
+</span></span><span style="display:flex;"><span>root@&lt;container id&gt;:/#
+</span></span><span style="display:flex;"><span>// or as root:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// show logs output in docker container
+</span></span><span style="display:flex;"><span>docker logs &lt;container-id&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// 
+</span></span></code></pre></div><h2 id="docker-nginx-proxy-manager">Docker: Nginx Proxy Manager</h2>
+<p>Quick-Start (9.28.2022)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># use this as a docker-compose.yml file
+</span></span><span style="display:flex;"><span>version: &#39;3&#39;
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  app:
+</span></span><span style="display:flex;"><span>    image: &#39;jc21/nginx-proxy-manager:latest&#39;
+</span></span><span style="display:flex;"><span>    restart: unless-stopped
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - &#39;80:80&#39;
+</span></span><span style="display:flex;"><span>      - &#39;81:81&#39;
+</span></span><span style="display:flex;"><span>      - &#39;443:443&#39;
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - ./data:/data
+</span></span><span style="display:flex;"><span>      - ./letsencrypt:/etc/letsencrypt
+</span></span></code></pre></div><p>Then initiate your stack: `docker-compose up -d'</p>
+<h1 id="nginx">Nginx</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// enable autostart
+</span></span><span style="display:flex;"><span>sudo update-rc.d nginx defaults
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// disable nginx from autostarting
+</span></span><span style="display:flex;"><span>sudo update-rc.d -f nginx disable
+</span></span></code></pre></div><h2 id="port-forwarding">Port Forwarding</h2>
+<ul>
+<li>TCP/UDP: Connecting and holding to an endpoint/Sending a signal and hoping it arrives</li>
+<li>dealing with busy port:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo netstat -nlptu | grep 80
+</span></span><span style="display:flex;"><span>sudo systemctl stop nginx
+</span></span><span style="display:flex;"><span>sudo systemctl stop apache
+</span></span></code></pre></div><h1 id="server-security">Server Security</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo ufw enable // make sure to enable the server firewall. 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo ufw reload // reload server firewall rules
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo apt install unattended-upgrades // automatically install security updates
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// using ssh keys to access your server (mostly for convenience)
+</span></span><span style="display:flex;"><span>// at local:
+</span></span><span style="display:flex;"><span>ssh-keygen -t ed25519
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ssh-copy-id -i /&lt;key directory&gt; &lt;user&gt;@&lt;ip&gt;
+</span></span><span style="display:flex;"><span>(default: /home/&lt;user&gt;/.ssh/id_ed25519.pub)
+</span></span><span style="display:flex;"><span>// edit ssh settings on server
+</span></span><span style="display:flex;"><span>sudo nano /etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span>systemctl restart sshd          // restart daemon
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// create easier login @ .bashrc
+</span></span><span style="display:flex;"><span>sudo nano ~/.bashrc
+</span></span><span style="display:flex;"><span>// add &#34;alias &lt;name&gt;=&#34;ssh -p &lt;port&gt; &lt;user&gt;@&lt;ip address&gt;&#34;
+</span></span><span style="display:flex;"><span>source ~/.bashrc
+</span></span></code></pre></div><h2 id="fail2ban">Fail2ban</h2>
+<ul>
+<li></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// fail2ban SSH logins
+</span></span><span style="display:flex;"><span>sudo apt install fail2ban
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// create sshd ban entry-- cp fail2ban.conf and enter at the bottom of /etc/fail2ban/fail2ban.local
+</span></span><span style="display:flex;"><span>[sshd]
+</span></span><span style="display:flex;"><span>enabled = true
+</span></span><span style="display:flex;"><span>port = &lt;port&gt;
+</span></span><span style="display:flex;"><span>filter = sshd
+</span></span><span style="display:flex;"><span>logpath = /var/log/auth.log
+</span></span><span style="display:flex;"><span>maxretry = 3
+</span></span><span style="display:flex;"><span>bantime = -1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo service fail2ban restart // restart fail2ban
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo fail2ban-client status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// to unban:
+</span></span><span style="display:flex;"><span>sudo fail2ban-client set sshd unbanip &lt;ip&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// 2FA SSH w/ Google Authenticator
+</span></span><span style="display:flex;"><span>sudo apt install libpam-google-authenticator
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo nano /etc/pam.d/sshd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo nano /etc/ssh/sshd_config
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// edit sshd config, then restart
+</span></span><span style="display:flex;"><span>sudo service sshd restart
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// to reverse, remove entries from files
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// chkrootkit
+</span></span><span style="display:flex;"><span>git clone https://github.com/Magentron/chkrootkit.git   // clone from repo
+</span></span><span style="display:flex;"><span>cd chkrootkit                                           // cd into directory
+</span></span><span style="display:flex;"><span>./chkrootkit                                            // run chkrootkit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// rkhunter
+</span></span><span style="display:flex;"><span>wget http://downloads.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz             // download package
+</span></span><span style="display:flex;"><span>tar -xvf rkhunter-1.4.6.tar.gz  // extract
+</span></span><span style="display:flex;"><span>rkhunter --check                // run tool
+</span></span></code></pre></div><h2 id="maldet-linux-malware-detection">Maldet: Linux Malware Detection</h2>
+<h3 id="installation-1">Installation</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// cd into a directory to unpack maldet files
+</span></span><span style="display:flex;"><span>wget https://www.rfxn.com/downloads/maldetect-current.tar.gz
+</span></span><span style="display:flex;"><span>tar -xvf maldetect-current.tar.gz
+</span></span><span style="display:flex;"><span>cd maldet-&lt;version&gt;
+</span></span><span style="display:flex;"><span>./install.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// update maldet
+</span></span><span style="display:flex;"><span>maldet -u
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// edit maldet config
+</span></span><span style="display:flex;"><span>nano /usr/local/maldetect/conf.maldet
+</span></span></code></pre></div><p>Make sure to have <code>clamav</code> installed so that maldet can utilize the clamav binary for the scanner engine.</p>
+<p><code>maldet --scan-all &lt;directory&gt;</code>: scan the entirety of a directory and subdirectories</p>
+<p><code>maldet -u</code>: update maldet</p>
+<h1 id="media">Media</h1>
+<h3 id="installing-jellyfin-docker">Installing Jellyfin (Docker)</h3>
+<p><a href="https://jellyfin.org/docs/general/administration/installing.html" target="_blank">https://jellyfin.org/docs/general/administration/installing.html</a></p>
+<h3 id="transcoding">Transcoding</h3>
+<p>To properly change track order of an <code>.mkv</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkvmerge --output &#34;your_file (1).mkv&#34; &#34;(&#34; &#34;your_file.mkv&#34; &#34;)&#34; --track-order 0:0,0:2,0:1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># first, get audio track info so we know which one to keep
+</span></span><span style="display:flex;"><span>mkvmerge -i input.mkv
+</span></span><span style="display:flex;"><span>File &#39;input.mkv&#39;: container: Matroska
+</span></span><span style="display:flex;"><span>Track ID 1: video (V_MPEG4/ISO/AVC)
+</span></span><span style="display:flex;"><span>Track ID 2: audio (A_AAC)
+</span></span><span style="display:flex;"><span>Track ID 3: audio (A_AAC)        &lt;----------- for example, let&#39;s keep this one
+</span></span><span style="display:flex;"><span>Track ID 4: audio (A_AAC)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mkvmerge -o output.mkv --audio-tracks 3 input.mkv
+</span></span></code></pre></div><h3 id="converting-mkv-to-h264-with-ffmpeg">Converting mkv to h264 with FFmpeg</h3>
+<p>EDIT: This question has become very popular and is one of the top results for searching &ldquo;convert mkv to h264 ffmpeg&rdquo; and thus I feel it is appropriate to add that for anyone stumbling upon this question to rather use</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ffmpeg -i input.mkv -c:v libx264 -c:a aac output.mp4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>// 10-bit/12-bit HEVC to 10-bit H.264
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ffmpeg -i input -map 0 -c:v libx264 -crf 18 -c:a copy output.mk
+</span></span></code></pre></div><p><a href="https://stackoverflow.com/questions/30898671/converting-mkv-to-h264-ffmpeg" target="_blank">link</a></p>
+<h3 id="hevc-x265-to-mp4-x264">HEVC x265 to MP4 x264</h3>
+<p><code>ffmpeg -i input.mp4 -c:v libx264 -crf 20 -c:a copy output.mp4</code></p>
+<p>10-bit/12-bit HEVC to 8-bit H.264</p>
+<p><code>ffmpeg -i input -map 0 -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy output.mkv</code></p>
+<pre><code>-map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: H.264 for more info on -crf and -preset.
+
+Uses the format filter to choose the yuv420p pixel format to create 8-bit output.
+</code></pre>
+<p>10-bit/12-bit HEVC to 10-bit H.264</p>
+<p><code>ffmpeg -i input -map 0 -c:v libx264 -crf 18 -c:a copy output.mkv</code></p>
+<pre><code>-map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: H.264 for more info on -crf and -preset.
+
+No need for the format filter in this case.
+</code></pre>
+<p>10-bit/12-bit HEVC to 8-bit HEVC</p>
+<p><code>ffmpeg -i input -map 0 -c:v libx265 -crf 20 -vf format=yuv420p -c:a copy output.mkv</code></p>
+<pre><code>-map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: HEVC / H.265 for more info on -crf and -preset.
+
+Uses the format filter to choose the yuv420p pixel format to create 8-bit output.
+</code></pre>
+<p>12-bit HEVC to 10-bit HEVC</p>
+<p><code>ffmpeg -i input -map 0 -c:v libx265 -crf 20 -vf format=yuv420p10le -c:a copy output.mkv</code></p>
+<pre><code>-map 0 will include all streams (default stream selection only selects 1 stream per type). See FFmpeg Wiki: Map.
+
+Adjust the -crf value to provide the desired level of quality. Add the -preset option if you want to adjust encoding speed. See FFmpeg Wiki: HEVC / H.265 for more info on -crf and -preset.
+
+Uses the format filter to choose the yuv420p10le pixel format to create 10-bit output. Other 10-bit pixel formats supported by libx265 are yuv422p10le &amp; yuv444p10le, but your player may not like these. See ffmpeg -h encoder=libx265 for additional supported pixel formats.
+</code></pre>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># assume input.mkv has 3 subtitle tracks
+</span></span><span style="display:flex;"><span># remove subtitle track 2 (copy 1&amp;3) from input.mkv &amp; save to output.mkv
+</span></span><span style="display:flex;"><span>mkvmerge -o output.mkv --subtitle-tracks 1,3 input.mkv
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># remove all subtitles (copy none)
+</span></span><span style="display:flex;"><span>mkvmerge -o output.mkv --no-subtitles input.mkv
+</span></span></code></pre></div>
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-networking/">computer-networking</a>
+<a href="/rover/categories/it/">it</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/ubuntu/">ubuntu</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>

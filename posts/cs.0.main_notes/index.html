@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Computer Science Notes | Rover</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.97.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Winston Tsia">
+<meta name="keywords" content="Data Structures, Algorithms">
+<meta name="description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science">
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/normalize.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/rover/css/all.css" /><link rel="stylesheet" href="/rover/css/katex.css" crossorigin="anonymous">
+<script defer src="/rover/js/katex.js"  integrity="" crossorigin="anonymous"></script>
+<script defer src="/rover/js/auto-render.js" integrity="" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body, { delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false} ] }); });
+</script>
+<script
+
+
+
+
+
+
+src="/rover/">
+</script>
+
+
+
+
+<meta property="og:title" content="Computer Science Notes" />
+<meta property="og:description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wtsia.github.io/rover/posts/cs.0.main_notes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-28T16:52:54-07:00" />
+<meta property="article:modified_time" content="2022-08-28T16:52:54-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Computer Science Notes"/>
+<meta name="twitter:description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science"/>
+
+<meta itemprop="name" content="Computer Science Notes">
+<meta itemprop="description" content="Notes on Data Structures, Algorithms, and other broad topics in computer science"><meta itemprop="datePublished" content="2022-08-28T16:52:54-07:00" />
+<meta itemprop="dateModified" content="2022-08-28T16:52:54-07:00" />
+<meta itemprop="wordCount" content="1337">
+<meta itemprop="keywords" content="Data Structures,Algorithms," />
+</head>
+<body>
+<header>
+<div id="avatar">
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+</div>
+<div id="titletext">
+<h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
+</div>
+<div id="title-description">
+<p id="subtitle"><a href="https://wtsia.github.io/rover/" target="_blank">Rover</a> is a blog for teaching or storing concepts.</p>
+<div id="social">
+<nav><ul>
+<li><a href="https://github.com/wtsia"><i title="Github" class="icons fab fa-github"></i></a></li>
+<li><a href="/rover/index.xml"><i title="RSS" class="icons fas fa-rss"></i></a></li>
+<li><a><i title="Switch Dark Mode" class="dark-mode icons fas fa-moon"></i></a></li>
+</ul></nav>
+</div>
+</div>
+<div id="mainmenu">
+<nav>
+<ul>
+<li><a href="/rover/">Home</a></li>
+<li><a href="/rover/posts">Notes</a></li>
+<li><a href="/rover/blog">Blog</a></li>
+<li><a href="/rover/about">About</a></li>
+<li><a href="/rover/tags">Tags</a></li>
+<li><a href="/rover/categories">Categories</a></li>
+<li><a href="/rover/files">Files</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
+<div class="post">
+<article>
+<div class="post-header">
+<div class="matter">
+<h1 class="title">Computer Science Notes</h1>
+<p class="post-meta">
+<span class="post-meta">
+
+
+
+</span>
+
+</p>
+</div>
+</div>
+<div class="markdown">
+<p><figure>
+  <img src="/rover/img/ComputerScience/rubik.jpg" alt="Replacement Text"  />
+</figure></p>
+<h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#basics">Basics</a>
+<ul>
+<li><a href="#bitsbytes">Bits/Bytes</a></li>
+<li><a href="#computer">Computer</a></li>
+<li><a href="#8-patterns-everyone-should-know">8 Patterns Everyone Should Know</a>
+<ul>
+<li><a href="#factory-creational">Factory (Creational)</a></li>
+<li><a href="#builder-creational">Builder (Creational)</a></li>
+<li><a href="#singleton-creational">Singleton (Creational)</a></li>
+<li><a href="#observer-behavioral">Observer (Behavioral)</a></li>
+<li><a href="#iterator-behavioral">Iterator (Behavioral)</a></li>
+<li><a href="#strategy-behavioral"><em>Strategy</em> (Behavioral)</a></li>
+<li><a href="#adapter-structural">Adapter (Structural)</a></li>
+<li><a href="#facade-structural">Facade (Structural)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#complexity">Complexity</a>
+<ul>
+<li><a href="#time-complexity-tc">Time Complexity (TC)</a></li>
+<li><a href="#space-complexity-sc">Space Complexity (SC)</a></li>
+</ul>
+</li>
+<li><a href="#data-structures-and-algorithms">Data Structures and Algorithms</a>
+<ul>
+<li><a href="#algorithms">Algorithms</a></li>
+<li><a href="#dynamic-programming--memoization">Dynamic Programming & Memoization</a></li>
+<li><a href="#algorithm-efficiency-big-oomega-notation">Algorithm Efficiency: Big $O/\Omega$-Notation</a>
+<ul>
+<li><a href="#o-notation">O-notation</a></li>
+<li><a href="#omega-notation">$\Omega$-notation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="basics">Basics</h1>
+<p>Some good development practices:</p>
+<ol>
+<li>being resourceful (Learn to solve problems, develop critical thinking, discuss issues with teammates, read documentation)</li>
+<li>version control (advanced concepts in GIT and GITHUB)</li>
+<li>data structure &amp; code efficiency ( learn how to manipulate data in a creative way so that you can save time and storage)</li>
+<li>scripting and automation (learn how to speed making scripts of tasks that are repetitive and that can make you save a ton of time)</li>
+<li>Asynchronous programming  (learn how run programs in &ldquo;parallel&rdquo; )</li>
+<li>CI &amp; CD : continuous integration and continuous deployment (take at least the basic concepts)</li>
+<li>clear and precise and accurate communication</li>
+</ol>
+<h2 id="bitsbytes">Bits/Bytes</h2>
+<ul>
+<li><code>0</code>s and <code>1</code>s are known as bits&ndash;<em>binary digits</em></li>
+<li>Bytes are <code>8</code> bits</li>
+</ul>
+<h2 id="computer">Computer</h2>
+<ul>
+<li><code>input/output device</code>: peripherals, keyboards, screens.</li>
+<li><code>storage</code>: non-volatile. Magnetic particles orientated in a <code>0</code>/<code>1</code> position. Disk vs memory. Disk applies a head that pulses electricity. Other method tunnel electrons into special circuits on memory&rsquo;s chip, and removes it with a &lsquo;flash&rsquo; of electrcity.</li>
+<li><code>memory</code>: RAM. volatile. Gives the ability to access memory in arbitrary order in a few ticks over hundreds from disks.</li>
+<li><code>processor</code>: executes read/write instructions, accesses memory as well as memory from cache (a mini-RAM, accessible in 1 clock tick). Initiates BIOS, then OS.</li>
+<li><code>clock</code>: The clock speed is typically measured in Hertz (Hz) and represents the number of clock cycles a CPU can execute in one second. Common units for clock speed include Megahertz (MHz) and Gigahertz (GHz), where 1 MHz equals one million cycles per second, and 1 GHz equals one billion cycles per second</li>
+</ul>
+<h2 id="8-patterns-everyone-should-know">8 Patterns Everyone Should Know</h2>
+<p>Creational, Structural, Behvaioral Patterns (in <code>Python</code>)</p>
+<h3 id="factory-creational">Factory (Creational)</h3>
+<p>Create a &lsquo;factory&rsquo; that instantiates an object for us using parameters as input for what &rsquo;type&rsquo; of object we want.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Dog:
+</span></span><span style="display:flex;"><span>    def __init__(self, name):
+</span></span><span style="display:flex;"><span>        self._name = name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def speak(self):
+</span></span><span style="display:flex;"><span>        return &#34;Woof!&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Cat:
+</span></span><span style="display:flex;"><span>    def __init__(self, name):
+</span></span><span style="display:flex;"><span>        self._name = name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def speak(self):
+</span></span><span style="display:flex;"><span>        return &#34;Meow!&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def get_pet(pet=&#34;dog&#34;):
+</span></span><span style="display:flex;"><span>    pets = dict(dog=Dog(&#34;Hope&#34;), cat=Cat(&#34;Peace&#34;))
+</span></span><span style="display:flex;"><span>    return pets[pet]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_pet = get_pet(&#34;dog&#34;)
+</span></span><span style="display:flex;"><span>print(my_pet.speak())  # Output: Woof!
+</span></span></code></pre></div><h3 id="builder-creational">Builder (Creational)</h3>
+<p>Create a builder that has methods to &ldquo;build&rdquo; our object instead of passing parameters during instantiation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Burger:
+</span></span><span style="display:flex;"><span>    def __init__(self, size, cheese=False, pepperoni=False, lettuce=False):
+</span></span><span style="display:flex;"><span>        self.size = size
+</span></span><span style="display:flex;"><span>        self.cheese = cheese
+</span></span><span style="display:flex;"><span>        self.pepperoni = pepperoni
+</span></span><span style="display:flex;"><span>        self.lettuce = lettuce
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class BurgerBuilder:
+</span></span><span style="display:flex;"><span>    def __init__(self, size):
+</span></span><span style="display:flex;"><span>        self.burger = Burger(size)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def add_cheese(self):
+</span></span><span style="display:flex;"><span>        self.burger.cheese = True
+</span></span><span style="display:flex;"><span>        return self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def add_pepperoni(self):
+</span></span><span style="display:flex;"><span>        self.burger.pepperoni = True
+</span></span><span style="display:flex;"><span>        return self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def add_lettuce(self):
+</span></span><span style="display:flex;"><span>        self.burger.lettuce = True
+</span></span><span style="display:flex;"><span>        return self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def build(self):
+</span></span><span style="display:flex;"><span>        return self.burger
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>builder = BurgerBuilder(4)
+</span></span><span style="display:flex;"><span>burger = builder.add_cheese().add_pepperoni().build()
+</span></span></code></pre></div><h3 id="singleton-creational">Singleton (Creational)</h3>
+<p>An object which only has a single instance instantiated, which is referenced by other objects. AKA a shared mutable state.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Singleton:
+</span></span><span style="display:flex;"><span>    _instance = None
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def __new__(cls):
+</span></span><span style="display:flex;"><span>        if cls._instance is None:
+</span></span><span style="display:flex;"><span>            cls._instance = super(Singleton, cls).__new__(cls)
+</span></span><span style="display:flex;"><span>        return cls._instance
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Usage
+</span></span><span style="display:flex;"><span>s1 = Singleton()
+</span></span><span style="display:flex;"><span>s2 = Singleton()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(s1 is s2)  # Output: True
+</span></span></code></pre></div><h3 id="observer-behavioral">Observer (Behavioral)</h3>
+<p>A subject/publisher can maintain a list of observers to which one action may be called and act on observers.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class Subject:
+</span></span><span style="display:flex;"><span>    def __init__(self):
+</span></span><span style="display:flex;"><span>        self._observers = []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def attach(self, observer):
+</span></span><span style="display:flex;"><span>        self._observers.append(observer)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def detach(self, observer):
+</span></span><span style="display:flex;"><span>        self._observers.remove(observer)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def notify(self, message):
+</span></span><span style="display:flex;"><span>        for observer in self._observers:
+</span></span><span style="display:flex;"><span>            observer.update(message)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Observer:
+</span></span><span style="display:flex;"><span>    def __init__(self, name):
+</span></span><span style="display:flex;"><span>        self._name = name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def update(self, message):
+</span></span><span style="display:flex;"><span>        print(f&#34;{self._name} received message: {message}&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Usage
+</span></span><span style="display:flex;"><span>subject = Subject()
+</span></span><span style="display:flex;"><span>observer1 = Observer(&#34;Observer 1&#34;)
+</span></span><span style="display:flex;"><span>observer2 = Observer(&#34;Observer 2&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>subject.attach(observer1)
+</span></span><span style="display:flex;"><span>subject.attach(observer2)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>subject.notify(&#34;Hello!&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span># Observer 1 received message: Hello!
+</span></span><span style="display:flex;"><span># Observer 2 received message: Hello!
+</span></span></code></pre></div><h3 id="iterator-behavioral">Iterator (Behavioral)</h3>
+<p>Defines how the values of an object can be iterated through.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class MyIterator:
+</span></span><span style="display:flex;"><span>    def __init__(self, data):
+</span></span><span style="display:flex;"><span>        self._data = data
+</span></span><span style="display:flex;"><span>        self._index = 0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def __iter__(self):
+</span></span><span style="display:flex;"><span>        return self
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def __next__(self):
+</span></span><span style="display:flex;"><span>        if self._index &lt; len(self._data):
+</span></span><span style="display:flex;"><span>            result = self._data[self._index]
+</span></span><span style="display:flex;"><span>            self._index += 1
+</span></span><span style="display:flex;"><span>            return result
+</span></span><span style="display:flex;"><span>        else:
+</span></span><span style="display:flex;"><span>            raise StopIteration
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Usage
+</span></span><span style="display:flex;"><span>my_list = [1, 2, 3, 4, 5]
+</span></span><span style="display:flex;"><span>my_iter = MyIterator(my_list)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>for item in my_iter:
+</span></span><span style="display:flex;"><span>    print(item)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output:
+</span></span><span style="display:flex;"><span># 1
+</span></span><span style="display:flex;"><span># 2
+</span></span><span style="display:flex;"><span># 3
+</span></span><span style="display:flex;"><span># 4
+</span></span><span style="display:flex;"><span># 5
+</span></span></code></pre></div><h3 id="strategy-behavioral"><em>Strategy</em> (Behavioral)</h3>
+<p>Fancy version of using an interface. Uses Open/Closed principle. You create an interface and define logic under it.</p>
+<blockquote>
+<p>&ldquo;programming at an interface level&rdquo;</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class PaymentStrategy:
+</span></span><span style="display:flex;"><span>    def pay(self, amount):
+</span></span><span style="display:flex;"><span>        pass
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class CreditCardPayment(PaymentStrategy):
+</span></span><span style="display:flex;"><span>    def pay(self, amount):
+</span></span><span style="display:flex;"><span>        print(f&#34;Paid ${amount} with Credit Card&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class PayPalPayment(PaymentStrategy):
+</span></span><span style="display:flex;"><span>    def pay(self, amount):
+</span></span><span style="display:flex;"><span>        print(f&#34;Paid ${amount} with PayPal&#34;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class ShoppingCart:
+</span></span><span style="display:flex;"><span>    def __init__(self, payment_strategy):
+</span></span><span style="display:flex;"><span>        self._items = []
+</span></span><span style="display:flex;"><span>        self._payment_strategy = payment_strategy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def add_item(self, item):
+</span></span><span style="display:flex;"><span>        self._items.append(item)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def checkout(self):
+</span></span><span style="display:flex;"><span>        total = sum(item.price for item in self._items)
+</span></span><span style="display:flex;"><span>        self._payment_strategy.pay(total)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Usage
+</span></span><span style="display:flex;"><span>cart = ShoppingCart(CreditCardPayment())
+</span></span><span style="display:flex;"><span>cart.add_item(Item(&#34;Item 1&#34;, 25))
+</span></span><span style="display:flex;"><span>cart.add_item(Item(&#34;Item 2&#34;, 15))
+</span></span><span style="display:flex;"><span>cart.checkout()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Output: Paid $40 with Credit Card
+</span></span></code></pre></div><h3 id="adapter-structural">Adapter (Structural)</h3>
+<p>Adapting a class into another s.t. it allows two incompatible interfaces to work together. It acts as a bridge between two existing classes, making them work together without changing their source code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># Existing class with an incompatible interface
+</span></span><span style="display:flex;"><span>class OldSystem:
+</span></span><span style="display:flex;"><span>    def do_old_stuff(self):
+</span></span><span style="display:flex;"><span>        return &#34;Old System is doing its stuff.&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Adapter class that adapts the OldSystem to a new interface
+</span></span><span style="display:flex;"><span>class Adapter:
+</span></span><span style="display:flex;"><span>    def __init__(self, old_system):
+</span></span><span style="display:flex;"><span>        self._old_system = old_system
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def do_new_stuff(self):
+</span></span><span style="display:flex;"><span>        # Delegate the call to the old system&#39;s method
+</span></span><span style="display:flex;"><span>        return self._old_system.do_old_stuff()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Client code
+</span></span><span style="display:flex;"><span>def client_code(target):
+</span></span><span style="display:flex;"><span>    result = target.do_new_stuff()
+</span></span><span style="display:flex;"><span>    print(result)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Usage
+</span></span><span style="display:flex;"><span>old_system = OldSystem()          # Existing class instance
+</span></span><span style="display:flex;"><span>adapter = Adapter(old_system)     # Adapter wraps the existing class
+</span></span><span style="display:flex;"><span>client_code(adapter)              # Client interacts with the adapter
+</span></span></code></pre></div><h3 id="facade-structural">Facade (Structural)</h3>
+<p>Design pattern that provides a simplified, higher-level interface to a complex system, a set of interfaces, or a group of classes. It hides the complexities of the underlying components and provides a unified interface that is easier to use. The facade pattern is often used to improve the usability and maintainability of a system by reducing the dependencies between clients and subsystems.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>class SubsystemA:
+</span></span><span style="display:flex;"><span>    def operation_a(self):
+</span></span><span style="display:flex;"><span>        return &#34;Subsystem A is doing its operation.&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class SubsystemB:
+</span></span><span style="display:flex;"><span>    def operation_b(self):
+</span></span><span style="display:flex;"><span>        return &#34;Subsystem B is doing its operation.&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>class Facade:
+</span></span><span style="display:flex;"><span>    def __init__(self):
+</span></span><span style="display:flex;"><span>        self._subsystem_a = SubsystemA()
+</span></span><span style="display:flex;"><span>        self._subsystem_b = SubsystemB()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    def do_complex_operation(self):
+</span></span><span style="display:flex;"><span>        result_a = self._subsystem_a.operation_a()
+</span></span><span style="display:flex;"><span>        result_b = self._subsystem_b.operation_b()
+</span></span><span style="display:flex;"><span>        return f&#34;Complex operation: {result_a} {result_b}&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Usage
+</span></span><span style="display:flex;"><span>facade = Facade()
+</span></span><span style="display:flex;"><span>result = facade.do_complex_operation()
+</span></span></code></pre></div><h1 id="complexity">Complexity</h1>
+<h2 id="time-complexity-tc">Time Complexity (TC)</h2>
+<p>Time complexity measures time taken to execute each statement of code in an algorithm. It is going to give information about the variation (increase or decrease) in execution time when the number of operations (increase or decrease) in an algorithm. Time complexity is a function of input length $l$, where output is time $t$ or:
+$$
+f(l) = t
+$$</p>
+<p>or more commonly:
+$$
+O(x), x \in 1, n, n^2, \log n, n \log n, 2^n, n! &hellip;
+$$</p>
+<p>Where $O(x)$ denotes O-notation, or &ldquo;Order&rdquo; notation. See <a href="#algorithm-efficiency-big-o-notation">Algorithm Efficiency</a>.</p>
+<p>A time-complexity analysis will require evaluating run time on each step of a program.</p>
+<blockquote>
+<p>Time complexity deals with finding out how the computational time of an algorithm changes with the change in size of the input.</p>
+</blockquote>
+<h2 id="space-complexity-sc">Space Complexity (SC)</h2>
+<p>While Space Complexity may also be described by O-notation, they are unrelated and not dependent on each other. For example, an $O(1)$ space complexity denotes the same amount of space usage per input data of any size.</p>
+<p>A program that uses a variable to swap values, while swapping multiple values for the variable, will still only use one variable.</p>
+<blockquote>
+<p>Space complexity deals with finding out how much (extra) space would be required by the algorithm with change in the input size.</p>
+</blockquote>
+<p>References: <a href="https://stackoverflow.com/questions/18686121/differences-between-time-complexity-and-space-complexity#:~:text=Time%20complexity%20deals%20with%20finding,change%20in%20the%20input%20size." target="_blank">Differences between time complexity and space complexity?</a></p>
+<h1 id="data-structures-and-algorithms">Data Structures and Algorithms</h1>
+<h2 id="algorithmspostscs0algorithms"><a href="./posts/cs.0.algorithms">Algorithms</a></h2>
+<p>See section header link for detailed notes.</p>
+<h2 id="dynamic-programming--memoization">Dynamic Programming &amp; Memoization</h2>
+<p>A way of making algorithms more efficient by storing the intermediary results.</p>
+<ul>
+<li>Memoization: In computing, memoization or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>fib(n)</code></li>
+</ul>
+<h2 id="algorithm-efficiency-big-oomega-notation">Algorithm Efficiency: Big $O/\Omega$-Notation</h2>
+<ul>
+<li>Space complexity: relationship between growth of input size and growth of space needed</li>
+</ul>
+<h3 id="o-notation">O-notation</h3>
+<p>Ranked closeness from Elements to Operations (Also good to bad)</p>
+<p>$O(1)$, $O(log n)$, $O(n)$, $O(n log n)$, $O(n^2)$, $O(2^n)$, $O(n!)$</p>
+<ul>
+<li>denotes <strong>maximum</strong> bound for runtime.</li>
+</ul>
+<h3 id="omega-notation">$\Omega$-notation</h3>
+<p>$\Omega (n)$</p>
+<ul>
+<li>denotes <strong>minimum</strong> bound for runtime.</li>
+</ul>
+
+</div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Categories</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/categories/computer-science/">computer-science</a>
+<a href="/rover/categories/education/">education</a>
+</p>
+</div>
+<div class="clearit"></div>
+<div class="tags">
+<div class="taxosfloating_left">
+<p>Tags</p>
+</div>
+<div class="termsfloating_right">
+<p>
+<a href="/rover/tags/algorithms/">algorithms</a>
+<a href="/rover/tags/data-structures/">data-structures</a>
+</p>
+</div>
+<div class="clearit"></div>
+</div>
+</article>
+</div>
+</main>
+<footer>
+© Copyright notice | <a href="https://github.com/dataCobra/hugo-vitae" target="_blank">Vitae</a> theme for <a href="https://gohugo.io" target="_blank">Hugo</a>
+</footer><script src="/rover/js/dark-mode.js"></script>
+
+</body>
+</html>
