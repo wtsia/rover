@@ -44,7 +44,7 @@ src="/rover/">
 <meta itemprop="name" content="Tips for an Ubuntu Server">
 <meta itemprop="description" content="Description"><meta itemprop="datePublished" content="2022-09-26T21:24:43-07:00" />
 <meta itemprop="dateModified" content="2022-09-26T21:24:43-07:00" />
-<meta itemprop="wordCount" content="1597">
+<meta itemprop="wordCount" content="2130">
 <meta itemprop="keywords" content="Ubuntu," />
 </head>
 <body>
@@ -141,10 +141,24 @@ src="/rover/">
 </li>
 <li><a href="#media">Media</a>
 <ul>
+<li><a href="#jellyfin">Jellyfin</a>
+<ul>
+<li><a href="#unlock-locked-user-account">Unlock locked user account</a></li>
+<li><a href="#sqlite3-cheat-sheet">SQLite3 Cheat Sheet</a>
+<ul>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#managing-databases">Managing databases</a></li>
+<li><a href="#managing-indexes">Managing indexes</a></li>
+<li><a href="#querying-data">Querying Data</a></li>
+<li><a href="#changing-data">Changing Data</a></li>
+</ul>
+</li>
 <li><a href="#installing-jellyfin-docker">Installing Jellyfin (Docker)</a></li>
 <li><a href="#transcoding">Transcoding</a></li>
 <li><a href="#converting-mkv-to-h264-with-ffmpeg">Converting mkv to h264 with FFmpeg</a></li>
 <li><a href="#hevc-x265-to-mp4-x264">HEVC x265 to MP4 x264</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -402,7 +416,126 @@ src="/rover/">
 <p><code>maldet --scan-all &lt;directory&gt;</code>: scan the entirety of a directory and subdirectories</p>
 <p><code>maldet -u</code>: update maldet</p>
 <h1 id="media">Media</h1>
-<h3 id="installing-jellyfin-docker">Installing Jellyfin (Docker)</h3>
+<h2 id="jellyfin">Jellyfin</h2>
+<h3 id="unlock-locked-user-account">Unlock locked user account</h3>
+<p>When the admin account is locked out and the Forgot Password feature is not working, you have to unlock the user manually. To do that, you need to find the <code>jellyfin.db</code> file on your system. The default location on Linux is: <code>/var/lib/jellyfin/data/</code>. For paths in other environments, see server paths.</p>
+<p>Linux CLI
+Before continuing, make sure that you have sqlite3 installed. When sqlite3 is not installed, you can install it under Debian based systems with apt install sqlite3. After that do the following commands/SQL query:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sqlite3 /PATH/TO/JELLYFIN/DB/jellyfin.db
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>UPDATE Users SET InvalidLoginAttemptCount = 0 WHERE Username = &#39;LockedUserName&#39;;
+</span></span><span style="display:flex;"><span>UPDATE Permissions SET Value = 0 WHERE Kind = 2 AND UserId IN (SELECT Id FROM Users WHERE Username = &#39;LockedUserName&#39;);
+</span></span><span style="display:flex;"><span>.exit
+</span></span></code></pre></div><h3 id="sqlite3-cheat-sheet">SQLite3 Cheat Sheet</h3>
+<h4 id="basics">Basics</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>.tables --show tables
+</span></span><span style="display:flex;"><span>.quit
+</span></span><span style="display:flex;"><span>.help
+</span></span><span style="display:flex;"><span>.databases
+</span></span><span style="display:flex;"><span>.schema ${schema_name}
+</span></span><span style="display:flex;"><span>.system ls -l -- execute UNIX command
+</span></span></code></pre></div><h4 id="managing-databases">Managing databases</h4>
+<p>Attach another database to the current database connection:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ATTACH DATABASE file_name AS database_name;
+</span></span></code></pre></div><p>Optimize the database:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>VACUUM
+</span></span></code></pre></div><p>Managing Tables
+Create a new table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE TABLE [IF NOT EXISTS] table(
+</span></span><span style="display:flex;"><span>   primary_key INTEGER PRIMARY KEY,
+</span></span><span style="display:flex;"><span>   column_name type NOT NULL,
+</span></span><span style="display:flex;"><span>   column_name type NULL,
+</span></span><span style="display:flex;"><span>   ...
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>Rename a table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ALTER TABLE table_name RENAME TO new_name;
+</span></span></code></pre></div><p>Add a new column to a table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ALTER TABLE table ADD COLUMN column_definition;
+</span></span></code></pre></div><p>Drop an existing column in a table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ALTER TABLE table DROP COLUMN column_name;
+</span></span></code></pre></div><p>Drop a table and its data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>DROP TABLE [IF EXISTS] table_name;
+</span></span></code></pre></div><h4 id="managing-indexes">Managing indexes</h4>
+<p>Creating an index</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE [UNIQUE] INDEX index_name
+</span></span><span style="display:flex;"><span>ON table_name (c1,c2,...)
+</span></span></code></pre></div><p>Delete an index:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>DROP INDEX index_name;
+</span></span></code></pre></div><p>Create an expression index:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CREATE INDEX index_name ON table_name(expression);
+</span></span></code></pre></div><h4 id="querying-data">Querying Data</h4>
+<p>Query all data from a table</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * FROM table_name;
+</span></span></code></pre></div><p>Query data from the specified column of a table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT c1, c2
+</span></span><span style="display:flex;"><span>FROM table_name;
+</span></span></code></pre></div><p>Query unique rows</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT DISTINCT (c1)
+</span></span><span style="display:flex;"><span>FROM table_name;
+</span></span></code></pre></div><p>Query rows that match a condition using a WHERE clause.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT *
+</span></span><span style="display:flex;"><span>FROM table_name
+</span></span><span style="display:flex;"><span>WHERE condition;
+</span></span></code></pre></div><p>Rename column in the query’s output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT c1 AS new_name
+</span></span><span style="display:flex;"><span>FROM table_name;
+</span></span></code></pre></div><p>Query data from multiple tables using inner join, left join</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * 
+</span></span><span style="display:flex;"><span>FROM table_name_1
+</span></span><span style="display:flex;"><span>INNER JOIN table_name_2 ON condition;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * 
+</span></span><span style="display:flex;"><span>FROM table_name_1
+</span></span><span style="display:flex;"><span>LEFT JOIN table_name_2 ON condition;
+</span></span></code></pre></div><p>Count rows returned by a query:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT COUNT (*)
+</span></span><span style="display:flex;"><span>FROM table_name;
+</span></span></code></pre></div><p>Sort rows using ORDER BY clause:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT c1, c2
+</span></span><span style="display:flex;"><span>FROM table_name
+</span></span><span style="display:flex;"><span>ORDER BY c1 ASC [DESC], c2 ASC [DESC],...;
+</span></span></code></pre></div><p>Group rows using GROUP BY clause.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT *
+</span></span><span style="display:flex;"><span>FROM table_name
+</span></span><span style="display:flex;"><span>GROUP BY c1, c2, ...;
+</span></span></code></pre></div><p>Filter group of rows using HAVING clause.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT c1, aggregate(c2)
+</span></span><span style="display:flex;"><span>FROM table_name
+</span></span><span style="display:flex;"><span>GROUP BY c1
+</span></span><span style="display:flex;"><span>HAVING condition;
+</span></span></code></pre></div><h4 id="changing-data">Changing Data</h4>
+<p>Insert a row into a table:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>INSERT INTO table_name(column1,column2,...)
+</span></span><span style="display:flex;"><span>VALUES(value_1,value_2,...);
+</span></span></code></pre></div><p>Insert multiple rows into a table in a single statement:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>INSERT INTO table_name(column1,column2,...)
+</span></span><span style="display:flex;"><span>VALUES(value_1,value_2,...),
+</span></span><span style="display:flex;"><span>      (value_1,value_2,...),
+</span></span><span style="display:flex;"><span>      (value_1,value_2,...)...
+</span></span><span style="display:flex;"><span>      ```
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Update all rows in a table:
+</span></span></code></pre></div><p>UPDATE table_name
+SET c1 = v1,
+&hellip;
+```</p>
+<p>Update rows that match with a condition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>UPDATE table_name
+</span></span><span style="display:flex;"><span>SET c1 = v1,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>WHERE condition;
+</span></span></code></pre></div><p>Delete all rows in a table</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>DELETE FROM table;
+</span></span></code></pre></div><p>Delete rows specified by a condition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>DELETE FROM table
+</span></span><span style="display:flex;"><span>WHERE condition;
+</span></span></code></pre></div><p>Search
+Search using LIKE operator:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * FROM table
+</span></span><span style="display:flex;"><span>WHERE column LIKE &#39;%value%&#39;
+</span></span></code></pre></div><p>Search using full-text search:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>SELECT * 
+</span></span><span style="display:flex;"><span>FROM table
+</span></span><span style="display:flex;"><span>WHERE table MATCH &#39;search_query&#39;;
+</span></span></code></pre></div><h3 id="installing-jellyfin-docker">Installing Jellyfin (Docker)</h3>
 <p><a href="https://jellyfin.org/docs/general/administration/installing.html" target="_blank">https://jellyfin.org/docs/general/administration/installing.html</a></p>
 <h3 id="transcoding">Transcoding</h3>
 <p>To properly change track order of an <code>.mkv</code>:</p>

@@ -7,8 +7,26 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-us</language>
 		<copyright>© Copyright notice | Vitae theme for Hugo</copyright>
-		<lastBuildDate>Sun, 12 Nov 2023 14:59:40 -0800</lastBuildDate>
+		<lastBuildDate>Tue, 27 Feb 2024 15:40:22 -0800</lastBuildDate>
 		<atom:link href="https://wtsia.github.io/rover/posts/index.xml" rel="self" type="application/rss+xml" />
+		<item>
+			<title>Cs.console Notes</title>
+			<link>https://wtsia.github.io/rover/posts/cs.console-notes/</link>
+			<pubDate>Tue, 27 Feb 2024 15:40:22 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.console-notes/</guid>
+			<description>
+			Notes on Cs.console Notes
+			</description>
+		</item>
+		<item>
+			<title>Infosec.Cysa&#43;</title>
+			<link>https://wtsia.github.io/rover/posts/infosec.cysa&#43;/</link>
+			<pubDate>Sun, 11 Feb 2024 14:23:05 -0800</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/infosec.cysa&#43;/</guid>
+			<description>
+			Notes on Infosec.CySA&#43;
+			</description>
+		</item>
 		<item>
 			<title>Nvim</title>
 			<link>https://wtsia.github.io/rover/posts/cs.nvim/</link>
@@ -151,15 +169,6 @@
 			<guid>https://wtsia.github.io/rover/posts/cs.c-programming/</guid>
 			<description>
 			Notes on C Programming
-			</description>
-		</item>
-		<item>
-			<title>Computer Organization Systems Programming</title>
-			<link>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</link>
-			<pubDate>Mon, 23 Jan 2023 00:30:07 -0800</pubDate>
-			<guid>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</guid>
-			<description>
-			Notes on Computer Organization and Systems Programming
 			</description>
 		</item>
 		<item>
@@ -430,6 +439,15 @@
 			<guid>https://wtsia.github.io/rover/posts/example-content/</guid>
 			<description>
 			Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+			</description>
+		</item>
+		<item>
+			<title></title>
+			<link>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</link>
+			<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+			<guid>https://wtsia.github.io/rover/posts/cs.computer-organization-systems-prog/</guid>
+			<description>
+			cdc+++ author = “Winston Tsia” authorlink = "" title = “Computer Organization Systems Programming” date = 2023-01-23T00:30:07-08:00 …
 			</description>
 		</item>
 		<item>

@@ -1,5 +1,7 @@
 User-agent: *
 
+Disallow: /rover/posts/cs.console-notes/
+Disallow: /rover/posts/infosec.cysa+/
 Disallow: /rover/posts/cs.nvim/
 Disallow: /rover/posts/cs.leetcode.hard/
 Disallow: /rover/posts/cs.leetcode.medium/
@@ -16,7 +18,6 @@ Disallow: /rover/posts/swe.git/
 Disallow: /rover/posts/swe.dockerfile-info/
 Disallow: /rover/posts/cs.api-design/
 Disallow: /rover/posts/cs.c-programming/
-Disallow: /rover/posts/cs.computer-organization-systems-prog/
 Disallow: /rover/posts/cs.relational-databases/
 Disallow: /rover/posts/math.arithmetic-proofs/
 Disallow: /rover/posts/cs.container-vm/

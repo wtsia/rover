@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="Javascript">
 <meta itemprop="description" content="Notes on Javascript"><meta itemprop="datePublished" content="2023-09-29T23:31:11-07:00" />
 <meta itemprop="dateModified" content="2023-09-29T23:31:11-07:00" />
-<meta itemprop="wordCount" content="365"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
+<meta itemprop="wordCount" content="1700"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
 <meta itemprop="keywords" content="tag1,tag2," />
 </head>
 <body>
@@ -126,6 +126,7 @@ src="/rover/">
 <li><a href="#javascript-object-model-and-misc-jquery">JavaScript: Object Model and Misc jQuery</a></li>
 <li><a href="#ajax">Ajax</a></li>
 <li><a href="#misc-jquery">Misc jQuery</a></li>
+<li><a href="#must-know-mentions">Must Know Mentions</a></li>
 </ul>
 </li>
 </ul>
@@ -164,103 +165,259 @@ src="/rover/">
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>newVar = `Backticks are needed to ${prop1} ${prop2} ${prop3}`;
 </span></span><span style="display:flex;"><span>console.log(newVar);
-</span></span></code></pre></div><h1 id="review">Review</h1>
+</span></span></code></pre></div><p>Certainly! Here&rsquo;s the information about the JavaScript topics you provided, formatted in Markdown:</p>
+<h1 id="review">Review</h1>
 <h2 id="javascript-introduction">JavaScript: Introduction</h2>
 <ul>
-<li>object</li>
-<li>method</li>
-<li>document.write</li>
-<li>var</li>
-<li>alert</li>
-<li>document.forms[&ldquo;myform&rdquo;].elements[&ldquo;num&rdquo;].value</li>
-<li>elementById</li>
-<li>innerHTML</li>
-<li>equality and relational operators</li>
-<li>parseInt</li>
-<li>parseFloat</li>
-<li>toFixed()</li>
-<li>if statement</li>
+<li>
+<p><strong>Object:</strong> In JavaScript, an object is a complex data type that can contain key-value pairs. Objects are used to represent and organize data in a structured way.</p>
+</li>
+<li>
+<p><strong>Method:</strong> A method is a function that is associated with an object. It can be invoked using dot notation, like <code>object.method()</code>.</p>
+</li>
+<li>
+<p><strong>document.write:</strong> <code>document.write</code> is a method in JavaScript that allows you to write HTML content directly to the document. While it&rsquo;s a simple way to add content, it&rsquo;s not commonly used in modern web development due to potential issues with document structure and performance.</p>
+</li>
+<li>
+<p><strong>var:</strong> <code>var</code> is a keyword used to declare variables in JavaScript. In modern JavaScript, it&rsquo;s often replaced with <code>let</code> or <code>const</code>.</p>
+</li>
+<li>
+<p><strong>alert:</strong> <code>alert</code> is a method that displays a dialog box with a specified message and an OK button. It is often used for debugging or showing information to the user.</p>
+</li>
+<li>
+<p><strong>document.forms[&ldquo;myform&rdquo;].elements[&ldquo;num&rdquo;].value:</strong> This expression accesses the value of an input element with the name &ldquo;num&rdquo; inside a form with the name &ldquo;myform&rdquo;.</p>
+</li>
+<li>
+<p><strong>elementById:</strong> <code>getElementById</code> is a method used to get a reference to an HTML element based on its unique ID.</p>
+</li>
+<li>
+<p><strong>innerHTML:</strong> <code>innerHTML</code> is a property that represents the HTML content within an element. It can be used to retrieve or modify the content of an element.</p>
+</li>
+<li>
+<p><strong>Equality and Relational Operators:</strong> Equality operators (<code>==</code> and <code>===</code>) are used to compare values for equality. Relational operators (<code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>) are used to compare values in terms of their order.</p>
+</li>
+<li>
+<p><strong>parseInt:</strong> <code>parseInt</code> is a function used to parse a string and convert it into an integer.</p>
+</li>
+<li>
+<p><strong>parseFloat:</strong> <code>parseFloat</code> is a function used to parse a string and convert it into a floating-point number.</p>
+</li>
+<li>
+<p><strong>toFixed():</strong> <code>toFixed</code> is a method that rounds a number to a specified number of decimal places and returns the result as a string.</p>
+</li>
+<li>
+<p><strong>if statement:</strong> The <code>if</code> statement is a control flow statement that executes a block of code if a specified condition is true.</p>
+</li>
 </ul>
 <h2 id="javascript-control-statements">JavaScript: Control Statements</h2>
 <ul>
-<li>if&hellip;else statement</li>
-<li>nested if</li>
-<li>while statement</li>
-<li>assignment operators such as +=</li>
-<li>increment operators such as ++</li>
-<li>switch statement</li>
-<li>break</li>
-<li>default</li>
-<li>continue</li>
-<li>for statement</li>
-<li>nested for statements</li>
-<li>logical operators such as ||</li>
-<li>isNaN</li>
+<li>
+<p><strong>if&hellip;else statement:</strong> The <code>if...else</code> statement is used to execute a block of code if a condition is true and another block if the condition is false.</p>
+</li>
+<li>
+<p><strong>Nested if:</strong> A nested <code>if</code> statement is an <code>if</code> statement inside another <code>if</code> or <code>else</code> block.</p>
+</li>
+<li>
+<p><strong>while statement:</strong> The <code>while</code> statement creates a loop that executes a block of code as long as a specified condition is true.</p>
+</li>
+<li>
+<p><strong>Assignment Operators (e.g., +=):</strong> Assignment operators are used to assign values to variables. <code>+=</code> is an example that adds the right operand to the left operand and assigns the result to the left operand.</p>
+</li>
+<li>
+<p><strong>Increment Operators (e.g., ++):</strong> Increment operators are used to increase the value of a variable. <code>++</code> adds 1 to the variable.</p>
+</li>
+<li>
+<p><strong>switch statement:</strong> The <code>switch</code> statement is used to perform different actions based on different conditions.</p>
+</li>
+<li>
+<p><strong>break:</strong> <code>break</code> is used to exit a loop or switch statement prematurely.</p>
+</li>
+<li>
+<p><strong>default:</strong> <code>default</code> is used in a switch statement as a default case when no other case matches.</p>
+</li>
+<li>
+<p><strong>continue:</strong> <code>continue</code> is used to skip the rest of the code inside a loop and continue with the next iteration.</p>
+</li>
+<li>
+<p><strong>for statement:</strong> The <code>for</code> statement creates a loop that consists of three optional expressions: initialization, condition, and iteration.</p>
+</li>
+<li>
+<p><strong>Nested for statements:</strong> A nested <code>for</code> statement is a <code>for</code> statement inside another <code>for</code> loop.</p>
+</li>
+<li>
+<p><strong>Logical Operators (e.g., ||):</strong> Logical operators are used to combine conditional statements. <code>||</code> represents the logical OR.</p>
+</li>
+<li>
+<p><strong>isNaN:</strong> <code>isNaN</code> is a function that checks if a value is NaN (Not a Number).</p>
+</li>
 </ul>
 <h2 id="javascript-functions">JavaScript: Functions</h2>
 <ul>
-<li>function definition syntax</li>
-<li>function call</li>
-<li>function argument</li>
-<li>Math.pow</li>
-<li>Math.round</li>
-<li>Math.floor</li>
-<li>Math.random</li>
-<li>local and global variables</li>
+<li>
+<p><strong>Function Definition Syntax:</strong> Functions are defined using the <code>function</code> keyword, followed by the function name, parameters in parentheses, and a block of code in curly braces.</p>
+</li>
+<li>
+<p><strong>Function Call:</strong> A function is called or invoked by using its name followed by parentheses, containing any required arguments.</p>
+</li>
+<li>
+<p><strong>Function Argument:</strong> A function argument is a value provided to a function when it is called.</p>
+</li>
+<li>
+<p><strong>Math.pow:</strong> <code>Math.pow</code> is a method that returns the base to the power of the exponent.</p>
+</li>
+<li>
+<p><strong>Math.round:</strong> <code>Math.round</code> is a method that rounds a number to the nearest integer.</p>
+</li>
+<li>
+<p><strong>Math.floor:</strong> <code>Math.floor</code> is a method that rounds a number down to the nearest integer.</p>
+</li>
+<li>
+<p><strong>Math.random:</strong> <code>Math.random</code> is a method that generates a pseudo-random floating-point number between 0 (inclusive) and 1 (exclusive).</p>
+</li>
+<li>
+<p><strong>Local and Global Variables:</strong> Local variables are declared within a function and have local scope, while global variables are declared outside any function and have global scope.</p>
+</li>
 </ul>
 <h2 id="javascript-arrays">JavaScript: Arrays</h2>
 <ul>
-<li>definition of array</li>
-<li>subscript</li>
-<li>defining a new array</li>
-<li>array initialization</li>
-<li>2-dimensional array</li>
-<li>looping through an array using the for statement</li>
-<li>pull-down menu</li>
-<li>form field validation</li>
+<li>
+<p><strong>Definition of Array:</strong> An array is a data structure that stores a collection of elements, each identified by an index or a key.</p>
+</li>
+<li>
+<p><strong>Subscript:</strong> A subscript is the index used to access individual elements in an array.</p>
+</li>
+<li>
+<p><strong>Defining a New Array:</strong> Arrays can be defined using square brackets and can contain elements of any data type.</p>
+</li>
+<li>
+<p><strong>Array Initialization:</strong> Array initialization is the process of assigning values to the elements of an array during its creation.</p>
+</li>
+<li>
+<p><strong>2-Dimensional Array:</strong> A 2-dimensional array is an array of arrays, forming a matrix-like structure.</p>
+</li>
+<li>
+<p><strong>Looping Through an Array Using the for Statement:</strong> The <code>for</code> statement can be used to iterate through the elements of an array.</p>
+</li>
+<li>
+<p><strong>Pull-Down Menu:</strong> A pull-down menu, often implemented using a <code>&lt;select&gt;</code> element, allows users to choose from a list of options.</p>
+</li>
+<li>
+<p><strong>Form Field Validation:</strong> Arrays can be used to store and validate form field values efficiently.</p>
+</li>
 </ul>
 <h2 id="javascript-objects">JavaScript: Objects</h2>
 <ul>
-<li>string.split</li>
-<li>string.charAt</li>
-<li>string.indexOf</li>
-<li>string.substr</li>
-<li>string.substring</li>
-<li>indexOf</li>
-<li>Date methods</li>
-<li>Math.floor</li>
-<li>Math.round</li>
-<li>regular expressions</li>
-<li>window.open</li>
+<li>
+<p><strong>string.split:</strong> <code>split</code> is a method that splits a string into an array of substrings based on a specified delimiter.</p>
+</li>
+<li>
+<p><strong>string.charAt:</strong> <code>charAt</code> is a method that returns the character at a specified index in a string.</p>
+</li>
+<li>
+<p><strong>string.indexOf</strong> <code>indexOf</code> is a method that returns the index of the first occurrence of a specified value in a string.</p>
+</li>
+<li>
+<p><strong>string.substr:</strong> <code>substr</code> is a method that returns a portion of a string starting from a specified index and for a specified number of characters.</p>
+</li>
+<li>
+<p><strong>string.substring:</strong> <code>substring</code> is a method that returns a portion of a string between two specified indices.</p>
+</li>
+<li>
+<p><strong>indexOf:</strong> <code>indexOf</code> is a method that returns the index of the first occurrence of a specified value in a string.</p>
+</li>
+<li>
+<p><strong>Date Methods:</strong> JavaScript provides methods to work with dates, including creating Date objects and accessing various components like day, month, year, etc.</p>
+</li>
+<li>
+<p><strong>Math.floor:</strong> <code>Math.floor</code> is a method that rounds a number down to the nearest integer.</p>
+</li>
+<li>
+<p><strong>Math.round:</strong> <code>Math.round</code> is a method that rounds a number to the nearest integer.</p>
+</li>
+<li>
+<p><strong>Regular Expressions:</strong> Regular expressions (regex) are patterns used to match character combinations in strings.</p>
+</li>
+<li>
+<p><strong>window.open:</strong> <code>window.open</code> is a method that opens a new browser window or tab.</p>
+</li>
 </ul>
 <h2 id="javascript-object-model-and-misc-jquery">JavaScript: Object Model and Misc jQuery</h2>
 <ul>
-<li>className</li>
-<li>document style elements</li>
-<li>onload</li>
-<li>onmouseover</li>
-<li>onmouseout</li>
-<li>getElementsByTagname</li>
-<li>jQuery navigation bar</li>
-<li>jQuery login slider</li>
+<li>
+<p><strong>className:</strong> <code>className</code> is a property that gets or sets the class attribute of an element.</p>
+</li>
+<li>
+<p><strong>Document Style Elements:</strong> Document style elements allow you to dynamically manipulate the styles of HTML elements.</p>
+</li>
+<li>
+<p><strong>onload:</strong> <code>onload</code> is an event that occurs when a document or an image finishes loading.</p>
+</li>
+<li>
+<p><strong>onmouseover:</strong> <code>onmouseover</code> is an event that occurs when the mouse pointer is moved over an element.</p>
+</li>
+<li>
+<p><strong>onmouseout:</strong> <code>onmouseout</code> is an event that occurs when the mouse pointer leaves an element.</p>
+</li>
+<li>
+<p><strong>getElementsByTagname:</strong> <code>getElementsByTagname</code> is a method that returns a collection of all elements in the document with the specified tag name.</p>
+</li>
+<li>
+<p><strong>jQuery Navigation Bar:</strong> jQuery can be used to create dynamic navigation bars that enhance the user experience.</p>
+</li>
+<li>
+<p><strong>jQuery Login Slider:</strong> jQuery sliders can be implemented to create interactive elements on a web page.</p>
+</li>
 </ul>
 <h2 id="ajax">Ajax</h2>
 <ul>
-<li>What is Ajax</li>
-<li>XMLHttpRequest</li>
-<li>&ldquo;try and catch&rdquo; statement</li>
-<li>onreadystatechange</li>
-<li>xmlHttp.readyState</li>
-<li>sending a Request to the Server</li>
+<li>
+<p><strong>What is Ajax:</strong> Ajax (Asynchronous JavaScript and XML) is a technology that allows web pages to be updated asynchronously by exchanging small amounts of data with the server behind the scenes.</p>
+</li>
+<li>
+<p><strong>XMLHttpRequest:</strong> <code>XMLHttpRequest</code> is an API used in Ajax to make HTTP requests from the browser.</p>
+</li>
+<li>
+<p><strong>&ldquo;try and catch&rdquo; statement:</strong> The <code>try</code> and <code>catch</code> statements are used to handle exceptions in JavaScript code.</p>
+</li>
+<li>
+<p><strong>onreadystatechange:</strong> <code>onreadystatechange</code> is an event handler that is triggered when the <code>readyState</code> property of an <code>XMLHttpRequest</code> changes.</p>
+</li>
+<li>
+<p><strong>xmlHttp.readyState:</strong> <code>readyState</code> is a property of <code>XMLHttpRequest</code> that represents the state of the request.</p>
+</li>
+<li>
+<p><strong>Sending a Request to the Server:</strong> Ajax allows sending requests to the server without reloading the entire page, enabling dynamic and interactive user experiences.</p>
+</li>
 </ul>
 <h2 id="misc-jquery">Misc jQuery</h2>
 <ul>
-<li>Show/hide instructions</li>
-<li>Fade an element</li>
-<li>Validate input form data for numeric</li>
-<li>Masking input form data</li>
-<li>val()</li>
+<li>
+<p><strong>Show/Hide Instructions:</strong> jQuery can be used to dynamically show or hide elements on a web page, providing an interactive user experience.</p>
+</li>
+<li>
+<p><strong>Fade an Element:</strong> jQuery provides methods to create fade-in and fade-out effects on elements, enhancing the visual appeal of a web page.</p>
+</li>
+<li>
+<p><strong>Validate Input Form Data for Numeric:</strong> jQuery can be used to validate input form data, ensuring it meets specific criteria such as being numeric.</p>
+</li>
+<li>
+<p><strong>Masking Input Form Data:</strong> Input masking involves formatting user input as it is entered, providing a structured and user-friendly experience. jQuery can be used for this purpose.</p>
+</li>
+<li>
+<p><strong>val():</strong> <code>val()</code> is a jQuery method used to get or set the value of form elements like input fields and text areas.</p>
+</li>
 </ul>
+<h2 id="must-know-mentions">Must Know Mentions</h2>
+<ul>
+<li>
+<p><strong>Dynamic Imports:</strong> JS bundles may be split into a by-need basis and sent over the network to decrease load times.</p>
+</li>
+<li>
+<p><strong>JS Bundles:</strong> HTML and JavaScript code that must be bundled into usable static assets by web browsers.</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>const lazyBundle = await import(&#39;./lazy.js&#39;);
+</span></span></code></pre></div><p>-<strong>TypeScript:</strong> may be used to improve static code quality.</p>
 
 </div>
 <div class="tags">

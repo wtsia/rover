@@ -314,28 +314,28 @@ $$</li>
 </tbody>
 </table>
 <h1 id="basics-of-java">Basics of Java</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import java.util.Scanner; // import scanner
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span> <span style="color:#75715e">// import scanner
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Salary</span> <span style="color:#f92672">{</span>                       
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String <span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Program starts in main and executes in main&#39;s braces {}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> wage<span style="color:#f92672">;</span> <span style="color:#75715e">// declare variable, does not assign 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// semicolon ends statement, and declaring a variable is paramount to object manipulation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// wage = 20; assigns the variable&#39;s value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    Scanner scnr <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// create object scanner, from System.in (keyboard input)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    wage <span style="color:#f92672">=</span> scnr<span style="color:#f92672">.</span><span style="color:#a6e22e">nextInt</span><span style="color:#f92672">();</span>                      
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>public class Salary {                       
-</span></span><span style="display:flex;"><span>  public static void main (String [] args) {
-</span></span><span style="display:flex;"><span>    // Program starts in main and executes in main&#39;s braces {}
-</span></span><span style="display:flex;"><span>    int wage; // declare variable, does not assign 
-</span></span><span style="display:flex;"><span>    // semicolon ends statement, and declaring a variable is paramount to object manipulation
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    // wage = 20; assigns the variable&#39;s value
-</span></span><span style="display:flex;"><span>    Scanner scnr = new Scanner(System.in);
-</span></span><span style="display:flex;"><span>    // create object scanner, from System.in (keyboard input)
-</span></span><span style="display:flex;"><span>    wage = scnr.nextInt();                      
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    System.out.print(&#34;Salary is \n&#34;);
-</span></span><span style="display:flex;"><span>    // \n creates a new line       
-</span></span><span style="display:flex;"><span>    System.out.println(wage * 40 * 52 + &#34; this is example text&#34;);
-</span></span><span style="display:flex;"><span>    /*
-</span></span><span style="display:flex;"><span>     * This is weirdly valid
-</span></span><span style="display:flex;"><span>     *
-</span></span><span style="display:flex;"><span>    */
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Salary is \n&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// \n creates a new line       
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>wage <span style="color:#f92672">*</span> 40 <span style="color:#f92672">*</span> 52 <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; this is example text&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * This is weirdly valid
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     *
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><ul>
 <li><code>print</code> vs <code>println</code>: ln encloses the output in its own line, sending the next line to a blank line</li>
 </ul>
@@ -417,16 +417,16 @@ You can test across a class using multiple methods and printing FAIL statements.
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>count = 0;
-</span></span><span style="display:flex;"><span>num = 6;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>count <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>num <span style="color:#f92672">=</span> 6<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>do {
-</span></span><span style="display:flex;"><span>   num = num - 1;
-</span></span><span style="display:flex;"><span>   count = count + 1;
-</span></span><span style="display:flex;"><span>} while (num &gt; 4); 
-</span></span><span style="display:flex;"><span>// executes twice, but DO always executes!
-</span></span><span style="display:flex;"><span>// for all num, DO will execute!
-</span></span></code></pre></div><h3 id="character-vs-string">Character vs String</h3>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>   num <span style="color:#f92672">=</span> num <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>   count <span style="color:#f92672">=</span> count <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span> <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>num <span style="color:#f92672">&gt;</span> 4<span style="color:#f92672">);</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// executes twice, but DO always executes!
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// for all num, DO will execute!
+</span></span></span></code></pre></div><h3 id="character-vs-string">Character vs String</h3>
 <ul>
 <li>ASCII - merican Standard Code for Information Interchange</li>
 <li>&lsquo;char&rsquo; vs &ldquo;String&rdquo;</li>
@@ -437,11 +437,11 @@ You can test across a class using multiple methods and printing FAIL statements.
 </span></span><span style="display:flex;"><span>word.toLowerCase();
 </span></span><span style="display:flex;"><span>word.toUpperCase();
 </span></span></code></pre></div><h3 id="input-validation">Input Validation</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>if (!in.**hasNextDouble()**) {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>in<span style="color:#f92672">.**</span>hasNextDouble<span style="color:#f92672">()**)</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    String word = in.next();
-</span></span><span style="display:flex;"><span>    System.err.println(word + &#34;is not a number&#34;);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    String word <span style="color:#f92672">=</span> in<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">err</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>word <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;is not a number&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><ul>
 <li>De Morgans Law:</li>
 </ul>
@@ -449,16 +449,16 @@ You can test across a class using multiple methods and printing FAIL statements.
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>!(A || B)  is the same as   !A &amp;&amp; !B
 </span></span></code></pre></div><h2 id="arrays">Arrays</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>// Create Arrays
-</span></span><span style="display:flex;"><span>String[] names;
-</span></span><span style="display:flex;"><span>double[] values;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// Create Arrays
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>String<span style="color:#f92672">[]</span> names<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span><span style="color:#f92672">[]</span> values<span style="color:#f92672">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>values = new double[size]; 
-</span></span><span style="display:flex;"><span>// new operator allocates memory for the array and automatically initializes all of its elements to a default value
-</span></span><span style="display:flex;"><span>// values refer to an array of doubles; 
-</span></span><span style="display:flex;"><span>// how many elements depends on the value of size 
-</span></span><span style="display:flex;"><span>// (at the time the array is created)
-</span></span></code></pre></div><ul>
+</span></span><span style="display:flex;"><span>values <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">double</span><span style="color:#f92672">[</span>size<span style="color:#f92672">];</span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// new operator allocates memory for the array and automatically initializes all of its elements to a default value
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// values refer to an array of doubles; 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// how many elements depends on the value of size 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// (at the time the array is created)
+</span></span></span></code></pre></div><ul>
 <li><code>toString()</code>, returns a string representation of an array.</li>
 <li><code>copyOf()</code> , copies an array
 <ul>
@@ -468,16 +468,16 @@ You can test across a class using multiple methods and printing FAIL statements.
 </ul>
 <h4 id="array-are-references">Array are references</h4>
 <p>When you make an assignment to an array variable, it simply <strong>copies the reference</strong>. But it doesn’t copy the array itself. For example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>double[] values = new double[3];
-</span></span><span style="display:flex;"><span>double[] data = values;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">double</span><span style="color:#f92672">[]</span> values <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">double</span><span style="color:#f92672">[</span>3<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span><span style="color:#f92672">[]</span> data <span style="color:#f92672">=</span> values<span style="color:#f92672">;</span>
 </span></span></code></pre></div><h4 id="traversing-arrays">Traversing Arrays</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] array = {1, 2, 3, 4, 5};
-</span></span><span style="display:flex;"><span>for (int i = 0; i &lt; array.length; i++) {
-</span></span><span style="display:flex;"><span>    array[i] *= array[i];
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> array <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5<span style="color:#f92672">};</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> array<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    array<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">*=</span> array<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>// Values after the loop: {1, 4, 9, 16, 25}
-</span></span></code></pre></div><ul>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Values after the loop: {1, 4, 9, 16, 25}
+</span></span></span></code></pre></div><ul>
 <li>Search (returning index of occurence), Reducing (i.e. Sum),</li>
 </ul>
 <h3 id="summary-so-far">Summary so far</h3>
@@ -503,17 +503,17 @@ You can test across a class using multiple methods and printing FAIL statements.
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;access_modifier&gt; &lt;return_type&gt; &lt;method_name&gt;( list_of_parameters) {
-</span></span><span style="display:flex;"><span>    //body
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>access_modifier<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>return_type<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>method_name<span style="color:#f92672">&gt;(</span> list_of_parameters<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//body
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>public int subtractNumbers(int m, int n) {
-</span></span><span style="display:flex;"><span>    int p = 0;
-</span></span><span style="display:flex;"><span>    p = m - n;
-</span></span><span style="display:flex;"><span>    System.out.println(p);
-</span></span><span style="display:flex;"><span>    return p;
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">subtractNumbers</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> m<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> n<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> m <span style="color:#f92672">-</span> n<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>p<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><blockquote>
 <p>we can see that <code>public</code> corresponse to the access modifier, <code>int</code> to return type, and <code>subtractNumbers</code> to method name. You can infer what the other parts are.</p>
 </blockquote>
@@ -533,11 +533,11 @@ You can test across a class using multiple methods and printing FAIL statements.
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>int[] values = { 1, 2, 3, 4, 5 };
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> values <span style="color:#f92672">=</span> <span style="color:#f92672">{</span> 1<span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span> 4<span style="color:#f92672">,</span> 5 <span style="color:#f92672">};</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>for (int value:values) {
-</span></span><span style="display:flex;"><span>  System.out.println(value);
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> value<span style="color:#f92672">:</span>values<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div><h2 id="hashmaps">Hashmaps</h2>
 <h3 id="import-javautilhashmap"><code>import java.util.HashMap;</code></h3>
 <ul>
@@ -671,6 +671,7 @@ You can test across a class using multiple methods and printing FAIL statements.
 </span></span><span style="display:flex;"><span>// List originally empty
 </span></span><span style="display:flex;"><span>valsList.add(31); // List now: 31 
 </span></span><span style="display:flex;"><span>valsList.add(41); // List now: 31 41
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>get()	get(index) 
 </span></span><span style="display:flex;"><span>Returns the element at the specified list location known as the index. Indices start at 0.	
 </span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
@@ -678,10 +679,12 @@ You can test across a class using multiple methods and printing FAIL statements.
 </span></span><span style="display:flex;"><span>x = valsList.get(1);  // Assigns 41
 </span></span><span style="display:flex;"><span>x = valsList.get(2);  // Assigns 59
 </span></span><span style="display:flex;"><span>x = valsList.get(3);  // Error: No such element
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>set()	set(index, element) 
 </span></span><span style="display:flex;"><span>Replaces the element at the specified position in this list with the specified element.	
 </span></span><span style="display:flex;"><span>// List originally: 31 41 59 
 </span></span><span style="display:flex;"><span>valsList.set(1, 119);  // List now 31 119 59
+</span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>size()	size()
 </span></span><span style="display:flex;"><span>Returns the number of list elements.	
 </span></span><span style="display:flex;"><span>// List originally: 31 41 59. Assume x is an int. 
@@ -726,13 +729,13 @@ You can test across a class using multiple methods and printing FAIL statements.
 <li>To call a method:</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>public class VeganClass { 
-</span></span><span style="display:flex;"><span>   public static double calcVegan() {
+</span></span><span style="display:flex;"><span>   public static double calcNum() {
 </span></span><span style="display:flex;"><span>      // some calculations and logic
 </span></span><span style="display:flex;"><span>   }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>   public static void main(String[] args) {
-</span></span><span style="display:flex;"><span>      // Calls method calcVegan and prints the result
-</span></span><span style="display:flex;"><span>      System.out.println(calcVegan());
+</span></span><span style="display:flex;"><span>      // Calls method calcNum and prints the result
+</span></span><span style="display:flex;"><span>      System.out.println(calcNum());
 </span></span><span style="display:flex;"><span>   }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ul>

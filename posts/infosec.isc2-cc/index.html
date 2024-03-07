@@ -46,7 +46,7 @@ src="/rover/">
 <meta itemprop="name" content="ISC2 CC">
 <meta itemprop="description" content="Notes on ISC2 CC"><meta itemprop="datePublished" content="2023-08-10T17:50:41-07:00" />
 <meta itemprop="dateModified" content="2023-08-10T17:50:41-07:00" />
-<meta itemprop="wordCount" content="33"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
+<meta itemprop="wordCount" content="2287"><meta itemprop="image" content="https://wtsia.github.io/img/%3Cfolder%3E/example.jpg">
 <meta itemprop="keywords" content="tag1,tag2," />
 </head>
 <body>
@@ -107,23 +107,598 @@ src="/rover/">
 <h1 id="contents">Contents</h1>
 <ul>
 <li><a href="#contents">Contents</a></li>
-<li><a href="#security-principles">Security Principles</a>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#security-principles">Security Principles:</a>
+<ul>
+<li><a href="#information-assurance">Information Assurance</a>
 <ul>
 <li><a href="#cia-triad">CIA Triad</a></li>
+<li><a href="#authentication">Authentication</a></li>
+<li><a href="#privacy">Privacy</a></li>
+</ul>
+</li>
+<li><a href="#risk-management">Risk Management</a>
+<ul>
+<li><a href="#methods-of-risk-management">Methods of Risk Management</a></li>
+<li><a href="#security-controls-governance-ethics">Security Controls, Governance, Ethics</a>
+<ul>
+<li><a href="#regulation-and-laws">Regulation and Laws</a></li>
+<li><a href="#standards">Standards</a></li>
 </ul>
 </li>
 </ul>
-<h1 id="security-principles">Security Principles</h1>
-<h2 id="cia-triad">CIA Triad</h2>
+</li>
+</ul>
+</li>
+<li><a href="#business-continuity-disaster-recovery-incidence-response">Business Continuity, Disaster Recovery, Incidence Response</a>
+<ul>
+<li><a href="#business-continuity-plan">Business Continuity Plan</a></li>
+<li><a href="#disaster-recovery">Disaster Recovery</a></li>
+<li><a href="#incidence-response">Incidence Response</a></li>
+</ul>
+</li>
+<li><a href="#access-control-concepts">Access Control Concepts</a>
+<ul>
+<li><a href="#defense-strategies">Defense Strategies</a></li>
+<li><a href="#physical-access">Physical Access</a></li>
+<li><a href="#logical-access">Logical Access</a>
+<ul>
+<li><a href="#access-controls">Access Controls:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#network-security"><strong>Network Security</strong></a>
+<ul>
+<li><a href="#osi-layers">OSI Layers</a></li>
+<li><a href="#tcpip">TCP/IP</a></li>
+<li><a href="#secure-ports">Secure Ports</a></li>
+<li><a href="#threats">Threats</a></li>
+<li><a href="#tools">Tools</a></li>
+</ul>
+</li>
+<li><a href="#network-security-architecture">Network Security Architecture</a>
+<ul>
+<li><a href="#network-design">Network Design</a>
+<ul>
+<li><a href="#defense-in-depth">Defense In Depth</a></li>
+</ul>
+</li>
+<li><a href="#zero-trust-and-microsegmentation">Zero Trust and Microsegmentation</a>
+<ul>
+<li><a href="#comparison-and-relationship">Comparison and Relationship</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#security-operations"><strong>Security Operations</strong></a>
+<ul>
+<li><a href="#data-security">Data Security</a></li>
+<li><a href="#system-hardening">System Hardening</a></li>
+<li><a href="#security-policies">Security Policies</a></li>
+<li><a href="#security-awareness-training">Security Awareness Training</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="overview">Overview</h1>
+<p>5 Chapters, 20+ modules</p>
+<h1 id="security-principles">Security Principles:</h1>
+<h2 id="information-assurance">Information Assurance</h2>
+<h3 id="cia-triad">CIA Triad</h3>
 <p>Confidentiality-Integrity-Availability</p>
 <ul>
 <li>C: Access management (sensitivity)</li>
 <li>I: Accurate, consistent data (baseline and state)</li>
-<li>A: Timely + Reliable accessible (criticality)</li>
+<li>A: Timely + Reliable access (criticality)</li>
 </ul>
-<p>Authentication</p>
+<blockquote>
+<p>The CIA triad is the cornerstone of information security, and as a security professional you will use all its components—confidentiality, integrity, and availability—to protect the information in your charge. Think of it as a three-dimensional way of thinking. There are many different aspects to protecting information and the more you think about it, the more you realize how complex it can be.</p>
+</blockquote>
+<h3 id="authentication">Authentication</h3>
 <ul>
 <li>Knowledge, Token, or Characteristic</li>
+</ul>
+<h3 id="privacy">Privacy</h3>
+<p>Laws to act in accordance with:</p>
+<ul>
+<li>HIPAA (Health Insurance Portability and Accountability Act)</li>
+<li>GDPR (General Data Protection Regulation)</li>
+</ul>
+<h2 id="risk-management">Risk Management</h2>
+<p><strong>Risk assessment, analysis, mitigation, remediation and communication</strong>. IT Risk $\subset$ Business Risk. Threat actors utilize threat vectors and stand at the opposing side to mitigating risk. <strong>Probability</strong> and <strong>Impact</strong> are important concepts in a subjective risk analysis.</p>
+<h3 id="methods-of-risk-management">Methods of Risk Management</h3>
+<ul>
+<li>Acceptance: Deeming something an &ldquo;acceptable&rdquo; risk</li>
+<li>Transfer: i.e. Insurance Policy</li>
+<li>Avoidance: Desisting operations to &ldquo;avoid&rdquo;</li>
+<li>Mitigation: Preventative measures like controls, policies, procedures, hiring expertise</li>
+</ul>
+<p>Risk may be presented with a risk matrix, a graph with an $x(+)$ and $y(+)$ axis, one corresponding to <strong>likelihood</strong> and the other axis corresponding to <strong>impact</strong>.</p>
+<h3 id="security-controls-governance-ethics">Security Controls, Governance, Ethics</h3>
+<p>Security Controls are the physical (entry badge), technical (logical controls, computer implemented) and administrative mechanisms that act as safeguards or countermeasures prescribed for an information system to protect the confidentiality, integrity and availability of the system and its information</p>
+<ul>
+<li>Policy: Sets guidelines/standards</li>
+<li>Procedure: Explicit sets of actions to undertake</li>
+</ul>
+<h4 id="regulation-and-laws">Regulation and Laws</h4>
+<ul>
+<li>(HIPAA, 1996) Health Insurance Portability and Accountability Act: must keep protected health information (PHI) secure, 1996.</li>
+<li>(GDPR, 2016) General Data Protection Regulation: EU provisions for personally identifiable information (PII) protections</li>
+</ul>
+<h4 id="standards">Standards</h4>
+<ul>
+<li>(ISO) International Organization for Standardization</li>
+<li>(NIST) National Institute of Standards and Technology: Dept. of Commerce, US Infosec standards.</li>
+<li>(IETF) Internet Engineering Task Force: Body that regulates communication standards</li>
+<li>(IEEE) Institute of Electrical and Electronic Engineers: sets subject standards</li>
+</ul>
+<h1 id="business-continuity-disaster-recovery-incidence-response">Business Continuity, Disaster Recovery, Incidence Response</h1>
+<h2 id="business-continuity-plan">Business Continuity Plan</h2>
+<p>Components include: team members, procedures/checlists, notifications, guidence for managers, how/when, critical supply chain contacts.</p>
+<ul>
+<li>Red Book: &ldquo;Red Book&rdquo; typically refers to a comprehensive document or set of guidelines that outlines security policies, procedures, and best practices for a specific organization or system (often given to entities outside the facility)</li>
+</ul>
+<h2 id="disaster-recovery">Disaster Recovery</h2>
+<p>The Disaster Recovery (DR) plan may include the following components: executive summary providing a high-level overview of the plan, department-specific plans, technical guides for IT personnel responsible for implementing and maintaining critical backup systems, full copies of the plan for critical disaster recovery team members, and checklists for certain individuals.</p>
+<h2 id="incidence-response">Incidence Response</h2>
+<p>The four main components of Incident Response are: Preparation; Detection and Analysis; Containment, Eradication and Recovery; and Post-Incident Activity</p>
+<h1 id="access-control-concepts">Access Control Concepts</h1>
+<ul>
+<li>Subjects</li>
+<li>Objects</li>
+<li>Rule</li>
+</ul>
+<h2 id="defense-strategies">Defense Strategies</h2>
+<ul>
+<li>Defense in Depth</li>
+<li>Least Privilege</li>
+<li>Privileged Access Management
+<ul>
+<li>Privileged Accounts</li>
+<li>Segregation of Duties
+<ul>
+<li>Two-Person Integrity: paired access to secure objects</li>
+</ul>
+</li>
+<li>User Provisioning: Creating accounts and managing access privileges for users</li>
+</ul>
+</li>
+</ul>
+<h2 id="physical-access">Physical Access</h2>
+<ul>
+<li>Badge/Gate Entry</li>
+<li>Enviromental Design</li>
+<li>Biometrics (Physiological, Behavioral)
+<ul>
+<li>Behavioral: Keystroke analysis</li>
+</ul>
+</li>
+</ul>
+<h2 id="logical-access">Logical Access</h2>
+<p>General:</p>
+<ul>
+<li>Passwords</li>
+<li>Biometrics</li>
+<li>Badge/token</li>
+</ul>
+<h3 id="access-controls">Access Controls:</h3>
+<ul>
+<li>Discretionary Access Control: subjects who have been granted access to information may pass, grant, change security, choose security, change access control on objects</li>
+<li>Mandatory Access Control: administrator based access control on objects, and subset of subjects are given a subset of objects to access</li>
+<li>Role-based Access Control: user based roles</li>
+</ul>
+<h1 id="network-security"><strong>Network Security</strong></h1>
+<h2 id="osi-layers">OSI Layers</h2>
+<p>Basic networks include LAN, WAN networks.</p>
+<ul>
+<li>Recall <a href="./posts/cs.networks/#osi">OSI Layers</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Upper (Host) Layer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Application Layer</td>
+<td>Provides network services directly to end-users or applications. It includes protocols like HTTP, SMTP, and FTP.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Presentation Layer</td>
+<td>Responsible for data translation, encryption, and compression. It ensures that data is presented in a format that the application layer can understand.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Session Layer</td>
+<td>Manages communication sessions between applications, including establishing, maintaining, and terminating connections.</td>
+</tr>
+<tr>
+<td>Lower Layer</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Transport Layer</td>
+<td>Ensures reliable data transfer between hosts. It manages flow control, error correction, and segmentation of data. Protocols include TCP and UDP.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Network Layer</td>
+<td>Handles logical addressing and routing of data packets between different networks. IP is the primary protocol at this layer.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data Link Layer</td>
+<td>Responsible for the physical addressing of data packets and the transmission of data frames within a single network segment. Ethernet and Wi-Fi are examples of data link layer protocols.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Physical Layer</td>
+<td>Deals with the physical transmission of data over the network medium. It includes specifications for cables, connectors, and other hardware components.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>A</strong>pps <strong>P</strong>resent <strong>S</strong>ession, <strong>T</strong>ransporting <strong>N</strong>etwork <strong>D</strong>ata <strong>P</strong>hysically</p>
+</blockquote>
+<ul>
+<li>TCP/IP is easy to hack, as it was designed for usability not security</li>
+<li><strong>Encapsulation</strong>: the addition of header and possibly a footer (trailer) data by a protocol used at that layer of the OSI model</li>
+</ul>
+<h2 id="tcpip">TCP/IP</h2>
+<p><strong>A</strong>pplication, <strong>T</strong>ransport, <strong>I</strong>nternet, <strong>N</strong>etwork Interface</p>
+<p><strong>IPv4 vs IPv6</strong></p>
+<ul>
+<li>IPSec optional in IPv4, mandatory in IPv6</li>
+<li>IPv6: uses 8 groups of Hexadecimal</li>
+</ul>
+<h2 id="secure-ports">Secure Ports</h2>
+<p>Note: * denotes secure. All susceptible to sniffing. </p>
+<table>
+<thead>
+<tr>
+<th>Port Number</th>
+<th>Protocol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21 / 22*</td>
+<td>FTP / SFTP*</td>
+<td>File Transfer Protocol for transferring files. SFTP Encrypted</td>
+</tr>
+<tr>
+<td>23  / 22*</td>
+<td>Telnet / SSH*</td>
+<td>Unsecured text communications protocol.</td>
+</tr>
+<tr>
+<td>25 / 587*</td>
+<td>SMTP / +TLS</td>
+<td>Simple Mail Transfer Protocol for email routing.</td>
+</tr>
+<tr>
+<td>37 / 123*</td>
+<td>Time / Network Time Protocol</td>
+<td>Protocol for synchronizing time over a network.</td>
+</tr>
+<tr>
+<td>53 / 853*</td>
+<td>DNS / +TLS</td>
+<td>Domain Name System for translating domain names.</td>
+</tr>
+<tr>
+<td>80 / 443</td>
+<td>HTTP / HTTPS</td>
+<td>Hypertext Transfer Protocol for web traffic. SSL/TLS has been compromised and is no longer considered secure. TLS 1.3 or higher recommended (2022)</td>
+</tr>
+<tr>
+<td>143 / 993</td>
+<td>IMAP / +SSL/TLS</td>
+<td>Internet Message Access Protocol for email retrieval.</td>
+</tr>
+<tr>
+<td>161/162</td>
+<td>SNMP / +SNMPv3</td>
+<td>Simple Network Management Protocol for network management.</td>
+</tr>
+<tr>
+<td>445 / 2049*</td>
+<td>SMB / NFS</td>
+<td>Server Message Block for file sharing over a network. Network File System is also not recommended through firewalls</td>
+</tr>
+<tr>
+<td>389 / 636</td>
+<td>LDAP / LDAPS (Secure)</td>
+<td>Lightweight Directory Access Protocol for directory services. Can use SSL/TLS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SYN, SYN-ACK, ACK</strong></p>
+<ul>
+<li>SYN &raquo; SYN-ACK &laquo; ACK</li>
+</ul>
+<h2 id="threats">Threats</h2>
+<table>
+<thead>
+<tr>
+<th>Type of Threat</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spoofing</td>
+<td>The act of masquerading as a legitimate entity to gain unauthorized access.</td>
+</tr>
+<tr>
+<td>Phishing</td>
+<td>Attempting to acquire sensitive information by pretending to be trustworthy.</td>
+</tr>
+<tr>
+<td>DOS/DDOS</td>
+<td>Denial of Service / Distributed Denial of Service attacks to disrupt service.</td>
+</tr>
+<tr>
+<td>Virus</td>
+<td>Malicious software that replicates by modifying other computer programs.</td>
+</tr>
+<tr>
+<td>Worm</td>
+<td>Standalone malware that replicates itself to spread to other computers.</td>
+</tr>
+<tr>
+<td>Trojan</td>
+<td>Malware that misleads users of its true intent.</td>
+</tr>
+<tr>
+<td>On-path Attack</td>
+<td>Intercepting data packets as they travel across a network.</td>
+</tr>
+<tr>
+<td>Side-channel</td>
+<td>Attacks based on information gained from the physical implementation of a system.</td>
+</tr>
+<tr>
+<td>Advanced Persistent Threat (APT)</td>
+<td>A prolonged and targeted cyberattack in which an intruder gains access to a network and remains undetected.</td>
+</tr>
+<tr>
+<td>Insider Threat</td>
+<td>A security risk that originates from within the targeted organization.</td>
+</tr>
+<tr>
+<td>Malware</td>
+<td>Software designed to disrupt, damage, or gain unauthorized access to a computer system.</td>
+</tr>
+<tr>
+<td>Ransomware</td>
+<td>Malware that encrypts the victim&rsquo;s files and demands a ransom for the decryption key.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tools">Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tools</th>
+<th>Description</th>
+<th>Identifies Threats</th>
+<th>Prevent Threats</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intrusion Detection System (IDS)</td>
+<td>A form of monitoring to detect abnormal activity; it detects intrusion attempts and system failures.</td>
+<td>✔️</td>
+<td></td>
+</tr>
+<tr>
+<td>Host-based IDS (HIDS)</td>
+<td>Monitors activity on a single computer.</td>
+<td>✔️</td>
+<td></td>
+</tr>
+<tr>
+<td>Network-based IDS (NIDS)</td>
+<td>Monitors and evaluates network activity to detect attacks or event anomalies.</td>
+<td>✔️</td>
+<td></td>
+</tr>
+<tr>
+<td>SIEM</td>
+<td>Gathers log data from sources across an enterprise to understand security concerns and apportion resources.</td>
+<td>✔️</td>
+<td></td>
+</tr>
+<tr>
+<td>Anti-malware/Antivirus</td>
+<td>Seeks to identify malicious software or processes.</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Scans</td>
+<td>Evaluates the effectiveness of security controls.</td>
+<td>✔️</td>
+<td></td>
+</tr>
+<tr>
+<td>Firewall</td>
+<td>Filters network traffic - manages and controls network traffic and protects the network.</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+<tr>
+<td>Intrusion Protection System (IPS-NIPS/HIPS)</td>
+<td>An active IDS that automatically attempts to detect and block attacks before they reach target systems.</td>
+<td>✔️</td>
+<td>✔️</td>
+</tr>
+</tbody>
+</table>
+<h1 id="network-security-architecture">Network Security Architecture</h1>
+<p><strong>Memorandum of Understanding (MOU)/Memorandum of Agreement (MOA)</strong></p>
+<p>A mutual pact/agreement to share resources during downtime.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Characteristics</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SaaS (Software as a Service)</td>
+<td>A software distribution model in which applications are hosted by a vendor or service provider and made available to customers over a network, typically the internet.</td>
+<td>- Accessible from anywhere<!-- raw HTML omitted --> - Subscription-based<!-- raw HTML omitted --> - Managed from a central location<!-- raw HTML omitted --> - No need to install or run applications on individual devices</td>
+<td>Google Workspace, Salesforce, Dropbox, Microsoft Office 365</td>
+</tr>
+<tr>
+<td>IaaS (Infrastructure as a Service)</td>
+<td>A form of cloud computing that provides virtualized computing resources over the internet.</td>
+<td>- Scalable computing resources<!-- raw HTML omitted --> - Pay-as-you-go model<!-- raw HTML omitted --> - No need for physical hardware management<!-- raw HTML omitted --> - Greater flexibility and control over infrastructure</td>
+<td>Amazon Web Services (AWS), Microsoft Azure, Google Compute Engine (GCE), IBM Cloud</td>
+</tr>
+<tr>
+<td>PaaS (Platform as a Service)</td>
+<td>A cloud computing model that provides customers a platform allowing them to develop, run, and manage applications without the complexity of building and maintaining the infrastructure.</td>
+<td>- Built-in development tools and database management<!-- raw HTML omitted --> - Middleware and development tools are provided<!-- raw HTML omitted --> - Platform management is handled by the provider<!-- raw HTML omitted --> - Simplifies the development process</td>
+<td>Heroku, Google App Engine, OpenShift, Microsoft Azure App Services</td>
+</tr>
+<tr>
+<td>SLA (Service Level Agreement)</td>
+<td>A contract between a service provider and the end user that defines the level of service expected from the service provider.</td>
+<td>- Specifies performance benchmarks<!-- raw HTML omitted --> - Details remedies for service failures<!-- raw HTML omitted --> - Sets expectations for service availability and support response times<!-- raw HTML omitted --> - May define service scope and customer obligations</td>
+<td>Varies by provider and service; typically a part of enterprise-level agreements for cloud services</td>
+</tr>
+</tbody>
+</table>
+<h2 id="network-design">Network Design</h2>
+<table>
+<thead>
+<tr>
+<th>Network Security Concept</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network Segmentation</td>
+<td>Network segmentation involves controlling traffic among networked devices. Complete or physical network segmentation occurs when a network is isolated from all outside communications, so transactions can only occur between devices within the segmented network.</td>
+</tr>
+<tr>
+<td>Demilitarized Zone (DMZ)</td>
+<td>A DMZ is a physical or logical subnetwork that contains and exposes an organization&rsquo;s external-facing services to an untrusted network, usually the internet.</td>
+</tr>
+<tr>
+<td>Virtual Local Area Network (VLAN)</td>
+<td>VLANs allow network administrators to partition a network for better traffic management.</td>
+</tr>
+<tr>
+<td>Virtual Private Network (VPN)</td>
+<td>A VPN extends a private network across a public network, allowing users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network.</td>
+</tr>
+<tr>
+<td>Defense in Depth</td>
+<td>A multi-layered strategy that uses several different components to protect operations and information.</td>
+</tr>
+<tr>
+<td>Network Access Control (NAC)</td>
+<td>NAC is used to define and implement policies that control access to network nodes by devices when they initially attempt to access the network.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="defense-in-depth">Defense In Depth</h3>
+<p><figure>
+  <img src="/rover/img/ISCCC/image.png" alt="Defense In Depth"  />
+</figure></p>
+<h2 id="zero-trust-and-microsegmentation">Zero Trust and Microsegmentation</h2>
+<h3 id="comparison-and-relationship">Comparison and Relationship</h3>
+<ul>
+<li><strong>Overlap</strong>: While different, these concepts can be complementary. Zero Trust can use microsegmentation as one of its strategies to enforce its no-trust policy by strictly limiting access to applications and environments based on user and device credentials and roles.</li>
+<li><strong>Implementation</strong>: In practice, an organization could use microsegmentation techniques to implement a Zero Trust security model, as microsegmentation can provide the granular control over traffic and access required by Zero Trust.</li>
+<li><strong>Security Strategy</strong>: Zero Trust is an overarching strategy or approach to security, while microsegmentation is a tactic or method that can be used to achieve the objectives of a Zero Trust model.</li>
+</ul>
+<h1 id="security-operations"><strong>Security Operations</strong></h1>
+<h2 id="data-security">Data Security</h2>
+<p><strong>Data Handling</strong>: Classification -&gt; Labeling -&gt; Retention -&gt; Destruction</p>
+<p><strong>Event Logging</strong>:</p>
+<p><em><strong>Ingress monitoring</strong></em> refers to surveillance and assessment of all inbound communications traffic and access attempts. Devices and tools that offer logging and alerting opportunities for ingress monitoring include: 
+Examples:</p>
+<ul>
+<li>Firewalls</li>
+<li>Gateways</li>
+<li>Remote authentication servers</li>
+<li>IDS/IPS tools</li>
+<li>SIEM solutions</li>
+<li>Anti-malware solutions</li>
+</ul>
+<p><em><strong>Egress monitoring</strong></em></p>
+<ul>
+<li>Email (content and attachments)</li>
+<li>Copy to portable media</li>
+<li>File Transfer Protocol (FTP)</li>
+<li>Posting to web pages/websites</li>
+<li>Applications/application programming interfaces (APIs)</li>
+</ul>
+<h2 id="system-hardening">System Hardening</h2>
+<p>Inventory &raquo; Baselines &raquo; Updates &raquo; Patches</p>
+<h2 id="security-policies">Security Policies</h2>
+<table>
+<thead>
+<tr>
+<th>Policy</th>
+<th>Key Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Handling Policy</td>
+<td>- Outlines proper handling and classification of data.<!-- raw HTML omitted -->- Restrictions based on user roles and data sensitivity.<!-- raw HTML omitted -->- Compliance with legal and regulatory requirements.<!-- raw HTML omitted -->- Encryption requirements for sensitive data.</td>
+</tr>
+<tr>
+<td>Password Policy</td>
+<td>- Specifies complexity requirements (length, characters, etc.).<!-- raw HTML omitted -->- Enforces regular password changes.<!-- raw HTML omitted -->- Prohibits password reuse.<!-- raw HTML omitted -->- May include two-factor authentication guidelines.</td>
+</tr>
+<tr>
+<td>Acceptable Use Policy (AUP)</td>
+<td>- Defines acceptable and prohibited uses of the organization&rsquo;s IT resources.<!-- raw HTML omitted -->- Sets guidelines for internet use, email conduct, and software installation.<!-- raw HTML omitted -->- Outlines consequences for violations.</td>
+</tr>
+<tr>
+<td>Bring Your Own Device (BYOD) Policy</td>
+<td>- Details security requirements for personal devices used for work.<!-- raw HTML omitted -->- Covers data segregation between personal and work data.<!-- raw HTML omitted -->- May include remote wipe authority for company data.<!-- raw HTML omitted -->- Defines support boundaries for personal devices.</td>
+</tr>
+<tr>
+<td>Privacy Policy</td>
+<td>- Explains how personal data is collected, used, stored, and protected.<!-- raw HTML omitted -->- Includes user rights regarding their data.<!-- raw HTML omitted -->- Details about data sharing with third parties.<!-- raw HTML omitted -->- Compliance with privacy laws like GDPR or CCPA.</td>
+</tr>
+<tr>
+<td>Change Management Policy</td>
+<td>- Procedures for requesting, reviewing, and implementing changes in the IT environment.<!-- raw HTML omitted -->- Roles and responsibilities for change management.<!-- raw HTML omitted -->- Testing and backout plans.<!-- raw HTML omitted -->- Documentation and communication of changes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-awareness-training">Security Awareness Training</h2>
+<ul>
+<li><strong>Education</strong>: The overall goal of education is to help learners improve their understanding of these ideas and their ability to relate them to their own experiences and apply that learning in useful ways.</li>
+<li><strong>Training</strong>: Focuses on building proficiency in a specific set of skills or actions, including sharpening the perception and judgment needed to make decisions as to which skill to use, when to use it and how to apply it. Training can focus on low-level skills, an entire task or complex workflows consisting of many tasks.</li>
+<li><strong>Awareness</strong>: These are activities that attract and engage the learner’s attention by acquainting them with aspects of an issue, concern, problem or need.</li>
 </ul>
 
 </div>
