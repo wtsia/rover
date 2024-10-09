@@ -43,13 +43,13 @@ src="/rover/">
 <meta itemprop="name" content="">
 <meta itemprop="description" content="cdc&#43;&#43;&#43; author = &ldquo;Winston Tsia&rdquo; authorlink = &quot;&quot; title = &ldquo;Computer Organization Systems Programming&rdquo; date = 2023-01-23T00:30:07-08:00 description = &ldquo;Notes on Computer Organization and Systems Programming&rdquo; tags = [ &ldquo;tag1&rdquo;, &ldquo;tag2&rdquo;, ] categories = [ &ldquo;cat1&rdquo;, &ldquo;cat2&rdquo;, ] math = true notaxonomy = false images = [&quot;/img//example.jpg&quot;] imagetext = &ldquo;An example text for an image you could add!&rdquo; hidden = true norobots = true nodate = true hidemeta = false &#43;&#43;&#43;">
 
-<meta itemprop="wordCount" content="457">
+<meta itemprop="wordCount" content="6042">
 <meta itemprop="keywords" content="" />
 </head>
 <body>
 <header>
 <div id="avatar">
-<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpeg" alt="Rover"></a>
 </div>
 <div id="titletext">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
@@ -159,6 +159,115 @@ hidemeta = false
 </li>
 </ul>
 </li>
+<li><a href="#programming-introduction">Programming Introduction</a>
+<ul>
+<li><a href="#datatypes">Datatypes</a></li>
+<li><a href="#arithmetic-operations">Arithmetic Operations</a>
+<ul>
+<li><a href="#additional-notes">Additional Notes:</a></li>
+</ul>
+</li>
+<li><a href="#format-specifiers">Format Specifiers</a></li>
+<li><a href="#includestdioh"><code>include<stdio.h></code></a></li>
+<li><a href="#math-functions">Math Functions</a></li>
+<li><a href="#if-else-switch">if-else, switch</a>
+<ul>
+<li><a href="#usage-examples">Usage Examples:</a>
+<ul>
+<li><a href="#if-statement"><code>if</code> Statement:</a></li>
+<li><a href="#if-else-statement"><code>if-else</code> Statement:</a></li>
+<li><a href="#if-else-if-else-statement"><code>if-else if-else</code> Statement:</a></li>
+<li><a href="#switch-statement"><code>switch</code> Statement:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#logical-operators">Logical Operators</a>
+<ul>
+<li><a href="#ternary-operator">Ternary Operator</a></li>
+</ul>
+</li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#user-defined-functions">User-Defined Functions</a></li>
+<li><a href="#function-prototype">Function Prototype</a></li>
+<li><a href="#example-user-defined-function-with-prototype">Example: User-Defined Function with Prototype</a></li>
+<li><a href="#why-use-function-prototypes">Why Use Function Prototypes?</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+</ul>
+</li>
+<li><a href="#string-functions">String Functions</a></li>
+<li><a href="#loops">Loops</a>
+<ul>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#for-loop"><code>for</code> Loop:</a></li>
+<li><a href="#while-loop"><code>while</code> Loop:</a></li>
+<li><a href="#do-while-loop"><code>do-while</code> Loop:</a></li>
+</ul>
+</li>
+<li><a href="#arrays">Arrays</a>
+<ul>
+<li><a href="#basics-of-arrays">Basics of Arrays</a>
+<ul>
+<li><a href="#declaration">Declaration</a></li>
+<li><a href="#initialization">Initialization</a></li>
+<li><a href="#accessing-array-elements">Accessing Array Elements</a></li>
+</ul>
+</li>
+<li><a href="#properties-of-arrays">Properties of Arrays</a></li>
+<li><a href="#multidimensional-arrays">Multidimensional Arrays</a></li>
+<li><a href="#dynamic-arrays">Dynamic Arrays</a></li>
+<li><a href="#limitations-and-considerations">Limitations and Considerations</a></li>
+</ul>
+</li>
+<li><a href="#structs">Structs</a>
+<ul>
+<li><a href="#understanding-structs">Understanding Structs</a>
+<ul>
+<li><a href="#example-of-struct-declaration">Example of Struct Declaration:</a></li>
+</ul>
+</li>
+<li><a href="#using-typedef-with-structs">Using Typedef with Structs</a>
+<ul>
+<li><a href="#example-using-typedef">Example Using Typedef:</a></li>
+</ul>
+</li>
+<li><a href="#practical-usage-of-structs-and-typedef">Practical Usage of Structs and Typedef</a></li>
+</ul>
+</li>
+<li><a href="#bitwise-operators">Bitwise Operators</a></li>
+<li><a href="#list-of-bitwise-operators-in-c">List of Bitwise Operators in C:</a></li>
+<li><a href="#practical-applications-of-bitwise-operators">Practical Applications of Bitwise Operators</a></li>
+<li><a href="#pointers">Pointers</a>
+<ul>
+<li><a href="#concepts-of-pointers">Concepts of Pointers</a></li>
+<li><a href="#example-uses-of-pointers">Example Uses of Pointers</a></li>
+<li><a href="#table-of-pointer-operations">Table of Pointer Operations</a></li>
+<li><a href="#key-points">Key Points</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#combinatorial-logic">Combinatorial Logic</a>
+<ul>
+<li><a href="#boolean-laws">Boolean Laws</a>
+<ul>
+<li><a href="#1-identity-laws">1. Identity Laws</a></li>
+<li><a href="#2-null-laws">2. Null Laws</a></li>
+<li><a href="#3-idempotent-laws">3. Idempotent Laws</a></li>
+<li><a href="#4-dominance-laws">4. Dominance Laws</a></li>
+<li><a href="#5-complement-laws">5. Complement Laws</a></li>
+<li><a href="#6-commutative-laws">6. Commutative Laws</a></li>
+<li><a href="#7-associative-laws">7. Associative Laws</a></li>
+<li><a href="#8-distributive-laws">8. Distributive Laws</a></li>
+<li><a href="#9-absorption-laws">9. Absorption Laws</a></li>
+<li><a href="#10-involution-law">10. Involution Law</a></li>
+<li><a href="#11-de-morgans-theorems">11. De Morgan’s Theorems</a></li>
+</ul>
+</li>
+<li><a href="#final-practice">Final Practice</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -263,7 +372,1263 @@ $$</li>
 </ul>
 <h4 id="process-of-dma-direct-memory-access">Process of DMA: Direct Memory Access</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>CPU -&gt; Controller -&gt; Disk -&gt; Load to Main Memory -&gt; Controller sends signal to CPU
-</span></span></code></pre></div>
+</span></span></code></pre></div><h2 id="programming-introduction">Programming Introduction</h2>
+<h3 id="datatypes">Datatypes</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Size (Typical)</th>
+<th>Range of Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>char</code></td>
+<td>1 byte</td>
+<td>-128 to 127 or 0 to 255</td>
+</tr>
+<tr>
+<td><code>unsigned char</code></td>
+<td>1 byte</td>
+<td>0 to 255</td>
+</tr>
+<tr>
+<td><code>signed char</code></td>
+<td>1 byte</td>
+<td>-128 to 127</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>4 bytes</td>
+<td>-2,147,483,648 to 2,147,483,647</td>
+</tr>
+<tr>
+<td><code>unsigned int</code></td>
+<td>4 bytes</td>
+<td>0 to 4,294,967,295</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>2 bytes</td>
+<td>-32,768 to 32,767</td>
+</tr>
+<tr>
+<td><code>unsigned short</code></td>
+<td>2 bytes</td>
+<td>0 to 65,535</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>4 or 8 bytes</td>
+<td>-2,147,483,648 to 2,147,483,647 (4 bytes)</td>
+</tr>
+<tr>
+<td><code>unsigned long</code></td>
+<td>4 or 8 bytes</td>
+<td>0 to 4,294,967,295 (4 bytes)</td>
+</tr>
+<tr>
+<td><code>long long</code></td>
+<td>8 bytes</td>
+<td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td><code>unsigned long long</code></td>
+<td>8 bytes</td>
+<td>0 to 18,446,744,073,709,551,615</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>4 bytes</td>
+<td>Approximately 1.2E-38 to 3.4E+38 (7 digits precision)</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>8 bytes</td>
+<td>Approximately 2.3E-308 to 1.7E+308 (15 digits precision)</td>
+</tr>
+<tr>
+<td><code>long double</code></td>
+<td>8 or 16 bytes</td>
+<td>Varies, often 3.4E-4932 to 1.1E+4932 (19 digits precision)</td>
+</tr>
+</tbody>
+</table>
+<p>Additional Notes:</p>
+<ul>
+<li>The exact size and range can depend on the architecture, compiler, and whether the system is 32-bit or 64-bit. For instance, long on many Unix-like systems on 64-bit architectures is typically 8 bytes.</li>
+<li>The size of long double can vary significantly between different systems and compilers.</li>
+<li>char can be either signed or unsigned by default, which depends on the compiler and system settings. This affects whether char interprets its bits as ranging from -128 to 127 or 0 to 255.</li>
+</ul>
+<h3 id="arithmetic-operations">Arithmetic Operations</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Syntax</th>
+<th>Example</th>
+<th>Result Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code></td>
+<td>Addition</td>
+<td><code>a + b</code></td>
+<td><code>5 + 3</code></td>
+<td>Adds <code>a</code> and <code>b</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td>Subtraction</td>
+<td><code>a - b</code></td>
+<td><code>5 - 3</code></td>
+<td>Subtracts <code>b</code> from <code>a</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Multiplication</td>
+<td><code>a * b</code></td>
+<td><code>5 * 3</code></td>
+<td>Multiplies <code>a</code> by <code>b</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td>Division</td>
+<td><code>a / b</code></td>
+<td><code>6 / 3</code></td>
+<td>Divides <code>a</code> by <code>b</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td>Modulus</td>
+<td><code>a % b</code></td>
+<td><code>5 % 3</code></td>
+<td>Remainder of <code>a</code> divided by <code>b</code></td>
+</tr>
+<tr>
+<td><code>++</code></td>
+<td>Increment</td>
+<td><code>a++</code> or <code>++a</code></td>
+<td><code>a = 5; a++</code></td>
+<td>Increments <code>a</code> by 1</td>
+</tr>
+<tr>
+<td><code>--</code></td>
+<td>Decrement</td>
+<td><code>a--</code> or <code>--a</code></td>
+<td><code>a = 5; a--</code></td>
+<td>Decrements <code>a</code> by 1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="additional-notes">Additional Notes:</h4>
+<ul>
+<li><strong>Division (<code>/</code>)</strong>: When used with integers, this operation performs integer division (i.e., the fractional part is discarded). If either operand is a floating-point number, the division will result in a floating-point quotient.</li>
+<li><strong>Modulus (<code>%</code>)</strong>: Only applicable to integer types. It returns the remainder of dividing the first operand by the second operand.</li>
+<li><strong>Increment (<code>++</code>)</strong> and <strong>Decrement (<code>--</code>)</strong>: These operators can be used in two forms—postfix (<code>a++</code>, <code>a--</code>), where the operation is performed after the value is used in an expression, and prefix (<code>++a</code>, <code>--a</code>), where the operation is performed before the value is used.</li>
+<li><strong>Important</strong>: In the case of division by zero, the behavior is undefined in C.</li>
+</ul>
+<h3 id="format-specifiers">Format Specifiers</h3>
+<table>
+<thead>
+<tr>
+<th>Format Specifier</th>
+<th>Description</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%d</code></td>
+<td>Decimal integer</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td><code>%ld</code></td>
+<td>Long decimal integer</td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td><code>%lld</code></td>
+<td>Long long decimal integer</td>
+<td><code>long long</code></td>
+</tr>
+<tr>
+<td><code>%u</code></td>
+<td>Unsigned decimal integer</td>
+<td><code>unsigned int</code></td>
+</tr>
+<tr>
+<td><code>%lu</code></td>
+<td>Unsigned long decimal integer</td>
+<td><code>unsigned long</code></td>
+</tr>
+<tr>
+<td><code>%llu</code></td>
+<td>Unsigned long long decimal integer</td>
+<td><code>unsigned long long</code></td>
+</tr>
+<tr>
+<td><code>%o</code></td>
+<td>Octal integer</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td><code>%lo</code></td>
+<td>Long octal integer</td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td><code>%llo</code></td>
+<td>Long long octal integer</td>
+<td><code>long long</code></td>
+</tr>
+<tr>
+<td><code>%x</code> or <code>%X</code></td>
+<td>Hexadecimal integer</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td><code>%lx</code> or <code>%lX</code></td>
+<td>Long hexadecimal integer</td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td><code>%llx</code> or <code>%llX</code></td>
+<td>Long long hexadecimal integer</td>
+<td><code>long long</code></td>
+</tr>
+<tr>
+<td><code>%c</code></td>
+<td>Character</td>
+<td><code>char</code></td>
+</tr>
+<tr>
+<td><code>%s</code></td>
+<td>String</td>
+<td><code>char *</code></td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>Floating-point number (standard notation)</td>
+<td><code>float</code> or <code>double</code></td>
+</tr>
+<tr>
+<td><code>%e</code> or <code>%E</code></td>
+<td>Floating-point number (scientific notation)</td>
+<td><code>float</code> or <code>double</code></td>
+</tr>
+<tr>
+<td><code>%g</code> or <code>%G</code></td>
+<td>Floating-point number (compact notation)</td>
+<td><code>float</code> or <code>double</code></td>
+</tr>
+<tr>
+<td><code>%p</code></td>
+<td>Pointer</td>
+<td><code>void *</code></td>
+</tr>
+<tr>
+<td><code>%n</code></td>
+<td>Stores the number of characters written so far</td>
+<td><code>int *</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="includestdioh"><code>include&lt;stdio.h&gt;</code></h3>
+<p>The <code>#include &lt;stdio.h&gt;</code> directive is a preprocessor command in the C programming language that instructs the compiler to include the Standard Input/Output library, known as <code>stdio.h</code>, into a program before the actual compilation begins. This header file contains declarations of functions and macros that provide input and output facilities. Here’s a breakdown of its main components and functionalities:</p>
+<ol>
+<li>
+<p><strong>Input/Output Functions</strong>:</p>
+<ul>
+<li><code>printf()</code>: Used to print the formatted output to the standard output (usually the screen).</li>
+<li><code>scanf()</code>: Used for formatted input, it reads data from the standard input (usually the keyboard).</li>
+<li><code>puts()</code>: Writes a string to stdout and appends a newline character.</li>
+<li><code>gets()</code>: Reads a string from stdin until a newline character is encountered (not safe to use because of buffer overflow issues).</li>
+</ul>
+</li>
+<li>
+<p><strong>File Handling Functions</strong>:</p>
+<ul>
+<li><code>fopen()</code>: Opens a file and returns a pointer to a <code>FILE</code> object associated with the file name specified.</li>
+<li><code>fclose()</code>: Closes an open file associated with a <code>FILE</code> pointer.</li>
+<li><code>fprintf()</code>, <code>fscanf()</code>: Similar to <code>printf()</code> and <code>scanf()</code>, but these work with file streams.</li>
+<li><code>fread()</code>, <code>fwrite()</code>: Used for reading and writing binary data to and from files.</li>
+<li><code>feof()</code>, <code>ferror()</code>: Check for end-of-file or errors when reading from or writing to files.</li>
+</ul>
+</li>
+<li>
+<p><strong>Character Input/Output</strong>:</p>
+<ul>
+<li><code>fgetc()</code>, <code>getc()</code>, <code>getchar()</code>: Used for reading a single character from a file or standard input.</li>
+<li><code>fputc()</code>, <code>putc()</code>, <code>putchar()</code>: Write a single character to a file or standard output.</li>
+</ul>
+</li>
+<li>
+<p><strong>Buffer Manipulation</strong>:</p>
+<ul>
+<li><code>setbuf()</code>, <code>setvbuf()</code>: Functions to set the buffer for a file stream, which can optimize I/O performance by reducing the number of actual input and output operations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling</strong>:</p>
+<ul>
+<li><code>perror()</code>: Prints an error message to standard error, describing the last error encountered during a call to a standard I/O function.</li>
+</ul>
+</li>
+<li>
+<p><strong>Positioning</strong>:</p>
+<ul>
+<li><code>rewind()</code>, <code>fseek()</code>, <code>ftell()</code>: Functions to move the read/write position in a file.</li>
+</ul>
+</li>
+<li>
+<p><strong>Temporary Files</strong>:</p>
+<ul>
+<li><code>tmpfile()</code>, <code>tmpnam()</code>: Functions for creating temporary files and names, useful in situations where a short-lived file is needed without leaving traces on the file system.</li>
+</ul>
+</li>
+</ol>
+<p>Including <code>stdio.h</code> in a C program is essential for performing standard input and output operations, which are fundamental to most applications. This header is part of the C Standard Library, included in the C Standard defined by the ISO/IEC 9899:2011 (commonly known as C11) and its predecessors. Using <code>#include &lt;string.h&gt;</code> for <code>fgets()</code>.</p>
+<h3 id="math-functions">Math Functions</h3>
+<p>Often includes <code>#include &lt;math.h&gt;</code></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fabs(x)</code></td>
+<td>Absolute value of <code>x</code></td>
+</tr>
+<tr>
+<td><code>ceil(x)</code></td>
+<td>Smallest integer not less than <code>x</code></td>
+</tr>
+<tr>
+<td><code>floor(x)</code></td>
+<td>Largest integer not greater than <code>x</code></td>
+</tr>
+<tr>
+<td><code>sqrt(x)</code></td>
+<td>Square root of <code>x</code></td>
+</tr>
+<tr>
+<td><code>pow(x, y)</code></td>
+<td><code>x</code> raised to the power of <code>y</code></td>
+</tr>
+<tr>
+<td><code>exp(x)</code></td>
+<td>Exponential function (e^x)</td>
+</tr>
+<tr>
+<td><code>log(x)</code></td>
+<td>Natural logarithm (base <code>e</code>) of <code>x</code></td>
+</tr>
+<tr>
+<td><code>log10(x)</code></td>
+<td>Base 10 logarithm of <code>x</code></td>
+</tr>
+<tr>
+<td><code>sin(x)</code></td>
+<td>Sine of <code>x</code> (in radians)</td>
+</tr>
+<tr>
+<td><code>cos(x)</code></td>
+<td>Cosine of <code>x</code> (in radians)</td>
+</tr>
+<tr>
+<td><code>tan(x)</code></td>
+<td>Tangent of <code>x</code> (in radians)</td>
+</tr>
+<tr>
+<td><code>asin(x)</code></td>
+<td>Arcsine of <code>x</code> (in radians)</td>
+</tr>
+<tr>
+<td><code>acos(x)</code></td>
+<td>Arccosine of <code>x</code> (in radians)</td>
+</tr>
+<tr>
+<td><code>atan(x)</code></td>
+<td>Arctangent of <code>x</code> (in radians)</td>
+</tr>
+<tr>
+<td><code>sinh(x)</code></td>
+<td>Hyperbolic sine of <code>x</code></td>
+</tr>
+<tr>
+<td><code>cosh(x)</code></td>
+<td>Hyperbolic cosine of <code>x</code></td>
+</tr>
+<tr>
+<td><code>tanh(x)</code></td>
+<td>Hyperbolic tangent of <code>x</code></td>
+</tr>
+<tr>
+<td><code>asinh(x)</code></td>
+<td>Inverse hyperbolic sine of <code>x</code></td>
+</tr>
+<tr>
+<td><code>acosh(x)</code></td>
+<td>Inverse hyperbolic cosine of <code>x</code></td>
+</tr>
+<tr>
+<td><code>atanh(x)</code></td>
+<td>Inverse hyperbolic tangent of <code>x</code></td>
+</tr>
+<tr>
+<td><code>fmod(x, y)</code></td>
+<td>Floating-point remainder of <code>x/y</code></td>
+</tr>
+<tr>
+<td><code>remainder(x, y)</code></td>
+<td>Floating-point remainder of <code>x/y</code></td>
+</tr>
+<tr>
+<td><code>hypot(x, y)</code></td>
+<td>Euclidean distance function sqrt(x^2 + y^2)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="if-else-switch">if-else, switch</h3>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if</code> statement</td>
+<td>Conditional statement that executes a block of code if the given condition is true.</td>
+</tr>
+<tr>
+<td><code>if-else</code> statement</td>
+<td>Conditional statement that executes one block of code if the condition is true, and another if false.</td>
+</tr>
+<tr>
+<td><code>if-else if-else</code></td>
+<td>Chain of conditional statements where each <code>else if</code> condition is evaluated only if previous conditions fail.</td>
+</tr>
+<tr>
+<td><code>switch</code> statement</td>
+<td>Multi-way decision statement that evaluates an expression and executes code based on matching case labels.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="usage-examples">Usage Examples:</h4>
+<h5 id="if-statement"><code>if</code> Statement:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;Positive</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="if-else-statement"><code>if-else</code> Statement:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;Positive</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;Non-positive</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="if-else-if-else-statement"><code>if-else if-else</code> Statement:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;Positive</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;Negative</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;Zero</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h5 id="switch-statement"><code>switch</code> Statement:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> day <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (day) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Monday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Tuesday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Wednesday</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;Invalid day</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
+<li>Note the use of <code>break;</code> statements to stop continuation of the cases.</li>
+</ul>
+<h3 id="logical-operators">Logical Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>Logical AND</td>
+<td><code>a &amp;&amp; b</code></td>
+<td>True if both <code>a</code> and <code>b</code> are true, false otherwise</td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>Logical OR</td>
+<td><code>a || b</code></td>
+<td>True if at least one of <code>a</code> or <code>b</code> is true, false otherwise</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>Logical NOT (negation)</td>
+<td><code>!a</code></td>
+<td>True if <code>a</code> is false, false if <code>a</code> is true</td>
+</tr>
+</tbody>
+</table>
+<h5 id="ternary-operator">Ternary Operator</h5>
+<p>Shortcut to an if/else statement when assigning/returning a value.</p>
+<p><code>condition ? expression1 : expression2</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> num <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> result <span style="color:#f92672">=</span> (num <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;even&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;odd&#34;</span>;
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;%d is %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, num, result); <span style="color:#75715e">// 10 is even
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="functions">Functions</h3>
+<p>User-defined functions are custom functions that you write to perform specific tasks, making your code modular, reusable, and easier to read. These functions allow you to break complex problems into smaller, manageable parts.</p>
+<h4 id="user-defined-functions">User-Defined Functions</h4>
+<p>User-defined functions are declared and defined by the programmer, specifying what operations the function will carry out. Each function typically performs a dedicated task that can be used throughout the program.</p>
+<p><strong>Structure of a User-Defined Function</strong>:</p>
+<ol>
+<li><strong>Function Declaration/Prototype</strong>: Introduces the function to the compiler before its actual implementation. It specifies the function&rsquo;s name, return type, and parameters (if any).</li>
+<li><strong>Function Definition</strong>: Contains the actual body of the function—i.e., the code that executes when the function is called.</li>
+<li><strong>Function Call</strong>: This is where you use the function in your code.</li>
+</ol>
+<h4 id="function-prototype">Function Prototype</h4>
+<blockquote>
+<p>Note: many C compilers do not check for parameter matching</p>
+</blockquote>
+<p>A function prototype is a declaration of a function that specifies the function’s name, return type, and its parameters (type and order), but not the body. It tells the compiler what the function looks like. It allows the compiler to handle the function call correctly and is particularly useful for managing and maintaining code where functions are defined after they are called.</p>
+<p><strong>Syntax of a Function Prototype</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>return_type <span style="color:#a6e22e">function_name</span>(type1 parameter1, type2 parameter2, ...);
+</span></span></code></pre></div><h4 id="example-user-defined-function-with-prototype">Example: User-Defined Function with Prototype</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function prototype
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> add(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>);
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#e6db74">&#34;The sum is: %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function definition
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">int</span> a, <span style="color:#66d9ef">int</span> b) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this example:</p>
+<ul>
+<li>The function prototype for <code>add(int, int)</code> is declared before the <code>main()</code> function.</li>
+<li>The function <code>add</code> is defined after <code>main</code>. It takes two integers, adds them, and returns the sum.</li>
+<li>The prototype ensures that the compiler knows about the <code>add</code> function when it is called in <code>main</code>.</li>
+</ul>
+<h4 id="why-use-function-prototypes">Why Use Function Prototypes?</h4>
+<ul>
+<li><strong>Type Checking</strong>: Function prototypes enable the compiler to perform type checks on the function arguments, reducing errors.</li>
+<li><strong>Program Organization</strong>: They help in organizing the program into logical blocks and can be declared in header files for use across multiple source files.</li>
+<li><strong>Forward Declarations</strong>: Useful in scenarios involving mutually recursive functions or when functions are defined in a different order than their calls.</li>
+</ul>
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+<li>Always declare function prototypes at the beginning of your files or in a header file.</li>
+<li>Match the function prototype with the function definition exactly to avoid any mismatch and compiler errors.</li>
+<li>Use meaningful function names and parameter names to make your code self-explanatory.</li>
+</ul>
+<h3 id="string-functions">String Functions</h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Header</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>strlen()</code></td>
+<td>Returns the length of a string excluding the null terminator</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Counts characters until the null terminator</td>
+</tr>
+<tr>
+<td><code>strcpy()</code></td>
+<td>Copies a string from source to destination</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Destination must have enough space to hold the source string</td>
+</tr>
+<tr>
+<td><code>strncpy()</code></td>
+<td>Copies a portion of a string from source to destination</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Allows you to specify the number of characters to copy</td>
+</tr>
+<tr>
+<td><code>strcat()</code></td>
+<td>Concatenates two strings</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Appends the contents of the source string to the destination string</td>
+</tr>
+<tr>
+<td><code>strncat()</code></td>
+<td>Concatenates a portion of a string to another string</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Allows you to specify the number of characters to concatenate</td>
+</tr>
+<tr>
+<td><code>strcmp()</code></td>
+<td>Compares two strings lexicographically</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Returns 0 if strings are equal, negative value if str1 &lt; str2, positive value if str1 &gt; str2</td>
+</tr>
+<tr>
+<td><code>strncmp()</code></td>
+<td>Compares a portion of two strings lexicographically</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Allows you to specify the number of characters to compare</td>
+</tr>
+<tr>
+<td><code>strchr()</code></td>
+<td>Returns a pointer to the first occurrence of a character</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Searches for the first occurrence of the specified character in the string</td>
+</tr>
+<tr>
+<td><code>strrchr()</code></td>
+<td>Returns a pointer to the last occurrence of a character</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Searches for the last occurrence of the specified character in the string</td>
+</tr>
+<tr>
+<td><code>strstr()</code></td>
+<td>Returns a pointer to the first occurrence of a substring</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Searches for the first occurrence of the specified substring in the string</td>
+</tr>
+<tr>
+<td><code>strtok()</code></td>
+<td>Splits a string into tokens based on delimiters</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Used for tokenizing strings</td>
+</tr>
+<tr>
+<td><code>sprintf()</code></td>
+<td>Formats and stores a series of characters into a string</td>
+<td><code>&lt;stdio.h&gt;</code></td>
+<td>Similar to <code>printf()</code> but writes output to a string instead of stdout</td>
+</tr>
+<tr>
+<td><code>snprintf()</code></td>
+<td>Writes formatted data to a string with specified maximum length</td>
+<td><code>&lt;stdio.h&gt;</code></td>
+<td>Same as <code>sprintf()</code> but specifies maximum length to prevent buffer overflow</td>
+</tr>
+<tr>
+<td><code>strcmp()</code></td>
+<td>Compares two strings lexicographically</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Returns 0 if strings are equal, negative value if str1 &lt; str2, positive value if str1 &gt; str2</td>
+</tr>
+<tr>
+<td><code>strncmp()</code></td>
+<td>Compares a portion of two strings lexicographically</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Allows you to specify the number of characters to compare</td>
+</tr>
+<tr>
+<td><code>strstr()</code></td>
+<td>Returns a pointer to the first occurrence of a substring</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Searches for the first occurrence of the specified substring in the string</td>
+</tr>
+<tr>
+<td><code>strtok()</code></td>
+<td>Splits a string into tokens based on delimiters</td>
+<td><code>&lt;string.h&gt;</code></td>
+<td>Used for tokenizing strings</td>
+</tr>
+<tr>
+<td><code>sprintf()</code></td>
+<td>Formats and stores a series of characters into a string</td>
+<td><code>&lt;stdio.h&gt;</code></td>
+<td>Similar to <code>printf()</code> but writes output to a string instead of stdout</td>
+</tr>
+<tr>
+<td><code>snprintf()</code></td>
+<td>Writes formatted data to a string with specified maximum length</td>
+<td><code>&lt;stdio.h&gt;</code></td>
+<td>Same as <code>sprintf()</code> but specifies maximum length to prevent buffer overflow</td>
+</tr>
+</tbody>
+</table>
+<h3 id="loops">Loops</h3>
+<table>
+<thead>
+<tr>
+<th>Loop</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for</code> loop</td>
+<td>Executes a block of code a specified number of times, with initialization, condition, and increment/decrement expressions</td>
+</tr>
+<tr>
+<td><code>while</code> loop</td>
+<td>Executes a block of code as long as the specified condition evaluates to true</td>
+</tr>
+<tr>
+<td><code>do-while</code> loop</td>
+<td>Executes a block of code at least once, and then repeatedly as long as the specified condition evaluates to true</td>
+</tr>
+</tbody>
+</table>
+<h4 id="examples">Examples</h4>
+<h4 id="for-loop"><code>for</code> Loop:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>; i<span style="color:#f92672">++</span>) {
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, i);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Outputs: 0 1 2 3 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="while-loop"><code>while</code> Loop:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>) {
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, i);
+</span></span><span style="display:flex;"><span>        i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Outputs: 0 1 2 3 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="do-while-loop"><code>do-while</code> Loop:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">do</span> {
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, i);
+</span></span><span style="display:flex;"><span>        i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Outputs: 0 1 2 3 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="arrays">Arrays</h3>
+<p>Arrays in C are fundamental data structures that allow you to store multiple items of the same data type under a single variable name. Arrays provide a convenient way to access and manipulate collections of data systematically using an index. Here’s an in-depth exploration of arrays in C:</p>
+<h4 id="basics-of-arrays">Basics of Arrays</h4>
+<p>An array is a collection of elements of the same type placed in contiguous memory locations. Each element in the array can be uniquely identified by an array index.</p>
+<h5 id="declaration">Declaration</h5>
+<p>To declare an array in C, you specify the type of its elements and the number of elements required by it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">10</span>]; <span style="color:#75715e">// Declares an array of ten integers
+</span></span></span></code></pre></div><h5 id="initialization">Initialization</h5>
+<p>Arrays can be initialized at the time of declaration. If some elements are initialized, the rest will be automatically initialized to the default zero value of the declared type.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>}; <span style="color:#75715e">// Initializes the first three elements, others set to 0
+</span></span></span></code></pre></div><p>If you provide an initializer list with fewer values than the size of the array, the remaining elements are set to zero:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> arr[<span style="color:#ae81ff">5</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>}; <span style="color:#75715e">// Output: arr = {1, 2, 0, 0, 0}
+</span></span></span></code></pre></div><p>You can also omit the size of the array if you initialize it at declaration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> arr[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>}; <span style="color:#75715e">// The compiler will size the array as 5
+</span></span></span></code></pre></div><h5 id="accessing-array-elements">Accessing Array Elements</h5>
+<p>Array elements are accessed using the subscript (index) notation. The index of the first element is 0, the second element is 1, and so forth.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; <span style="color:#75715e">// Set the first element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> x <span style="color:#f92672">=</span> arr[<span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// Read the second element
+</span></span></span></code></pre></div><h4 id="properties-of-arrays">Properties of Arrays</h4>
+<ul>
+<li><strong>Fixed Size</strong>: Once declared, the size of the array cannot be changed.</li>
+<li><strong>Contiguous Memory Allocation</strong>: Elements are stored in contiguous memory locations, which allows efficient access using indices.</li>
+<li><strong>Index Based Access</strong>: Elements are accessed using indices, which are zero-based.</li>
+</ul>
+<h4 id="multidimensional-arrays">Multidimensional Arrays</h4>
+<p>C supports multidimensional arrays, which are arrays of arrays. The most common type is the two-dimensional array.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> matrix[<span style="color:#ae81ff">3</span>][<span style="color:#ae81ff">4</span>]; <span style="color:#75715e">// Declare a 2D array (3 rows and 4 columns)
+</span></span></span></code></pre></div><p>Initialize a 2D array:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> matrix[<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">3</span>] <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    {<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>},
+</span></span><span style="display:flex;"><span>    {<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>}
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Access elements in a 2D array:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> value <span style="color:#f92672">=</span> matrix[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">2</span>]; <span style="color:#75715e">// Accesses the third element of the first row
+</span></span></span></code></pre></div><h4 id="dynamic-arrays">Dynamic Arrays</h4>
+<p>While C does not directly support dynamic arrays as part of its standard array data structure, you can simulate them using pointers and memory management functions (<code>malloc</code>, <code>realloc</code>).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> arr <span style="color:#f92672">=</span> malloc(<span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>)); <span style="color:#75715e">// Dynamically allocated array of 10 integers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (arr <span style="color:#f92672">!=</span> NULL) {
+</span></span><span style="display:flex;"><span>    arr[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// Set the first element
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// Use the array
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    free(arr); <span style="color:#75715e">// Don&#39;t forget to free the allocated memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h4 id="limitations-and-considerations">Limitations and Considerations</h4>
+<ul>
+<li><strong>No Bounds Checking</strong>: C does not perform bounds checking on arrays. Accessing out-of-bounds elements can lead to undefined behavior and potential security risks, such as buffer overflows.</li>
+<li><strong>Fixed Length</strong>: The length of a static array is determined at compile-time and cannot be modified at runtime.</li>
+</ul>
+<blockquote>
+<p>Arrays are a powerful, low-level data structure that forms the basis for more complex data structures in C and other programming languages. They allow efficient data storage and access but require careful management to avoid common pitfalls such as buffer overflows.</p>
+</blockquote>
+<h3 id="structs">Structs</h3>
+<p>In C programming, a <code>struct</code> (or structure) is a user-defined data type that allows you to combine different data types into a single logical unit. This is particularly useful for grouping related data together to form more complex data structures. <code>typedef</code> is a keyword used to create an alias for a data type, making the code more readable and easier to manage, especially when dealing with structs and other compound data types.</p>
+<h4 id="understanding-structs">Understanding Structs</h4>
+<p>A <code>struct</code> is defined using the <code>struct</code> keyword followed by the structure name and a block of member declarations enclosed in braces. Each member can be of any data type, including other structs or pointers.</p>
+<h5 id="example-of-struct-declaration">Example of Struct Declaration:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> Person {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">50</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> height;
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h4 id="using-typedef-with-structs">Using Typedef with Structs</h4>
+<p><code>typedef</code> can be used with structs to simplify the syntax when declaring variables of the struct type. Without <code>typedef</code>, you need to use the <code>struct</code> keyword each time you declare a variable of that type.</p>
+<h5 id="example-using-typedef">Example Using Typedef:</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> Person {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> name[<span style="color:#ae81ff">50</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> height;
+</span></span><span style="display:flex;"><span>} Person;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Person person1, person2; <span style="color:#75715e">// Now you can declare variables without the &#39;struct&#39; keyword
+</span></span></span></code></pre></div><table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Usage</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>struct</code></td>
+<td><code>struct StructName {...};</code></td>
+<td>Defines a new structure type with various mixed data types.</td>
+<td><code>struct Person { char name[50]; int age; float height; };</code></td>
+</tr>
+<tr>
+<td><code>typedef</code></td>
+<td><code>typedef existingType NewType;</code></td>
+<td>Creates an alias for an existing data type for easier referencing.</td>
+<td><code>typedef struct Person { char name[50]; int age; float height; } Person;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="practical-usage-of-structs-and-typedef">Practical Usage of Structs and Typedef</h4>
+<ul>
+<li><strong>Complex Data Structures</strong>: Structs are used to model real-world entities into programmable structures, like creating a <code>Person</code> or <code>Car</code> model with relevant attributes.</li>
+<li><strong>Readability and Maintainability</strong>: Using <code>typedef</code> with structs improves code readability and makes it easier to handle complex nested structures.</li>
+<li><strong>Type Abstraction</strong>: <code>typedef</code> provides a level of abstraction which can help in making the code less dependent on specific data types, making it easier to modify the data type later if needed.</li>
+</ul>
+<h3 id="bitwise-operators">Bitwise Operators</h3>
+<p>Bitwise operators in C are used for manipulating data at the bit level, which is essential in low-level programming where direct control over bits is required. These operators are used to perform bit-level operations on integers (both signed and unsigned).</p>
+<h3 id="list-of-bitwise-operators-in-c">List of Bitwise Operators in C:</h3>
+<ol>
+<li><strong>AND (<code>&amp;</code>)</strong>: Performs a binary AND operation on each bit of its integer arguments. Each bit of the output is 1 if the corresponding bits of the operands are both 1, otherwise 0.</li>
+<li><strong>OR (<code>|</code>)</strong>: Performs a binary OR operation on each bit of its integer arguments. Each bit of the output is 1 if at least one of the corresponding bits of the operands is 1.</li>
+<li><strong>XOR (<code>^</code>)</strong>: Performs a binary XOR operation on each bit of its integer arguments. Each bit of the output is 1 if the corresponding bits of the operands are different, otherwise 0.</li>
+<li><strong>NOT (<code>~</code>)</strong>: Performs a binary NOT operation on each bit of its integer argument. Inverts the bits of its operand (0 becomes 1 and 1 becomes 0).</li>
+<li><strong>Left Shift (<code>&lt;&lt;</code>)</strong>: Shifts the bits of its left operand to the left by the number of positions specified by the right operand. New bits on the right are filled with zeros.</li>
+<li><strong>Right Shift (<code>&gt;&gt;</code>)</strong>: Shifts the bits of its left operand to the right by the number of positions specified by the right operand. For unsigned data, the new bits on the left are filled with zeros. For signed data, the behavior is implementation-defined (commonly, the sign bit is propagated).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Operation</th>
+<th>Example</th>
+<th>Result Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td><code>&amp;</code></td>
+<td>Bitwise AND</td>
+<td><code>5 &amp; 3</code></td>
+<td><code>0101 &amp; 0011</code> gives <code>0001</code> (1)</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>`</td>
+<td>`</td>
+<td>Bitwise OR</td>
+<td>`5</td>
+</tr>
+<tr>
+<td>XOR</td>
+<td><code>^</code></td>
+<td>Bitwise XOR</td>
+<td><code>5 ^ 3</code></td>
+<td><code>0101 ^ 0011</code> gives <code>0110</code> (6)</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td><code>~</code></td>
+<td>Bitwise NOT</td>
+<td><code>~5</code></td>
+<td><code>~0101</code> gives <code>1010</code> (varies based on bit width)</td>
+</tr>
+<tr>
+<td>Left Shift</td>
+<td><code>&lt;&lt;</code></td>
+<td>Shift bits left, fill with 0s on the right</td>
+<td><code>5 &lt;&lt; 1</code></td>
+<td><code>0101 &lt;&lt; 1</code> gives <code>1010</code> (10)</td>
+</tr>
+<tr>
+<td>Right Shift</td>
+<td><code>&gt;&gt;</code></td>
+<td>Shift bits right, fill based on the data type</td>
+<td><code>5 &gt;&gt; 1</code></td>
+<td><code>0101 &gt;&gt; 1</code> gives <code>0010</code> (2)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: When using Markdown, especially in a context where you&rsquo;re using the pipe character (<code>|</code>) as text, make sure to either escape it using a backslash (<code>\|</code>) or format your document so that it&rsquo;s not confused with a table delimiter.</p>
+<h3 id="practical-applications-of-bitwise-operators">Practical Applications of Bitwise Operators</h3>
+<ul>
+<li><strong>Low-Level Hardware Interaction</strong>: Bitwise operations are crucial for interacting with hardware where certain bits in registers need to be set or cleared.</li>
+<li><strong>Data Compression</strong>: Bitwise operators can be used for compressing data by packing multiple information pieces in a single byte or sequence of bytes.</li>
+<li><strong>Efficiency</strong>: Operations involving bits are very fast and can be used to improve performance in high-performance applications.</li>
+</ul>
+<p>Bitwise operators provide a powerful toolset for control and optimization in embedded systems, graphics, communications, and wherever direct manipulation of data at the bit level is necessary.</p>
+<h3 id="pointers">Pointers</h3>
+<p>Pointers in C are fundamental to programming in this language, providing powerful and flexible tools for manipulating memory and enhancing performance. A pointer is a variable that stores the memory address of another variable, allowing for direct access and modification of its value.</p>
+<h4 id="concepts-of-pointers">Concepts of Pointers</h4>
+<ol>
+<li>
+<p><strong>Definition</strong>: A pointer is defined by specifying the data type of the variable it points to. This determines the type of data the pointer can address.</p>
+</li>
+<li>
+<p><strong>Initialization</strong>: A pointer can be initialized to the address of a variable using the address-of operator (<code>&amp;</code>).</p>
+</li>
+<li>
+<p><strong>Dereferencing</strong>: Using the dereference operator (<code>*</code>), you can access or modify the value at the address the pointer is pointing to.</p>
+</li>
+<li>
+<p><strong>Pointer Arithmetic</strong>: C allows arithmetic operations on pointers, where you can increment (<code>++</code>), decrement (<code>--</code>), or perform other arithmetic to traverse through memory locations.</p>
+</li>
+<li>
+<p><strong>Null Pointer</strong>: A special value (typically <code>0</code> or <code>NULL</code>) used to signify that a pointer does not point to any valid memory area.</p>
+</li>
+<li>
+<p><strong>Pointer to Pointer</strong>: C allows for multiple levels of indirection, e.g., a pointer to a pointer, which can further increase the flexibility of memory access.</p>
+</li>
+</ol>
+<h4 id="example-uses-of-pointers">Example Uses of Pointers</h4>
+<ul>
+<li><strong>Array Traversal</strong>: By incrementing a pointer initialized to the address of an array, you can traverse the array.</li>
+<li><strong>Dynamic Memory Allocation</strong>: Using pointers with functions like <code>malloc()</code>, <code>calloc()</code>, and <code>free()</code>, you can allocate and manage dynamic memory during runtime.</li>
+<li><strong>Function Pointers</strong>: Pointers to functions allow for dynamic invocation of functions and are used extensively in callback mechanisms.</li>
+<li><strong>Pass-by-Reference</strong>: C uses pointers to achieve pass-by-reference, allowing functions to modify the value of the arguments.</li>
+</ul>
+<h4 id="table-of-pointer-operations">Table of Pointer Operations</h4>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Syntax/Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pointer Declaration</td>
+<td><code>int *ptr;</code></td>
+<td>Declare a pointer to an integer.</td>
+</tr>
+<tr>
+<td>Initialization</td>
+<td><code>int x = 10; ptr = &amp;x;</code></td>
+<td>Initialize a pointer to the address of variable <code>x</code>.</td>
+</tr>
+<tr>
+<td>Dereferencing</td>
+<td><code>int value = *ptr;</code></td>
+<td>Access the value at the address stored in <code>ptr</code>.</td>
+</tr>
+<tr>
+<td>Address-of Operator</td>
+<td><code>int *ptr = &amp;x;</code></td>
+<td>Get the address of variable <code>x</code>.</td>
+</tr>
+<tr>
+<td>Pointer Arithmetic</td>
+<td><code>ptr++;</code></td>
+<td>Move the pointer to the next integer position.</td>
+</tr>
+<tr>
+<td>Null Pointer</td>
+<td><code>int *ptr = NULL;</code></td>
+<td>Assign a null value to a pointer.</td>
+</tr>
+<tr>
+<td>Pointer to Pointer</td>
+<td><code>int **pptr = &amp;ptr;</code></td>
+<td>Declare a pointer to another pointer.</td>
+</tr>
+<tr>
+<td>Function Pointer</td>
+<td><code>void (*funcPtr)() = &amp;functionName;</code></td>
+<td>Declare a pointer to a function <code>functionName</code>.</td>
+</tr>
+<tr>
+<td>Dynamic Memory</td>
+<td><code>ptr = (int*)malloc(10 * sizeof(int));</code></td>
+<td>Allocate memory dynamically for 10 integers.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="key-points">Key Points</h4>
+<ul>
+<li><strong>Memory Safety</strong>: Incorrect usage of pointers, such as dereferencing uninitialized pointers (wild pointers) or pointers to freed memory (dangling pointers), can lead to undefined behavior and security vulnerabilities.</li>
+<li><strong>Type Safety</strong>: It is crucial to ensure that pointers are used with the correct type to avoid runtime errors and data corruption. The pointers type must be the same as the referenced variable&rsquo;s type.</li>
+<li><strong>Memory Leaks</strong>: Mismanagement of dynamic memory (e.g., not freeing allocated memory) can lead to memory leaks, which are problematic in long-running programs.</li>
+</ul>
+<p>Understanding and using pointers effectively is crucial for developing efficient and powerful C programs, as they provide direct access to memory and facilitate complex data structures like linked lists, trees, and more.</p>
+<h2 id="combinatorial-logic">Combinatorial Logic</h2>
+<p>Boolean algebra is a branch of algebra that deals with binary variables and logical operations. It forms the basis for designing and analyzing digital circuits and systems. Here are the fundamental properties of Boolean algebra that are commonly used:</p>
+<h3 id="boolean-laws">Boolean Laws</h3>
+<h4 id="1-identity-laws">1. Identity Laws</h4>
+<ul>
+<li><strong>Identity Law for OR</strong>: ( A + 0 = A )</li>
+<li><strong>Identity Law for AND</strong>: ( A \cdot 1 = A )</li>
+</ul>
+<h4 id="2-null-laws">2. Null Laws</h4>
+<ul>
+<li><strong>Null Law for OR</strong>: ( A + 1 = 1 )</li>
+<li><strong>Null Law for AND</strong>: ( A \cdot 0 = 0 )</li>
+</ul>
+<h4 id="3-idempotent-laws">3. Idempotent Laws</h4>
+<ul>
+<li><strong>Idempotent Law for OR</strong>: ( A + A = A )</li>
+<li><strong>Idempotent Law for AND</strong>: ( A \cdot A = A )</li>
+</ul>
+<h4 id="4-dominance-laws">4. Dominance Laws</h4>
+<ul>
+<li><strong>Dominance Law for OR</strong>: ( A + 1 = 1 )</li>
+<li><strong>Dominance Law for AND</strong>: ( A \cdot 0 = 0 )</li>
+</ul>
+<h4 id="5-complement-laws">5. Complement Laws</h4>
+<ul>
+<li><strong>Complement Law for OR</strong>: ( A + A&rsquo; = 1 )</li>
+<li><strong>Complement Law for AND</strong>: ( A \cdot A&rsquo; = 0 )</li>
+</ul>
+<h4 id="6-commutative-laws">6. Commutative Laws</h4>
+<ul>
+<li><strong>Commutative Law for OR</strong>: ( A + B = B + A )</li>
+<li><strong>Commutative Law for AND</strong>: ( A \cdot B = B \cdot A )</li>
+</ul>
+<h4 id="7-associative-laws">7. Associative Laws</h4>
+<ul>
+<li><strong>Associative Law for OR</strong>: ( (A + B) + C = A + (B + C) )</li>
+<li><strong>Associative Law for AND</strong>: ( (A \cdot B) \cdot C = A \cdot (B \cdot C) )</li>
+</ul>
+<h4 id="8-distributive-laws">8. Distributive Laws</h4>
+<ul>
+<li><strong>Distributive Law for OR over AND</strong>: ( A + (B \cdot C) = (A + B) \cdot (A + C) )</li>
+<li><strong>Distributive Law for AND over OR</strong>: ( A \cdot (B + C) = (A \cdot B) + (A \cdot C) )</li>
+</ul>
+<h4 id="9-absorption-laws">9. Absorption Laws</h4>
+<ul>
+<li><strong>Absorption Law for OR</strong>: ( A + AB = A )</li>
+<li><strong>Absorption Law for AND</strong>: ( A(A + B) = A )</li>
+</ul>
+<h4 id="10-involution-law">10. Involution Law</h4>
+<ul>
+<li><strong>Involution</strong>: ( (A&rsquo;)&rsquo; = A )</li>
+</ul>
+<h4 id="11-de-morgans-theorems">11. De Morgan&rsquo;s Theorems</h4>
+<ul>
+<li><strong>De Morgan&rsquo;s for OR</strong>: ( (A + B)&rsquo; = A&rsquo; \cdot B&rsquo; )</li>
+<li><strong>De Morgan&rsquo;s for AND</strong>: ( (A \cdot B)&rsquo; = A&rsquo; + B&rsquo; )</li>
+</ul>
+<p>These properties and theorems are instrumental in simplifying Boolean expressions, which can reduce the complexity of logic circuits. They are also essential for proving equivalences between different Boolean expressions or circuits, which is a critical task in digital logic design and optimization.</p>
+<h3 id="final-practice">Final Practice</h3>
+<p>Complete the following functions to generate different sequences of numbers:</p>
+<ul>
+<li><code>int* Fibonacci(int n)</code>
+<ul>
+<li>Create an array of integers and size n</li>
+<li>Fill in the array with the first n Fibonacci numbers. The Fibonacci sequence begins with 0 and then 1 follows. All subsequent values are the sum of the previous two, ex: 0, 1, 1, 2, 3, 5, 8, 13.</li>
+<li>Return the array</li>
+</ul>
+</li>
+<li><code>int* Squares(int n)</code>
+<ul>
+<li>Create an array of integers and size n</li>
+<li>Fill in the array with the squares of 1 to n (inclusive). Ex: 1, 4, 9, …, n2</li>
+<li>Return the array</li>
+</ul>
+</li>
+<li><code>int* Concatenate(int* array1, int size1, int* array2, int size2)</code>
+<ul>
+<li>Create an array of integers and size = size1 + size2</li>
+<li>Fill in the array with the elements of array1 followed by the elements of array2</li>
+<li>Return the array</li>
+<li>main() reads the size of the Fibonacci and the squares sequences and calls the three functions above to create the arrays. Then main() calls PrintArray() provided in the template to print the arrays.</li>
+</ul>
+</li>
+</ul>
+<p>Ex: If the input is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>6 4
+</span></span></code></pre></div><p>the output is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>0 1 1 2 3 5 
+</span></span><span style="display:flex;"><span>1 4 9 16 
+</span></span><span style="display:flex;"><span>0 1 1 2 3 5 1 4 9 16
+</span></span></code></pre></div><blockquote>
+<p>My Interpretation:</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">PrintArray</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> array, <span style="color:#66d9ef">int</span> size) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> size; <span style="color:#f92672">++</span>j) {
+</span></span><span style="display:flex;"><span>      printf(<span style="color:#e6db74">&#34;%d &#34;</span>, array[j]);
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Return the first n Fibonacci numbers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">Fibonacci</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> seq <span style="color:#f92672">=</span> malloc(n <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>)); <span style="color:#75715e">// Allocate memory for n integers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) seq[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// First Fibonacci number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) seq[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// Second Fibonacci number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; j <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>j) {
+</span></span><span style="display:flex;"><span>      seq[j] <span style="color:#f92672">=</span> seq[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> seq[j <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> seq;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Return sequence of squares for 1..n (inclusive)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">Squares</span>(<span style="color:#66d9ef">int</span> n) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> seq <span style="color:#f92672">=</span> malloc(n <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>)); <span style="color:#75715e">// Allocate memory for n integers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>j) {
+</span></span><span style="display:flex;"><span>      seq[j] <span style="color:#f92672">=</span> (j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">*</span> (j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>); <span style="color:#75715e">// Square of (j + 1)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> seq;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Return an array that is a copy of array1 followed by the elements of array2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">Concatenate</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> array1, <span style="color:#66d9ef">int</span> size1, <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> array2, <span style="color:#66d9ef">int</span> size2) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> seq <span style="color:#f92672">=</span> malloc((size1 <span style="color:#f92672">+</span> size2) <span style="color:#f92672">*</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>)); <span style="color:#75715e">// Allocate memory for size1 + size2 integers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> size1; <span style="color:#f92672">++</span>j) {
+</span></span><span style="display:flex;"><span>      seq[j] <span style="color:#f92672">=</span> array1[j]; <span style="color:#75715e">// Copy elements of array1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   }
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> size2; <span style="color:#f92672">++</span>j) {
+</span></span><span style="display:flex;"><span>      seq[size1 <span style="color:#f92672">+</span> j] <span style="color:#f92672">=</span> array2[j]; <span style="color:#75715e">// Copy elements of array2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> seq;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span> fibn; <span style="color:#75715e">// Number of Fibonacci numbers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#66d9ef">int</span> sqrn; <span style="color:#75715e">// Number of squares
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   scanf(<span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>fibn, <span style="color:#f92672">&amp;</span>sqrn);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> fibs;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> sqrs;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> conc;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   fibs <span style="color:#f92672">=</span> Fibonacci(fibn);
+</span></span><span style="display:flex;"><span>   PrintArray(fibs, fibn);
+</span></span><span style="display:flex;"><span>   printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   sqrs <span style="color:#f92672">=</span> Squares(sqrn);
+</span></span><span style="display:flex;"><span>   PrintArray(sqrs, sqrn);
+</span></span><span style="display:flex;"><span>   printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   conc <span style="color:#f92672">=</span> Concatenate(fibs, fibn, sqrs, sqrn);
+</span></span><span style="display:flex;"><span>   PrintArray(conc, fibn <span style="color:#f92672">+</span> sqrn);
+</span></span><span style="display:flex;"><span>   printf(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Free the dynamically allocated memory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   free(fibs);
+</span></span><span style="display:flex;"><span>   free(sqrs);
+</span></span><span style="display:flex;"><span>   free(conc);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Program Breakdown:</p>
+<ol>
+<li>
+<p><strong>Including Headers and Defining Functions:</strong></p>
+<ul>
+<li><code>#include &lt;stdio.h&gt;</code>: This includes the Standard Input Output header file, allowing the use of input/output functions like <code>printf</code> and <code>scanf</code>.</li>
+<li><code>#include &lt;stdlib.h&gt;</code>: This includes the Standard Library header file, which is necessary for memory allocation and management functions such as <code>malloc</code> and <code>free</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>PrintArray Function:</strong></p>
+<ul>
+<li><code>void PrintArray(int* array, int size)</code>: This function takes a pointer to an integer array and the size of the array as arguments. It iterates through the array and prints each element followed by a space. This function is used to output the results of the various sequences generated in the program.</li>
+</ul>
+</li>
+<li>
+<p><strong>Fibonacci Function:</strong></p>
+<ul>
+<li><code>int* Fibonacci(int n)</code>: This function generates the first <code>n</code> Fibonacci numbers and returns a pointer to the array containing these numbers. Memory for <code>n</code> integers is allocated using <code>malloc</code>. The Fibonacci sequence starts with 0 and 1, and every subsequent number is the sum of the two preceding ones. The function fills the array accordingly and returns it.</li>
+</ul>
+</li>
+<li>
+<p><strong>Squares Function:</strong></p>
+<ul>
+<li><code>int* Squares(int n)</code>: This function calculates the squares of integers from 1 to <code>n</code> and returns a pointer to the array containing these square numbers. Memory for <code>n</code> integers is allocated, and each element at index <code>j</code> is set to <code>(j+1)*(j+1)</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Concatenate Function:</strong></p>
+<ul>
+<li><code>int* Concatenate(int* array1, int size1, int* array2, int size2)</code>: This function takes two arrays and their sizes as input, allocates memory for a new array that can hold the contents of both input arrays, and then fills this new array first with the elements of <code>array1</code> and then with <code>array2</code>. It returns a pointer to the concatenated array.</li>
+</ul>
+</li>
+<li>
+<p><strong>Main Function:</strong></p>
+<ul>
+<li><code>int main(void)</code>: This is the main function where execution begins. The user is prompted to enter two integers, <code>fibn</code> and <code>sqrn</code>, which represent the number of Fibonacci numbers and square numbers to be generated, respectively.</li>
+<li>The Fibonacci numbers for <code>fibn</code> and the square numbers for <code>sqrn</code> are generated by calling <code>Fibonacci(fibn)</code> and <code>Squares(sqrn)</code>. The results are stored in dynamically allocated arrays <code>fibs</code> and <code>sqrs</code>.</li>
+<li>The <code>PrintArray</code> function is called three times to print the Fibonacci sequence, the square numbers, and their concatenated result.</li>
+<li>Memory cleanup is performed using <code>free</code> to release the dynamically allocated memory for <code>fibs</code>, <code>sqrs</code>, and the concatenated array <code>conc</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Memory Management:</strong></p>
+<ul>
+<li>The program carefully manages memory using <code>malloc</code> for allocation and <code>free</code> for deallocation, ensuring no memory leaks occur.</li>
+</ul>
+</li>
+</ol>
+
 </div>
 </div>
 </article>

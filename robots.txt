@@ -1,5 +1,6 @@
 User-agent: *
 
+Disallow: /rover/posts/cs.2023.in.review/
 Disallow: /rover/posts/cs.console-notes/
 Disallow: /rover/posts/infosec.cysa+/
 Disallow: /rover/posts/cs.nvim/

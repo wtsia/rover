@@ -44,13 +44,13 @@ src="/rover/">
 <meta itemprop="name" content="Object Oriented Programming">
 <meta itemprop="description" content="Notes on Object Oriented Programming: Java"><meta itemprop="datePublished" content="2022-08-17T01:19:31-07:00" />
 <meta itemprop="dateModified" content="2022-08-17T01:19:31-07:00" />
-<meta itemprop="wordCount" content="4037">
+<meta itemprop="wordCount" content="4543">
 <meta itemprop="keywords" content="CIS,Computer Science,Java," />
 </head>
 <body>
 <header>
 <div id="avatar">
-<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpg" alt="Rover"></a>
+<a href="https://wtsia.github.io/rover/"><img src="/rover/img/about.jpeg" alt="Rover"></a>
 </div>
 <div id="titletext">
 <h2 id="title"><a href="https://wtsia.github.io/rover/">Rover</a></h2>
@@ -154,7 +154,9 @@ src="/rover/">
 </li>
 <li><a href="#summary-so-far-1">Summary So Far</a>
 <ul>
+<li><a href="#general">General</a></li>
 <li><a href="#loops">Loops</a></li>
+<li><a href="#objects-1">Objects</a></li>
 </ul>
 </li>
 <li><a href="#objects-and-classes-introduction">Objects and Classes: Introduction</a>
@@ -222,6 +224,22 @@ src="/rover/">
 <li><a href="#collisions">Collisions</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#conclusion--usages">Conclusion + Usages</a>
+<ul>
+<li><a href="#java">Java</a></li>
+<li><a href="#spring-framework">Spring Framework</a></li>
+<li><a href="#relationship-and-enhancements">Relationship and Enhancements</a>
+<ul>
+<li><a href="#1-dependency-management">1. <strong>Dependency Management</strong></a></li>
+<li><a href="#2-aspect-oriented-programming-aop">2. <strong>Aspect-Oriented Programming (AOP)</strong></a></li>
+<li><a href="#3-data-access">3. <strong>Data Access</strong></a></li>
+<li><a href="#4-transaction-management">4. <strong>Transaction Management</strong></a></li>
+<li><a href="#5-web-development">5. <strong>Web Development</strong></a></li>
+<li><a href="#6-microservices-and-cloud">6. <strong>Microservices and Cloud</strong></a></li>
 </ul>
 </li>
 </ul>
@@ -701,6 +719,7 @@ You can test across a class using multiple methods and printing FAIL statements.
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Rectangle box1 = new Rectangle(0, 0, 100, 200);
 </span></span><span style="display:flex;"><span>Rectangle box2 = box1;
 </span></span></code></pre></div><h1 id="summary-so-far-1">Summary So Far</h1>
+<h2 id="general">General</h2>
 <ul>
 <li>Definition of methods besides the main method
 <ul>
@@ -786,10 +805,13 @@ You can test across a class using multiple methods and printing FAIL statements.
 </span></span><span style="display:flex;"><span>      numItems = 55;
 </span></span><span style="display:flex;"><span>      break;
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="loops">Loops</h3>
+</span></span></code></pre></div><h2 id="loops">Loops</h2>
 <ul>
 <li>for and for-each (Find: <strong>Enhanced Loops</strong>)</li>
 <li>while and do-while (Find: <strong>Do/While Loop</strong>)</li>
+</ul>
+<h2 id="objects-1">Objects</h2>
+<ul>
 <li>Mutable and Immutable Objects
 <ul>
 <li>Mutable: can be changed
@@ -1144,7 +1166,8 @@ Cannot invoke methods on <code>null</code>.</p>
 </span></span><span style="display:flex;"><span>    Employee otherEmployee = (Employee) obj; // Casting to type Employee
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h1 id="algorithmspostscs0algorithms"><a href="./posts/cs.0.algorithms">Algorithms</a></h1>
+</span></span></code></pre></div><h1 id="algorithms">Algorithms</h1>
+<p><a href="./posts/cs.0.algorithms">Algorithms notes</a></p>
 <h2 id="o-notation">O-Notation</h2>
 <p><a href="./posts/cs.algorithm-analysis">O-Notation notes</a></p>
 <h2 id="abstract-data-types-adt">Abstract Data Types (ADT)</h2>
@@ -1225,6 +1248,44 @@ Cannot invoke methods on <code>null</code>.</p>
 Open Addressing</li>
 <li>Look for next available slot (linear/quadratic probing or double hashing)</li>
 </ul>
+<h1 id="conclusion--usages">Conclusion + Usages</h1>
+<p>Java is a widely-used programming language, while Spring is a powerful framework that builds on Java, enhancing its capabilities especially in the context of enterprise and web applications. Understanding their relationship involves examining how Spring extends Java&rsquo;s functionality and simplifies many of the complex tasks in large-scale application development.</p>
+<h3 id="java">Java</h3>
+<p>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible. It is known for its portability across platforms, which is achieved through the Java Virtual Machine (JVM). Java is used in a variety of computing platforms from embedded devices and mobile phones to enterprise servers and supercomputers.</p>
+<h3 id="spring-framework">Spring Framework</h3>
+<p>Spring, specifically Spring Framework, is an open source framework created to address the complexity of enterprise application development. One of the primary strengths of Spring is its dependency injection (DI) feature, which promotes loose coupling through DI and inversion of control (IoC). Spring&rsquo;s core container handles the management of application components, using configuration files or annotations.</p>
+<h3 id="relationship-and-enhancements">Relationship and Enhancements</h3>
+<h4 id="1-dependency-management">1. <strong>Dependency Management</strong></h4>
+<ul>
+<li><strong>Java</strong> provides the foundation with basic libraries and runtime environment.</li>
+<li><strong>Spring</strong> adds a comprehensive DI mechanism that allows developers to define application components and their dependencies abstractly, without hard-coding them in the classes themselves.</li>
+</ul>
+<h4 id="2-aspect-oriented-programming-aop">2. <strong>Aspect-Oriented Programming (AOP)</strong></h4>
+<ul>
+<li><strong>Java</strong> supports object-oriented programming, but managing cross-cutting concerns like logging or transaction management can lead to code scattering and tangling.</li>
+<li><strong>Spring</strong> supports Aspect-Oriented Programming which enables separating cross-cutting concerns from the business logic. This makes the system easier to maintain and scale.</li>
+</ul>
+<h4 id="3-data-access">3. <strong>Data Access</strong></h4>
+<ul>
+<li><strong>Java</strong> provides JDBC (Java Database Connectivity) as a standard API for database interaction, which involves boilerplate code.</li>
+<li><strong>Spring</strong> offers templates for JDBC, simplifying the interaction with databases and reducing the need for repetitive boilerplate code.</li>
+</ul>
+<h4 id="4-transaction-management">4. <strong>Transaction Management</strong></h4>
+<ul>
+<li><strong>Java</strong> transaction management can be complex and error-prone when handling manually.</li>
+<li><strong>Spring</strong> provides a consistent transaction management interface that can scale from local transactions to global transactions (JTA) using a consistent programming model.</li>
+</ul>
+<h4 id="5-web-development">5. <strong>Web Development</strong></h4>
+<ul>
+<li><strong>Java</strong> provides servlets and Java Server Pages (JSP) for web applications.</li>
+<li><strong>Spring</strong> has built upon and extended these technologies with Spring MVC, a component-based framework that uses the Model-View-Controller (MVC) architecture for building web applications more efficiently.</li>
+</ul>
+<h4 id="6-microservices-and-cloud">6. <strong>Microservices and Cloud</strong></h4>
+<ul>
+<li><strong>Java</strong> is widely used in enterprise environments, but building microservices architectures requires more than just the language.</li>
+<li><strong>Spring Boot</strong> (part of the larger Spring ecosystem) makes it easy to create stand-alone, production-grade Spring-based applications that you can &ldquo;just run&rdquo;. It&rsquo;s particularly useful for microservice architectures with its auto-configuration capabilities and built-in application server.</li>
+</ul>
+<p>In summary, while Java provides the foundational elements and syntax for programming, Spring builds on Java to offer a robust framework that simplifies many of the manual processes in enterprise and web application development. It enhances productivity and reduces the complexity associated with large-scale application development.</p>
 
 </div>
 <div class="tags">
