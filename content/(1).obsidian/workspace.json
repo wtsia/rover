@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "e8582d21f7f9620b",
+    "type": "split",
+    "children": [
+      {
+        "id": "a217486026533fed",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e10c0299edc022a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "infosec.uscc.west.mobileForensics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "infosec.uscc.west.mobileForensics"
+            }
+          },
+          {
+            "id": "a3a78c419d7c0e5c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "infosec.uscc.west.redTeamFullStackHacking.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "infosec.uscc.west.redTeamFullStackHacking"
+            }
+          },
+          {
+            "id": "6f455b0a22665c86",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "infosec.Sec+.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "infosec.Sec+"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ccc9b61470127504",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef81e709a15f15e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f744243edf94bcc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "1f7cef718d9812d0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ce251a1ed8d1b805",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "33eb11f5c1896b99",
+    "type": "split",
+    "children": [
+      {
+        "id": "52d6e2b94c4b1e76",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "955322e325b263c5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "51082825d3c23db6",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "7fffc576538cedea",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "7e96537d86af49b4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "6f455b0a22665c86",
+  "lastOpenFiles": [
+    "infosec.uscc.west.mobileForensics.md",
+    "infosec.uscc.west.redTeamFullStackHacking.md",
+    "infosec.Sec+.md",
+    "life.educationaltaxnotes.md",
+    "Untitled 1.md",
+    "SOCanalyst.md",
+    "Excalidraw/Drawing 2025-07-23 12.29.51.excalidraw.md",
+    "Excalidraw/Drawing 2025-07-23 12.29.25.excalidraw.md",
+    "Excalidraw/Drawing 2025-07-23 12.27.44.excalidraw.md",
+    "Excalidraw",
+    "Untitled.md"
+  ]
+}
