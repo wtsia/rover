@@ -58,7 +58,7 @@
 
 # Chapter 1: General Security Concepts
 Question: What are the Security Control Categories?
-- enables CIA triad (Confidentiality, Integrity, Availability) + non-repudiation
+- enables **CIA triad (Confidentiality, Integrity, Availability)** + non-repudiation
 - POMT: Physical, Operational Managerial, Technical -- Please Offer Me Tea
 - Operational: Controls human element like policies, procedure, training. 
 Conclusion: POMT
@@ -181,3 +181,5 @@ What are the categories of VM?
 
 End of Life?
 - endoflife.date
+
+## 

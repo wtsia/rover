@@ -12,3 +12,8 @@ Running it locally:
 ```
 npx quartz build --serve
 ```
+
+Syncing it:
+```
+npx quartz sync
+```
