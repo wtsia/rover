@@ -104,10 +104,10 @@ Expanding a disk in Proxmox is simple, but shrinking one is a high-risk operatio
 
 One of the most valuable lessons in any homelab is learning to troubleshoot. 
 
-I encountered an issue while port scanning using `nmap` that the service was not available. Scanning the port should'be shown something like:
+I encountered an issue while port scanning using `nmap` that the service was not available. Scanning the port should'be shown something like (as an example):
 
 ```
-PS C:\Users\winst> nmap -sU -p <port> <ip_address>
+> nmap -sU -p <port> <ip_address>
 Starting Nmap 7.97 ( https://nmap.org ) at 2012-12-21 13:37 -0400
 Nmap scan report for <ip_address>
 Host is up (0.0040s latency).
