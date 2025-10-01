@@ -16,5 +16,6 @@ npx quartz build --serve
 
 Syncing it:
 ```
+npx quartz build
 npx quartz sync
 ```

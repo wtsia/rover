@@ -1,12 +1,12 @@
 
-
 -----
-
 ## A Proxmox Journey
 
 Building a homelab can feel daunting, but with the right tools and a bit of guidance, any enthusiast can transform a spare PC into a versatile server capable of running anything from game servers to virtualized desktops. This guide chronicles my real-world journey of setting up a server using Proxmox VE, navigating the common hurdles, and unlocking its advanced capabilities.
 
+---
 ### Part 1: Installing Proxmox VE
+---
 
 Every great server starts with a solid foundation. Proxmox VE (Virtual Environment) is a powerful, open-source hypervisor based on Debian Linux. It allows you to run both full virtual machines (VMs) and lightweight Linux Containers (LXC) on a single machine, all managed through a clean web interface.
 
@@ -17,7 +17,10 @@ Every great server starts with a solid foundation. Proxmox VE (Virtual Environme
 
 The particular steps of this process are fairly self-explanatory.
 
+
+---
 ### Part 2: Mastering LXC Containers
+---
 
 While VMs are great for running different operating systems, LXC containers are the undisputed champions of efficiency for running Linux services. They share the host kernel, using a fraction of the RAM and CPU overhead of a full VM.
 
@@ -39,8 +42,9 @@ For a different way of setting it up (untested on my end),
     ```
 3.  **Install Docker:** Start the container, open its console, and follow the official Docker installation guide to install `docker-ce` and `docker-compose`.
 
+---
 ### Part 3: Advanced Networking
-
+---
 By default, Docker containers live on an internal, private network. To recap how embedded our container is, We have a bare-metal Proxmox VE server hosting a Linux container that is hosting Docker which is hosting a sub-container.
 
 Usually to expose a service, you map ports. But what if you want a container to act like a real device on your LAN with its own IP? The answer I arrived at was `macvlan`.
@@ -73,8 +77,10 @@ networks:
           ip_range: 10.0.0.48/28 # A reserved IP range for Docker
 ```
 
-### Part 4: Advanced Disk Management
 
+---
+### Part 4: Advanced Disk Management
+---
 Expanding a disk in Proxmox is simple, but shrinking one is a high-risk operation that requires manual intervention. I successfully navigated this to reduce an oversized VM disk which I accidentally had allocated in GB (Giga-Bytes) when I was under the impression I was dealing with MB, ballooning the volume size from a few GB to a couple TB.
 
 **The Shrinking Workflow (High-Level):**
@@ -89,7 +95,12 @@ Expanding a disk in Proxmox is simple, but shrinking one is a high-risk operatio
     ```
 5.  **Finalize:** Detach the old disk, set the new disk as the primary boot device in the VM's **Options -\> Boot Order**, and verify it boots correctly.
 
-### Part 5: A Troubleshooting Diary: Where I Ran Into Issues
+
+---
+### Part 5: A Troubleshooting Diary 
+*Where I Ran Into Issues*
+
+---
 
 One of the most valuable lessons in any homelab is learning to troubleshoot. 
 
@@ -97,7 +108,7 @@ I encountered an issue while port scanning using `nmap` that the service was not
 
 ```
 PS C:\Users\winst> nmap -sU -p <port> <ip_address>
-Starting Nmap 7.97 ( https://nmap.org ) at 2025-09-30 15:33 -0400
+Starting Nmap 7.97 ( https://nmap.org ) at 2012-12-21 13:37 -0400
 Nmap scan report for <ip_address>
 Host is up (0.0040s latency).
 
@@ -116,8 +127,10 @@ When the `macvlan`-enabled game server was still unreachable despite a correct D
 
 This process highlights a key principle: isolate the problem layer by layer, from the application outwards.
 
-### Part 6: Day-to-Day Administration/Experimenting
 
+---
+### Part 6: Day-to-Day Administration/Experimenting
+---
 Beyond the big projects, I covered essential administrative tasks:
 
   * **Changing a Guest's IP:** Edit `/etc/network/interfaces` and `/etc/hosts` on the guest itself.
@@ -126,6 +139,7 @@ Beyond the big projects, I covered essential administrative tasks:
 
 Additionally, I'm able to spin up multiple VMs and LCXs to experiment with from Active Directory to a Wazuh container for monitoring endpoints or networks, and log analysis. 
 
+-----
 ### Conclusion
 
-From a single physical machine, this homelab now hosts an efficient Docker environment with containers that act as first-class citizens on the network, alongside fully isolated virtual machines. The journey from a simple installation to complex troubleshooting and administration demonstrates the incredible power and flexibility of Proxmox VE. The learning curve is real, but the capabilities you unlock are well worth the effort.
+From a single physical machine, this homelab now hosts an efficient Docker environment with containers that act as devices on the network, alongside fully isolated virtual machines. The journey from a simple installation to complex troubleshooting and administration demonstrates the incredible power and flexibility I learned about for Proxmox VE. The learning continues, but look back, the capabilities I unlocked were well worth the effort.
