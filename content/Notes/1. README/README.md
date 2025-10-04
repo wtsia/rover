@@ -1,0 +1,1 @@
+Feel free to peruse. However some notes are unfinished, and sometimes won't make sense if you're not me :)
