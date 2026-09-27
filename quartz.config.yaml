@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: wtsia.github.io/rover
   ignorePatterns:
     - private
     - templates
@@ -16,9 +16,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Outfit
+      body: Inter
+      code: Fira Code
     colors:
       lightMode:
         light: "#faf8f8"
@@ -31,15 +31,15 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#FFA500"
-        lightgray: "#FFA500"
-        gray: "#FFA500"
-        darkgray: "#FFA500"
-        dark: "#FFA500"
-        secondary: "#FFA500"
-        tertiary: "#FFA500"
-        highlight: "rgba(34, 211, 238, 0.15)"
-        textHighlight: "#22d3ee88"
+        light: "#282828"      # Deep warm charcoal (eliminates harsh pure-black glare)
+        lightgray: "#3c3836"  # Soft warm gray for borders and callout backgrounds
+        gray: "#928374"       # Muted earth-gray for graph lines and subtle UI elements
+        darkgray: "#ebdbb2"   # Soft cream body text (prevents halation/astigmatism bleed)
+        dark: "#fbf1c7"       # Brighter warm cream for high-contrast headers
+        secondary: "#fe8019"  # Warm ember orange for standard links and Explorer folders
+        tertiary: "#fabd2f"   # Soft amber/gold for hover states and visited graph nodes
+        highlight: "rgba(254, 128, 25, 0.15)"
+        textHighlight: "#fe801988"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -61,7 +61,17 @@ plugins:
   - source: "@quartz-community/obsidian-flavored-markdown"
     enabled: true
     options:
+      comments: true
+      highlight: true
+      wikilinks: true
+      callouts: true
+      mermaid: true
+      parseTags: true
+      parseArrows: true
+      parseBlockReferences: true
       enableInHtmlEmbed: false
+      enableYouTubeEmbed: true
+      enableVideoEmbed: true
       enableCheckbox: true
     order: 30
   - source: "@quartz-community/github-flavored-markdown"
@@ -90,7 +100,7 @@ plugins:
     enabled: false
     order: 85
   - source: "@quartz-community/hard-line-breaks"
-    enabled: false
+    enabled: true
     order: 90
   - source: "@quartz-community/ox-hugo"
     enabled: false
@@ -103,12 +113,29 @@ plugins:
   - source: "@quartz-themes/core"
     enabled: false
     options:
-      theme: tokyo-night
+      theme: default
       mode: both
   - source: "@quartz-community/remove-draft"
     enabled: true
   - source: "@quartz-community/explicit-publish"
     enabled: false
+  - source: "@quartz-community/unlisted-pages"
+    enabled: true
+    options: {}
+    order: 45
+  - source: "@quartz-community/encrypted-pages"
+    enabled: true
+    options:
+      iterations: 600000
+      passwordField: password
+      unlistWhenEncrypted: false
+      outputPath: static/encryptedContentIndex.json
+  - source: "@quartz-community/stacked-pages"
+    enabled: false
+    layout:
+      position: afterBody
+      priority: 50
+      display: all
   - source: "@quartz-community/alias-redirects"
     enabled: true
   - source: "@quartz-community/content-index"
@@ -209,7 +236,14 @@ plugins:
       position: footer
       priority: 50
   - source: "@quartz-community/recent-notes"
-    enabled: false
+    enabled: true
+    options:
+      title: "Recent Posts"
+      limit: 3
+      showTags: true
+    layout:
+      position: afterBody
+      priority: 10
   - source: "@quartz-community/spacer"
     enabled: true
     options: {}
@@ -239,24 +273,13 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: "@quartz-community/unlisted-pages"
-    enabled: true
-    options: {}
-    order: 45
-  - source: "@quartz-community/encrypted-pages"
+  - source: "@quartz-community/obsidian-plugin-excalidraw"
     enabled: true
     options:
-      iterations: 600000
-      passwordField: password
-      unlistWhenEncrypted: false
-      outputPath: static/encryptedContentIndex.json
-    order: 900
-  - source: "@quartz-community/stacked-pages"
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
-      display: all
+      enableInteraction: true
+      darkMode: auto
+      exportPadding: 20
+    order: 50
 layout:
   groups:
     toolbar:

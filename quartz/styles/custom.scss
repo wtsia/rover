@@ -1,3 +1,7 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+/* Force all syntax-highlighted code text to orange */
+pre code .line span {
+  color: #fe8019 !important;
+}
